@@ -1,0 +1,16 @@
+,value
+master_seed,20261201
+seed_rule,"SeedSequence(master, spawn_key=(cell_row, sim_index)); one default_rng per simulation"
+cells,68
+simulations,1240000
+failed_simulations,0
+smoke,False
+seconds,1218.5
+python,3.12.13
+numpy,2.5.4
+pandas,3.1.0
+machine,macOS-15.4.1-arm64-arm-64bit
+v1_hashes_verified,23
+v1_1_hashes_verified,7
+method,"M4b baseline only (rom bootstrap-t, max rule, iid days)"
+note,"ALL DATA SIMULATED, NULL ONLY"
