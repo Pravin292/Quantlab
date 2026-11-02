@@ -1,0 +1,146 @@
+id,hypothesis,class,family,market_or_stock,description
+H1-C001,H1,confirmatory,F1_H1_omnibus,NSE,"Friedman test, ln per-bar volatility, open/middle/close, market-level panel"
+H1-C002,H1,confirmatory,F1_H1_omnibus,US,"Friedman test, ln per-bar volatility, open/middle/close, market-level panel"
+H1-P001,H1,post-hoc,F2_H1_posthoc_NSE,NSE,Wilcoxon signed-rank open vs middle (interpreted only if NSE omnibus passes Holm)
+H1-P002,H1,post-hoc,F2_H1_posthoc_NSE,NSE,Wilcoxon signed-rank close vs middle (interpreted only if NSE omnibus passes Holm)
+H1-P003,H1,post-hoc,F2_H1_posthoc_NSE,NSE,Wilcoxon signed-rank open vs close (interpreted only if NSE omnibus passes Holm)
+H1-P004,H1,post-hoc,F2_H1_posthoc_US,US,Wilcoxon signed-rank open vs middle (interpreted only if US omnibus passes Holm)
+H1-P005,H1,post-hoc,F2_H1_posthoc_US,US,Wilcoxon signed-rank close vs middle (interpreted only if US omnibus passes Holm)
+H1-P006,H1,post-hoc,F2_H1_posthoc_US,US,Wilcoxon signed-rank open vs close (interpreted only if US omnibus passes Holm)
+H2-C001,H2,confirmatory,F3_H2_primary,NSE,"return continuation g_open, k=3, event regression (wild cluster bootstrap p)"
+H2-C002,H2,confirmatory,F3_H2_primary,NSE,"forward volatility y_fv_open, k=3, event regression (wild cluster bootstrap p)"
+H2-C003,H2,confirmatory,F3_H2_primary,US,"return continuation g_open, k=3, event regression (wild cluster bootstrap p)"
+H2-C004,H2,confirmatory,F3_H2_primary,US,"forward volatility y_fv_open, k=3, event regression (wild cluster bootstrap p)"
+H3-C001,H3,confirmatory,F4_H3_primary,NSE,"clustered Wald test, autocorrelations at lags 1-6 jointly zero"
+H3-C002,H3,confirmatory,F4_H3_primary,US,"clustered Wald test, autocorrelations at lags 1-6 jointly zero"
+H1-E001,H1,exploratory,BH_H1,RELIANCE.NS,per-stock Friedman test
+H1-E002,H1,exploratory,BH_H1,TCS.NS,per-stock Friedman test
+H1-E003,H1,exploratory,BH_H1,INFY.NS,per-stock Friedman test
+H1-E004,H1,exploratory,BH_H1,AAPL,per-stock Friedman test
+H1-E005,H1,exploratory,BH_H1,MSFT,per-stock Friedman test
+H1-E006,H1,exploratory,BH_H1,NVDA,per-stock Friedman test
+H1-E007,H1,exploratory,BH_H1,NSE,"market-level Friedman, sensitivity: all bars, no subsampling"
+H1-E008,H1,exploratory,BH_H1,US,"market-level Friedman, sensitivity: all bars, no subsampling"
+H1-E009,H1,exploratory,BH_H1,NSE,"market-level Friedman, sensitivity: mean |r| measure"
+H1-E010,H1,exploratory,BH_H1,US,"market-level Friedman, sensitivity: mean |r| measure"
+H1-E011,H1,exploratory,BH_H1,NSE,"market-level Friedman, sensitivity: drop the 3 highest-volatility days"
+H1-E012,H1,exploratory,BH_H1,US,"market-level Friedman, sensitivity: drop the 3 highest-volatility days"
+H1-E013,H1,exploratory,BH_H1,NSE,"market-level Friedman, sensitivity: first 5 bars of open period excluded"
+H1-E014,H1,exploratory,BH_H1,US,"market-level Friedman, sensitivity: first 5 bars of open period excluded"
+H1-E015,H1,exploratory,BH_H1,NSE,"market-level Friedman, sensitivity: 15:10 bar excluded from close period"
+H1-E016,H1,exploratory,BH_H1,NSE,"market-level Friedman, stability: first half of days"
+H1-E017,H1,exploratory,BH_H1,NSE,"market-level Friedman, stability: second half of days"
+H1-E018,H1,exploratory,BH_H1,US,"market-level Friedman, stability: first half of days"
+H1-E019,H1,exploratory,BH_H1,US,"market-level Friedman, stability: second half of days"
+H2-E001,H2,exploratory,BH_H2,NSE,return continuation: baseline L=20 instead of 10
+H2-E002,H2,exploratory,BH_H2,NSE,"return continuation: entry at event close (optimistic), k=3"
+H2-E003,H2,exploratory,BH_H2,NSE,"return continuation: delayed entry O(t+2), k=3"
+H2-E004,H2,exploratory,BH_H2,NSE,return continuation: continuous ln(volume ratio) instead of event dummy
+H2-E005,H2,exploratory,BH_H2,NSE,return continuation: de-clustered events (skip events within k bars of an earlier one)
+H2-E006,H2,exploratory,BH_H2,NSE,return continuation: top 1% of |outcome| dropped (sensitivity only)
+H2-E007,H2,exploratory,BH_H2,NSE,"return continuation: matched comparison (same stock and slot, similar |z|)"
+H2-E008,H2,exploratory,BH_H2,NSE,return continuation: horizon k=1
+H2-E009,H2,exploratory,BH_H2,NSE,return continuation: horizon k=6
+H2-E010,H2,exploratory,BH_H2,NSE,"return continuation: stability, first half of days"
+H2-E011,H2,exploratory,BH_H2,NSE,"return continuation: stability, second half of days"
+H2-E012,H2,exploratory,BH_H2,NSE,forward volatility: baseline L=20 instead of 10
+H2-E013,H2,exploratory,BH_H2,NSE,"forward volatility: entry at event close (optimistic), k=3"
+H2-E014,H2,exploratory,BH_H2,NSE,"forward volatility: delayed entry O(t+2), k=3"
+H2-E015,H2,exploratory,BH_H2,NSE,forward volatility: continuous ln(volume ratio) instead of event dummy
+H2-E016,H2,exploratory,BH_H2,NSE,forward volatility: de-clustered events (skip events within k bars of an earlier one)
+H2-E017,H2,exploratory,BH_H2,NSE,forward volatility: top 1% of |outcome| dropped (sensitivity only)
+H2-E018,H2,exploratory,BH_H2,NSE,"forward volatility: matched comparison (same stock and slot, similar |z|)"
+H2-E019,H2,exploratory,BH_H2,NSE,forward volatility: horizon k=1
+H2-E020,H2,exploratory,BH_H2,NSE,forward volatility: horizon k=6
+H2-E021,H2,exploratory,BH_H2,NSE,"forward volatility: stability, first half of days"
+H2-E022,H2,exploratory,BH_H2,NSE,"forward volatility: stability, second half of days"
+H2-E023,H2,exploratory,BH_H2,US,return continuation: baseline L=20 instead of 10
+H2-E024,H2,exploratory,BH_H2,US,"return continuation: entry at event close (optimistic), k=3"
+H2-E025,H2,exploratory,BH_H2,US,"return continuation: delayed entry O(t+2), k=3"
+H2-E026,H2,exploratory,BH_H2,US,return continuation: continuous ln(volume ratio) instead of event dummy
+H2-E027,H2,exploratory,BH_H2,US,return continuation: de-clustered events (skip events within k bars of an earlier one)
+H2-E028,H2,exploratory,BH_H2,US,return continuation: top 1% of |outcome| dropped (sensitivity only)
+H2-E029,H2,exploratory,BH_H2,US,"return continuation: matched comparison (same stock and slot, similar |z|)"
+H2-E030,H2,exploratory,BH_H2,US,return continuation: horizon k=1
+H2-E031,H2,exploratory,BH_H2,US,return continuation: horizon k=6
+H2-E032,H2,exploratory,BH_H2,US,"return continuation: stability, first half of days"
+H2-E033,H2,exploratory,BH_H2,US,"return continuation: stability, second half of days"
+H2-E034,H2,exploratory,BH_H2,US,forward volatility: baseline L=20 instead of 10
+H2-E035,H2,exploratory,BH_H2,US,"forward volatility: entry at event close (optimistic), k=3"
+H2-E036,H2,exploratory,BH_H2,US,"forward volatility: delayed entry O(t+2), k=3"
+H2-E037,H2,exploratory,BH_H2,US,forward volatility: continuous ln(volume ratio) instead of event dummy
+H2-E038,H2,exploratory,BH_H2,US,forward volatility: de-clustered events (skip events within k bars of an earlier one)
+H2-E039,H2,exploratory,BH_H2,US,forward volatility: top 1% of |outcome| dropped (sensitivity only)
+H2-E040,H2,exploratory,BH_H2,US,"forward volatility: matched comparison (same stock and slot, similar |z|)"
+H2-E041,H2,exploratory,BH_H2,US,forward volatility: horizon k=1
+H2-E042,H2,exploratory,BH_H2,US,forward volatility: horizon k=6
+H2-E043,H2,exploratory,BH_H2,US,"forward volatility: stability, first half of days"
+H2-E044,H2,exploratory,BH_H2,US,"forward volatility: stability, second half of days"
+H2-E045,H2,exploratory,BH_H2,RELIANCE.NS,return continuation: per-stock regression
+H2-E046,H2,exploratory,BH_H2,RELIANCE.NS,forward volatility: per-stock regression
+H2-E047,H2,exploratory,BH_H2,TCS.NS,return continuation: per-stock regression
+H2-E048,H2,exploratory,BH_H2,TCS.NS,forward volatility: per-stock regression
+H2-E049,H2,exploratory,BH_H2,INFY.NS,return continuation: per-stock regression
+H2-E050,H2,exploratory,BH_H2,INFY.NS,forward volatility: per-stock regression
+H2-E051,H2,exploratory,BH_H2,AAPL,return continuation: per-stock regression
+H2-E052,H2,exploratory,BH_H2,AAPL,forward volatility: per-stock regression
+H2-E053,H2,exploratory,BH_H2,MSFT,return continuation: per-stock regression
+H2-E054,H2,exploratory,BH_H2,MSFT,forward volatility: per-stock regression
+H2-E055,H2,exploratory,BH_H2,NVDA,return continuation: per-stock regression
+H2-E056,H2,exploratory,BH_H2,NVDA,forward volatility: per-stock regression
+H3-E001,H3,exploratory,BH_H3,NSE,autocorrelation at lag 1 (clustered z)
+H3-E002,H3,exploratory,BH_H3,NSE,autocorrelation at lag 2 (clustered z)
+H3-E003,H3,exploratory,BH_H3,NSE,autocorrelation at lag 3 (clustered z)
+H3-E004,H3,exploratory,BH_H3,NSE,autocorrelation at lag 4 (clustered z)
+H3-E005,H3,exploratory,BH_H3,NSE,autocorrelation at lag 5 (clustered z)
+H3-E006,H3,exploratory,BH_H3,NSE,autocorrelation at lag 6 (clustered z)
+H3-E007,H3,exploratory,BH_H3,NSE,variance ratio VR(2) (day-block bootstrap p)
+H3-E008,H3,exploratory,BH_H3,NSE,variance ratio VR(3) (day-block bootstrap p)
+H3-E009,H3,exploratory,BH_H3,NSE,variance ratio VR(6) (day-block bootstrap p)
+H3-E010,H3,exploratory,BH_H3,NSE,variance ratio VR(12) (day-block bootstrap p)
+H3-E011,H3,exploratory,BH_H3,NSE,"predictive regression, past 1 bars -> next 1 bars"
+H3-E012,H3,exploratory,BH_H3,NSE,predictive regression k=1: extra slope for large moves |z|>1.5
+H3-E013,H3,exploratory,BH_H3,NSE,"predictive regression, past 3 bars -> next 3 bars"
+H3-E014,H3,exploratory,BH_H3,NSE,predictive regression k=3: extra slope for large moves |z|>1.5
+H3-E015,H3,exploratory,BH_H3,NSE,"predictive regression, past 6 bars -> next 6 bars"
+H3-E016,H3,exploratory,BH_H3,NSE,predictive regression k=6: extra slope for large moves |z|>1.5
+H3-E017,H3,exploratory,BH_H3,NSE,day-level: first-30-minute return vs last-30-minute return (Spearman)
+H3-E018,H3,exploratory,BH_H3,NSE,"omnibus Wald, sensitivity: no demeaning"
+H3-E019,H3,exploratory,BH_H3,NSE,"omnibus Wald, sensitivity: single overall mean"
+H3-E020,H3,exploratory,BH_H3,NSE,"omnibus Wald, sensitivity: z winsorised at +/-4"
+H3-E021,H3,exploratory,BH_H3,NSE,"omnibus Wald, stability: first half of days"
+H3-E022,H3,exploratory,BH_H3,NSE,"omnibus Wald, stability: second half of days"
+H3-E023,H3,exploratory,BH_H3,US,autocorrelation at lag 1 (clustered z)
+H3-E024,H3,exploratory,BH_H3,US,autocorrelation at lag 2 (clustered z)
+H3-E025,H3,exploratory,BH_H3,US,autocorrelation at lag 3 (clustered z)
+H3-E026,H3,exploratory,BH_H3,US,autocorrelation at lag 4 (clustered z)
+H3-E027,H3,exploratory,BH_H3,US,autocorrelation at lag 5 (clustered z)
+H3-E028,H3,exploratory,BH_H3,US,autocorrelation at lag 6 (clustered z)
+H3-E029,H3,exploratory,BH_H3,US,variance ratio VR(2) (day-block bootstrap p)
+H3-E030,H3,exploratory,BH_H3,US,variance ratio VR(3) (day-block bootstrap p)
+H3-E031,H3,exploratory,BH_H3,US,variance ratio VR(6) (day-block bootstrap p)
+H3-E032,H3,exploratory,BH_H3,US,variance ratio VR(12) (day-block bootstrap p)
+H3-E033,H3,exploratory,BH_H3,US,"predictive regression, past 1 bars -> next 1 bars"
+H3-E034,H3,exploratory,BH_H3,US,predictive regression k=1: extra slope for large moves |z|>1.5
+H3-E035,H3,exploratory,BH_H3,US,"predictive regression, past 3 bars -> next 3 bars"
+H3-E036,H3,exploratory,BH_H3,US,predictive regression k=3: extra slope for large moves |z|>1.5
+H3-E037,H3,exploratory,BH_H3,US,"predictive regression, past 6 bars -> next 6 bars"
+H3-E038,H3,exploratory,BH_H3,US,predictive regression k=6: extra slope for large moves |z|>1.5
+H3-E039,H3,exploratory,BH_H3,US,day-level: first-30-minute return vs last-30-minute return (Spearman)
+H3-E040,H3,exploratory,BH_H3,US,"omnibus Wald, sensitivity: no demeaning"
+H3-E041,H3,exploratory,BH_H3,US,"omnibus Wald, sensitivity: single overall mean"
+H3-E042,H3,exploratory,BH_H3,US,"omnibus Wald, sensitivity: z winsorised at +/-4"
+H3-E043,H3,exploratory,BH_H3,US,"omnibus Wald, stability: first half of days"
+H3-E044,H3,exploratory,BH_H3,US,"omnibus Wald, stability: second half of days"
+H3-E045,H3,exploratory,BH_H3,RELIANCE.NS,per-stock omnibus Wald
+H3-E046,H3,exploratory,BH_H3,RELIANCE.NS,day-level first-30 vs last-30 minute return (Spearman)
+H3-E047,H3,exploratory,BH_H3,TCS.NS,per-stock omnibus Wald
+H3-E048,H3,exploratory,BH_H3,TCS.NS,day-level first-30 vs last-30 minute return (Spearman)
+H3-E049,H3,exploratory,BH_H3,INFY.NS,per-stock omnibus Wald
+H3-E050,H3,exploratory,BH_H3,INFY.NS,day-level first-30 vs last-30 minute return (Spearman)
+H3-E051,H3,exploratory,BH_H3,AAPL,per-stock omnibus Wald
+H3-E052,H3,exploratory,BH_H3,AAPL,day-level first-30 vs last-30 minute return (Spearman)
+H3-E053,H3,exploratory,BH_H3,MSFT,per-stock omnibus Wald
+H3-E054,H3,exploratory,BH_H3,MSFT,day-level first-30 vs last-30 minute return (Spearman)
+H3-E055,H3,exploratory,BH_H3,NVDA,per-stock omnibus Wald
+H3-E056,H3,exploratory,BH_H3,NVDA,day-level first-30 vs last-30 minute return (Spearman)
