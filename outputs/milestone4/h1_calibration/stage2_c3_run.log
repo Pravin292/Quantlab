@@ -1,0 +1,73 @@
+dev_row 00   G flat NSE n_days= 59 dep=     none sd=0.3 n=25000 failed=0 q95=2.4496 total=25000 elapsed=5s
+dev_row 01   G flat  US n_days= 59 dep=     none sd=0.3 n=25000 failed=0 q95=2.4066 total=50000 elapsed=8s
+dev_row 02   G    E NSE n_days= 59 dep=     none sd=0.3 n=25000 failed=0 q95=2.5007 total=75000 elapsed=11s
+dev_row 03   G    E  US n_days= 59 dep=     none sd=0.3 n=25000 failed=0 q95=2.4915 total=100000 elapsed=15s
+dev_row 04   G   D5 NSE n_days= 59 dep=     none sd=0.3 n=25000 failed=0 q95=2.4915 total=125000 elapsed=18s
+dev_row 05   G   D5  US n_days= 59 dep=     none sd=0.3 n=25000 failed=0 q95=2.4782 total=150000 elapsed=22s
+dev_row 06   G   R2 NSE n_days= 59 dep=     none sd=0.3 n=25000 failed=0 q95=2.4719 total=175000 elapsed=25s
+dev_row 07   G   R2  US n_days= 59 dep=     none sd=0.3 n=25000 failed=0 q95=2.4728 total=200000 elapsed=29s
+dev_row 08 T10 flat NSE n_days= 59 dep=     none sd=0.3 n=25000 failed=0 q95=2.4673 total=225000 elapsed=32s
+dev_row 09 T10 flat  US n_days= 59 dep=     none sd=0.3 n=25000 failed=0 q95=2.4619 total=250000 elapsed=36s
+dev_row 10 T10    E NSE n_days= 59 dep=     none sd=0.3 n=25000 failed=0 q95=2.5793 total=275000 elapsed=39s
+dev_row 11 T10    E  US n_days= 59 dep=     none sd=0.3 n=25000 failed=0 q95=2.5424 total=300000 elapsed=43s
+dev_row 12 T10   D5 NSE n_days= 59 dep=     none sd=0.3 n=25000 failed=0 q95=2.5942 total=325000 elapsed=46s
+dev_row 13 T10   D5  US n_days= 59 dep=     none sd=0.3 n=25000 failed=0 q95=2.6132 total=350000 elapsed=50s
+dev_row 14 T10   R2 NSE n_days= 59 dep=     none sd=0.3 n=25000 failed=0 q95=2.5301 total=375000 elapsed=54s
+dev_row 15 T10   R2  US n_days= 59 dep=     none sd=0.3 n=25000 failed=0 q95=2.4871 total=400000 elapsed=58s
+dev_row 16  T6 flat NSE n_days= 59 dep=     none sd=0.3 n=25000 failed=0 q95=2.4992 total=425000 elapsed=62s
+dev_row 17  T6 flat  US n_days= 59 dep=     none sd=0.3 n=25000 failed=0 q95=2.4794 total=450000 elapsed=66s
+dev_row 18  T6    E NSE n_days= 59 dep=     none sd=0.3 n=25000 failed=0 q95=2.7292 total=475000 elapsed=70s
+dev_row 19  T6    E  US n_days= 59 dep=     none sd=0.3 n=25000 failed=0 q95=2.6475 total=500000 elapsed=73s
+dev_row 20  T6   D5 NSE n_days= 59 dep=     none sd=0.3 n=25000 failed=0 q95=2.7455 total=525000 elapsed=77s
+dev_row 21  T6   D5  US n_days= 59 dep=     none sd=0.3 n=25000 failed=0 q95=2.7207 total=550000 elapsed=81s
+dev_row 22  T6   R2 NSE n_days= 59 dep=     none sd=0.3 n=25000 failed=0 q95=2.5794 total=575000 elapsed=84s
+dev_row 23  T6   R2  US n_days= 59 dep=     none sd=0.3 n=25000 failed=0 q95=2.5514 total=600000 elapsed=88s
+dev_row 24  T4 flat NSE n_days= 59 dep=     none sd=0.3 n=25000 failed=0 q95=2.6408 total=625000 elapsed=92s
+dev_row 25  T4 flat  US n_days= 59 dep=     none sd=0.3 n=25000 failed=0 q95=2.5712 total=650000 elapsed=96s
+dev_row 26  T4    E NSE n_days= 59 dep=     none sd=0.3 n=25000 failed=0 q95=2.9972 total=675000 elapsed=99s
+dev_row 27  T4    E  US n_days= 59 dep=     none sd=0.3 n=25000 failed=0 q95=2.8733 total=700000 elapsed=103s
+dev_row 28  T4   D5 NSE n_days= 59 dep=     none sd=0.3 n=25000 failed=0 q95=3.0507 total=725000 elapsed=107s
+dev_row 29  T4   D5  US n_days= 59 dep=     none sd=0.3 n=25000 failed=0 q95=3.0569 total=750000 elapsed=112s
+dev_row 30  T4   R2 NSE n_days= 59 dep=     none sd=0.3 n=25000 failed=0 q95=2.7570 total=775000 elapsed=116s
+dev_row 31  T4   R2  US n_days= 59 dep=     none sd=0.3 n=25000 failed=0 q95=2.7040 total=800000 elapsed=120s
+dev_row 40  T6    E NSE n_days= 59 dep=estimated sd=0.3 n=25000 failed=0 q95=2.7279 total=825000 elapsed=125s
+dev_row 41  T6    E  US n_days= 59 dep=estimated sd=0.3 n=25000 failed=0 q95=2.6690 total=850000 elapsed=130s
+dev_row 42  T6   D5 NSE n_days= 59 dep=estimated sd=0.3 n=25000 failed=0 q95=2.7719 total=875000 elapsed=135s
+dev_row 43  T6   D5  US n_days= 59 dep=estimated sd=0.3 n=25000 failed=0 q95=2.7332 total=900000 elapsed=139s
+dev_row 44  T4    E NSE n_days= 59 dep=estimated sd=0.3 n=25000 failed=0 q95=3.0075 total=925000 elapsed=143s
+dev_row 45  T4    E  US n_days= 59 dep=estimated sd=0.3 n=25000 failed=0 q95=2.8488 total=950000 elapsed=148s
+dev_row 46  T4   D5 NSE n_days= 59 dep=estimated sd=0.3 n=25000 failed=0 q95=3.0358 total=975000 elapsed=152s
+dev_row 47  T4   D5  US n_days= 59 dep=estimated sd=0.3 n=25000 failed=0 q95=3.0380 total=1000000 elapsed=157s
+dev_row 48  T4    E NSE n_days= 59 dep=     none sd=0.6 n=25000 failed=0 q95=3.2280 total=1025000 elapsed=161s
+dev_row 49  T4    E  US n_days= 59 dep=     none sd=0.6 n=25000 failed=0 q95=3.0394 total=1050000 elapsed=165s
+dev_row 50  T4   D5 NSE n_days= 59 dep=     none sd=0.6 n=25000 failed=0 q95=3.2987 total=1075000 elapsed=169s
+dev_row 51  T4   D5  US n_days= 59 dep=     none sd=0.6 n=25000 failed=0 q95=3.2892 total=1100000 elapsed=173s
+dev_row 52   G    E NSE n_days=125 dep=     none sd=0.3 n=25000 failed=0 q95=2.4100 total=1125000 elapsed=180s
+dev_row 53   G    E NSE n_days=250 dep=     none sd=0.3 n=25000 failed=0 q95=2.3764 total=1150000 elapsed=195s
+dev_row 54   G    E  US n_days=125 dep=     none sd=0.3 n=25000 failed=0 q95=2.4097 total=1175000 elapsed=203s
+dev_row 55   G    E  US n_days=250 dep=     none sd=0.3 n=25000 failed=0 q95=2.3715 total=1200000 elapsed=218s
+dev_row 56   G   D5 NSE n_days=125 dep=     none sd=0.3 n=25000 failed=0 q95=2.4278 total=1225000 elapsed=226s
+dev_row 57   G   D5 NSE n_days=250 dep=     none sd=0.3 n=25000 failed=0 q95=2.3880 total=1250000 elapsed=243s
+dev_row 58   G   D5  US n_days=125 dep=     none sd=0.3 n=25000 failed=0 q95=2.4314 total=1275000 elapsed=252s
+dev_row 59   G   D5  US n_days=250 dep=     none sd=0.3 n=25000 failed=0 q95=2.3651 total=1300000 elapsed=270s
+dev_row 60  T6    E NSE n_days=125 dep=     none sd=0.3 n=25000 failed=0 q95=2.5799 total=1325000 elapsed=280s
+dev_row 61  T6    E NSE n_days=250 dep=     none sd=0.3 n=25000 failed=0 q95=2.4871 total=1350000 elapsed=299s
+dev_row 62  T6    E  US n_days=125 dep=     none sd=0.3 n=25000 failed=0 q95=2.5324 total=1375000 elapsed=309s
+dev_row 63  T6    E  US n_days=250 dep=     none sd=0.3 n=25000 failed=0 q95=2.4673 total=1400000 elapsed=331s
+dev_row 64  T6   D5 NSE n_days=125 dep=     none sd=0.3 n=25000 failed=0 q95=2.5968 total=1425000 elapsed=342s
+dev_row 65  T6   D5 NSE n_days=250 dep=     none sd=0.3 n=25000 failed=0 q95=2.4952 total=1450000 elapsed=363s
+dev_row 66  T6   D5  US n_days=125 dep=     none sd=0.3 n=25000 failed=0 q95=2.5798 total=1475000 elapsed=376s
+dev_row 67  T6   D5  US n_days=250 dep=     none sd=0.3 n=25000 failed=0 q95=2.5197 total=1500000 elapsed=395s
+dev_row 68  T4    E NSE n_days=125 dep=     none sd=0.3 n=25000 failed=0 q95=2.8746 total=1525000 elapsed=406s
+dev_row 69  T4    E NSE n_days=250 dep=     none sd=0.3 n=25000 failed=0 q95=2.7855 total=1550000 elapsed=427s
+dev_row 70  T4    E  US n_days=125 dep=     none sd=0.3 n=25000 failed=0 q95=2.7273 total=1575000 elapsed=438s
+dev_row 71  T4    E  US n_days=250 dep=     none sd=0.3 n=25000 failed=0 q95=2.6586 total=1600000 elapsed=459s
+dev_row 72  T4   D5 NSE n_days=125 dep=     none sd=0.3 n=25000 failed=0 q95=2.8801 total=1625000 elapsed=469s
+dev_row 73  T4   D5 NSE n_days=250 dep=     none sd=0.3 n=25000 failed=0 q95=2.8160 total=1650000 elapsed=492s
+dev_row 74  T4   D5  US n_days=125 dep=     none sd=0.3 n=25000 failed=0 q95=2.8714 total=1675000 elapsed=502s
+dev_row 75  T4   D5  US n_days=250 dep=     none sd=0.3 n=25000 failed=0 q95=2.7840 total=1700000 elapsed=519s
+ n_days  c3_crit  source_dev_row  n_cells
+     59   3.2987              50       44
+    125   2.8801              72       12
+    250   2.8160              73       12
+COMPLETE 1700000 simulations, 0 failed

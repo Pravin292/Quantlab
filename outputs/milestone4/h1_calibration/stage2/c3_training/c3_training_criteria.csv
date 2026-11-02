@@ -1,0 +1,7 @@
+criterion,met
+"all 68 cells x planned simulations completed, simulation indices unique",True
+numerical failure rate <= 0.1% in every cell (D6),True
+"one finite critical value for each of the sample sizes 59, 125, 250",True
+training seed 20261202 distinct from every other registered master seed,True
+"in-sample C3 rate within the upper limit in every cell (5.5% tier A, 6.0% tier B; uninformative about validity: same data)",True
+"frozen v1, v1.1, Stage 1 and Stage 2 input manifests verified before the run",True

@@ -1,0 +1,23 @@
+,value
+master_seed,20261202
+seed_rule,"SeedSequence(20261202, spawn_key=(dev_row, i))"
+cells,68
+simulations,1700000
+failed_simulations,0
+smoke,False
+wall_seconds,524.0
+started_unix,1793602047
+child_cpu_user_seconds,2904.7
+child_cpu_system_seconds,38.9
+max_child_rss_mb,143.7
+output_mb,25.7
+logical_cpus,8
+free_gib_before,5.51
+free_gib_after,4.4
+python,3.12.13
+numpy,2.5.4
+pandas,3.1.0
+machine,macOS-15.4.1-arm64-arm-64bit
+manifests_verified_before,"{'v1': 23, 'v1.1': 7, 'stage1_code': 8, 'stage2_inputs': 18}"
+manifests_verified_after,"{'v1': 23, 'v1.1': 7, 'stage1_code': 8, 'stage2_inputs': 18}"
+note,"ALL DATA SIMULATED, NULL ONLY; C3 training only; no baseline, C1 or C2 was run"
