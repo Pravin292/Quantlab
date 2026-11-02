@@ -1,0 +1,99 @@
+{
+  "version": "v1.1",
+  "supersedes_in_part": "v1 (all v1 files remain byte-identical and unchanged; see v1_manifest_sha256)",
+  "status": "PROPOSED for review; NOT approved for any experiment. Stage 1 has not started.",
+  "v1_manifest_sha256": "36150e1cabe8c311217fc9c4e680061d39b4b85d17ad4d6c9ebb01997493755c",
+  "unchanged_from_v1": [
+    "estimand",
+    "statistic",
+    "alpha",
+    "C1 definition",
+    "C3 definition at 59, 125, 250 days",
+    "grids (cells_stage1/development/validation.csv)",
+    "gate bounds and tiers",
+    "seeds of v1",
+    "failure conditions",
+    "fair-comparison rules",
+    "environment"
+  ],
+  "A1_C2": {
+    "name": "FDB-like procedure, formula UNVERIFIED (not attributed to any paper)",
+    "status": "UNVERIFIED. Derived from Beran's double-bootstrap logic and a search-tool recollection; the original paper has NOT been read. It must not be attributed to Davidson and MacKinnon or to any paper until verified.",
+    "definition": "outer B=999 day-resamples give T*_b; one inner day-resample of each outer sample gives T**_b; p1 = mean(T* >= T); Q = (1 - p1) quantile of {T**_b}; p_fdb = mean(T*_b > Q); reject iff p_fdb <= alpha",
+    "v1_defect": "v1 computed mean(T** > Q), which equals p1 up to rounding (300 of 300 datasets, max difference 0.0000). v1 code and text are left unchanged.",
+    "code": "src/quantlab/research/h1_calibration_v11.py::fdb_like_test",
+    "use_rules": "see A6"
+  },
+  "A2_ambiguity": {
+    "per_cell": {
+      "inputs": "k rejections in n valid simulations; p_hat = k/n; Wilson 95% interval [L, U] (z = 1.959964)",
+      "point_pass": "v1 rule: lo <= p_hat <= hi, and (tier A/B) U <= Wilson limit, and p_hat <= 0.07; for C3 only p_hat <= hi",
+      "ambiguous": "a point-rule bound that applies (lo and hi; hi only for C3) satisfies L <= bound <= U",
+      "status": "PASS | PASS_AMBIGUOUS | FAIL | FAIL_AMBIGUOUS = point_pass x ambiguous"
+    },
+    "per_candidate": {
+      "FAIL": "at least one gated cell is FAIL",
+      "FAIL_BOUNDARY_ONLY": "no FAIL, at least one FAIL_AMBIGUOUS; decision stays 'not selected'",
+      "MARGINAL_NOT_DEMONSTRATED": "every gated cell point-passes, at least one is PASS_AMBIGUOUS; no claim of calibration is made",
+      "PASS_CLEAR": "every gated cell is PASS"
+    },
+    "replication_rule": {
+      "who_decides": "only with the user's explicit approval; never automatic",
+      "what": "the ambiguous cells only, 100,000 simulations, fresh seed (name ambiguity_replication, 20261210), same data process and method",
+      "decision": "the point rule on the replication estimate ALONE (original estimate discarded, no pooling, to avoid optional stopping)",
+      "after": "still ambiguous at n=100,000 -> final status MARGINAL_NOT_DEMONSTRATED; no further replication"
+    },
+    "code": "src/quantlab/research/h1_calibration_v11.py::classify_cell, classify_candidate"
+  },
+  "A3_redundant_clauses": {
+    "statement": "At 25,000 simulations per gated cell the Wilson-upper clause and the 7.0% ceiling never change a decision. Checked exhaustively at n = 10,000, 20,000, 25,000, 50,000 and 100,000 (all redundant). At n = 1,000, 2,000 and 5,000 the Wilson clause DOES change 8-12 decisions per tier; a 500-step scan finds it first redundant at n = 8,500 (tier A) and 9,500 (tier B). The 7.0% ceiling changed no decision at any n tested. Redundancy is not claimed for untested n.",
+    "evidence": "gate_redundancy_check.csv: exhaustive over every k = 0..n, decisions with and without the clauses are identical",
+    "why": "tier A: p_hat <= 0.055 implies Wilson U <= 0.058 < 0.060; tier B: p_hat <= 0.060 implies U <= 0.063 < 0.065; both p_hat bounds are below 0.07",
+    "consequence": "the clauses stay in the spec text (harmless) but give no extra protection when a cell has at least 10,000 valid simulations; removing them would not change any decision at n = 25,000",
+    "caveat": "the Wilson clause binds when a cell has fewer than about 10,000 valid simulations (e.g. after numerical failures in a reduced cell or in tier C-sized cells)"
+  },
+  "A4_alternative_processes": {
+    "file": "alt_dgp_parameters.json",
+    "common": "3 stocks, shape E, 59 days, NSE and US, 25,000 simulations, H0 true by construction, day factor f ~ N(0, 0.3^2) unless stated, unit-variance shocks",
+    "null_check": "analytic E[(shock part)^2] = 1 within 1e-9 (tests) for a, b, e, f; unit-variance multipliers for c, d; THEN a Monte-Carlo period-mean check within 0.5% at 10^6 bars before use (Stage 4)",
+    "DEVIATION_e": "process e: v1 / docs/15 wording (log day scale Student-t(3)) has infinite E[exp(2f)] (a t variable has no moment-generating function), so the expected squared return and the estimand do not exist. v1.1 uses a Gaussian scale mixture (5% of days with 3x the sd), overall sd 0.3. THIS IS A CHANGE OF CONTENT, NOT ONLY A NORMALISATION: PENDING YOUR APPROVAL.",
+    "cells_alternative_dgps.csv": "unchanged in v1; its text for process e is superseded by this file"
+  },
+  "A5_C3_intermediate_sizes": {
+    "sample_sizes_days": [
+      90,
+      180
+    ],
+    "training_family_per_size": "tails G, T6, T4 x shapes E, D5 x markets NSE, US = 12 cells (the same family used for 125 and 250 days)",
+    "sims_per_cell": 25000,
+    "seed_name": "c3_training_intermediate",
+    "seed": 20261209,
+    "rule": "crit_n = max over the 12 training cells of size n of the 0.95 quantile of T (no margin); reject when T > crit_n",
+    "applies_to": "validation cells T7 and T5 (shape E) at 90 and 180 days; the 59-day cells use crit_59 from the 44-cell development family",
+    "limitation": "the family at 90 and 180 days has 12 cells (no estimated-dependence cells, no 0.6 day-volatility cells, no flat or R2 shapes), like 125 and 250 days; C3 is therefore less conservative there than at 59 days and is valid only inside that family",
+    "cells_file": "cells_c3_training_intermediate.csv",
+    "n_cells": 24,
+    "n_simulations": 600000,
+    "est_generation_only_wall_hours": 0.045580178307659674,
+    "cost_note": "generation of the data only (benchmark / 4x speed-up); computing T adds a small amount; it is NOT part of the earlier resource table"
+  },
+  "A6_C2_use_restrictions": [
+    "C2 results (including this corrected FDB-like procedure) are NOT used for any methodological conclusion",
+    "C2 is NOT used in candidate selection or ranking, and is not described as validated, calibrated or as the Davidson-Mackinnon method",
+    "C2 may be run and its gate outcomes reported, labelled 'FDB-like procedure, formula UNVERIFIED'",
+    "these restrictions lapse only after the user records that the formula has been verified against the original paper",
+    "a corrected C2 may be selected only on the user's explicit written approval of a 'procedure-defined, simulation-evidence-only' status"
+  ],
+  "new_seeds": {
+    "c3_training_intermediate": 20261209,
+    "ambiguity_replication": 20261210,
+    "note": "20261209 and 20261210 are not used by any v1 seed; v1 seeds 20261201..20261208 unchanged"
+  },
+  "tests_note": "tests/test_research_h1_calibration_v11.py check code behaviour only; they are not evidence of statistical validity of any procedure",
+  "unresolved_decisions": [
+    "approve or reject the process e replacement (A4)",
+    "approve the 12-cell C3 families at 90/180 days (A5)",
+    "approve the wording of the ambiguity-replication rule (A2)",
+    "how to treat C2 if the paper stays unavailable (A6 default: report only, never select)"
+  ]
+}

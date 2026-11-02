@@ -1,0 +1,25 @@
+tail,shape,market,n_days,dependence,day_vol_sd,n_sims,purpose,seed_name
+G,E,NSE,90,none,0.3,25000,C3 training only (never evaluated on),c3_training_intermediate
+G,E,US,90,none,0.3,25000,C3 training only (never evaluated on),c3_training_intermediate
+G,D5,NSE,90,none,0.3,25000,C3 training only (never evaluated on),c3_training_intermediate
+G,D5,US,90,none,0.3,25000,C3 training only (never evaluated on),c3_training_intermediate
+T6,E,NSE,90,none,0.3,25000,C3 training only (never evaluated on),c3_training_intermediate
+T6,E,US,90,none,0.3,25000,C3 training only (never evaluated on),c3_training_intermediate
+T6,D5,NSE,90,none,0.3,25000,C3 training only (never evaluated on),c3_training_intermediate
+T6,D5,US,90,none,0.3,25000,C3 training only (never evaluated on),c3_training_intermediate
+T4,E,NSE,90,none,0.3,25000,C3 training only (never evaluated on),c3_training_intermediate
+T4,E,US,90,none,0.3,25000,C3 training only (never evaluated on),c3_training_intermediate
+T4,D5,NSE,90,none,0.3,25000,C3 training only (never evaluated on),c3_training_intermediate
+T4,D5,US,90,none,0.3,25000,C3 training only (never evaluated on),c3_training_intermediate
+G,E,NSE,180,none,0.3,25000,C3 training only (never evaluated on),c3_training_intermediate
+G,E,US,180,none,0.3,25000,C3 training only (never evaluated on),c3_training_intermediate
+G,D5,NSE,180,none,0.3,25000,C3 training only (never evaluated on),c3_training_intermediate
+G,D5,US,180,none,0.3,25000,C3 training only (never evaluated on),c3_training_intermediate
+T6,E,NSE,180,none,0.3,25000,C3 training only (never evaluated on),c3_training_intermediate
+T6,E,US,180,none,0.3,25000,C3 training only (never evaluated on),c3_training_intermediate
+T6,D5,NSE,180,none,0.3,25000,C3 training only (never evaluated on),c3_training_intermediate
+T6,D5,US,180,none,0.3,25000,C3 training only (never evaluated on),c3_training_intermediate
+T4,E,NSE,180,none,0.3,25000,C3 training only (never evaluated on),c3_training_intermediate
+T4,E,US,180,none,0.3,25000,C3 training only (never evaluated on),c3_training_intermediate
+T4,D5,NSE,180,none,0.3,25000,C3 training only (never evaluated on),c3_training_intermediate
+T4,D5,US,180,none,0.3,25000,C3 training only (never evaluated on),c3_training_intermediate

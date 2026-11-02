@@ -1,0 +1,9 @@
+tier,cells_K,n_needed_per_cell_for_95pct_joint_pass_at_true_5pct
+"A core [4.5,5.5], Wilson upper<=6.0",24,20000
+"A core [4.5,5.5], Wilson upper<=6.0",48,25000
+"A core [4.5,5.5], Wilson upper<=6.0",96,25000
+"A core [4.5,5.5], Wilson upper<=6.0",192,30000
+"B stress [4.0,6.0], Wilson upper<=6.5",24,10000
+"B stress [4.0,6.0], Wilson upper<=6.5",48,10000
+"B stress [4.0,6.0], Wilson upper<=6.5",96,10000
+"B stress [4.0,6.0], Wilson upper<=6.5",192,10000

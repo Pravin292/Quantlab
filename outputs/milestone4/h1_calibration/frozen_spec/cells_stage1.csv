@@ -1,0 +1,69 @@
+experiment,tail,shape,market,n_days,merge,B,n_sims
+HA tail scan,G,flat,NSE,59,1,999,20000
+HA tail scan,G,flat,US,59,1,999,20000
+HA tail scan,G,E,NSE,59,1,999,20000
+HA tail scan,G,E,US,59,1,999,20000
+HA tail scan,G,D5,NSE,59,1,999,20000
+HA tail scan,G,D5,US,59,1,999,20000
+HA tail scan,T20,flat,NSE,59,1,999,20000
+HA tail scan,T20,flat,US,59,1,999,20000
+HA tail scan,T20,E,NSE,59,1,999,20000
+HA tail scan,T20,E,US,59,1,999,20000
+HA tail scan,T20,D5,NSE,59,1,999,20000
+HA tail scan,T20,D5,US,59,1,999,20000
+HA tail scan,T10,flat,NSE,59,1,999,20000
+HA tail scan,T10,flat,US,59,1,999,20000
+HA tail scan,T10,E,NSE,59,1,999,20000
+HA tail scan,T10,E,US,59,1,999,20000
+HA tail scan,T10,D5,NSE,59,1,999,20000
+HA tail scan,T10,D5,US,59,1,999,20000
+HA tail scan,T8,flat,NSE,59,1,999,20000
+HA tail scan,T8,flat,US,59,1,999,20000
+HA tail scan,T8,E,NSE,59,1,999,20000
+HA tail scan,T8,E,US,59,1,999,20000
+HA tail scan,T8,D5,NSE,59,1,999,20000
+HA tail scan,T8,D5,US,59,1,999,20000
+HA tail scan,T6,flat,NSE,59,1,999,20000
+HA tail scan,T6,flat,US,59,1,999,20000
+HA tail scan,T6,E,NSE,59,1,999,20000
+HA tail scan,T6,E,US,59,1,999,20000
+HA tail scan,T6,D5,NSE,59,1,999,20000
+HA tail scan,T6,D5,US,59,1,999,20000
+HA tail scan,T5,flat,NSE,59,1,999,20000
+HA tail scan,T5,flat,US,59,1,999,20000
+HA tail scan,T5,E,NSE,59,1,999,20000
+HA tail scan,T5,E,US,59,1,999,20000
+HA tail scan,T5,D5,NSE,59,1,999,20000
+HA tail scan,T5,D5,US,59,1,999,20000
+HA tail scan,T4,flat,NSE,59,1,999,20000
+HA tail scan,T4,flat,US,59,1,999,20000
+HA tail scan,T4,E,NSE,59,1,999,20000
+HA tail scan,T4,E,US,59,1,999,20000
+HA tail scan,T4,D5,NSE,59,1,999,20000
+HA tail scan,T4,D5,US,59,1,999,20000
+HA tail scan,T3,flat,NSE,59,1,999,20000
+HA tail scan,T3,flat,US,59,1,999,20000
+HA tail scan,T3,E,NSE,59,1,999,20000
+HA tail scan,T3,E,US,59,1,999,20000
+HA tail scan,T3,D5,NSE,59,1,999,20000
+HA tail scan,T3,D5,US,59,1,999,20000
+HB effective-bar (merge g consecutive bars),T4,E,NSE,59,1,999,20000
+HB effective-bar (merge g consecutive bars),T4,E,NSE,59,2,999,20000
+HB effective-bar (merge g consecutive bars),T4,E,NSE,59,3,999,20000
+HB effective-bar (merge g consecutive bars),T4,E,US,59,1,999,20000
+HB effective-bar (merge g consecutive bars),T4,E,US,59,2,999,20000
+HB effective-bar (merge g consecutive bars),T4,E,US,59,3,999,20000
+HB effective-bar (merge g consecutive bars),T4,D5,NSE,59,1,999,20000
+HB effective-bar (merge g consecutive bars),T4,D5,NSE,59,2,999,20000
+HB effective-bar (merge g consecutive bars),T4,D5,NSE,59,3,999,20000
+HB effective-bar (merge g consecutive bars),T4,D5,US,59,1,999,20000
+HB effective-bar (merge g consecutive bars),T4,D5,US,59,2,999,20000
+HB effective-bar (merge g consecutive bars),T4,D5,US,59,3,999,20000
+HE bootstrap size,T4,E,NSE,59,1,999,5000
+HE bootstrap size,T4,E,NSE,59,1,9999,5000
+HE bootstrap size,T4,E,US,59,1,999,5000
+HE bootstrap size,T4,E,US,59,1,9999,5000
+HE bootstrap size,T4,D5,NSE,59,1,999,5000
+HE bootstrap size,T4,D5,NSE,59,1,9999,5000
+HE bootstrap size,T4,D5,US,59,1,999,5000
+HE bootstrap size,T4,D5,US,59,1,9999,5000

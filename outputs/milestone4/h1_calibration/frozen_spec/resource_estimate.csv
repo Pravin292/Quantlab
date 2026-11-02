@@ -1,0 +1,6 @@
+stage,cells,simulations,est_wall_hours,total_core_assumption
+Stage 1 mechanism diagnosis (base method only),68,1240000,0.16475208475539047,measured single-core times divided by an observed parallel speedup of 4.0
+"Stage 2 development, all candidates + baseline on shared data (FULL grid)",76,1780000,11.686454543471173,measured single-core times divided by an observed parallel speedup of 4.0
+Stage 2 development (REDUCED: no 250-day cells),64,1480000,6.828022241299753,measured single-core times divided by an observed parallel speedup of 4.0
+"Stage 3 validation, worst case = C1 selected (FULL)",96,2280000,13.252516933819857,measured single-core times divided by an observed parallel speedup of 4.0
+"Stage 4 alternative DGPs, C1 (generation cost of non-standard DGPs NOT included; assume x3)",12,300000,3.0734882502656538,measured single-core times divided by an observed parallel speedup of 4.0

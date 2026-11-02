@@ -1,0 +1,64 @@
+{
+  "version": "v1",
+  "status": "FROZEN for review; any change requires a numbered new version approved by the user",
+  "estimand": "unchanged: day-volatility-weighted pooled variance ratio (RMS volatility) between open, middle, close",
+  "statistic": "T = max over the 3 pairwise contrasts of |ln(mean_a/mean_b)| / influence-function SE (rom, block 1, as h1_rms2)",
+  "alpha": 0.05,
+  "stocks_per_market": 3,
+  "baseline_for_comparison": "M4b bootstrap-t, B=999, rom, max rule, iid days",
+  "candidates": {
+    "C1": "null-imposed model-based bootstrap with empirical bar-level shocks; R=499 artificial datasets; decision p=(1+#{T*>=T})/(R+1)<=alpha; robust (median) day scale; slot profile equalised within period; shocks drawn jointly over stocks from the same period; day scales drawn iid",
+    "C2": "fast double bootstrap-t; B=999; one inner resample per outer; adjusted p = share of T** above the (1-p1) quantile of T**, reject if <= alpha (formula recalled from Davidson & MacKinnon 2007; NOT verified against the paper; Stage 1 verifies the implementation on a case with known behaviour)",
+    "C3": "fixed critical value per sample size = max over gated development cells of the 95% quantile of T, from a SEPARATE training run (disjoint seeds, 25,000 simulations per cell); no extra margin; evaluated on the upper gates only (conservative benchmark/fallback)"
+  },
+  "fair_comparison_rules": [
+    "all candidates and the baseline are run on the SAME simulated dataset (same seed) in every simulation of every cell",
+    "same alpha, same cells, same number of simulations, same gates; computing cost is reported for each",
+    "no candidate is chosen on one cell, one scenario or on power",
+    "selection among candidates that pass the two-sided gates in every gated cell: the simplest; ties broken by cost; power is reported only after calibration passes"
+  ],
+  "gates": {
+    "tier_A_core (df G,10,6,7)": "point estimate in [4.5%,5.5%] AND Wilson 95% upper limit <= 6.0%, every cell",
+    "tier_B_stress (df 4,5)": "point estimate in [4.0%,6.0%] AND Wilson 95% upper limit <= 6.5%, every cell",
+    "tier_C (df 3)": "report only",
+    "ceiling": "no validated cell above 7.0%",
+    "C3_only": "upper limits only (point <= 5.5% tier A, <= 6.0% tier B); its conservatism (lowest cell rate) is reported",
+    "alternative_DGPs": "point estimate in [4.0%,6.0%] each",
+    "conditional_behaviour": "rejection by leverage quartile and by critical-value quartile: reported, flagged if clearly steeper than the Gaussian reference",
+    "numerical": "any failure rate above 0.1% needs a pre-specified fallback; denominators reported",
+    "n_per_gated_cell": 25000,
+    "n_per_report_cell": 10000,
+    "basis": "stage0_mc_precision.py: 25,000 simulations give 95% joint pass probability for up to ~96 gated cells at a true 5.0% rate (30,000 for 192)",
+    "bradley_note": "Bradley (1978) liberal band 0.5-1.5 alpha is attested only via secondary sources; the original and any stringent band were NOT verified and are not cited"
+  },
+  "seeds": {
+    "stage1": 20261201,
+    "c3_training": 20261202,
+    "development": 20261203,
+    "validation_cells": 20261204,
+    "validation_intermediate_cells": 20261205,
+    "alternative_dgps": 20261206,
+    "bar_level_pipeline_check": 20261207,
+    "reference_implementation_check": 20261208,
+    "rule": "per-simulation child SeedSequence passed to default_rng; validation seeds unused until Stage 3"
+  },
+  "failure_conditions": [
+    "any tier A cell outside gate on validation",
+    "any tier B cell outside gate (domain narrowed to df>=6 and reported)",
+    "any alternative DGP outside gate",
+    "fitted-parameter instability (critical-value CV of the candidate >= that of the baseline)",
+    "power collapse flagged (<70% of baseline power at T4 flat x1.2)",
+    "retuning after seeing validation",
+    "reference implementation disagrees",
+    "required simulations unreachable within the approved budget"
+  ],
+  "environment": {
+    "python": "3.12.13",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scipy": "1.18.1",
+    "statsmodels": "0.15.0",
+    "os": "macOS Darwin 24.4.0"
+  },
+  "descriptive_real_data_note": "descriptive tail/shape summaries only; they place real data on the grid; no H1 test on real data"
+}

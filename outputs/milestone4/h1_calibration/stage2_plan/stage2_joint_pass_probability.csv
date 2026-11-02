@@ -1,0 +1,3 @@
+grid,tier_A_cells,tier_B_cells,joint_pass_prob_if_all_true_5pct
+development (Stage 2),44,24,0.9880318020380924
+"validation (Stage 3): 44+10 A, 24+10 B",54,34,0.985331795294045

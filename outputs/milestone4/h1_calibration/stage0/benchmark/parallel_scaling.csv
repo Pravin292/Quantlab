@@ -1,0 +1,2 @@
+task,single_core_s_per_test,all_cores_wall_s_per_test,speedup,n_tests
+"C1 R=499, 59 days",0.0481043697509449,0.036243271484181605,1.327263455561402,64

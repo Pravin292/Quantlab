@@ -1,0 +1,27 @@
+59 generate data (fast generator) 0.0005s
+59 base bootstrap-t, B=999 (M4b method) 0.0014s
+59 C2 fast double bootstrap, B=999 0.0034s
+59 C3 fixed critical value 0.0000s
+59 C1 fit only 0.0018s
+59 C1 full test, R=199 0.0213s
+59 C1 full test, R=499 0.0487s
+59 C1 full test, R=999 0.0949s
+125 generate data (fast generator) 0.0010s
+125 base bootstrap-t, B=999 (M4b method) 0.0029s
+125 C2 fast double bootstrap, B=999 0.0070s
+125 C3 fixed critical value 0.0000s
+125 C1 fit only 0.0033s
+125 C1 full test, R=199 0.0437s
+125 C1 full test, R=499 0.1044s
+125 C1 full test, R=999 0.2112s
+250 generate data (fast generator) 0.0020s
+250 base bootstrap-t, B=999 (M4b method) 0.0063s
+250 C2 fast double bootstrap, B=999 0.0148s
+250 C3 fixed critical value 0.0000s
+250 C1 fit only 0.0059s
+250 C1 full test, R=199 0.0882s
+250 C1 full test, R=499 0.2101s
+250 C1 full test, R=999 0.4206s
+                task  single_core_s_per_test  all_cores_wall_s_per_test   speedup  n_tests
+0  C1 R=499, 59 days                0.048104                   0.036243  1.327263       64
+COMPLETE

@@ -1,0 +1,6 @@
+,value
+datasets,300.0
+mean_abs_diff_implemented_vs_first,0.0
+max_abs_diff_implemented_vs_first,0.0
+mean_abs_diff_variant_vs_first,0.01362028695362029
+max_abs_diff_variant_vs_first,0.06206206206206205

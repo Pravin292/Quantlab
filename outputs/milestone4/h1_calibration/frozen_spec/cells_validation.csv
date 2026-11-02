@@ -1,0 +1,97 @@
+tail,shape,market,n_days,dependence,day_vol_sd,tier,n_sims,origin
+G,flat,NSE,59,none,0.3,A,25000,"development cell, FRESH seeds"
+G,flat,US,59,none,0.3,A,25000,"development cell, FRESH seeds"
+G,E,NSE,59,none,0.3,A,25000,"development cell, FRESH seeds"
+G,E,US,59,none,0.3,A,25000,"development cell, FRESH seeds"
+G,D5,NSE,59,none,0.3,A,25000,"development cell, FRESH seeds"
+G,D5,US,59,none,0.3,A,25000,"development cell, FRESH seeds"
+G,R2,NSE,59,none,0.3,A,25000,"development cell, FRESH seeds"
+G,R2,US,59,none,0.3,A,25000,"development cell, FRESH seeds"
+T10,flat,NSE,59,none,0.3,A,25000,"development cell, FRESH seeds"
+T10,flat,US,59,none,0.3,A,25000,"development cell, FRESH seeds"
+T10,E,NSE,59,none,0.3,A,25000,"development cell, FRESH seeds"
+T10,E,US,59,none,0.3,A,25000,"development cell, FRESH seeds"
+T10,D5,NSE,59,none,0.3,A,25000,"development cell, FRESH seeds"
+T10,D5,US,59,none,0.3,A,25000,"development cell, FRESH seeds"
+T10,R2,NSE,59,none,0.3,A,25000,"development cell, FRESH seeds"
+T10,R2,US,59,none,0.3,A,25000,"development cell, FRESH seeds"
+T6,flat,NSE,59,none,0.3,A,25000,"development cell, FRESH seeds"
+T6,flat,US,59,none,0.3,A,25000,"development cell, FRESH seeds"
+T6,E,NSE,59,none,0.3,A,25000,"development cell, FRESH seeds"
+T6,E,US,59,none,0.3,A,25000,"development cell, FRESH seeds"
+T6,D5,NSE,59,none,0.3,A,25000,"development cell, FRESH seeds"
+T6,D5,US,59,none,0.3,A,25000,"development cell, FRESH seeds"
+T6,R2,NSE,59,none,0.3,A,25000,"development cell, FRESH seeds"
+T6,R2,US,59,none,0.3,A,25000,"development cell, FRESH seeds"
+T4,flat,NSE,59,none,0.3,B,25000,"development cell, FRESH seeds"
+T4,flat,US,59,none,0.3,B,25000,"development cell, FRESH seeds"
+T4,E,NSE,59,none,0.3,B,25000,"development cell, FRESH seeds"
+T4,E,US,59,none,0.3,B,25000,"development cell, FRESH seeds"
+T4,D5,NSE,59,none,0.3,B,25000,"development cell, FRESH seeds"
+T4,D5,US,59,none,0.3,B,25000,"development cell, FRESH seeds"
+T4,R2,NSE,59,none,0.3,B,25000,"development cell, FRESH seeds"
+T4,R2,US,59,none,0.3,B,25000,"development cell, FRESH seeds"
+T3,flat,NSE,59,none,0.3,C,10000,"development cell, FRESH seeds"
+T3,flat,US,59,none,0.3,C,10000,"development cell, FRESH seeds"
+T3,E,NSE,59,none,0.3,C,10000,"development cell, FRESH seeds"
+T3,E,US,59,none,0.3,C,10000,"development cell, FRESH seeds"
+T3,D5,NSE,59,none,0.3,C,10000,"development cell, FRESH seeds"
+T3,D5,US,59,none,0.3,C,10000,"development cell, FRESH seeds"
+T3,R2,NSE,59,none,0.3,C,10000,"development cell, FRESH seeds"
+T3,R2,US,59,none,0.3,C,10000,"development cell, FRESH seeds"
+T6,E,NSE,59,estimated,0.3,A,25000,"development cell, FRESH seeds"
+T6,E,US,59,estimated,0.3,A,25000,"development cell, FRESH seeds"
+T6,D5,NSE,59,estimated,0.3,A,25000,"development cell, FRESH seeds"
+T6,D5,US,59,estimated,0.3,A,25000,"development cell, FRESH seeds"
+T4,E,NSE,59,estimated,0.3,B,25000,"development cell, FRESH seeds"
+T4,E,US,59,estimated,0.3,B,25000,"development cell, FRESH seeds"
+T4,D5,NSE,59,estimated,0.3,B,25000,"development cell, FRESH seeds"
+T4,D5,US,59,estimated,0.3,B,25000,"development cell, FRESH seeds"
+T4,E,NSE,59,none,0.6,B,25000,"development cell, FRESH seeds"
+T4,E,US,59,none,0.6,B,25000,"development cell, FRESH seeds"
+T4,D5,NSE,59,none,0.6,B,25000,"development cell, FRESH seeds"
+T4,D5,US,59,none,0.6,B,25000,"development cell, FRESH seeds"
+G,E,NSE,125,none,0.3,A,25000,"development cell, FRESH seeds"
+G,E,NSE,250,none,0.3,A,25000,"development cell, FRESH seeds"
+G,E,US,125,none,0.3,A,25000,"development cell, FRESH seeds"
+G,E,US,250,none,0.3,A,25000,"development cell, FRESH seeds"
+G,D5,NSE,125,none,0.3,A,25000,"development cell, FRESH seeds"
+G,D5,NSE,250,none,0.3,A,25000,"development cell, FRESH seeds"
+G,D5,US,125,none,0.3,A,25000,"development cell, FRESH seeds"
+G,D5,US,250,none,0.3,A,25000,"development cell, FRESH seeds"
+T6,E,NSE,125,none,0.3,A,25000,"development cell, FRESH seeds"
+T6,E,NSE,250,none,0.3,A,25000,"development cell, FRESH seeds"
+T6,E,US,125,none,0.3,A,25000,"development cell, FRESH seeds"
+T6,E,US,250,none,0.3,A,25000,"development cell, FRESH seeds"
+T6,D5,NSE,125,none,0.3,A,25000,"development cell, FRESH seeds"
+T6,D5,NSE,250,none,0.3,A,25000,"development cell, FRESH seeds"
+T6,D5,US,125,none,0.3,A,25000,"development cell, FRESH seeds"
+T6,D5,US,250,none,0.3,A,25000,"development cell, FRESH seeds"
+T4,E,NSE,125,none,0.3,B,25000,"development cell, FRESH seeds"
+T4,E,NSE,250,none,0.3,B,25000,"development cell, FRESH seeds"
+T4,E,US,125,none,0.3,B,25000,"development cell, FRESH seeds"
+T4,E,US,250,none,0.3,B,25000,"development cell, FRESH seeds"
+T4,D5,NSE,125,none,0.3,B,25000,"development cell, FRESH seeds"
+T4,D5,NSE,250,none,0.3,B,25000,"development cell, FRESH seeds"
+T4,D5,US,125,none,0.3,B,25000,"development cell, FRESH seeds"
+T4,D5,US,250,none,0.3,B,25000,"development cell, FRESH seeds"
+T7,E,NSE,59,none,0.3,A,25000,NEW intermediate cell (not used in development)
+T7,E,NSE,90,none,0.3,A,25000,NEW intermediate cell (not used in development)
+T7,E,NSE,180,none,0.3,A,25000,NEW intermediate cell (not used in development)
+T7,D1.5,NSE,59,none,0.3,A,25000,NEW intermediate cell (not used in development)
+T7,D3.0,NSE,59,none,0.3,A,25000,NEW intermediate cell (not used in development)
+T7,E,US,59,none,0.3,A,25000,NEW intermediate cell (not used in development)
+T7,E,US,90,none,0.3,A,25000,NEW intermediate cell (not used in development)
+T7,E,US,180,none,0.3,A,25000,NEW intermediate cell (not used in development)
+T7,D1.5,US,59,none,0.3,A,25000,NEW intermediate cell (not used in development)
+T7,D3.0,US,59,none,0.3,A,25000,NEW intermediate cell (not used in development)
+T5,E,NSE,59,none,0.3,B,25000,NEW intermediate cell (not used in development)
+T5,E,NSE,90,none,0.3,B,25000,NEW intermediate cell (not used in development)
+T5,E,NSE,180,none,0.3,B,25000,NEW intermediate cell (not used in development)
+T5,D1.5,NSE,59,none,0.3,B,25000,NEW intermediate cell (not used in development)
+T5,D3.0,NSE,59,none,0.3,B,25000,NEW intermediate cell (not used in development)
+T5,E,US,59,none,0.3,B,25000,NEW intermediate cell (not used in development)
+T5,E,US,90,none,0.3,B,25000,NEW intermediate cell (not used in development)
+T5,E,US,180,none,0.3,B,25000,NEW intermediate cell (not used in development)
+T5,D1.5,US,59,none,0.3,B,25000,NEW intermediate cell (not used in development)
+T5,D3.0,US,59,none,0.3,B,25000,NEW intermediate cell (not used in development)

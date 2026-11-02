@@ -1,0 +1,43 @@
+{
+  "a_intraday_volatility_clustering": {
+    "log_vol": "h_0 ~ N(0, 0.25^2); h_j = 0.9 h_(j-1) + sqrt(1 - 0.9^2) * 0.25 * eta_j, eta_j ~ N(0,1); new path for every stock-day",
+    "return": "r = profile * exp(f) * exp(h_j - sigma^2) * eps, eps ~ Student-t(6) scaled to unit variance, f ~ N(0, 0.3^2)",
+    "null_normalisation": "exp(-sigma^2) on the amplitude, because E[exp(2h)] = exp(2 sigma^2) for h ~ N(0, sigma^2); h is stationary so E is the same in every slot",
+    "unit_variance_multiplier_eps": 0.816496580927726
+  },
+  "b_jumps": {
+    "return": "r = profile * exp(f) * (0.9619 * eps + J), eps ~ Student-t(10) scaled to unit variance, f ~ N(0, 0.3^2)",
+    "jump": "per bar and stock, with probability 0.002: J = sign * U(4.0, 8.0) (random sign); otherwise J = 0",
+    "null_normalisation": "E[J^2] = 37.3333, jump share of variance = 0.07467; shock multiplier sqrt(1 - share) = 0.96194 keeps E[(...)^2] = 1",
+    "unit_variance_multiplier_eps": 0.8944271909999159
+  },
+  "c_period_specific_tails": {
+    "return": "r = profile * exp(f) * eps; eps ~ Student-t(4) in open and close slots, Student-t(8) in middle slots, each scaled to unit variance",
+    "null_normalisation": "each period's shock has unit variance, so E r^2 is profile-driven only",
+    "unit_variance_multipliers": {
+      "t4": 0.7071067811865476,
+      "t8": 0.8660254037844386
+    }
+  },
+  "d_stock_specific_tails": {
+    "return": "r = profile * exp(f) * eps; eps ~ Student-t(3), Student-t(5), Student-t(8) for stock 1, 2, 3, each scaled to unit variance",
+    "null_normalisation": "unit variance per stock",
+    "unit_variance_multipliers": {
+      "t3": 0.5773502691896257,
+      "t5": 0.7745966692414834,
+      "t8": 0.8660254037844386
+    }
+  },
+  "e_heavy_tailed_day_factor": {
+    "DEVIATION_FROM_V1_WORDING": "v1 / docs/15 said 'log day scale Student-t(3)/sqrt(3) x 0.3'. A Student-t variable has no moment-generating function, so E[exp(2f)] is infinite: expected squared return, and with it the estimand, would not exist. Replaced by a Gaussian scale mixture with the same overall sd and heavy tails. PENDING YOUR APPROVAL.",
+    "log_day_factor": "f ~ N(0, 0.25355^2) with probability 0.95, N(0, 0.76064^2) with probability 0.05 (independent across stocks); overall sd = 0.3",
+    "return": "r = profile * exp(f) * eps, eps ~ Student-t(8) scaled to unit variance",
+    "null_normalisation": "E[exp(2f)] is finite and the same in all periods (f is independent of the slot), so period variance ratios are unaffected; unit-variance shocks",
+    "unit_variance_multiplier_eps": 0.8660254037844386
+  },
+  "f_laplace_shocks": {
+    "return": "r = profile * exp(f) * eps, eps ~ Laplace with scale 1/sqrt(2) (unit variance, excess kurtosis 3), f ~ N(0, 0.3^2)",
+    "null_normalisation": "variance of Laplace(b) is 2 b^2 = 1",
+    "laplace_scale": 0.7071067811865475
+  }
+}

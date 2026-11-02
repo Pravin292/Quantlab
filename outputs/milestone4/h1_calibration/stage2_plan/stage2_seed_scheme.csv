@@ -1,0 +1,6 @@
+purpose,master_seed,spawn_key,rows_from,sims
+C3 training run,20261202,"(dev_row, i)",stage2_c3_training_cells.csv dev_row,1700000
+Stage 2 development run (data),20261203,"(dev_row, i, 0)",cells_development.csv row,1780000
+  baseline bootstrap draws,20261203,"(dev_row, i, 1)",same,1780000
+  C1 bootstrap draws,20261203,"(dev_row, i, 2)",same,1780000
+  C2 (report-only) draws,20261203,"(dev_row, i, 3)",same,1780000

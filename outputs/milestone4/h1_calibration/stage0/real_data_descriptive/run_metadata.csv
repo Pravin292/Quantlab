@@ -1,0 +1,6 @@
+,value
+master_seed,20261102
+reps_per_df,200
+dfs,"[3, 4, 5, 6, 8, 10, 20, 1000]"
+day_vol_sd_in_reference,0.3
+note,"descriptive only; no hypothesis test; reference worlds have no volatility clustering inside a day, no price rounding, no cross-stock dependence of shocks"

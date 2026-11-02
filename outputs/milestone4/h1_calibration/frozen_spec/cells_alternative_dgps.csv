@@ -1,0 +1,13 @@
+dgp,description,shape,market,n_days,n_sims,tier
+a_intraday_volatility_clustering,"log-vol AR(1) across bars within day, phi 0.9, stationary sd 0.25, t6 shocks",E,NSE,59,25000,alt
+a_intraday_volatility_clustering,"log-vol AR(1) across bars within day, phi 0.9, stationary sd 0.25, t6 shocks",E,US,59,25000,alt
+b_jumps,"t10 shocks plus per-bar jump probability 0.002, jump size uniform 4-8 times the bar scale, random sign",E,NSE,59,25000,alt
+b_jumps,"t10 shocks plus per-bar jump probability 0.002, jump size uniform 4-8 times the bar scale, random sign",E,US,59,25000,alt
+c_period_specific_tails,"df 4 in open and close, df 8 in middle",E,NSE,59,25000,alt
+c_period_specific_tails,"df 4 in open and close, df 8 in middle",E,US,59,25000,alt
+d_stock_specific_tails,"df 3, 5, 8 for the three stocks",E,NSE,59,25000,alt
+d_stock_specific_tails,"df 3, 5, 8 for the three stocks",E,US,59,25000,alt
+e_heavy_tailed_day_factor,"log day scale t3 distributed with sd 0.3, t8 shocks",E,NSE,59,25000,alt
+e_heavy_tailed_day_factor,"log day scale t3 distributed with sd 0.3, t8 shocks",E,US,59,25000,alt
+f_laplace_shocks,"generalised error shape 1 (Laplace), unit variance",E,NSE,59,25000,alt
+f_laplace_shocks,"generalised error shape 1 (Laplace), unit variance",E,US,59,25000,alt
