@@ -1,0 +1,17 @@
+# Python / tooling
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+
+# Market data: Yahoo Finance bars. Redistribution is not allowed (docs/03_data_sources_and_licensing.md).
+# Never commit it. Re-create it locally with the scripts described in the README.
+data/
+
+# Real-data EDA outputs that embed bar-level data (charts, largest_moves.csv). Re-create with scripts/milestone3/run_eda.py.
+outputs/milestone3/
+
+# Local backups of the requirements file
+requirements.txt.bak*
+requirements.txt.new

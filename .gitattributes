@@ -1,0 +1,4 @@
+# Keep line endings identical on every operating system: the frozen SHA-256 manifests hash raw file bytes.
+* text=auto eol=lf
+*.parquet binary
+*.pyc binary
