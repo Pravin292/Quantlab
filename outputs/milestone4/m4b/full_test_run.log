@@ -1,0 +1,13 @@
+........................................................................ [ 32%]
+........................................................................ [ 65%]
+........................................................................ [ 97%]
+.....                                                                    [100%]
+=============================== warnings summary ===============================
+tests/test_research_h2.py::test_primary_outcomes_use_next_open_entry_and_open_to_close_first_candle
+tests/test_research_h2.py::test_continuation_sign_follows_the_event_candle_direction
+tests/test_research_h2.py::test_delay_shifts_entry_one_candle
+  /Users/pravin/Quantlab/src/quantlab/research/h2_volume.py:157: RuntimeWarning: invalid value encountered in scalar divide
+    prev_ratio[i] = day_rms[i - 1] / np.nanmedian(day_rms[i - L:i])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+221 passed, 3 warnings in 9.98s

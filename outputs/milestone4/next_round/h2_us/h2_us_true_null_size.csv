@@ -1,0 +1,21 @@
+world,truth,market,dependence,model,outcome,p_type,n_sims,rejection_rate,ci95_low,ci95_high,mc_se
+"A day factor in returns, volume independent",TRUE NULL,US,independent,M0 original (c1 c2),vol,p,1500,0.050666666666666665,0.04067048746137049,0.06295851176301591,0.005662717578192503
+"A day factor in returns, volume independent",TRUE NULL,US,independent,M0 original (c1 c2),ret,p,1500,0.056666666666666664,0.046058810963857985,0.06953953396821465,0.005969676459996558
+"A day factor in returns, volume independent",TRUE NULL,US,independent,M5 + c3 + c4 [primary candidate],vol,p,1500,0.04666666666666667,0.037101423784208984,0.05854801163505326,0.0054460315147141095
+"A day factor in returns, volume independent",TRUE NULL,US,independent,M5 + c3 + c4 [primary candidate],vol,p_wild,1500,0.04666666666666667,0.037101423784208984,0.05854801163505326,0.0054460315147141095
+"A day factor in returns, volume independent",TRUE NULL,US,independent,M5 + c3 + c4 [primary candidate],ret,p,1500,0.05733333333333333,0.04665985273546587,0.0702684194974608,0.006002567351959894
+"A day factor in returns, volume independent",TRUE NULL,US,independent,M5 + c3 + c4 [primary candidate],ret,p_wild,1500,0.05,0.04007427795110507,0.06222479397242731,0.005627314338711377
+"A day factor in returns, volume independent",TRUE NULL,US,independent,DFE day effects + c3 (within-day question),vol,p,1500,0.048666666666666664,0.038883466209874006,0.060755751111950314,0.005555671109909358
+"A day factor in returns, volume independent",TRUE NULL,US,independent,DFE day effects + c3 (within-day question),vol,p_wild,1500,0.04733333333333333,0.037694866685182016,0.05928449603493424,0.00548287569856603
+"A day factor in returns, volume independent",TRUE NULL,US,independent,DFE day effects + c3 (within-day question),ret,p,1500,0.05333333333333334,0.04306045806930371,0.0658882503584988,0.005801660043406478
+"A day factor in returns, volume independent",TRUE NULL,US,independent,DFE day effects + c3 (within-day question),ret,p_wild,1500,0.05,0.04007427795110507,0.06222479397242731,0.005627314338711377
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,independent,M0 original (c1 c2),vol,p,1500,0.05266666666666667,0.0424622139130536,0.06515656721389487,0.005767315313551525
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,independent,M0 original (c1 c2),ret,p,1500,0.058666666666666666,0.047863248384401806,0.0717248784502329,0.006067667805062551
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,independent,M5 + c3 + c4 [primary candidate],vol,p,1500,0.048,0.038288884557067485,0.06002040546390282,0.005519420259411309
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,independent,M5 + c3 + c4 [primary candidate],vol,p_wild,1500,0.043333333333333335,0.03414325410175927,0.05485654481323284,0.005257093972627562
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,independent,M5 + c3 + c4 [primary candidate],ret,p,1500,0.05733333333333333,0.04665985273546587,0.0702684194974608,0.006002567351959894
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,independent,M5 + c3 + c4 [primary candidate],ret,p_wild,1500,0.051333333333333335,0.041267219564552274,0.06369170696068815,0.005697848846843999
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,independent,DFE day effects + c3 (within-day question),vol,p,1500,0.051333333333333335,0.041267219564552274,0.06369170696068815,0.005697848846843999
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,independent,DFE day effects + c3 (within-day question),vol,p_wild,1500,0.043333333333333335,0.03414325410175927,0.05485654481323284,0.005257093972627562
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,independent,DFE day effects + c3 (within-day question),ret,p,1500,0.06266666666666666,0.051483450461383466,0.0760842401783754,0.00625777146464328
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,independent,DFE day effects + c3 (within-day question),ret,p_wild,1500,0.056666666666666664,0.046058810963857985,0.06953953396821465,0.005969676459996558

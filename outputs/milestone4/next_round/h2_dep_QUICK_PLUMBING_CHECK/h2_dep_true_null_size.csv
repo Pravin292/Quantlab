@@ -1,0 +1,61 @@
+world,truth,market,dependence,model,outcome,p_type,n_sims,rejection_rate,ci95_low,ci95_high,mc_se
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,X0 independent,M0 original (c1 c2),vol,p,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,X0 independent,M0 original (c1 c2),ret,p,4,0.25,0.045586062644636216,0.6993639475573634,0.21650635094610965
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,X0 independent,M5 + c3 + c4 [primary candidate],vol,p,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,X0 independent,M5 + c3 + c4 [primary candidate],vol,p_wild,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,X0 independent,M5 + c3 + c4 [primary candidate],ret,p,4,0.25,0.045586062644636216,0.6993639475573634,0.21650635094610965
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,X0 independent,M5 + c3 + c4 [primary candidate],ret,p_wild,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,X0 independent,DFE day effects + c3 (within-day question),vol,p,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,X0 independent,DFE day effects + c3 (within-day question),vol,p_wild,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,X0 independent,DFE day effects + c3 (within-day question),ret,p,4,0.25,0.045586062644636216,0.6993639475573634,0.21650635094610965
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,X0 independent,DFE day effects + c3 (within-day question),ret,p_wild,4,0.25,0.045586062644636216,0.6993639475573634,0.21650635094610965
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,X3 empirical-parameter dependence,M0 original (c1 c2),vol,p,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,X3 empirical-parameter dependence,M0 original (c1 c2),ret,p,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,X3 empirical-parameter dependence,M5 + c3 + c4 [primary candidate],vol,p,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,X3 empirical-parameter dependence,M5 + c3 + c4 [primary candidate],vol,p_wild,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,X3 empirical-parameter dependence,M5 + c3 + c4 [primary candidate],ret,p,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,X3 empirical-parameter dependence,M5 + c3 + c4 [primary candidate],ret,p_wild,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,X3 empirical-parameter dependence,DFE day effects + c3 (within-day question),vol,p,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,X3 empirical-parameter dependence,DFE day effects + c3 (within-day question),vol,p_wild,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,X3 empirical-parameter dependence,DFE day effects + c3 (within-day question),ret,p,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,X3 empirical-parameter dependence,DFE day effects + c3 (within-day question),ret,p_wild,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,X4 illustrative strong dependence,M0 original (c1 c2),vol,p,4,0.25,0.045586062644636216,0.6993639475573634,0.21650635094610965
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,X4 illustrative strong dependence,M0 original (c1 c2),ret,p,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,X4 illustrative strong dependence,M5 + c3 + c4 [primary candidate],vol,p,4,0.25,0.045586062644636216,0.6993639475573634,0.21650635094610965
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,X4 illustrative strong dependence,M5 + c3 + c4 [primary candidate],vol,p_wild,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,X4 illustrative strong dependence,M5 + c3 + c4 [primary candidate],ret,p,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,X4 illustrative strong dependence,M5 + c3 + c4 [primary candidate],ret,p_wild,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,X4 illustrative strong dependence,DFE day effects + c3 (within-day question),vol,p,4,0.25,0.045586062644636216,0.6993639475573634,0.21650635094610965
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,X4 illustrative strong dependence,DFE day effects + c3 (within-day question),vol,p_wild,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,X4 illustrative strong dependence,DFE day effects + c3 (within-day question),ret,p,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,X4 illustrative strong dependence,DFE day effects + c3 (within-day question),ret,p_wild,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,X0 independent,M0 original (c1 c2),vol,p,4,0.25,0.045586062644636216,0.6993639475573634,0.21650635094610965
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,X0 independent,M0 original (c1 c2),ret,p,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,X0 independent,M5 + c3 + c4 [primary candidate],vol,p,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,X0 independent,M5 + c3 + c4 [primary candidate],vol,p_wild,4,0.25,0.045586062644636216,0.6993639475573634,0.21650635094610965
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,X0 independent,M5 + c3 + c4 [primary candidate],ret,p,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,X0 independent,M5 + c3 + c4 [primary candidate],ret,p_wild,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,X0 independent,DFE day effects + c3 (within-day question),vol,p,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,X0 independent,DFE day effects + c3 (within-day question),vol,p_wild,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,X0 independent,DFE day effects + c3 (within-day question),ret,p,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,X0 independent,DFE day effects + c3 (within-day question),ret,p_wild,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,X3 empirical-parameter dependence,M0 original (c1 c2),vol,p,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,X3 empirical-parameter dependence,M0 original (c1 c2),ret,p,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,X3 empirical-parameter dependence,M5 + c3 + c4 [primary candidate],vol,p,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,X3 empirical-parameter dependence,M5 + c3 + c4 [primary candidate],vol,p_wild,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,X3 empirical-parameter dependence,M5 + c3 + c4 [primary candidate],ret,p,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,X3 empirical-parameter dependence,M5 + c3 + c4 [primary candidate],ret,p_wild,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,X3 empirical-parameter dependence,DFE day effects + c3 (within-day question),vol,p,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,X3 empirical-parameter dependence,DFE day effects + c3 (within-day question),vol,p_wild,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,X3 empirical-parameter dependence,DFE day effects + c3 (within-day question),ret,p,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,X3 empirical-parameter dependence,DFE day effects + c3 (within-day question),ret,p_wild,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,X4 illustrative strong dependence,M0 original (c1 c2),vol,p,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,X4 illustrative strong dependence,M0 original (c1 c2),ret,p,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,X4 illustrative strong dependence,M5 + c3 + c4 [primary candidate],vol,p,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,X4 illustrative strong dependence,M5 + c3 + c4 [primary candidate],vol,p_wild,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,X4 illustrative strong dependence,M5 + c3 + c4 [primary candidate],ret,p,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,X4 illustrative strong dependence,M5 + c3 + c4 [primary candidate],ret,p_wild,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,X4 illustrative strong dependence,DFE day effects + c3 (within-day question),vol,p,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,X4 illustrative strong dependence,DFE day effects + c3 (within-day question),vol,p_wild,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,X4 illustrative strong dependence,DFE day effects + c3 (within-day question),ret,p,4,0.0,0.0,0.48990002040399916,0.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,X4 illustrative strong dependence,DFE day effects + c3 (within-day question),ret,p_wild,4,0.0,0.0,0.48990002040399916,0.0

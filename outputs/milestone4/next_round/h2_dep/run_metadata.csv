@@ -1,0 +1,7 @@
+,value
+master_seed,20261054
+quick,False
+n_sims_per_cell,500
+wild_B,199
+dependence_params,"{'NSE': {'ret_corr': 0.355, 'share': 0.454, 'phi': 0.441}, 'US': {'ret_corr': 0.187, 'share': 0.141, 'phi': 0.19}} | illustrative {'ret_corr': 0.5, 'share': 0.7, 'phi': 0.7}"
+note,ALL DATA SIMULATED; TRUE-NULL worlds only

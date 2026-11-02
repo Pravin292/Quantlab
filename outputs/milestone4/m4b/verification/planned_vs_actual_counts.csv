@@ -1,0 +1,9 @@
+part,status,planned_total,actual_total,cells_planned,cells_found,cells_with_wrong_count,unique_seeds_in_file,duplicate_seeds_in_file,missing_values_in_decision_columns,detail
+h1_diag,OK,320000.0,320000.0,40.0,40.0,0.0,320000.0,0.0,0.0,[]
+h1_cand,OK,220000.0,220000.0,30.0,30.0,0.0,220000.0,0.0,0.0,[]
+h1_size,OK,108000.0,108000.0,28.0,28.0,0.0,108000.0,0.0,0.0,[]
+h1_grid,OK,160000.0,160000.0,32.0,32.0,0.0,160000.0,0.0,0.0,[]
+h2_p59,OK,5280.0,5280.0,44.0,44.0,0.0,5280.0,0.0,0.0,[]
+h2_pbig,OK,1600.0,1600.0,20.0,20.0,0.0,1600.0,0.0,0.0,[]
+ALL FILES,DUPLICATE SEEDS ACROSS FILES,,814880.0,,,,814852.0,,,
+aborted early H2 start,ZERO RESULTS,,,,,,,,,log bytes=0; its output folder was empty and removed

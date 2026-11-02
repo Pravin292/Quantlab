@@ -1,0 +1,7 @@
+market,period,n_slots_used,raw_max_over_min_of_sqrt_variance,raw_note,fit_amplitude_b,fit_scale_tau_bars,fit_log_resid_rms,fitted_max_over_min_of_sqrt_variance
+NSE,open,8,1.7234309628841655,"overstated by sampling noise (59 days, heavy tails)",2.030669098210599,2.062530871497743,0.046203397037975075,1.6844026649625539
+NSE,middle,54,2.382121218804293,"overstated by sampling noise (59 days, heavy tails)",,,,
+NSE,close,9,3.140733058907486,"overstated by sampling noise (59 days, heavy tails)",4.5812082030342545,0.36453459888285983,0.3441511793110033,2.3624580833328332
+US,open,11,2.340009531180777,"overstated by sampling noise (59 days, heavy tails)",5.69527908154519,3.3662293305762154,0.16334153744119753,2.276434911854729
+US,middle,54,2.007974317125583,"overstated by sampling noise (59 days, heavy tails)",,,,
+US,close,12,2.365429908921666,"overstated by sampling noise (59 days, heavy tails)",3.17405059381868,1.2315046137715127,0.2670462498499831,2.0426212451446637

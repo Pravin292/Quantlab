@@ -1,0 +1,13 @@
+NSE SCAN tau=flat done
+NSE SCAN tau=8 done
+NSE SCAN tau=5 done
+NSE SCAN tau=3.5 done
+NSE SCAN tau=2 done
+NSE SCAN D5 gaussian done
+US SCAN tau=flat done
+US SCAN tau=8 done
+US SCAN tau=5 done
+US SCAN tau=3.5 done
+US SCAN tau=2 done
+US SCAN D5 gaussian done
+COMPLETE

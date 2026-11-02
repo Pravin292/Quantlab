@@ -1,0 +1,7 @@
+,value
+master_seed,20261041
+quick,True
+n_sims_NSE,4
+n_sims_US,4
+wild_B,29
+note,ALL DATA SIMULATED; independent of the first H2 diagnostic run (different seed)

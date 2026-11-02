@@ -1,0 +1,6 @@
+,value
+master_seed,20261060
+n_sims_per_cell,600
+B,499
+block,5
+note,"Part 3 ALL DATA SIMULATED; Part 2 is a coverage count of the real sample, no test run"

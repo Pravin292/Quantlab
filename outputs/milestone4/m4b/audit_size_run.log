@@ -1,0 +1,29 @@
+size NSE T4 flat 125 audited
+size NSE T4 E 125 audited
+size NSE T4 D5 125 audited
+size NSE T4 E dep 125 audited
+size NSE G E 125 audited
+size NSE T4 flat 250 audited
+size NSE T4 E 250 audited
+size NSE T4 D5 250 audited
+size NSE T4 E dep 250 audited
+size NSE G E 250 audited
+size NSE T4 E x1.1 125 audited
+size NSE T4 E x1.2 125 audited
+size NSE T4 E x1.1 250 audited
+size NSE T4 E x1.2 250 audited
+size US T4 flat 125 audited
+size US T4 E 125 audited
+size US T4 D5 125 audited
+size US T4 E dep 125 audited
+size US G E 125 audited
+size US T4 flat 250 audited
+size US T4 E 250 audited
+size US T4 D5 250 audited
+size US T4 E dep 250 audited
+size US G E 250 audited
+size US T4 E x1.1 125 audited
+size US T4 E x1.2 125 audited
+size US T4 E x1.1 250 audited
+size US T4 E x1.2 250 audited
+COMPLETE size

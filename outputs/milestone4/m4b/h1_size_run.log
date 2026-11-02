@@ -1,0 +1,29 @@
+NSE T4 flat 125 done 95s
+NSE T4 E 125 done 182s
+NSE T4 D5 125 done 273s
+NSE T4 E dep 125 done 361s
+NSE G E 125 done 442s
+NSE T4 flat 250 done 620s
+NSE T4 E 250 done 776s
+NSE T4 D5 250 done 931s
+NSE T4 E dep 250 done 1107s
+NSE G E 250 done 1269s
+NSE T4 E x1.1 125 done 1286s
+NSE T4 E x1.2 125 done 1303s
+NSE T4 E x1.1 250 done 1334s
+NSE T4 E x1.2 250 done 1366s
+US T4 flat 125 done 1447s
+US T4 E 125 done 1529s
+US T4 D5 125 done 1611s
+US T4 E dep 125 done 1691s
+US G E 125 done 1773s
+US T4 flat 250 done 1939s
+US T4 E 250 done 2113s
+US T4 D5 250 done 2281s
+US T4 E dep 250 done 2451s
+US G E 250 done 2624s
+US T4 E x1.1 125 done 2640s
+US T4 E x1.2 125 done 2657s
+US T4 E x1.1 250 done 2697s
+US T4 E x1.2 250 done 2738s
+COMPLETE

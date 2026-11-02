@@ -1,0 +1,41 @@
+NSE G flat 59 done 21s
+NSE G E 59 done 44s
+NSE G D5 59 done 77s
+NSE T10 flat 59 done 100s
+NSE T10 E 59 done 123s
+NSE T10 D5 59 done 152s
+NSE T6 flat 59 done 181s
+NSE T6 E 59 done 210s
+NSE T6 D5 59 done 240s
+NSE T4 flat 59 done 272s
+NSE T4 E 59 done 304s
+NSE T4 D5 59 done 335s
+NSE T4 Etau0.37 59 done 367s
+NSE T4 Etau1.0 59 done 397s
+NSE T4 Etau2.0 59 done 428s
+NSE T4 Etau4.0 59 done 459s
+NSE T4 Eopen 59 done 490s
+NSE T4 Eclose 59 done 521s
+NSE T4 E nodayfactor 59 done 552s
+NSE T4 D5 nodayfactor 59 done 583s
+US G flat 59 done 615s
+US G E 59 done 646s
+US G D5 59 done 677s
+US T10 flat 59 done 708s
+US T10 E 59 done 739s
+US T10 D5 59 done 771s
+US T6 flat 59 done 801s
+US T6 E 59 done 835s
+US T6 D5 59 done 868s
+US T4 flat 59 done 900s
+US T4 E 59 done 931s
+US T4 D5 59 done 963s
+US T4 Etau0.37 59 done 994s
+US T4 Etau1.0 59 done 1026s
+US T4 Etau2.0 59 done 1057s
+US T4 Etau4.0 59 done 1089s
+US T4 Eopen 59 done 1121s
+US T4 Eclose 59 done 1158s
+US T4 E nodayfactor 59 done 1192s
+US T4 D5 nodayfactor 59 done 1225s
+COMPLETE

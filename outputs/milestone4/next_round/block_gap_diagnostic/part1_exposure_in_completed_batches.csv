@@ -1,0 +1,39 @@
+part,scenario,market,n_sims,sims_with_any_day_dropped,share,min_days_used
+calib,"D1 gaussian, flat",NSE,1000,0,0.0,59
+calib,"D2 t4, flat",NSE,1000,0,0.0,59
+calib,"T6 t6 + day factor, flat",NSE,1000,0,0.0,59
+calib,"D3 t4 + day factor, flat",NSE,1000,0,0.0,59
+calib,"R1 realistic moderate (round 1), t4",NSE,1000,0,0.0,59
+calib,"R2 realistic strong (round 1), t4",NSE,1000,0,0.0,59
+calib,R3 R2 + regime + AR(0.1),NSE,1000,0,0.0,59
+calib,"E empirical-shape profile, t4",NSE,1000,0,0.0,59
+calib,"D5 stress (exp decay tau=2), t4",NSE,1000,0,0.0,59
+calib,POWER flat x1.1,NSE,300,0,0.0,59
+calib,POWER E x1.1,NSE,300,0,0.0,59
+calib,POWER E x1.2,NSE,300,0,0.0,59
+calib,"D1 gaussian, flat",US,1000,0,0.0,59
+calib,"D2 t4, flat",US,1000,0,0.0,59
+calib,"T6 t6 + day factor, flat",US,1000,0,0.0,59
+calib,"D3 t4 + day factor, flat",US,1000,0,0.0,59
+calib,"R1 realistic moderate (round 1), t4",US,1000,0,0.0,59
+calib,"R2 realistic strong (round 1), t4",US,1000,0,0.0,59
+calib,R3 R2 + regime + AR(0.1),US,1000,0,0.0,59
+calib,"E empirical-shape profile, t4",US,1000,0,0.0,59
+calib,"D5 stress (exp decay tau=2), t4",US,1000,0,0.0,59
+calib,POWER flat x1.1,US,300,0,0.0,59
+calib,POWER E x1.1,US,300,0,0.0,59
+calib,POWER E x1.2,US,300,0,0.0,59
+dep,DEP X0,NSE,800,0,0.0,59
+dep,DEP X1,NSE,800,0,0.0,59
+dep,DEP X2,NSE,800,0,0.0,59
+dep,DEP X3,NSE,800,0,0.0,59
+dep,DEP X4,NSE,800,0,0.0,59
+dep,DEP X3 x1.1,NSE,300,0,0.0,59
+dep,DEP X3 x1.2,NSE,300,0,0.0,59
+dep,DEP X0,US,800,0,0.0,59
+dep,DEP X1,US,800,0,0.0,59
+dep,DEP X2,US,800,0,0.0,59
+dep,DEP X3,US,800,0,0.0,59
+dep,DEP X4,US,800,0,0.0,59
+dep,DEP X3 x1.1,US,300,0,0.0,59
+dep,DEP X3 x1.2,US,300,0,0.0,59

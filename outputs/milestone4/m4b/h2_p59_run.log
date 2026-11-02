@@ -1,0 +1,45 @@
+NSE X0 independent null 59 done 150s
+NSE X0 independent vol x0.90 59 done 297s
+NSE X0 independent vol x1.05 59 done 430s
+NSE X0 independent vol x1.10 59 done 590s
+NSE X0 independent vol x1.25 59 done 747s
+NSE X0 independent cont -0.10 59 done 911s
+NSE X0 independent cont -0.05 59 done 1065s
+NSE X0 independent cont -0.02 59 done 1213s
+NSE X0 independent cont +0.02 59 done 1353s
+NSE X0 independent cont +0.05 59 done 1515s
+NSE X0 independent cont +0.10 59 done 1683s
+NSE X3 estimated dependence null 59 done 1865s
+NSE X3 estimated dependence vol x0.90 59 done 1978s
+NSE X3 estimated dependence vol x1.05 59 done 2075s
+NSE X3 estimated dependence vol x1.10 59 done 2176s
+NSE X3 estimated dependence vol x1.25 59 done 2275s
+NSE X3 estimated dependence cont -0.10 59 done 2372s
+NSE X3 estimated dependence cont -0.05 59 done 2469s
+NSE X3 estimated dependence cont -0.02 59 done 2555s
+NSE X3 estimated dependence cont +0.02 59 done 2642s
+NSE X3 estimated dependence cont +0.05 59 done 2730s
+NSE X3 estimated dependence cont +0.10 59 done 2816s
+US X0 independent null 59 done 2905s
+US X0 independent vol x0.90 59 done 2995s
+US X0 independent vol x1.05 59 done 3078s
+US X0 independent vol x1.10 59 done 3171s
+US X0 independent vol x1.25 59 done 3267s
+US X0 independent cont -0.10 59 done 3366s
+US X0 independent cont -0.05 59 done 3463s
+US X0 independent cont -0.02 59 done 3565s
+US X0 independent cont +0.02 59 done 3667s
+US X0 independent cont +0.05 59 done 3760s
+US X0 independent cont +0.10 59 done 3858s
+US X3 estimated dependence null 59 done 3980s
+US X3 estimated dependence vol x0.90 59 done 4084s
+US X3 estimated dependence vol x1.05 59 done 4182s
+US X3 estimated dependence vol x1.10 59 done 4285s
+US X3 estimated dependence vol x1.25 59 done 4387s
+US X3 estimated dependence cont -0.10 59 done 4493s
+US X3 estimated dependence cont -0.05 59 done 4596s
+US X3 estimated dependence cont -0.02 59 done 4697s
+US X3 estimated dependence cont +0.02 59 done 4754s
+US X3 estimated dependence cont +0.05 59 done 4799s
+US X3 estimated dependence cont +0.10 59 done 4844s
+COMPLETE

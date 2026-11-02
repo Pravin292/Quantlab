@@ -1,0 +1,133 @@
+scenario,market,seed,n_days_used,rom|B49|blk1|bonf,rom|B49|blk1|max,rom|B99|blk1|bonf,rom|B99|blk1|max,est_open_mid,est_close_mid,diff|B49|blk1|bonf,diff|B49|blk1|max,diff|B99|blk1|bonf,diff|B99|blk1|max
+"D1 gaussian, flat",NSE,1091472855,59,False,False,False,False,0.0005872387373608829,-0.06856780704074776,True,False,False,False
+"D1 gaussian, flat",NSE,1442789356,59,False,False,False,False,0.009288785468144815,-0.025408278782347436,False,False,False,False
+"D1 gaussian, flat",NSE,2978059093,59,False,False,False,False,-0.002777995336437646,0.004267040975545959,False,False,False,False
+"D1 gaussian, flat",NSE,2826864490,59,False,False,False,False,-0.005511608338546578,-0.020200580774565925,False,False,False,False
+"D1 gaussian, flat",NSE,688043756,59,False,False,False,False,-0.012130620623604928,0.031251269990959715,False,False,False,False
+"D1 gaussian, flat",NSE,3973133747,59,False,False,False,False,0.0343210448100219,-0.0069434911178832956,False,False,False,False
+"D2 t4, flat",NSE,3660650551,59,False,False,False,False,-0.015665014498825677,-0.014914898839227846,False,False,False,False
+"D2 t4, flat",NSE,3243594471,59,True,True,True,True,-0.10932199328014869,-0.25364605462699846,True,True,True,True
+"D2 t4, flat",NSE,3083816394,59,False,False,False,False,-0.12465658919120495,-0.03082505827925171,False,False,False,False
+"D2 t4, flat",NSE,635199498,59,False,False,False,False,-0.14544991525833162,-0.051609120991599894,False,False,True,True
+"D2 t4, flat",NSE,2854703789,59,False,False,False,False,-0.01715301680459662,0.011977318256144577,False,False,False,False
+"D2 t4, flat",NSE,3544140345,59,True,True,True,True,-0.18236498590435804,0.12391875323720383,False,False,True,False
+"T6 t6 + day factor, flat",NSE,2073569155,59,False,False,False,False,0.06478846625388203,-0.07486210429027838,False,False,False,False
+"T6 t6 + day factor, flat",NSE,3433638544,59,False,False,False,False,0.08219584388583503,0.1258159383951178,False,False,False,False
+"T6 t6 + day factor, flat",NSE,399616422,59,False,False,False,False,0.0383887882986842,0.08799352011512665,False,False,False,False
+"T6 t6 + day factor, flat",NSE,2685149774,59,True,False,False,False,0.08547719294057593,-0.04805611490481427,False,False,False,False
+"T6 t6 + day factor, flat",NSE,963512222,59,False,False,False,False,0.038939928908404864,0.11964463157843168,False,False,False,False
+"T6 t6 + day factor, flat",NSE,2912183070,59,False,False,False,False,0.055526167372304064,-0.04531620177203917,False,False,False,False
+"D3 t4 + day factor, flat",NSE,559596446,59,False,False,False,False,-0.051407987071259265,0.1874906944807285,False,False,False,False
+"D3 t4 + day factor, flat",NSE,3175780211,59,False,False,False,False,-0.06152499012144555,-0.07651037021388576,False,False,False,False
+"D3 t4 + day factor, flat",NSE,2272388225,59,False,False,False,False,-0.007510626738437712,0.04158055371879466,False,False,False,False
+"D3 t4 + day factor, flat",NSE,3534285606,59,False,False,False,False,-0.06141960115670791,-0.08551371638906002,False,False,False,False
+"D3 t4 + day factor, flat",NSE,1883900254,59,False,False,False,False,-0.03913323292147272,-0.10798120963469335,False,False,False,False
+"D3 t4 + day factor, flat",NSE,2521651458,59,False,False,True,True,-0.04023859164941212,0.2348848677593519,False,True,True,True
+"R1 realistic moderate (round 1), t4",NSE,4233595231,59,False,False,False,False,0.10976794976057111,-0.10007570353161964,False,False,False,False
+"R1 realistic moderate (round 1), t4",NSE,363101914,59,False,False,False,False,-0.0672941185064032,-0.03719690991069498,False,False,False,False
+"R1 realistic moderate (round 1), t4",NSE,3633075498,59,False,False,False,False,0.06864328125303079,-0.007416245834349869,False,False,False,False
+"R1 realistic moderate (round 1), t4",NSE,1169208613,59,False,False,False,False,0.34643046598583216,0.22772502500320177,False,False,False,False
+"R1 realistic moderate (round 1), t4",NSE,339389766,59,False,False,False,False,-0.06650462657759403,-0.019257432467721162,False,False,False,False
+"R1 realistic moderate (round 1), t4",NSE,2912377781,59,False,False,False,False,-0.11663865175415794,-0.07003593186464491,False,False,False,False
+"R2 realistic strong (round 1), t4",NSE,3149993609,59,False,False,False,False,-0.15652319291684877,-0.23661263896959556,False,False,False,False
+"R2 realistic strong (round 1), t4",NSE,2948642400,59,False,False,False,False,0.07998769410886367,-0.005190948571744026,False,False,False,False
+"R2 realistic strong (round 1), t4",NSE,1610212960,59,False,False,False,False,-0.012108050277413742,-0.09180963164902663,False,False,False,False
+"R2 realistic strong (round 1), t4",NSE,1613081117,59,False,False,False,False,-0.1173816962780722,0.05989525416053909,False,False,False,False
+"R2 realistic strong (round 1), t4",NSE,887653385,59,False,False,False,False,-0.06750091261165879,0.06668100313628157,False,False,False,False
+"R2 realistic strong (round 1), t4",NSE,209254855,59,True,True,False,False,-0.17093202591917972,0.08683399471288435,True,True,True,True
+R3 R2 + regime + AR(0.1),NSE,2608418616,59,False,False,False,False,0.10828743288643593,-0.06876005467130407,False,False,False,False
+R3 R2 + regime + AR(0.1),NSE,3755805076,59,False,False,False,False,0.23574007444605607,0.04059231107230226,False,False,False,False
+R3 R2 + regime + AR(0.1),NSE,2223603477,59,False,False,False,False,-0.014528260798286551,-0.1155418363637109,False,False,False,False
+R3 R2 + regime + AR(0.1),NSE,827069591,59,True,True,True,True,-0.12606130817543643,-0.2526671574569372,False,True,True,True
+R3 R2 + regime + AR(0.1),NSE,1558513630,59,False,False,False,False,-0.13071515190709346,-0.07015502466330031,False,False,False,False
+R3 R2 + regime + AR(0.1),NSE,409776054,59,False,False,True,True,-0.18320198583104916,-0.16735919448332476,False,False,False,False
+"E empirical-shape profile, t4",NSE,212688618,59,False,False,False,False,-0.2142437859072075,-0.25280191272285174,True,True,False,False
+"E empirical-shape profile, t4",NSE,2948046503,59,False,False,False,False,-0.06927165669723251,-0.19649673704938556,False,False,False,False
+"E empirical-shape profile, t4",NSE,323799725,59,False,False,False,False,-0.21723568987652864,0.010363492062769744,True,False,False,False
+"E empirical-shape profile, t4",NSE,1247553380,59,True,True,True,True,0.1429756979966616,-0.30586799246780105,True,True,True,True
+"E empirical-shape profile, t4",NSE,4197457912,59,False,False,False,False,-0.10048100656604685,-0.08758733661498237,False,False,False,False
+"E empirical-shape profile, t4",NSE,2075460101,59,True,True,True,False,-0.3524995125956036,-0.11157567810204329,False,False,True,False
+"D5 stress (exp decay tau=2), t4",NSE,2076043870,59,False,False,False,False,-0.06984404427883836,-0.03613434295777149,False,False,False,False
+"D5 stress (exp decay tau=2), t4",NSE,2710820873,59,False,False,False,False,0.03546003559512325,0.030329828631202958,False,False,False,False
+"D5 stress (exp decay tau=2), t4",NSE,148208362,59,False,False,False,False,-0.0653289051422048,0.2373278870774273,False,False,False,False
+"D5 stress (exp decay tau=2), t4",NSE,476700250,59,False,False,False,False,-0.09774033058564273,-0.0472117107923401,False,False,False,False
+"D5 stress (exp decay tau=2), t4",NSE,1165255913,59,True,True,True,True,-0.33052522491375075,-0.07700344257112957,True,True,True,True
+"D5 stress (exp decay tau=2), t4",NSE,3936823837,59,False,False,False,False,-0.07352712777104739,0.051234940817488715,False,False,False,False
+POWER flat x1.1,NSE,1924053581,59,True,True,True,True,0.35907451695016024,0.3453545326532576,True,True,True,True
+POWER flat x1.1,NSE,3638668319,59,False,False,False,False,-0.023139674168989592,0.13475998370213646,False,False,False,False
+POWER flat x1.1,NSE,3991568598,59,True,False,False,False,0.09517271417342715,0.3499987462728379,False,False,False,True
+POWER flat x1.1,NSE,3782669863,59,False,False,False,False,0.09677614214094764,0.06958608001542649,False,False,False,False
+POWER E x1.1,NSE,3166277900,59,False,False,False,False,0.08543589354515321,0.1250204760660936,False,False,False,False
+POWER E x1.1,NSE,620940964,59,False,False,False,False,0.1713283232801533,0.02129903196533411,False,False,False,False
+POWER E x1.1,NSE,516980972,59,False,True,True,True,0.29095867953826554,0.182125376711666,False,True,True,True
+POWER E x1.1,NSE,3307390886,59,False,False,False,False,0.20646553580209415,0.12478799703128926,False,False,False,False
+POWER E x1.2,NSE,313280912,59,True,True,True,True,0.5227248688602724,0.4522561792775878,True,False,True,False
+POWER E x1.2,NSE,1258938602,59,True,False,False,False,0.41592974214438344,0.27939905729460957,True,False,False,False
+POWER E x1.2,NSE,2387549283,59,True,True,True,True,0.20611038281416438,0.30208468097344854,False,False,False,False
+POWER E x1.2,NSE,1607444964,59,True,True,True,False,0.3407415876096346,0.6349847002960204,True,False,True,False
+"D1 gaussian, flat",US,2177036198,59,False,False,False,False,0.007315403015319945,0.015783377393551765,False,False,False,False
+"D1 gaussian, flat",US,1241118512,59,False,False,False,False,0.02789314485563367,0.04317213856712544,False,False,False,False
+"D1 gaussian, flat",US,2593301284,59,False,False,False,False,0.027622319052004646,-0.018233590119224638,False,False,False,False
+"D1 gaussian, flat",US,2467744845,59,False,False,False,False,-0.04150177745636983,0.03134988519102156,False,False,False,False
+"D1 gaussian, flat",US,4204951870,59,False,False,False,False,0.023133524953804538,0.030017279741441926,False,False,False,False
+"D1 gaussian, flat",US,2718023950,59,False,False,False,False,0.03484135816780505,-0.00586991027238988,False,False,False,False
+"D2 t4, flat",US,1366324940,59,False,False,False,False,0.012270182847823236,-0.04268442848755128,False,False,False,False
+"D2 t4, flat",US,1656636493,59,False,False,False,False,-0.06652186072607139,-0.02627215433149191,False,False,False,False
+"D2 t4, flat",US,1729602548,59,False,False,False,False,0.06840665708795918,0.1373010950594128,False,False,False,False
+"D2 t4, flat",US,3470401780,59,False,False,False,False,-0.07622734524333301,0.11262597659023271,False,False,False,False
+"D2 t4, flat",US,1179630979,59,False,False,False,False,0.22616038740058692,-0.008590219932881839,False,False,False,False
+"D2 t4, flat",US,1153194176,59,False,False,False,False,-0.07287576743716816,-0.072694313808112,False,False,False,False
+"T6 t6 + day factor, flat",US,4032580127,59,False,False,False,False,0.11714480057052051,0.02814613089149271,False,False,False,False
+"T6 t6 + day factor, flat",US,3469222588,59,True,False,False,False,0.003737483102909709,-0.10083091974454267,True,False,False,False
+"T6 t6 + day factor, flat",US,2372834650,59,False,False,False,False,-0.08609092000418582,-0.013042364667916893,False,False,False,False
+"T6 t6 + day factor, flat",US,3410269376,59,False,False,False,False,0.021487293373946198,-0.12395409343657689,False,False,False,False
+"T6 t6 + day factor, flat",US,1642656799,59,False,False,False,False,-0.019533589326018494,-0.0007031951578043605,False,False,False,False
+"T6 t6 + day factor, flat",US,2894487540,59,False,False,False,False,-0.03472028080545009,0.02764885621895152,False,False,False,False
+"D3 t4 + day factor, flat",US,666926450,59,False,False,False,False,0.14966504677739406,-0.028645900723329367,False,False,False,False
+"D3 t4 + day factor, flat",US,2062102176,59,False,False,False,False,0.08351937069930095,-0.13951129849881314,False,False,False,False
+"D3 t4 + day factor, flat",US,1526514846,59,False,False,False,False,-0.039855537186183676,-0.048346773580947265,False,False,False,False
+"D3 t4 + day factor, flat",US,2540129551,59,False,False,False,False,0.3194951249007335,-0.059549797229564626,False,False,False,False
+"D3 t4 + day factor, flat",US,1052194274,59,False,False,False,False,0.08444279939504659,-0.021423714378771438,False,False,False,False
+"D3 t4 + day factor, flat",US,2827778320,59,False,False,False,False,-0.029167682464832645,-0.09236060405153936,False,False,False,False
+"R1 realistic moderate (round 1), t4",US,1172779384,59,False,False,True,True,-0.10972956525133874,0.17665346896213713,False,False,True,True
+"R1 realistic moderate (round 1), t4",US,457304748,59,False,False,False,False,0.016234342347085335,-0.03846680470667953,False,False,False,False
+"R1 realistic moderate (round 1), t4",US,980330058,59,False,False,False,False,-0.05490345524853127,0.029347165726695636,False,False,False,False
+"R1 realistic moderate (round 1), t4",US,4163762609,59,False,False,False,False,0.3151653178715179,0.04498870190086361,False,False,False,False
+"R1 realistic moderate (round 1), t4",US,2593075909,59,False,False,False,False,0.15653232721817475,-0.13890601019534166,False,False,False,False
+"R1 realistic moderate (round 1), t4",US,994710985,59,False,False,False,False,0.0062582329427591,0.19833620646525488,False,False,False,False
+"R2 realistic strong (round 1), t4",US,881468466,59,False,False,False,False,0.0631586698213954,-0.053791888571855795,False,False,False,False
+"R2 realistic strong (round 1), t4",US,107971833,59,False,False,False,False,0.06485800356852758,0.05701826632911857,False,False,False,False
+"R2 realistic strong (round 1), t4",US,1980897513,59,False,False,False,False,-0.06947371115812692,-0.14101281329375662,False,False,False,False
+"R2 realistic strong (round 1), t4",US,3026726308,59,False,False,False,False,0.037914289835932,0.1039011615911944,False,False,False,False
+"R2 realistic strong (round 1), t4",US,3501652483,59,True,False,False,False,-0.15506881404880796,0.10305207775972512,False,False,True,False
+"R2 realistic strong (round 1), t4",US,1930559037,59,False,False,False,False,-0.05582040343187333,-0.036099562141633255,False,False,False,False
+R3 R2 + regime + AR(0.1),US,3908768517,59,True,False,False,False,-0.21723596935801195,0.16848835227224424,False,False,False,False
+R3 R2 + regime + AR(0.1),US,93429539,59,False,False,False,False,0.2999071621528684,-0.04733848701668592,False,False,False,False
+R3 R2 + regime + AR(0.1),US,1640826333,59,False,False,False,False,0.03724796616003329,-0.055323894734416686,False,False,False,False
+R3 R2 + regime + AR(0.1),US,529805313,59,False,False,False,False,-0.03805629974099577,-0.11165084974387784,False,False,False,False
+R3 R2 + regime + AR(0.1),US,3048901751,59,False,False,False,False,0.0672891293924695,-0.06703840103943276,False,False,False,False
+R3 R2 + regime + AR(0.1),US,1924606500,59,True,True,True,True,-0.3082381253314653,0.053167754457411696,True,True,True,True
+"E empirical-shape profile, t4",US,356526134,59,False,False,False,False,-0.08944174154735533,0.1857146450296019,False,False,False,False
+"E empirical-shape profile, t4",US,522480375,59,False,False,False,False,-0.054862025050758816,-0.036607092177725405,False,False,False,False
+"E empirical-shape profile, t4",US,1788799145,59,False,False,False,False,0.06221392279722398,-0.12322168216327604,False,False,False,False
+"E empirical-shape profile, t4",US,1531013447,59,False,False,False,False,0.20697589113363582,0.12740395174031047,False,False,False,False
+"E empirical-shape profile, t4",US,856217556,59,False,False,False,False,0.2629625175481261,0.017978275533986943,False,False,False,False
+"E empirical-shape profile, t4",US,1067335740,59,False,False,False,False,-0.04858859321172186,-0.1119455561734624,False,False,False,False
+"D5 stress (exp decay tau=2), t4",US,4054750137,59,False,False,False,False,0.16964199690910367,0.05803534169125772,False,False,False,False
+"D5 stress (exp decay tau=2), t4",US,2433546111,59,False,False,False,False,0.04189161711254943,0.6149432450704386,False,False,False,False
+"D5 stress (exp decay tau=2), t4",US,3333416534,59,False,False,False,False,-0.004480052482767913,0.06162039987571295,False,False,False,False
+"D5 stress (exp decay tau=2), t4",US,1295471644,59,False,False,False,False,0.06323308550335256,0.05877151187826817,False,False,False,False
+"D5 stress (exp decay tau=2), t4",US,1726364731,59,False,False,False,False,-0.04018197228991658,-0.13976723427135138,False,False,False,False
+"D5 stress (exp decay tau=2), t4",US,1921960936,59,False,False,False,False,-0.06812816498980895,0.08363711162174056,False,False,False,False
+POWER flat x1.1,US,2805680407,59,False,False,False,False,0.11799164074997413,0.2795118387211174,False,False,False,False
+POWER flat x1.1,US,1016776923,59,True,True,True,True,0.1524973142078551,0.27734616798964723,True,True,False,False
+POWER flat x1.1,US,2893020684,59,True,False,False,False,0.2004950286057148,0.131133812279375,False,False,False,False
+POWER flat x1.1,US,2876740752,59,True,False,True,False,0.2202414042371391,0.30950989799655565,True,False,True,False
+POWER E x1.1,US,3439205786,59,False,False,False,False,0.12947855615342477,0.16141706705753567,False,False,False,False
+POWER E x1.1,US,2815166542,59,False,False,False,False,0.10550159504729269,0.16907990347446208,False,False,False,False
+POWER E x1.1,US,654894828,59,False,False,False,False,0.1042180521648608,0.24866469726390908,False,False,False,False
+POWER E x1.1,US,2964392805,59,True,True,True,True,0.17036805654185486,0.28738970034044625,True,True,True,True
+POWER E x1.2,US,2436859585,59,True,True,True,True,0.3372573687502674,0.2567826373579624,True,True,True,True
+POWER E x1.2,US,3320454401,59,True,True,True,True,0.3409484502114926,0.13056098451844814,True,True,True,True
+POWER E x1.2,US,3658465885,59,False,True,False,False,0.4365415304916585,0.34729226104953914,False,False,False,False
+POWER E x1.2,US,2685728211,59,True,True,True,True,0.4530893197881733,0.395406981435155,True,True,True,True

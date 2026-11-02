@@ -1,0 +1,2 @@
+check,reps,rejection_rate,ci95_low,ci95_high,share_of_200_panels_where_permutation_p_matches_scipy_p
+Friedman on iid exchangeable 59x3 panels,20000,0.0484,0.04551140557088715,0.051462047768195476,0.995

@@ -1,0 +1,50 @@
+market                scenario_bar_level scenario_fast        rule  n_bar_level  n_fast  rate_bar_level  rate_fast  difference      z
+   NSE     E empirical-shape profile, t4          T4 E   rom_t|max         1000   10000           0.085      0.082       0.003  0.274
+   NSE     E empirical-shape profile, t4          T4 E  rom_t|bonf         1000   10000           0.095      0.090       0.005  0.472
+   NSE     E empirical-shape profile, t4          T4 E  diff_t|max         1000   10000           0.106      0.092       0.014  1.474
+   NSE     E empirical-shape profile, t4          T4 E diff_t|bonf         1000   10000           0.125      0.110       0.015  1.407
+   NSE   D5 stress (exp decay tau=2), t4         T4 D5   rom_t|max         1000   10000           0.091      0.083       0.008  0.860
+   NSE   D5 stress (exp decay tau=2), t4         T4 D5  rom_t|bonf         1000   10000           0.109      0.096       0.013  1.334
+   NSE   D5 stress (exp decay tau=2), t4         T4 D5  diff_t|max         1000   10000           0.105      0.096       0.009  0.949
+   NSE   D5 stress (exp decay tau=2), t4         T4 D5 diff_t|bonf         1000   10000           0.136      0.121       0.015  1.419
+   NSE          D3 t4 + day factor, flat       T4 flat   rom_t|max         1000   10000           0.063      0.050       0.013  1.794
+   NSE          D3 t4 + day factor, flat       T4 flat  rom_t|bonf         1000   10000           0.063      0.053       0.010  1.393
+   NSE          D3 t4 + day factor, flat       T4 flat  diff_t|max         1000   10000           0.058      0.051       0.007  0.939
+   NSE          D3 t4 + day factor, flat       T4 flat diff_t|bonf         1000   10000           0.066      0.056       0.010  1.330
+   NSE R2 realistic strong (round 1), t4         T4 R2   rom_t|max         1000   10000           0.082      0.062       0.020  2.509
+   NSE R2 realistic strong (round 1), t4         T4 R2  rom_t|bonf         1000   10000           0.089      0.068       0.021  2.550
+   NSE R2 realistic strong (round 1), t4         T4 R2  diff_t|max         1000   10000           0.085      0.066       0.019  2.307
+   NSE R2 realistic strong (round 1), t4         T4 R2 diff_t|bonf         1000   10000           0.092      0.075       0.017  1.928
+   NSE                      POWER E x1.1     T4 E x1.1   rom_t|max          300    2000           0.103      0.122      -0.019 -0.929
+   NSE                      POWER E x1.1     T4 E x1.1  rom_t|bonf          300    2000           0.117      0.142      -0.025 -1.184
+   NSE                      POWER E x1.1     T4 E x1.1  diff_t|max          300    2000           0.040      0.054      -0.014 -1.017
+   NSE                      POWER E x1.1     T4 E x1.1 diff_t|bonf          300    2000           0.057      0.064      -0.008 -0.519
+   NSE                      POWER E x1.2     T4 E x1.2   rom_t|max          300    2000           0.630      0.636      -0.005 -0.184
+   NSE                      POWER E x1.2     T4 E x1.2  rom_t|bonf          300    2000           0.703      0.696       0.007  0.258
+   NSE                      POWER E x1.2     T4 E x1.2  diff_t|max          300    2000           0.420      0.426      -0.006 -0.180
+   NSE                      POWER E x1.2     T4 E x1.2 diff_t|bonf          300    2000           0.523      0.504       0.019  0.625
+    US     E empirical-shape profile, t4          T4 E   rom_t|max         1000   10000           0.069      0.069       0.000  0.024
+    US     E empirical-shape profile, t4          T4 E  rom_t|bonf         1000   10000           0.079      0.077       0.002  0.180
+    US     E empirical-shape profile, t4          T4 E  diff_t|max         1000   10000           0.079      0.075       0.004  0.457
+    US     E empirical-shape profile, t4          T4 E diff_t|bonf         1000   10000           0.094      0.090       0.004  0.367
+    US   D5 stress (exp decay tau=2), t4         T4 D5   rom_t|max         1000   10000           0.078      0.080      -0.002 -0.234
+    US   D5 stress (exp decay tau=2), t4         T4 D5  rom_t|bonf         1000   10000           0.097      0.092       0.005  0.499
+    US   D5 stress (exp decay tau=2), t4         T4 D5  diff_t|max         1000   10000           0.096      0.095       0.001  0.134
+    US   D5 stress (exp decay tau=2), t4         T4 D5 diff_t|bonf         1000   10000           0.124      0.117       0.007  0.636
+    US          D3 t4 + day factor, flat       T4 flat   rom_t|max         1000   10000           0.054      0.050       0.004  0.509
+    US          D3 t4 + day factor, flat       T4 flat  rom_t|bonf         1000   10000           0.049      0.053      -0.004 -0.592
+    US          D3 t4 + day factor, flat       T4 flat  diff_t|max         1000   10000           0.049      0.049       0.000  0.056
+    US          D3 t4 + day factor, flat       T4 flat diff_t|bonf         1000   10000           0.044      0.053      -0.009 -1.182
+    US R2 realistic strong (round 1), t4         T4 R2   rom_t|max         1000   10000           0.061      0.056       0.005  0.721
+    US R2 realistic strong (round 1), t4         T4 R2  rom_t|bonf         1000   10000           0.060      0.059       0.001  0.089
+    US R2 realistic strong (round 1), t4         T4 R2  diff_t|max         1000   10000           0.056      0.057      -0.001 -0.091
+    US R2 realistic strong (round 1), t4         T4 R2 diff_t|bonf         1000   10000           0.063      0.065      -0.002 -0.269
+    US                      POWER E x1.1     T4 E x1.1   rom_t|max          300    2000           0.177      0.142       0.035  1.608
+    US                      POWER E x1.1     T4 E x1.1  rom_t|bonf          300    2000           0.177      0.150       0.027  1.219
+    US                      POWER E x1.1     T4 E x1.1  diff_t|max          300    2000           0.070      0.062       0.008  0.497
+    US                      POWER E x1.1     T4 E x1.1 diff_t|bonf          300    2000           0.077      0.057       0.020  1.342
+    US                      POWER E x1.2     T4 E x1.2   rom_t|max          300    2000           0.707      0.708      -0.001 -0.030
+    US                      POWER E x1.2     T4 E x1.2  rom_t|bonf          300    2000           0.747      0.758      -0.011 -0.427
+    US                      POWER E x1.2     T4 E x1.2  diff_t|max          300    2000           0.523      0.500       0.024  0.770
+    US                      POWER E x1.2     T4 E x1.2 diff_t|bonf          300    2000           0.590      0.554       0.036  1.187
+cells: 48 | |z|>2: 3 | |z|>3: 0 | mean diff: 0.0063

@@ -1,0 +1,21 @@
+NSE X3 estimated dependence null 125 done 76s
+NSE X3 estimated dependence vol x1.05 125 done 153s
+NSE X3 estimated dependence vol x1.10 125 done 227s
+NSE X3 estimated dependence cont +0.02 125 done 308s
+NSE X3 estimated dependence cont +0.05 125 done 392s
+NSE X3 estimated dependence null 250 done 586s
+NSE X3 estimated dependence vol x1.05 250 done 801s
+NSE X3 estimated dependence vol x1.10 250 done 983s
+NSE X3 estimated dependence cont +0.02 250 done 1162s
+NSE X3 estimated dependence cont +0.05 250 done 1348s
+US X3 estimated dependence null 125 done 1430s
+US X3 estimated dependence vol x1.05 125 done 1509s
+US X3 estimated dependence vol x1.10 125 done 1589s
+US X3 estimated dependence cont +0.02 125 done 1672s
+US X3 estimated dependence cont +0.05 125 done 1753s
+US X3 estimated dependence null 250 done 1929s
+US X3 estimated dependence vol x1.05 250 done 2111s
+US X3 estimated dependence vol x1.10 250 done 2298s
+US X3 estimated dependence cont +0.02 250 done 2495s
+US X3 estimated dependence cont +0.05 250 done 2690s
+COMPLETE

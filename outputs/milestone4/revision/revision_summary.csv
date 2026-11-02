@@ -1,0 +1,7 @@
+symbol,gap_minutes_between_pulls,bars_complete_in_original,of_which_still_present,bars_dropped_from_window_start,share_price_changed,n_price_changed,share_volume_changed,n_volume_changed,n_empty_became_filled,n_filled_became_empty,n_zero_became_nonzero,n_nonzero_became_zero,share_usable_flag_changed,share_volume_reliable_flag_changed,n_dates_with_any_change
+RELIANCE.NS,61,4458,4458,0,0.0,0,0.0,0,0,0,0,0,0.0,0.0,0
+TCS.NS,61,4458,4458,0,0.0,0,0.0,0,0,0,0,0,0.0,0.0,0
+INFY.NS,61,4458,4458,0,0.0,0,0.0,0,0,0,0,0,0.0,0.0,0
+AAPL,61,4681,4681,0,0.0,0,0.0,0,0,0,0,0,0.0,0.0,0
+MSFT,61,4681,4681,0,0.0,0,0.0,0,0,0,0,0,0.0,0.0,0
+NVDA,61,4681,4681,0,0.0,0,0.0,0,0,0,0,0,0.0,0.0,0

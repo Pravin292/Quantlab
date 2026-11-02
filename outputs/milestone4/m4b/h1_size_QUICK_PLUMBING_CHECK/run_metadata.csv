@@ -1,0 +1,7 @@
+,value
+master_seed,20261072
+quick,True
+stocks_per_market,3
+empirical_shape_params,"{'NSE': {'open_amp': 2.031, 'open_tau': 2.063, 'close_amp': 4.581, 'close_tau': 0.365}, 'US': {'open_amp': 5.695, 'open_tau': 3.366, 'close_amp': 3.174, 'close_tau': 1.232}}"
+empirical_dependence_params,"{'NSE': {'ret_corr': 0.355, 'share': 0.454, 'phi': 0.441}, 'US': {'ret_corr': 0.187, 'share': 0.141, 'phi': 0.19}}"
+note,ALL DATA SIMULATED (direct generator); per-simulation seeds saved

@@ -1,0 +1,169 @@
+dgp,truth,market,model,outcome,p_type,n_sims,rejection_rate,ci95_low,ci95_high,mean_beta,median_events
+"A day factor in returns, volume independent",TRUE NULL,US,M0 original (c1 c2),vol,p,240,0.06666666666666667,0.041448541622887115,0.10553868287039048,-0.001648193536657229,929.5
+"A day factor in returns, volume independent",TRUE NULL,US,M0 original (c1 c2),ret,p,240,0.07083333333333333,0.044691561397139305,0.11049770901447215,-2.195172843134786e-06,929.5
+"A day factor in returns, volume independent",TRUE NULL,US,M1 + c3,vol,p,240,0.07916666666666666,0.05126483412019705,0.12032852812808215,-0.0015360065520700816,929.5
+"A day factor in returns, volume independent",TRUE NULL,US,M5 + c3 + c4 [primary candidate],vol,p,240,0.08333333333333333,0.05459106258101232,0.12520434558560076,-0.001536203839003834,929.5
+"A day factor in returns, volume independent",TRUE NULL,US,M5 + c3 + c4 [primary candidate],vol,p_wild,240,0.07083333333333333,0.044691561397139305,0.11049770901447215,-0.001536203839003834,929.5
+"A day factor in returns, volume independent",TRUE NULL,US,M5 + c3 + c4 [primary candidate],ret,p,240,0.07083333333333333,0.044691561397139305,0.11049770901447215,-2.1100842175601816e-06,929.5
+"A day factor in returns, volume independent",TRUE NULL,US,M5 + c3 + c4 [primary candidate],ret,p_wild,240,0.0625,0.03823777547321912,0.10054740310172462,-2.1100842175601816e-06,929.5
+"A day factor in returns, volume independent",TRUE NULL,US,S1 c3_12 instead of c3,vol,p,240,0.0625,0.03823777547321912,0.10054740310172462,-0.001415668874224404,929.5
+"A day factor in returns, volume independent",TRUE NULL,US,S2 c3_24 instead of c3,vol,p,240,0.06666666666666667,0.041448541622887115,0.10553868287039048,-0.0012112762339804744,929.5
+"A day factor in returns, volume independent",TRUE NULL,US,S3 c4 only (prior day),vol,p,240,0.06666666666666667,0.041448541622887115,0.10553868287039048,-0.001639176711848662,929.5
+"A day factor in returns, volume independent",TRUE NULL,US,DFE day effects + c3 (within-day question),vol,p,240,0.07916666666666666,0.05126483412019705,0.12032852812808215,-0.0015487554980663514,929.5
+"A day factor in returns, volume independent",TRUE NULL,US,DFE day effects + c3 (within-day question),vol,p_wild,240,0.058333333333333334,0.03506211241962322,0.09552102023698665,-0.0015487554980663514,929.5
+"A day factor in returns, volume independent",TRUE NULL,US,DFE day effects + c3 (within-day question),ret,p,240,0.07083333333333333,0.044691561397139305,0.11049770901447215,-1.6405775772824803e-06,929.5
+"A day factor in returns, volume independent",TRUE NULL,US,DFE day effects + c3 (within-day question),ret,p_wild,240,0.058333333333333334,0.03506211241962322,0.09552102023698665,-1.6405775772824803e-06,929.5
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,M0 original (c1 c2),vol,p,240,0.06666666666666667,0.041448541622887115,0.10553868287039048,0.0010436779783219161,929.5
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,M0 original (c1 c2),ret,p,240,0.05416666666666667,0.031924882079320746,0.09045620465895525,-3.6123931823611227e-06,929.5
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,M1 + c3,vol,p,240,0.058333333333333334,0.03506211241962322,0.09552102023698665,0.0008389731851752342,929.5
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,M5 + c3 + c4 [primary candidate],vol,p,240,0.058333333333333334,0.03506211241962322,0.09552102023698665,0.0008408540139461957,929.5
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,M5 + c3 + c4 [primary candidate],vol,p_wild,240,0.05,0.02883001643094939,0.08534902438899274,0.0008408540139461957,929.5
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,M5 + c3 + c4 [primary candidate],ret,p,240,0.058333333333333334,0.03506211241962322,0.09552102023698665,-3.6496062381001444e-06,929.5
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,M5 + c3 + c4 [primary candidate],ret,p_wild,240,0.05416666666666667,0.031924882079320746,0.09045620465895525,-3.6496062381001444e-06,929.5
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,S1 c3_12 instead of c3,vol,p,240,0.06666666666666667,0.041448541622887115,0.10553868287039048,0.0008017909361154106,929.5
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,S2 c3_24 instead of c3,vol,p,240,0.06666666666666667,0.041448541622887115,0.10553868287039048,0.0006076596753383479,929.5
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,S3 c4 only (prior day),vol,p,240,0.06666666666666667,0.041448541622887115,0.10553868287039048,0.0010413262473522194,929.5
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,DFE day effects + c3 (within-day question),vol,p,240,0.058333333333333334,0.03506211241962322,0.09552102023698665,0.0005832540626220142,929.5
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,DFE day effects + c3 (within-day question),vol,p_wild,240,0.05,0.02883001643094939,0.08534902438899274,0.0005832540626220142,929.5
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,DFE day effects + c3 (within-day question),ret,p,240,0.05416666666666667,0.031924882079320746,0.09045620465895525,-3.4231941785716667e-06,929.5
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,US,DFE day effects + c3 (within-day question),ret,p_wild,240,0.041666666666666664,0.022787175722256768,0.0749877732610176,-3.4231941785716667e-06,929.5
+B volume loads on day factor (0.8),SHARED REGIME,US,M0 original (c1 c2),vol,p,240,1.0,0.9842455102000642,1.0,0.1846769531768647,1189.0
+B volume loads on day factor (0.8),SHARED REGIME,US,M0 original (c1 c2),ret,p,240,0.05,0.02883001643094939,0.08534902438899274,4.2596821659844366e-06,1189.0
+B volume loads on day factor (0.8),SHARED REGIME,US,M1 + c3,vol,p,240,0.9958333333333333,0.9767793433714805,0.9992641209102499,0.11707095486561299,1189.0
+B volume loads on day factor (0.8),SHARED REGIME,US,M5 + c3 + c4 [primary candidate],vol,p,240,0.9958333333333333,0.9767793433714805,0.9992641209102499,0.11662431231670785,1189.0
+B volume loads on day factor (0.8),SHARED REGIME,US,M5 + c3 + c4 [primary candidate],vol,p_wild,240,0.9958333333333333,0.9767793433714805,0.9992641209102499,0.11662431231670785,1189.0
+B volume loads on day factor (0.8),SHARED REGIME,US,M5 + c3 + c4 [primary candidate],ret,p,240,0.05,0.02883001643094939,0.08534902438899274,5.138020123241042e-06,1189.0
+B volume loads on day factor (0.8),SHARED REGIME,US,M5 + c3 + c4 [primary candidate],ret,p_wild,240,0.05,0.02883001643094939,0.08534902438899274,5.138020123241042e-06,1189.0
+B volume loads on day factor (0.8),SHARED REGIME,US,S1 c3_12 instead of c3,vol,p,240,1.0,0.9842455102000642,1.0,0.1508675732676888,1189.0
+B volume loads on day factor (0.8),SHARED REGIME,US,S2 c3_24 instead of c3,vol,p,240,1.0,0.9842455102000642,1.0,0.11838909144148922,1189.0
+B volume loads on day factor (0.8),SHARED REGIME,US,S3 c4 only (prior day),vol,p,240,1.0,0.9842455102000642,1.0,0.18373838621312308,1189.0
+B volume loads on day factor (0.8),SHARED REGIME,US,DFE day effects + c3 (within-day question),vol,p,240,0.04583333333333333,0.025782215329808383,0.08019477957179987,0.0016474670580076123,1189.0
+B volume loads on day factor (0.8),SHARED REGIME,US,DFE day effects + c3 (within-day question),vol,p_wild,240,0.041666666666666664,0.022787175722256768,0.0749877732610176,0.0016474670580076123,1189.0
+B volume loads on day factor (0.8),SHARED REGIME,US,DFE day effects + c3 (within-day question),ret,p,240,0.041666666666666664,0.022787175722256768,0.0749877732610176,3.148866227890501e-06,1189.0
+B volume loads on day factor (0.8),SHARED REGIME,US,DFE day effects + c3 (within-day question),ret,p_wild,240,0.03333333333333333,0.016985260309156956,0.0643855968374497,3.148866227890501e-06,1189.0
+C volume loads on day factor + intraday regime (0.8),SHARED REGIME,US,M0 original (c1 c2),vol,p,240,1.0,0.9842455102000642,1.0,0.24109504886723948,1342.5
+C volume loads on day factor + intraday regime (0.8),SHARED REGIME,US,M0 original (c1 c2),ret,p,240,0.0375,0.019851917405050365,0.06972098565989014,5.154270474553936e-06,1342.5
+C volume loads on day factor + intraday regime (0.8),SHARED REGIME,US,M1 + c3,vol,p,240,1.0,0.9842455102000642,1.0,0.18039487280214458,1342.5
+C volume loads on day factor + intraday regime (0.8),SHARED REGIME,US,M5 + c3 + c4 [primary candidate],vol,p,240,1.0,0.9842455102000642,1.0,0.18000186950839073,1342.5
+C volume loads on day factor + intraday regime (0.8),SHARED REGIME,US,M5 + c3 + c4 [primary candidate],vol,p_wild,240,1.0,0.9842455102000642,1.0,0.18000186950839073,1342.5
+C volume loads on day factor + intraday regime (0.8),SHARED REGIME,US,M5 + c3 + c4 [primary candidate],ret,p,240,0.0375,0.019851917405050365,0.06972098565989014,4.24245788808999e-06,1342.5
+C volume loads on day factor + intraday regime (0.8),SHARED REGIME,US,M5 + c3 + c4 [primary candidate],ret,p_wild,240,0.041666666666666664,0.022787175722256768,0.0749877732610176,4.24245788808999e-06,1342.5
+C volume loads on day factor + intraday regime (0.8),SHARED REGIME,US,S1 c3_12 instead of c3,vol,p,240,1.0,0.9842455102000642,1.0,0.19760011037607664,1342.5
+C volume loads on day factor + intraday regime (0.8),SHARED REGIME,US,S2 c3_24 instead of c3,vol,p,240,1.0,0.9842455102000642,1.0,0.16992857802202715,1342.5
+C volume loads on day factor + intraday regime (0.8),SHARED REGIME,US,S3 c4 only (prior day),vol,p,240,1.0,0.9842455102000642,1.0,0.2404086090536173,1342.5
+C volume loads on day factor + intraday regime (0.8),SHARED REGIME,US,DFE day effects + c3 (within-day question),vol,p,240,0.9125,0.8699439436313522,0.9420586022837009,0.07234332305205123,1342.5
+C volume loads on day factor + intraday regime (0.8),SHARED REGIME,US,DFE day effects + c3 (within-day question),vol,p_wild,240,0.9,0.8555194571936857,0.9318769509663658,0.07234332305205123,1342.5
+C volume loads on day factor + intraday regime (0.8),SHARED REGIME,US,DFE day effects + c3 (within-day question),ret,p,240,0.0375,0.019851917405050365,0.06972098565989014,3.102935650509312e-07,1342.5
+C volume loads on day factor + intraday regime (0.8),SHARED REGIME,US,DFE day effects + c3 (within-day question),ret,p_wild,240,0.041666666666666664,0.022787175722256768,0.0749877732610176,3.102935650509312e-07,1342.5
+D volume loads on intraday regime only (1.0),SHARED REGIME,US,M0 original (c1 c2),vol,p,240,1.0,0.9842455102000642,1.0,0.21425396304639158,1317.0
+D volume loads on intraday regime only (1.0),SHARED REGIME,US,M0 original (c1 c2),ret,p,240,0.058333333333333334,0.03506211241962322,0.09552102023698665,2.775987978057483e-06,1317.0
+D volume loads on intraday regime only (1.0),SHARED REGIME,US,M1 + c3,vol,p,240,1.0,0.9842455102000642,1.0,0.19667836054473214,1317.0
+D volume loads on intraday regime only (1.0),SHARED REGIME,US,M5 + c3 + c4 [primary candidate],vol,p,240,1.0,0.9842455102000642,1.0,0.1963761859955909,1317.0
+D volume loads on intraday regime only (1.0),SHARED REGIME,US,M5 + c3 + c4 [primary candidate],vol,p_wild,240,1.0,0.9842455102000642,1.0,0.1963761859955909,1317.0
+D volume loads on intraday regime only (1.0),SHARED REGIME,US,M5 + c3 + c4 [primary candidate],ret,p,240,0.0625,0.03823777547321912,0.10054740310172462,2.1845458098710036e-06,1317.0
+D volume loads on intraday regime only (1.0),SHARED REGIME,US,M5 + c3 + c4 [primary candidate],ret,p_wild,240,0.05416666666666667,0.031924882079320746,0.09045620465895525,2.1845458098710036e-06,1317.0
+D volume loads on intraday regime only (1.0),SHARED REGIME,US,S1 c3_12 instead of c3,vol,p,240,1.0,0.9842455102000642,1.0,0.19368802562862983,1317.0
+D volume loads on intraday regime only (1.0),SHARED REGIME,US,S2 c3_24 instead of c3,vol,p,240,1.0,0.9842455102000642,1.0,0.18402758594736449,1317.0
+D volume loads on intraday regime only (1.0),SHARED REGIME,US,S3 c4 only (prior day),vol,p,240,1.0,0.9842455102000642,1.0,0.21382216792182085,1317.0
+D volume loads on intraday regime only (1.0),SHARED REGIME,US,DFE day effects + c3 (within-day question),vol,p,240,1.0,0.9842455102000642,1.0,0.1257030841069597,1317.0
+D volume loads on intraday regime only (1.0),SHARED REGIME,US,DFE day effects + c3 (within-day question),vol,p_wild,240,1.0,0.9842455102000642,1.0,0.1257030841069597,1317.0
+D volume loads on intraday regime only (1.0),SHARED REGIME,US,DFE day effects + c3 (within-day question),ret,p,240,0.0625,0.03823777547321912,0.10054740310172462,1.1346662867910263e-06,1317.0
+D volume loads on intraday regime only (1.0),SHARED REGIME,US,DFE day effects + c3 (within-day question),ret,p_wild,240,0.0625,0.03823777547321912,0.10054740310172462,1.1346662867910263e-06,1317.0
+"E stress: day factor sd 0.5, loading 1.5",SHARED REGIME,US,M0 original (c1 c2),vol,p,240,1.0,0.9842455102000642,1.0,0.40764200120830085,2445.5
+"E stress: day factor sd 0.5, loading 1.5",SHARED REGIME,US,M0 original (c1 c2),ret,p,240,0.058333333333333334,0.03506211241962322,0.09552102023698665,6.471122891540997e-06,2445.5
+"E stress: day factor sd 0.5, loading 1.5",SHARED REGIME,US,M1 + c3,vol,p,240,1.0,0.9842455102000642,1.0,0.22217650358884822,2445.5
+"E stress: day factor sd 0.5, loading 1.5",SHARED REGIME,US,M5 + c3 + c4 [primary candidate],vol,p,240,1.0,0.9842455102000642,1.0,0.2216033611662884,2445.5
+"E stress: day factor sd 0.5, loading 1.5",SHARED REGIME,US,M5 + c3 + c4 [primary candidate],vol,p_wild,240,1.0,0.9842455102000642,1.0,0.2216033611662884,2445.5
+"E stress: day factor sd 0.5, loading 1.5",SHARED REGIME,US,M5 + c3 + c4 [primary candidate],ret,p,240,0.0625,0.03823777547321912,0.10054740310172462,5.398697219722239e-06,2445.5
+"E stress: day factor sd 0.5, loading 1.5",SHARED REGIME,US,M5 + c3 + c4 [primary candidate],ret,p_wild,240,0.05,0.02883001643094939,0.08534902438899274,5.398697219722239e-06,2445.5
+"E stress: day factor sd 0.5, loading 1.5",SHARED REGIME,US,S1 c3_12 instead of c3,vol,p,240,1.0,0.9842455102000642,1.0,0.3074622714034246,2445.5
+"E stress: day factor sd 0.5, loading 1.5",SHARED REGIME,US,S2 c3_24 instead of c3,vol,p,240,1.0,0.9842455102000642,1.0,0.22466959744909906,2445.5
+"E stress: day factor sd 0.5, loading 1.5",SHARED REGIME,US,S3 c4 only (prior day),vol,p,240,1.0,0.9842455102000642,1.0,0.4069235245096022,2445.5
+"E stress: day factor sd 0.5, loading 1.5",SHARED REGIME,US,DFE day effects + c3 (within-day question),vol,p,240,0.041666666666666664,0.022787175722256768,0.0749877732610176,-0.0008137770359760636,2445.5
+"E stress: day factor sd 0.5, loading 1.5",SHARED REGIME,US,DFE day effects + c3 (within-day question),vol,p_wild,240,0.0375,0.019851917405050365,0.06972098565989014,-0.0008137770359760636,2445.5
+"E stress: day factor sd 0.5, loading 1.5",SHARED REGIME,US,DFE day effects + c3 (within-day question),ret,p,240,0.05,0.02883001643094939,0.08534902438899274,6.52647509172306e-06,2445.5
+"E stress: day factor sd 0.5, loading 1.5",SHARED REGIME,US,DFE day effects + c3 (within-day question),ret,p_wild,240,0.05,0.02883001643094939,0.08534902438899274,6.52647509172306e-06,2445.5
+"A day factor in returns, volume independent",TRUE NULL,NSE,M0 original (c1 c2),vol,p,120,0.058333333333333334,0.02854064663137293,0.1155272594680315,-0.0010261023375931248,849.0
+"A day factor in returns, volume independent",TRUE NULL,NSE,M0 original (c1 c2),ret,p,120,0.05,0.023114049304474235,0.10480419464586234,6.958399052739688e-07,849.0
+"A day factor in returns, volume independent",TRUE NULL,NSE,M1 + c3,vol,p,120,0.05,0.023114049304474235,0.10480419464586234,-0.0013930116043802912,849.0
+"A day factor in returns, volume independent",TRUE NULL,NSE,M5 + c3 + c4 [primary candidate],vol,p,120,0.05,0.023114049304474235,0.10480419464586234,-0.0014319444169999058,849.0
+"A day factor in returns, volume independent",TRUE NULL,NSE,M5 + c3 + c4 [primary candidate],vol,p_wild,120,0.05,0.023114049304474235,0.10480419464586234,-0.0014319444169999058,849.0
+"A day factor in returns, volume independent",TRUE NULL,NSE,M5 + c3 + c4 [primary candidate],ret,p,120,0.05,0.023114049304474235,0.10480419464586234,6.928061922391986e-07,849.0
+"A day factor in returns, volume independent",TRUE NULL,NSE,M5 + c3 + c4 [primary candidate],ret,p_wild,120,0.05,0.023114049304474235,0.10480419464586234,6.928061922391986e-07,849.0
+"A day factor in returns, volume independent",TRUE NULL,NSE,S1 c3_12 instead of c3,vol,p,120,0.041666666666666664,0.017926452505837805,0.0938421292954309,-0.0016884499056455877,849.0
+"A day factor in returns, volume independent",TRUE NULL,NSE,S2 c3_24 instead of c3,vol,p,120,0.05,0.023114049304474235,0.10480419464586234,-0.001512168188811246,849.0
+"A day factor in returns, volume independent",TRUE NULL,NSE,S3 c4 only (prior day),vol,p,120,0.06666666666666667,0.03416489747129058,0.12605267077718166,-0.0010845320393446304,849.0
+"A day factor in returns, volume independent",TRUE NULL,NSE,DFE day effects + c3 (within-day question),vol,p,120,0.075,0.039956662006448734,0.13641056839109136,-0.0019242966199567993,849.0
+"A day factor in returns, volume independent",TRUE NULL,NSE,DFE day effects + c3 (within-day question),vol,p_wild,120,0.058333333333333334,0.02854064663137293,0.1155272594680315,-0.0019242966199567993,849.0
+"A day factor in returns, volume independent",TRUE NULL,NSE,DFE day effects + c3 (within-day question),ret,p,120,0.05,0.023114049304474235,0.10480419464586234,4.0864434374514776e-07,849.0
+"A day factor in returns, volume independent",TRUE NULL,NSE,DFE day effects + c3 (within-day question),ret,p_wild,120,0.05,0.023114049304474235,0.10480419464586234,4.0864434374514776e-07,849.0
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,M0 original (c1 c2),vol,p,120,0.041666666666666664,0.017926452505837805,0.0938421292954309,-0.0032921573538548807,855.5
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,M0 original (c1 c2),ret,p,120,0.041666666666666664,0.017926452505837805,0.0938421292954309,1.9475993405209027e-06,855.5
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,M1 + c3,vol,p,120,0.041666666666666664,0.017926452505837805,0.0938421292954309,-0.003559746242281907,855.5
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,M5 + c3 + c4 [primary candidate],vol,p,120,0.041666666666666664,0.017926452505837805,0.0938421292954309,-0.0034928314403801113,855.5
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,M5 + c3 + c4 [primary candidate],vol,p_wild,120,0.025,0.00853802009878548,0.07093123740434756,-0.0034928314403801113,855.5
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,M5 + c3 + c4 [primary candidate],ret,p,120,0.041666666666666664,0.017926452505837805,0.0938421292954309,1.8303218339604394e-06,855.5
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,M5 + c3 + c4 [primary candidate],ret,p_wild,120,0.025,0.00853802009878548,0.07093123740434756,1.8303218339604394e-06,855.5
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,S1 c3_12 instead of c3,vol,p,120,0.05,0.023114049304474235,0.10480419464586234,-0.0035921176274353486,855.5
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,S2 c3_24 instead of c3,vol,p,120,0.05,0.023114049304474235,0.10480419464586234,-0.004827202665175886,855.5
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,S3 c4 only (prior day),vol,p,120,0.041666666666666664,0.017926452505837805,0.0938421292954309,-0.003212250251954986,855.5
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,DFE day effects + c3 (within-day question),vol,p,120,0.025,0.00853802009878548,0.07093123740434756,-0.003821200903237588,855.5
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,DFE day effects + c3 (within-day question),vol,p_wild,120,0.016666666666666666,0.004582468541151394,0.058737126812913806,-0.003821200903237588,855.5
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,DFE day effects + c3 (within-day question),ret,p,120,0.041666666666666664,0.017926452505837805,0.0938421292954309,2.0788135665639784e-06,855.5
+"F day factor + intraday regime in returns, volume independent",TRUE NULL,NSE,DFE day effects + c3 (within-day question),ret,p_wild,120,0.03333333333333333,0.013037340166920576,0.0825815794852803,2.0788135665639784e-06,855.5
+B volume loads on day factor (0.8),SHARED REGIME,NSE,M0 original (c1 c2),vol,p,120,1.0,0.9689797289440706,1.0,0.18337527881159374,1093.0
+B volume loads on day factor (0.8),SHARED REGIME,NSE,M0 original (c1 c2),ret,p,120,0.08333333333333333,0.045893154816730314,0.14662373772987763,1.3162140420339878e-05,1093.0
+B volume loads on day factor (0.8),SHARED REGIME,NSE,M1 + c3,vol,p,120,0.9916666666666667,0.9543025846256777,0.9985274821693252,0.12118805865064856,1093.0
+B volume loads on day factor (0.8),SHARED REGIME,NSE,M5 + c3 + c4 [primary candidate],vol,p,120,0.9916666666666667,0.9543025846256777,0.9985274821693252,0.1206838943900577,1093.0
+B volume loads on day factor (0.8),SHARED REGIME,NSE,M5 + c3 + c4 [primary candidate],vol,p_wild,120,0.9916666666666667,0.9543025846256777,0.9985274821693252,0.1206838943900577,1093.0
+B volume loads on day factor (0.8),SHARED REGIME,NSE,M5 + c3 + c4 [primary candidate],ret,p,120,0.08333333333333333,0.045893154816730314,0.14662373772987763,1.1544131695812101e-05,1093.0
+B volume loads on day factor (0.8),SHARED REGIME,NSE,M5 + c3 + c4 [primary candidate],ret,p_wild,120,0.075,0.039956662006448734,0.13641056839109136,1.1544131695812101e-05,1093.0
+B volume loads on day factor (0.8),SHARED REGIME,NSE,S1 c3_12 instead of c3,vol,p,120,1.0,0.9689797289440706,1.0,0.15023819228770846,1093.0
+B volume loads on day factor (0.8),SHARED REGIME,NSE,S2 c3_24 instead of c3,vol,p,120,0.9916666666666667,0.9543025846256777,0.9985274821693252,0.11787349416831122,1093.0
+B volume loads on day factor (0.8),SHARED REGIME,NSE,S3 c4 only (prior day),vol,p,120,1.0,0.9689797289440706,1.0,0.18240320843095623,1093.0
+B volume loads on day factor (0.8),SHARED REGIME,NSE,DFE day effects + c3 (within-day question),vol,p,120,0.041666666666666664,0.017926452505837805,0.0938421292954309,0.0030877103705543346,1093.0
+B volume loads on day factor (0.8),SHARED REGIME,NSE,DFE day effects + c3 (within-day question),vol,p_wild,120,0.03333333333333333,0.013037340166920576,0.0825815794852803,0.0030877103705543346,1093.0
+B volume loads on day factor (0.8),SHARED REGIME,NSE,DFE day effects + c3 (within-day question),ret,p,120,0.058333333333333334,0.02854064663137293,0.1155272594680315,1.132857308184072e-05,1093.0
+B volume loads on day factor (0.8),SHARED REGIME,NSE,DFE day effects + c3 (within-day question),ret,p_wild,120,0.05,0.023114049304474235,0.10480419464586234,1.132857308184072e-05,1093.0
+C volume loads on day factor + intraday regime (0.8),SHARED REGIME,NSE,M0 original (c1 c2),vol,p,120,1.0,0.9689797289440706,1.0,0.24230411724471257,1231.0
+C volume loads on day factor + intraday regime (0.8),SHARED REGIME,NSE,M0 original (c1 c2),ret,p,120,0.05,0.023114049304474235,0.10480419464586234,-1.0689300574028044e-05,1231.0
+C volume loads on day factor + intraday regime (0.8),SHARED REGIME,NSE,M1 + c3,vol,p,120,1.0,0.9689797289440706,1.0,0.18288551186313604,1231.0
+C volume loads on day factor + intraday regime (0.8),SHARED REGIME,NSE,M5 + c3 + c4 [primary candidate],vol,p,120,1.0,0.9689797289440706,1.0,0.18253254655630938,1231.0
+C volume loads on day factor + intraday regime (0.8),SHARED REGIME,NSE,M5 + c3 + c4 [primary candidate],vol,p_wild,120,1.0,0.9689797289440706,1.0,0.18253254655630938,1231.0
+C volume loads on day factor + intraday regime (0.8),SHARED REGIME,NSE,M5 + c3 + c4 [primary candidate],ret,p,120,0.05,0.023114049304474235,0.10480419464586234,-9.238530684401586e-06,1231.0
+C volume loads on day factor + intraday regime (0.8),SHARED REGIME,NSE,M5 + c3 + c4 [primary candidate],ret,p_wild,120,0.05,0.023114049304474235,0.10480419464586234,-9.238530684401586e-06,1231.0
+C volume loads on day factor + intraday regime (0.8),SHARED REGIME,NSE,S1 c3_12 instead of c3,vol,p,120,1.0,0.9689797289440706,1.0,0.20037345250316982,1231.0
+C volume loads on day factor + intraday regime (0.8),SHARED REGIME,NSE,S2 c3_24 instead of c3,vol,p,120,1.0,0.9689797289440706,1.0,0.1727729534477369,1231.0
+C volume loads on day factor + intraday regime (0.8),SHARED REGIME,NSE,S3 c4 only (prior day),vol,p,120,1.0,0.9689797289440706,1.0,0.24165933611809506,1231.0
+C volume loads on day factor + intraday regime (0.8),SHARED REGIME,NSE,DFE day effects + c3 (within-day question),vol,p,120,0.9,0.8333168001483641,0.9418669830068925,0.07239392382721718,1231.0
+C volume loads on day factor + intraday regime (0.8),SHARED REGIME,NSE,DFE day effects + c3 (within-day question),vol,p_wild,120,0.8583333333333333,0.7848035127258367,0.9096319596840804,0.07239392382721718,1231.0
+C volume loads on day factor + intraday regime (0.8),SHARED REGIME,NSE,DFE day effects + c3 (within-day question),ret,p,120,0.06666666666666667,0.03416489747129058,0.12605267077718166,-1.0573198554038093e-05,1231.0
+C volume loads on day factor + intraday regime (0.8),SHARED REGIME,NSE,DFE day effects + c3 (within-day question),ret,p_wild,120,0.05,0.023114049304474235,0.10480419464586234,-1.0573198554038093e-05,1231.0
+D volume loads on intraday regime only (1.0),SHARED REGIME,NSE,M0 original (c1 c2),vol,p,120,1.0,0.9689797289440706,1.0,0.20929118708954428,1217.5
+D volume loads on intraday regime only (1.0),SHARED REGIME,NSE,M0 original (c1 c2),ret,p,120,0.075,0.039956662006448734,0.13641056839109136,-1.517507968754585e-06,1217.5
+D volume loads on intraday regime only (1.0),SHARED REGIME,NSE,M1 + c3,vol,p,120,1.0,0.9689797289440706,1.0,0.19080603408528557,1217.5
+D volume loads on intraday regime only (1.0),SHARED REGIME,NSE,M5 + c3 + c4 [primary candidate],vol,p,120,1.0,0.9689797289440706,1.0,0.19033256422401537,1217.5
+D volume loads on intraday regime only (1.0),SHARED REGIME,NSE,M5 + c3 + c4 [primary candidate],vol,p_wild,120,1.0,0.9689797289440706,1.0,0.19033256422401537,1217.5
+D volume loads on intraday regime only (1.0),SHARED REGIME,NSE,M5 + c3 + c4 [primary candidate],ret,p,120,0.075,0.039956662006448734,0.13641056839109136,-2.0120454284255256e-06,1217.5
+D volume loads on intraday regime only (1.0),SHARED REGIME,NSE,M5 + c3 + c4 [primary candidate],ret,p_wild,120,0.075,0.039956662006448734,0.13641056839109136,-2.0120454284255256e-06,1217.5
+D volume loads on intraday regime only (1.0),SHARED REGIME,NSE,S1 c3_12 instead of c3,vol,p,120,1.0,0.9689797289440706,1.0,0.18844077882730229,1217.5
+D volume loads on intraday regime only (1.0),SHARED REGIME,NSE,S2 c3_24 instead of c3,vol,p,120,1.0,0.9689797289440706,1.0,0.179456711789417,1217.5
+D volume loads on intraday regime only (1.0),SHARED REGIME,NSE,S3 c4 only (prior day),vol,p,120,1.0,0.9689797289440706,1.0,0.20872256470508346,1217.5
+D volume loads on intraday regime only (1.0),SHARED REGIME,NSE,DFE day effects + c3 (within-day question),vol,p,120,1.0,0.9689797289440706,1.0,0.11491846359021703,1217.5
+D volume loads on intraday regime only (1.0),SHARED REGIME,NSE,DFE day effects + c3 (within-day question),vol,p_wild,120,1.0,0.9689797289440706,1.0,0.11491846359021703,1217.5
+D volume loads on intraday regime only (1.0),SHARED REGIME,NSE,DFE day effects + c3 (within-day question),ret,p,120,0.06666666666666667,0.03416489747129058,0.12605267077718166,-5.316755420270176e-07,1217.5
+D volume loads on intraday regime only (1.0),SHARED REGIME,NSE,DFE day effects + c3 (within-day question),ret,p_wild,120,0.06666666666666667,0.03416489747129058,0.12605267077718166,-5.316755420270176e-07,1217.5
+"E stress: day factor sd 0.5, loading 1.5",SHARED REGIME,NSE,M0 original (c1 c2),vol,p,120,1.0,0.9689797289440706,1.0,0.4063413968942523,2210.0
+"E stress: day factor sd 0.5, loading 1.5",SHARED REGIME,NSE,M0 original (c1 c2),ret,p,120,0.058333333333333334,0.02854064663137293,0.1155272594680315,-6.148154994538985e-06,2210.0
+"E stress: day factor sd 0.5, loading 1.5",SHARED REGIME,NSE,M1 + c3,vol,p,120,1.0,0.9689797289440706,1.0,0.22570928255829123,2210.0
+"E stress: day factor sd 0.5, loading 1.5",SHARED REGIME,NSE,M5 + c3 + c4 [primary candidate],vol,p,120,1.0,0.9689797289440706,1.0,0.22528613088833066,2210.0
+"E stress: day factor sd 0.5, loading 1.5",SHARED REGIME,NSE,M5 + c3 + c4 [primary candidate],vol,p_wild,120,1.0,0.9689797289440706,1.0,0.22528613088833066,2210.0
+"E stress: day factor sd 0.5, loading 1.5",SHARED REGIME,NSE,M5 + c3 + c4 [primary candidate],ret,p,120,0.041666666666666664,0.017926452505837805,0.0938421292954309,-9.95606558172391e-06,2210.0
+"E stress: day factor sd 0.5, loading 1.5",SHARED REGIME,NSE,M5 + c3 + c4 [primary candidate],ret,p_wild,120,0.025,0.00853802009878548,0.07093123740434756,-9.95606558172391e-06,2210.0
+"E stress: day factor sd 0.5, loading 1.5",SHARED REGIME,NSE,S1 c3_12 instead of c3,vol,p,120,1.0,0.9689797289440706,1.0,0.3043202273440067,2210.0
+"E stress: day factor sd 0.5, loading 1.5",SHARED REGIME,NSE,S2 c3_24 instead of c3,vol,p,120,1.0,0.9689797289440706,1.0,0.220907454172238,2210.0
+"E stress: day factor sd 0.5, loading 1.5",SHARED REGIME,NSE,S3 c4 only (prior day),vol,p,120,1.0,0.9689797289440706,1.0,0.4058021048736074,2210.0
+"E stress: day factor sd 0.5, loading 1.5",SHARED REGIME,NSE,DFE day effects + c3 (within-day question),vol,p,120,0.025,0.00853802009878548,0.07093123740434756,-0.001325968134324428,2210.0
+"E stress: day factor sd 0.5, loading 1.5",SHARED REGIME,NSE,DFE day effects + c3 (within-day question),vol,p_wild,120,0.0,0.0,0.031020271055929513,-0.001325968134324428,2210.0
+"E stress: day factor sd 0.5, loading 1.5",SHARED REGIME,NSE,DFE day effects + c3 (within-day question),ret,p,120,0.016666666666666666,0.004582468541151394,0.058737126812913806,-1.9830261228403833e-06,2210.0
+"E stress: day factor sd 0.5, loading 1.5",SHARED REGIME,NSE,DFE day effects + c3 (within-day question),ret,p_wild,120,0.016666666666666666,0.004582468541151394,0.058737126812913806,-1.9830261228403833e-06,2210.0

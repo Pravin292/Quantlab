@@ -1,0 +1,25 @@
+NSE D1 gaussian, flat done
+NSE D2 t4, flat done
+NSE T6 t6 + day factor, flat done
+NSE D3 t4 + day factor, flat done
+NSE R1 realistic moderate (round 1), t4 done
+NSE R2 realistic strong (round 1), t4 done
+NSE R3 R2 + regime + AR(0.1) done
+NSE E empirical-shape profile, t4 done
+NSE D5 stress (exp decay tau=2), t4 done
+NSE POWER flat x1.1 done
+NSE POWER E x1.1 done
+NSE POWER E x1.2 done
+US D1 gaussian, flat done
+US D2 t4, flat done
+US T6 t6 + day factor, flat done
+US D3 t4 + day factor, flat done
+US R1 realistic moderate (round 1), t4 done
+US R2 realistic strong (round 1), t4 done
+US R3 R2 + regime + AR(0.1) done
+US E empirical-shape profile, t4 done
+US D5 stress (exp decay tau=2), t4 done
+US POWER flat x1.1 done
+US POWER E x1.1 done
+US POWER E x1.2 done
+COMPLETE

@@ -1,0 +1,7 @@
+,value
+master_seed,20261080
+quick,False
+wild_B,199
+stocks_per_market,3
+dependence_params,"{'NSE': {'ret_corr': 0.355, 'share': 0.454, 'phi': 0.441}, 'US': {'ret_corr': 0.187, 'share': 0.141, 'phi': 0.19}}"
+note,"ALL DATA SIMULATED; planted effects, not market relationships"

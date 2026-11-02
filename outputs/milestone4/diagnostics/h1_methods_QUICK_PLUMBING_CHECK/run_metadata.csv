@@ -1,0 +1,9 @@
+,value
+master_seed,20261040
+quick,True
+n_sims_size,8
+n_sims_power,6
+bootstrap_B,49
+n_days,59
+stocks_per_market,3
+note,ALL DATA SIMULATED; per-simulation seeds saved in H1_methods_per_simulation.csv

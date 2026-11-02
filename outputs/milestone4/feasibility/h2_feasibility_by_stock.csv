@@ -1,0 +1,7 @@
+market,symbol,bars_with_baseline,n_events,n_event_days,n_usable_events,n_usable_event_days
+US,AAPL,3898,364,48,332,47
+NSE,INFY.NS,3509,685,47,658,47
+US,MSFT,3897,419,49,385,47
+US,NVDA,3900,336,42,318,42
+NSE,RELIANCE.NS,3509,550,49,521,49
+NSE,TCS.NS,3509,703,48,679,48

@@ -1,0 +1,3 @@
+market,trading_dates_in_sample,complete_days_kept,days_dropped,dropped_positions,windows_spanning_gap,windows_total,share_windows_spanning,share_boot_samples_with_gap_block(as_run),share_blocks_spanning
+NSE,60,59,1,[59],0,55,0.0,0.0,0.0
+US,60,60,0,[],0,56,0.0,0.0,0.0
