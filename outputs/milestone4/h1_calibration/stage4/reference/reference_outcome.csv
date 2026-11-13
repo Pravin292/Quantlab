@@ -1,0 +1,5 @@
+criterion,met,value
+T relative difference <= 1e-9 in all datasets,True,4.768872501827147e-14
+identical C3 decisions in all datasets,True,0.0
+five frozen C3 values re-derived to 1e-12,True,1.5556274857809575e-16
+datasets compared,True,100.0

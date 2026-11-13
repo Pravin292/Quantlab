@@ -1,0 +1,24 @@
+                         process market    days  bars_open  dev_open_%  dev_close_%  dev_open_in_SE  dev_close_in_SE  pass_open  pass_close
+a_intraday_volatility_clustering    NSE 2083334   50000016     -0.0133      -0.0622         -0.2407          -0.5393       True        True
+a_intraday_volatility_clustering     US 1515152   50000016     -0.0841       0.1119         -1.1871           1.2474       True        True
+                         b_jumps    NSE 2083334   50000016     -0.0266       0.0325         -0.5954           0.3303       True        True
+                         b_jumps     US 1515152   50000016      0.0143       0.0058          0.2289           0.0756       True        True
+       e_heavy_tailed_day_factor    NSE 2083334   50000016     -0.0180       0.1433         -0.3283           0.9989       True        True
+       e_heavy_tailed_day_factor     US 1515152   50000016      0.0129       0.0281          0.1820           0.2917       True        True
+                f_laplace_shocks    NSE 2083334   50000016     -0.0358       0.0038         -0.6527           0.0495       True        True
+                f_laplace_shocks     US 1515152   50000016     -0.1537       0.0233         -2.7352           0.3039       True        True
+                process market component     bars  rel_dev  se_rel  pass
+c_period_specific_tails    NSE      open 10000008  0.00052 0.00092  True
+c_period_specific_tails    NSE    middle 67500054  0.00002 0.00019  True
+c_period_specific_tails    NSE     close 11250009  0.00077 0.00064  True
+c_period_specific_tails     US      open 10000023  0.00030 0.00099  True
+c_period_specific_tails     US    middle 49091022 -0.00007 0.00024  True
+c_period_specific_tails     US     close 10909116 -0.00073 0.00071  True
+ d_stock_specific_tails    NSE   stock 1 10000066  0.00020 0.00151  True
+ d_stock_specific_tails    NSE   stock 2 10000066 -0.00085 0.00159  True
+ d_stock_specific_tails    NSE   stock 3 10000066 -0.00029 0.00132  True
+ d_stock_specific_tails     US   stock 1 10000067 -0.00054 0.00080  True
+ d_stock_specific_tails     US   stock 2 10000067 -0.00027 0.00094  True
+ d_stock_specific_tails     US   stock 3 10000067  0.00018 0.00038  True
+NULL CHECK PASSED: True
+COMPLETE

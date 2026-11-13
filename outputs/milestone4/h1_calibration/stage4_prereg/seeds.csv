@@ -1,0 +1,6 @@
+purpose,master,spawn_key,status
+Stage 4 alternative processes,20261206,"(cell_row, i, stream)",frozen v1 seed
+Stage 4 bar-level check,20261207,"(cell_index, i, stream)",frozen v1 seed
+Stage 4 reference implementation,20261208,"(val_row, i)",frozen v1 seed
+Stage 4 Monte-Carlo null check (before use of the alternative processes),20261206,"(100 + process_market_index, batch)","frozen v1 seed, separate namespace: first key element >= 100, simulation streams use 0-11"
+preregistration analyses only (this script),20261215,"(combo, batch)","analysis seed, not a validation seed"

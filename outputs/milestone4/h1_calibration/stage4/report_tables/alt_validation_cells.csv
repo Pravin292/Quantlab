@@ -1,0 +1,25 @@
+cell_row,process,market,method,n_valid,n_failed,rejections,rate_%,wilson_low_%,wilson_high_%,status,c3_gate_rate_le_6.0%
+0,a_intraday_volatility_clustering,NSE,C3 (candidate),25000,0,494,1.976,1.810714363837331,2.156041946437531,PASS,True
+0,a_intraday_volatility_clustering,NSE,baseline (reference),25000,0,1672,6.688,6.384939493787909,7.004368962621898,FAIL,False
+1,a_intraday_volatility_clustering,US,C3 (candidate),25000,0,408,1.6320000000000001,1.482207545919958,1.7966544650615208,PASS,True
+1,a_intraday_volatility_clustering,US,baseline (reference),25000,0,1527,6.1080000000000005,5.817836241293097,6.411650431424383,FAIL_AMBIGUOUS,False
+2,b_jumps,NSE,C3 (candidate),25000,0,592,2.368,2.186710493413969,2.56392536721847,PASS,True
+2,b_jumps,NSE,baseline (reference),25000,0,1815,7.26,6.944876708111665,7.588255990146445,FAIL,False
+3,b_jumps,US,C3 (candidate),25000,0,490,1.96,1.795401891322959,2.1393593352638387,PASS,True
+3,b_jumps,US,baseline (reference),25000,0,1593,6.372,6.075877659594301,6.681527893976237,FAIL,False
+4,c_period_specific_tails,NSE,C3 (candidate),25000,0,1103,4.412,4.164362799011352,4.673645002771306,PASS,True
+4,c_period_specific_tails,NSE,baseline (reference),25000,0,2363,9.452,9.09556086737055,9.820898296152377,FAIL,False
+5,c_period_specific_tails,US,C3 (candidate),25000,0,924,3.696,3.469158147065611,3.9370696596761685,PASS,True
+5,c_period_specific_tails,US,baseline (reference),25000,0,2152,8.608,8.26664491963177,8.96207357934576,FAIL,False
+6,d_stock_specific_tails,NSE,C3 (candidate),25000,0,695,2.78,2.583353335963345,2.9911559296367503,PASS,True
+6,d_stock_specific_tails,NSE,baseline (reference),25000,0,1879,7.516,7.195669844448134,7.849384192819008,FAIL,False
+7,d_stock_specific_tails,US,C3 (candidate),25000,0,505,2.02,1.8528386895759235,2.2019041008411153,PASS,True
+7,d_stock_specific_tails,US,baseline (reference),25000,0,1544,6.176,5.884286804199425,6.4811789741923285,FAIL_AMBIGUOUS,False
+8,e_heavy_tailed_day_factor,NSE,C3 (candidate),25000,0,359,1.436,1.295810149424024,1.5911120863786665,PASS,True
+8,e_heavy_tailed_day_factor,NSE,baseline (reference),25000,0,1260,5.04,4.775656506751928,5.318158329787256,PASS,True
+9,e_heavy_tailed_day_factor,US,C3 (candidate),25000,0,307,1.228,1.0987787203731978,1.3722074274846559,PASS,True
+9,e_heavy_tailed_day_factor,US,baseline (reference),25000,0,1272,5.088,4.822430387957411,5.367369699645966,PASS,True
+10,f_laplace_shocks,NSE,C3 (candidate),25000,0,413,1.652,1.5012623570589883,1.817593508532571,PASS,True
+10,f_laplace_shocks,NSE,baseline (reference),25000,0,1539,6.156,5.8647414484956295,6.4607304752860415,FAIL_AMBIGUOUS,False
+11,f_laplace_shocks,US,C3 (candidate),25000,0,336,1.344,1.208552638445349,1.4943978661509714,PASS,True
+11,f_laplace_shocks,US,baseline (reference),25000,0,1396,5.584,5.306138550861829,5.875509131071543,PASS,True

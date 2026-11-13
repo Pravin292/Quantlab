@@ -1,0 +1,6 @@
+criterion,met
+"A. null check: all 16 ratios (a, b, e, f) within 0.5%; all 12 truncated moments (c, d) within 0.5%; analytic factors = 1",True
+B. alternative processes: C3 rate at most 6.0% in all 12 cells (v1.1 A2); no numerical failures above 0.1%,True
+"C1. bar-level: no |z| > 3 in the 16 comparisons (C3 and baseline, 8 cells x 8,000 vs Stage 3 fast route)",True
+C2. same-returns matrices (80): identical shape and max relative difference <= 1e-9,True
+"D. reference implementation: T within 1e-9 in 100 datasets, identical C3 decisions, five C3 values re-derived to 1e-12",True

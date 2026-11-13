@@ -1,0 +1,21 @@
+          val_row      n_days  T_vectorised  T_reference  rel_diff
+count  100.000000  100.000000    100.000000   100.000000     100.0
+mean    34.600000   68.700000      1.299651     1.299651       0.0
+std     23.558224   21.024517      0.825559     0.825559       0.0
+min      3.000000   59.000000      0.092540     0.092540       0.0
+25%     11.000000   59.000000      0.666744     0.666744       0.0
+50%     38.500000   59.000000      1.190258     1.190258       0.0
+75%     50.000000   59.000000      1.753658     1.753658       0.0
+max     77.000000  125.000000      4.744340     4.744340       0.0
+ n_days                        source  cells   frozen  rederived     rel_diff
+     59              Stage 2 training     44 3.298658   3.298658 0.000000e+00
+    125              Stage 2 training     12 2.880076   2.880076 0.000000e+00
+    250              Stage 2 training     12 2.816000   2.816000 0.000000e+00
+     90 Stage 3 intermediate training     12 2.946701   2.946701 0.000000e+00
+    180 Stage 3 intermediate training     12 2.854727   2.854727 1.555627e-16
+                                    criterion  met        value
+T relative difference <= 1e-9 in all datasets True 4.768873e-14
+       identical C3 decisions in all datasets True 0.000000e+00
+    five frozen C3 values re-derived to 1e-12 True 1.555627e-16
+                            datasets compared True 1.000000e+02
+COMPLETE

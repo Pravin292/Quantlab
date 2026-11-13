@@ -1,0 +1,5 @@
+process,analytic_E[shock part^2],abs_error
+a_intraday_volatility_clustering,1.0,0.0
+b_jumps,1.0,0.0
+e_heavy_tailed_day_factor,0.9999999999999998,2.220446049250313e-16
+f_laplace_shocks,0.9999999999999998,2.220446049250313e-16

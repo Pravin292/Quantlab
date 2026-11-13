@@ -1,0 +1,2 @@
+criterion,met,matrices,max_rel_diff
+all matrices same shape and max relative difference <= 1e-9,True,80,3.5883061379075597e-13

@@ -1,0 +1,5 @@
+criterion,met
+"a, b, e, f: all 16 period-mean ratios within 0.5%",True
+"c, d: all 12 truncated second moments within 0.5% of the exact value",True
+analytic unit-variance factors equal 1 to 1e-9,True
+NULL CHECK PASSED (all of the above),True

@@ -1,0 +1,9 @@
+bar-level cell 0 (val row 2) n=8000 days_used min/max 59/59 c3=0.0085 base=0.0544 invalid=0 done=8000 elapsed=449s
+bar-level cell 1 (val row 3) n=8000 days_used min/max 59/59 c3=0.0083 base=0.0451 invalid=0 done=16000 elapsed=956s
+bar-level cell 2 (val row 4) n=8000 days_used min/max 59/59 c3=0.0097 base=0.0498 invalid=0 done=24000 elapsed=1497s
+bar-level cell 3 (val row 5) n=8000 days_used min/max 59/59 c3=0.0089 base=0.0549 invalid=0 done=32000 elapsed=2086s
+bar-level cell 4 (val row 26) n=8000 days_used min/max 59/59 c3=0.0335 base=0.0823 invalid=0 done=40000 elapsed=2664s
+bar-level cell 5 (val row 27) n=8000 days_used min/max 59/59 c3=0.0243 base=0.0676 invalid=0 done=48000 elapsed=3261s
+bar-level cell 6 (val row 28) n=8000 days_used min/max 59/59 c3=0.0306 base=0.0756 invalid=0 done=56000 elapsed=3819s
+bar-level cell 7 (val row 29) n=8000 days_used min/max 59/59 c3=0.0334 base=0.0798 invalid=0 done=64000 elapsed=4405s
+COMPLETE 64000 simulations this session; 0 cells already complete

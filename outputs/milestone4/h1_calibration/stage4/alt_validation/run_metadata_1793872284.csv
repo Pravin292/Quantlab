@@ -1,0 +1,15 @@
+,value
+master_seed,20261206
+seed_rule,"SeedSequence(20261206, spawn_key=(cell_row, i, stream)); stream 0 data, 1 baseline"
+c3_crit_59,3.298658000460969
+cells_this_session,12
+simulations_this_session,300000
+smoke,False
+wall_seconds,234.9
+started_unix,1793872285
+child_cpu_user_seconds,1196.7
+logical_cpus,8
+python,3.12.13
+numpy,2.5.4
+manifests_verified,"{'v1': 23, 'v1.1': 7, 'stage1_code': 8, 'stage2_inputs': 18, 'stage2_addendum': 2, 'stage2_c3_table': 2, 'stage3_inputs': 12, 'c3_intermediate_table': 2, 'stage4_inputs': 21}"
+note,"ALL DATA SIMULATED, NULL ONLY; C3 unchanged; baseline is a reference"
