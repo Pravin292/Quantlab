@@ -1,6 +1,6 @@
 # Documentation index
 
-Documents are numbered in reading order. `07_research_protocol.md` does not exist: **docs 09 to 17b are diagnostic or planning documents, not a frozen research protocol.**
+Documents are numbered in reading order. `07_research_protocol.md` does not exist: **docs 09 to 24 are diagnostic or planning documents, not a frozen research protocol.**
 
 ## M1 to M3: data, pipeline and EDA
 
@@ -35,5 +35,24 @@ Documents are numbered in reading order. `07_research_protocol.md` does not exis
 | [16](16_h1_calibration_stage1_report.md) | Stage 1 report |
 | [17](17_h1_calibration_stage2_plan.md) | Stage 2 plan |
 | [17b](17b_h1_calibration_stage2_review_record.md) | Stage 2 design decisions: review record |
+| [17c](17c_h1_calibration_stage2_d2_confirmation.md) | D2 diagnostic flag: confirmed formula, units and labels |
+| [18](18_h1_calibration_stage2_report.md) | **Stage 2 report** (all results, failures, violations, borderline flags) |
+| [20](20_h1_calibration_stage3_prerun_record.md) | Stage 3 pre-run record: authorisation, frozen specification, fill-ins, run-once rule |
+| [21](21_h1_calibration_stage3_report.md) | **Stage 3 report** (locked validation of C3; all cells, D2 flags, power cells, Stage 4/5 dependency chain) |
+| [22](22_h1_calibration_stage4_preregistration.md) | Stage 4 preregistration (null check, alternative processes, bar-level check, reference check, decisions D1–D6) |
+| [22b](22b_h1_calibration_stage4_approval_record.md) | Stage 4 approval record (D1–D6 approvals, 8,000 simulations per bar-level cell, fill-ins) |
+| [23](23_h1_calibration_stage4_report.md) | **Stage 4 report** (independent validation of C3: all five preregistered criteria met; limitations) |
+| [24](24_h1_calibration_stage5_decision_report.md) | **Stage 5 decision report** (classification PARTIAL; validated domain, count and seed audit, gate interpretation, limitations). Numbered 24 because `docs/14` is the Stage 0 report |
+| [25](25_h1_calibration_stage5_errata.md) | Stage 5 errata (repeat-variability re-analysis of saved Stage 2 and 3 files; PARTIAL unchanged) |
+| [26](26_real_data_descriptive_validation_protocol.md) | **Phase 6 protocol, revision 5: PROPOSED, not approved, not executed** (real-data descriptive validation; no data accessed) |
+| [27](27_quantlab_formal_decision_and_approval_register.md) | Phase 6 decision and approval register (D1–D17 all pending; gates, checklist, blocked work) |
+| [28](28_stage0_mode_b_reference_layout_verification.md) | Stage 0 reference layout check for Mode B (read-only; the n = 59 D-tail claim is not supported) |
+| [29](29_stage0_d_tail_compatibility_decision_memo.md) | Decision memo on the Stage 0 D-tail mismatch (options A, B, C; owner decision pending) |
+
+## Project status
+
+| Doc | Content |
+|---|---|
+| [19](19_quantlab_project_status_report.md) | **Consolidated project status**, findings, limitations, simulation ledger, integrity checks and blockers |
 
 Doc 12 is a closed audit report and is not edited; later documents refine its wording where needed (docs 13 section 2.1).
