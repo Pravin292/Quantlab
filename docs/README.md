@@ -50,6 +50,10 @@ Documents are numbered in reading order. `07_research_protocol.md` does not exis
 | [29](29_stage0_d_tail_compatibility_decision_memo.md) | Decision memo on the Stage 0 D-tail mismatch (options A, B, C; owner decision pending) |
 | [30](30_real_data_h1_test_preregistration_plan.md) | Real-data H1 test pre-registration plan (frozen C3, existing local sample; R1–R8, authorisation record) |
 | [31](31_real_data_h1_test_report.md) | **Real-data H1 test report** (US: T = 22.59, reject; NSE: not testable, 58 complete sessions) |
+| [32](32_decision_sheet_and_next_paths.md) | Decision sheet: paths P1–P3 and a suggested response to D1–D17 per path (nothing approved) |
+| [33](33_complete_h1_check_preregistration_plan.md) | Path P2 pre-registration plan: repeat the H1 check on new data (NSE and fresh US); proposed, blocked on provider and licence |
+| [34](34_provider_research_for_p2.md) | Provider research for the P2 check (NSE: Kite Connect, TrueData; US: Alpaca, Databento, Massive); web research, unverified terms |
+| [35](35_nse_h1_check_report.md) | **NSE H1 check report** (zero-cost, one Yahoo pull: 59 complete sessions, T = 17.31, reject) |
 
 ## Project status
 
