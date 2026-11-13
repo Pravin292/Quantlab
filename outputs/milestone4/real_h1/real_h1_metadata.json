@@ -1,0 +1,69 @@
+{
+  "crit_n59": 3.298658000460969,
+  "data_files": {
+    "AAPL_20261030T063234Z_5m_60d_8faf215de093.parquet": "586d3782903c07951143bd42e53548e592506f0d7a0f93baf016ef9529c3612a",
+    "INFY.NS_20261030T063233Z_5m_60d_c08ef11b563e.parquet": "ac8ad40679f8e2f89079bd91dad9678153e837fecf6033ffe6a9fa2125b3ed96",
+    "MSFT_20261030T063234Z_5m_60d_983f387b97df.parquet": "4391f4cce6bdff109b215a457585f5652f7474086384c9437f14b9130b393ab7",
+    "NVDA_20261030T063234Z_5m_60d_99b1f2f46d2e.parquet": "c7b19fd0140596ea98e099cc2a031a71f672c55bd29cd9dc8edff0257450466f",
+    "RELIANCE.NS_20261030T063232Z_5m_60d_cfd0857862bb.parquet": "bc897825c26e12d609a4e510fcbeae7a05c34b8a69d80ca3b0932488f67494a8",
+    "TCS.NS_20261030T063233Z_5m_60d_66f1a9d1601d.parquet": "ce074f5a87ce5bad95235c7c67be80e226d327156839477d26e0ba6112c1b267"
+  },
+  "NSE": {
+    "symbols": [
+      "INFY.NS",
+      "RELIANCE.NS",
+      "TCS.NS"
+    ],
+    "used_slots": 71,
+    "dates_in_sample": 60,
+    "usable_per_stock": [
+      58,
+      58,
+      58
+    ],
+    "usable_market_sessions": 58,
+    "n_required": 59,
+    "crit": 3.298658000460969,
+    "status": "NOT_TESTABLE",
+    "T": null,
+    "reject": null,
+    "first_date": null,
+    "last_date": null
+  },
+  "US": {
+    "symbols": [
+      "AAPL",
+      "MSFT",
+      "NVDA"
+    ],
+    "used_slots": 77,
+    "dates_in_sample": 60,
+    "usable_per_stock": [
+      60,
+      60,
+      60
+    ],
+    "usable_market_sessions": 60,
+    "n_required": 59,
+    "crit": 3.298658000460969,
+    "status": "TESTED",
+    "T": 22.594382798473223,
+    "reject": true,
+    "first_date": "2026-08-06",
+    "last_date": "2026-10-28",
+    "contrasts": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        0,
+        2
+      ]
+    ]
+  }
+}

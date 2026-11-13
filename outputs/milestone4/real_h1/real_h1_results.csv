@@ -1,0 +1,3 @@
+market,symbols,dates_in_sample,usable_market_sessions,usable_per_stock,n_required,status,T,crit,reject,first_date,last_date,log_ratio_open_middle,se_open_middle,log_ratio_close_middle,se_close_middle,log_ratio_open_close,se_open_close
+NSE,"INFY.NS,RELIANCE.NS,TCS.NS",60,58,"[58, 58, 58]",59,NOT_TESTABLE,,3.298658000460969,,,,,,,,,
+US,"AAPL,MSFT,NVDA",60,60,"[60, 60, 60]",59,TESTED,22.594382798473223,3.298658000460969,True,2026-08-06,2026-10-28,1.4573840759406296,0.06450205296331926,-0.02014662998253542,0.08986959389887936,1.4775307059231648,0.08459274962278102

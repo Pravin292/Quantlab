@@ -48,6 +48,8 @@ Documents are numbered in reading order. `07_research_protocol.md` does not exis
 | [27](27_quantlab_formal_decision_and_approval_register.md) | Phase 6 decision and approval register (D1–D17 all pending; gates, checklist, blocked work) |
 | [28](28_stage0_mode_b_reference_layout_verification.md) | Stage 0 reference layout check for Mode B (read-only; the n = 59 D-tail claim is not supported) |
 | [29](29_stage0_d_tail_compatibility_decision_memo.md) | Decision memo on the Stage 0 D-tail mismatch (options A, B, C; owner decision pending) |
+| [30](30_real_data_h1_test_preregistration_plan.md) | Real-data H1 test pre-registration plan (frozen C3, existing local sample; R1–R8, authorisation record) |
+| [31](31_real_data_h1_test_report.md) | **Real-data H1 test report** (US: T = 22.59, reject; NSE: not testable, 58 complete sessions) |
 
 ## Project status
 
