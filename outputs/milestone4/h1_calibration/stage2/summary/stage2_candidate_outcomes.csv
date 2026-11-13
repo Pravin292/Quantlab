@@ -1,0 +1,4 @@
+method,eligible,role,gated_cells,n_PASS,n_PASS_AMBIGUOUS,n_FAIL,n_FAIL_AMBIGUOUS,v1_1_candidate_outcome,ambiguous_tierA_cells,tierA_cells,ambiguous_yardstick_reached_D4,advancement_statuses_ok_D4,cells_blocked_by_failures_D6,lowest_cell_rate,highest_cell_rate
+baseline,False,reference only (never selectable),68,21,11,28,8,FAIL,16,44,True,False,0,0.04676,0.0864
+c1,True,preferred if it qualifies (D1),68,31,25,3,9,FAIL,17,44,True,False,0,0.04468,0.06576
+c3,True,labelled fallback (D1),68,68,0,0,0,PASS_CLEAR,0,44,False,True,0,0.00492,0.05248

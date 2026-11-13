@@ -1,0 +1,13 @@
+power_cell,shape,mult,market,method,power_method,power_baseline,ratio_to_baseline,flag_cell,power_collapse_flag,caveat
+0,flat,1.1,NSE,c1,0.3564,0.3126,1.1401151631477928,False,False,
+0,flat,1.1,NSE,c3,0.1288,0.3126,0.41202815099168266,False,False,
+1,flat,1.1,US,c1,0.4842,0.4238,1.142520056630486,False,False,
+1,flat,1.1,US,c3,0.2026,0.4238,0.4780556866446437,False,False,
+2,flat,1.2,NSE,c1,0.9344,0.86,1.0865116279069769,True,False,
+2,flat,1.2,NSE,c3,0.8236,0.86,0.9576744186046512,True,False,
+3,flat,1.2,US,c1,0.9516,0.895,1.063240223463687,True,False,
+3,flat,1.2,US,c3,0.881,0.895,0.9843575418994414,True,False,
+4,E,1.2,NSE,c1,0.6908,0.6432,1.074004975124378,False,False,baseline size is distorted in E cells: ratio not a fair yardstick; no flag applies
+4,E,1.2,NSE,c3,0.5432,0.6432,0.8445273631840796,False,False,baseline size is distorted in E cells: ratio not a fair yardstick; no flag applies
+5,E,1.2,US,c1,0.7966,0.7174,1.110398661834402,False,False,baseline size is distorted in E cells: ratio not a fair yardstick; no flag applies
+5,E,1.2,US,c3,0.6056,0.7174,0.8441594647337608,False,False,baseline size is distorted in E cells: ratio not a fair yardstick; no flag applies

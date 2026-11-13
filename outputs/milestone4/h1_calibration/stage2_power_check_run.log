@@ -1,0 +1,7 @@
+power cell 0 flat x1.1 NSE: base=0.3126 c1=0.3564 c3=0.1288 elapsed=74s
+power cell 1 flat x1.1 US: base=0.4238 c1=0.4842 c3=0.2026 elapsed=158s
+power cell 2 flat x1.2 NSE: base=0.8600 c1=0.9344 c3=0.8236 elapsed=230s
+power cell 3 flat x1.2 US: base=0.8950 c1=0.9516 c3=0.8810 elapsed=309s
+power cell 4 E x1.2 NSE: base=0.6432 c1=0.6908 c3=0.5432 elapsed=383s
+power cell 5 E x1.2 US: base=0.7174 c1=0.7966 c3=0.6056 elapsed=463s
+COMPLETE
