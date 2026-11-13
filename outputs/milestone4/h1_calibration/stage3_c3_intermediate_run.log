@@ -1,0 +1,28 @@
+row 00   G   E NSE 90d n=25000 failed=0 q95=2.4400 done=25000 elapsed=6s
+row 01   G   E  US 90d n=25000 failed=0 q95=2.4178 done=50000 elapsed=11s
+row 02   G  D5 NSE 90d n=25000 failed=0 q95=2.4352 done=75000 elapsed=16s
+row 03   G  D5  US 90d n=25000 failed=0 q95=2.4415 done=100000 elapsed=21s
+row 04  T6   E NSE 90d n=25000 failed=0 q95=2.6412 done=125000 elapsed=25s
+row 05  T6   E  US 90d n=25000 failed=0 q95=2.6053 done=150000 elapsed=30s
+row 06  T6  D5 NSE 90d n=25000 failed=0 q95=2.6353 done=175000 elapsed=35s
+row 07  T6  D5  US 90d n=25000 failed=0 q95=2.6549 done=200000 elapsed=40s
+row 08  T4   E NSE 90d n=25000 failed=0 q95=2.9336 done=225000 elapsed=44s
+row 09  T4   E  US 90d n=25000 failed=0 q95=2.7990 done=250000 elapsed=49s
+row 10  T4  D5 NSE 90d n=25000 failed=0 q95=2.9467 done=275000 elapsed=54s
+row 11  T4  D5  US 90d n=25000 failed=0 q95=2.9453 done=300000 elapsed=59s
+row 12   G   E NSE 180d n=25000 failed=0 q95=2.3722 done=325000 elapsed=68s
+row 13   G   E  US 180d n=25000 failed=0 q95=2.3792 done=350000 elapsed=78s
+row 14   G  D5 NSE 180d n=25000 failed=0 q95=2.4002 done=375000 elapsed=87s
+row 15   G  D5  US 180d n=25000 failed=0 q95=2.3996 done=400000 elapsed=97s
+row 16  T6   E NSE 180d n=25000 failed=0 q95=2.5560 done=425000 elapsed=106s
+row 17  T6   E  US 180d n=25000 failed=0 q95=2.5183 done=450000 elapsed=117s
+row 18  T6  D5 NSE 180d n=25000 failed=0 q95=2.5031 done=475000 elapsed=127s
+row 19  T6  D5  US 180d n=25000 failed=0 q95=2.5375 done=500000 elapsed=137s
+row 20  T4   E NSE 180d n=25000 failed=0 q95=2.8031 done=525000 elapsed=147s
+row 21  T4   E  US 180d n=25000 failed=0 q95=2.7076 done=550000 elapsed=157s
+row 22  T4  D5 NSE 180d n=25000 failed=0 q95=2.8547 done=575000 elapsed=168s
+row 23  T4  D5  US 180d n=25000 failed=0 q95=2.8309 done=600000 elapsed=178s
+ n_days  c3_crit  source_row  n_cells
+     90   2.9467          10       12
+    180   2.8547          22       12
+COMPLETE 600000 simulations, 0 failed

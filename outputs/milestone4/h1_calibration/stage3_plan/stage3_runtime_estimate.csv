@@ -1,0 +1,4 @@
+item,simulations,est_wall_hours
+validation run (data + baseline reference + C3),2280000,0.8292337816042502
+C3 training at 90/180 days (data + T only),600000,0.05
+"validation power cells (6 x 5,000, baseline + C3)",30000,0.008152604201071275

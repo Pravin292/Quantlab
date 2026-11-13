@@ -1,0 +1,6 @@
+condition,cells_violating,triggered
+1. any tier A cell outside its gate (C3: rate above 5.5%),0,False
+2. any tier B cell outside its gate (C3: rate above 6.0%),0,False
+ceiling: any validated cell above 7.0%,0,False
+numerical: method-cells above 0.1% failures,0,False
+clear FAIL or FAIL_AMBIGUOUS statuses for C3,0,False

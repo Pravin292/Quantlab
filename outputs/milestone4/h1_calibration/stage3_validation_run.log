@@ -1,0 +1,97 @@
+cell 00/95   G flat NSE n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0491 c3=0.0062 failed b/c3=0/0 done=25000 elapsed=19s
+cell 01/95   G flat  US n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0498 c3=0.0062 failed b/c3=0/0 done=50000 elapsed=39s
+cell 02/95   G    E NSE n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0520 c3=0.0083 failed b/c3=0/0 done=75000 elapsed=59s
+cell 03/95   G    E  US n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0503 c3=0.0084 failed b/c3=0/0 done=100000 elapsed=81s
+cell 04/95   G   D5 NSE n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0526 c3=0.0087 failed b/c3=0/0 done=125000 elapsed=101s
+cell 05/95   G   D5  US n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0511 c3=0.0084 failed b/c3=0/0 done=150000 elapsed=122s
+cell 06/95   G   R2 NSE n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0477 c3=0.0070 failed b/c3=0/0 done=175000 elapsed=141s
+cell 07/95   G   R2  US n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0461 c3=0.0060 failed b/c3=0/0 done=200000 elapsed=160s
+cell 08/95 T10 flat NSE n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0482 c3=0.0075 failed b/c3=0/0 done=225000 elapsed=178s
+cell 09/95 T10 flat  US n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0463 c3=0.0059 failed b/c3=0/0 done=250000 elapsed=197s
+cell 10/95 T10    E NSE n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0554 c3=0.0122 failed b/c3=0/0 done=275000 elapsed=215s
+cell 11/95 T10    E  US n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0549 c3=0.0102 failed b/c3=0/0 done=300000 elapsed=233s
+cell 12/95 T10   D5 NSE n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0566 c3=0.0123 failed b/c3=0/0 done=325000 elapsed=251s
+cell 13/95 T10   D5  US n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0559 c3=0.0142 failed b/c3=0/0 done=350000 elapsed=270s
+cell 14/95 T10   R2 NSE n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0492 c3=0.0075 failed b/c3=0/0 done=375000 elapsed=288s
+cell 15/95 T10   R2  US n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0510 c3=0.0084 failed b/c3=0/0 done=400000 elapsed=307s
+cell 16/95  T6 flat NSE n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0490 c3=0.0077 failed b/c3=0/0 done=425000 elapsed=325s
+cell 17/95  T6 flat  US n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0481 c3=0.0070 failed b/c3=0/0 done=450000 elapsed=344s
+cell 18/95  T6    E NSE n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0620 c3=0.0174 failed b/c3=0/0 done=475000 elapsed=362s
+cell 19/95  T6    E  US n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0602 c3=0.0148 failed b/c3=0/0 done=500000 elapsed=381s
+cell 20/95  T6   D5 NSE n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0606 c3=0.0182 failed b/c3=0/0 done=525000 elapsed=399s
+cell 21/95  T6   D5  US n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0629 c3=0.0182 failed b/c3=0/0 done=550000 elapsed=418s
+cell 22/95  T6   R2 NSE n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0562 c3=0.0112 failed b/c3=0/0 done=575000 elapsed=436s
+cell 23/95  T6   R2  US n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0533 c3=0.0114 failed b/c3=0/0 done=600000 elapsed=455s
+cell 24/95  T4 flat NSE n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0543 c3=0.0137 failed b/c3=0/0 done=625000 elapsed=475s
+cell 25/95  T4 flat  US n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0452 c3=0.0097 failed b/c3=0/0 done=650000 elapsed=494s
+cell 26/95  T4    E NSE n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0793 c3=0.0308 failed b/c3=0/0 done=675000 elapsed=513s
+cell 27/95  T4    E  US n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0680 c3=0.0238 failed b/c3=0/0 done=700000 elapsed=533s
+cell 28/95  T4   D5 NSE n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0815 c3=0.0324 failed b/c3=0/0 done=725000 elapsed=552s
+cell 29/95  T4   D5  US n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0806 c3=0.0340 failed b/c3=0/0 done=750000 elapsed=572s
+cell 30/95  T4   R2 NSE n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0652 c3=0.0214 failed b/c3=0/0 done=775000 elapsed=591s
+cell 31/95  T4   R2  US n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0579 c3=0.0151 failed b/c3=0/0 done=800000 elapsed=610s
+cell 32/95  T3 flat NSE n_days= 59 dep=     none sd=0.3 n=10000 rej base=0.0543 c3=0.0218 failed b/c3=0/0 done=810000 elapsed=618s
+cell 33/95  T3 flat  US n_days= 59 dep=     none sd=0.3 n=10000 rej base=0.0450 c3=0.0161 failed b/c3=0/0 done=820000 elapsed=626s
+cell 34/95  T3    E NSE n_days= 59 dep=     none sd=0.3 n=10000 rej base=0.0916 c3=0.0520 failed b/c3=0/0 done=830000 elapsed=634s
+cell 35/95  T3    E  US n_days= 59 dep=     none sd=0.3 n=10000 rej base=0.0754 c3=0.0358 failed b/c3=0/0 done=840000 elapsed=642s
+cell 36/95  T3   D5 NSE n_days= 59 dep=     none sd=0.3 n=10000 rej base=0.1040 c3=0.0613 failed b/c3=0/0 done=850000 elapsed=651s
+cell 37/95  T3   D5  US n_days= 59 dep=     none sd=0.3 n=10000 rej base=0.1051 c3=0.0624 failed b/c3=0/0 done=860000 elapsed=660s
+cell 38/95  T3   R2 NSE n_days= 59 dep=     none sd=0.3 n=10000 rej base=0.0679 c3=0.0308 failed b/c3=0/0 done=870000 elapsed=668s
+cell 39/95  T3   R2  US n_days= 59 dep=     none sd=0.3 n=10000 rej base=0.0563 c3=0.0234 failed b/c3=0/0 done=880000 elapsed=676s
+cell 40/95  T6    E NSE n_days= 59 dep=estimated sd=0.3 n=25000 rej base=0.0622 c3=0.0177 failed b/c3=0/0 done=905000 elapsed=697s
+cell 41/95  T6    E  US n_days= 59 dep=estimated sd=0.3 n=25000 rej base=0.0566 c3=0.0126 failed b/c3=0/0 done=930000 elapsed=718s
+cell 42/95  T6   D5 NSE n_days= 59 dep=estimated sd=0.3 n=25000 rej base=0.0618 c3=0.0196 failed b/c3=0/0 done=955000 elapsed=739s
+cell 43/95  T6   D5  US n_days= 59 dep=estimated sd=0.3 n=25000 rej base=0.0634 c3=0.0177 failed b/c3=0/0 done=980000 elapsed=759s
+cell 44/95  T4    E NSE n_days= 59 dep=estimated sd=0.3 n=25000 rej base=0.0776 c3=0.0329 failed b/c3=0/0 done=1005000 elapsed=780s
+cell 45/95  T4    E  US n_days= 59 dep=estimated sd=0.3 n=25000 rej base=0.0701 c3=0.0240 failed b/c3=0/0 done=1030000 elapsed=801s
+cell 46/95  T4   D5 NSE n_days= 59 dep=estimated sd=0.3 n=25000 rej base=0.0803 c3=0.0333 failed b/c3=0/0 done=1055000 elapsed=822s
+cell 47/95  T4   D5  US n_days= 59 dep=estimated sd=0.3 n=25000 rej base=0.0792 c3=0.0333 failed b/c3=0/0 done=1080000 elapsed=843s
+cell 48/95  T4    E NSE n_days= 59 dep=     none sd=0.6 n=25000 rej base=0.0810 c3=0.0445 failed b/c3=0/0 done=1105000 elapsed=864s
+cell 49/95  T4    E  US n_days= 59 dep=     none sd=0.6 n=25000 rej base=0.0649 c3=0.0341 failed b/c3=0/0 done=1130000 elapsed=885s
+cell 50/95  T4   D5 NSE n_days= 59 dep=     none sd=0.6 n=25000 rej base=0.0872 c3=0.0487 failed b/c3=0/0 done=1155000 elapsed=905s
+cell 51/95  T4   D5  US n_days= 59 dep=     none sd=0.6 n=25000 rej base=0.0842 c3=0.0493 failed b/c3=0/0 done=1180000 elapsed=926s
+cell 52/95   G    E NSE n_days=125 dep=     none sd=0.3 n=25000 rej base=0.0520 c3=0.0154 failed b/c3=0/0 done=1205000 elapsed=967s
+cell 53/95   G    E NSE n_days=250 dep=     none sd=0.3 n=25000 rej base=0.0509 c3=0.0147 failed b/c3=0/0 done=1230000 elapsed=1050s
+cell 54/95   G    E  US n_days=125 dep=     none sd=0.3 n=25000 rej base=0.0508 c3=0.0160 failed b/c3=0/0 done=1255000 elapsed=1089s
+cell 55/95   G    E  US n_days=250 dep=     none sd=0.3 n=25000 rej base=0.0503 c3=0.0160 failed b/c3=0/0 done=1280000 elapsed=1173s
+cell 56/95   G   D5 NSE n_days=125 dep=     none sd=0.3 n=25000 rej base=0.0494 c3=0.0171 failed b/c3=0/0 done=1305000 elapsed=1214s
+cell 57/95   G   D5 NSE n_days=250 dep=     none sd=0.3 n=25000 rej base=0.0538 c3=0.0175 failed b/c3=0/0 done=1330000 elapsed=1299s
+cell 58/95   G   D5  US n_days=125 dep=     none sd=0.3 n=25000 rej base=0.0492 c3=0.0165 failed b/c3=0/0 done=1355000 elapsed=1339s
+cell 59/95   G   D5  US n_days=250 dep=     none sd=0.3 n=25000 rej base=0.0509 c3=0.0161 failed b/c3=0/0 done=1380000 elapsed=1424s
+cell 60/95  T6    E NSE n_days=125 dep=     none sd=0.3 n=25000 rej base=0.0595 c3=0.0263 failed b/c3=0/0 done=1405000 elapsed=1464s
+cell 61/95  T6    E NSE n_days=250 dep=     none sd=0.3 n=25000 rej base=0.0560 c3=0.0248 failed b/c3=0/0 done=1430000 elapsed=1549s
+cell 62/95  T6    E  US n_days=125 dep=     none sd=0.3 n=25000 rej base=0.0560 c3=0.0230 failed b/c3=0/0 done=1455000 elapsed=1588s
+cell 63/95  T6    E  US n_days=250 dep=     none sd=0.3 n=25000 rej base=0.0541 c3=0.0227 failed b/c3=0/0 done=1480000 elapsed=1676s
+cell 64/95  T6   D5 NSE n_days=125 dep=     none sd=0.3 n=25000 rej base=0.0604 c3=0.0294 failed b/c3=0/0 done=1505000 elapsed=1717s
+cell 65/95  T6   D5 NSE n_days=250 dep=     none sd=0.3 n=25000 rej base=0.0578 c3=0.0275 failed b/c3=0/0 done=1530000 elapsed=1802s
+cell 66/95  T6   D5  US n_days=125 dep=     none sd=0.3 n=25000 rej base=0.0583 c3=0.0298 failed b/c3=0/0 done=1555000 elapsed=1843s
+cell 67/95  T6   D5  US n_days=250 dep=     none sd=0.3 n=25000 rej base=0.0562 c3=0.0259 failed b/c3=0/0 done=1580000 elapsed=1938s
+cell 68/95  T4    E NSE n_days=125 dep=     none sd=0.3 n=25000 rej base=0.0780 c3=0.0492 failed b/c3=0/0 done=1605000 elapsed=1983s
+cell 69/95  T4    E NSE n_days=250 dep=     none sd=0.3 n=25000 rej base=0.0712 c3=0.0444 failed b/c3=0/0 done=1630000 elapsed=2077s
+cell 70/95  T4    E  US n_days=125 dep=     none sd=0.3 n=25000 rej base=0.0672 c3=0.0388 failed b/c3=0/0 done=1655000 elapsed=2122s
+cell 71/95  T4    E  US n_days=250 dep=     none sd=0.3 n=25000 rej base=0.0626 c3=0.0363 failed b/c3=0/0 done=1680000 elapsed=2254s
+cell 72/95  T4   D5 NSE n_days=125 dep=     none sd=0.3 n=25000 rej base=0.0785 c3=0.0527 failed b/c3=0/0 done=1705000 elapsed=2319s
+cell 73/95  T4   D5 NSE n_days=250 dep=     none sd=0.3 n=25000 rej base=0.0755 c3=0.0496 failed b/c3=0/0 done=1730000 elapsed=2452s
+cell 74/95  T4   D5  US n_days=125 dep=     none sd=0.3 n=25000 rej base=0.0771 c3=0.0528 failed b/c3=0/0 done=1755000 elapsed=2518s
+cell 75/95  T4   D5  US n_days=250 dep=     none sd=0.3 n=25000 rej base=0.0696 c3=0.0452 failed b/c3=0/0 done=1780000 elapsed=2651s
+cell 76/95  T7    E NSE n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0602 c3=0.0159 failed b/c3=0/0 done=1805000 elapsed=2684s
+cell 77/95  T7    E NSE n_days= 90 dep=     none sd=0.3 n=25000 rej base=0.0596 c3=0.0243 failed b/c3=0/0 done=1830000 elapsed=2731s
+cell 78/95  T7    E NSE n_days=180 dep=     none sd=0.3 n=25000 rej base=0.0535 c3=0.0220 failed b/c3=0/0 done=1855000 elapsed=2822s
+cell 79/95  T7 D1.5 NSE n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0583 c3=0.0162 failed b/c3=0/0 done=1880000 elapsed=2855s
+cell 80/95  T7 D3.0 NSE n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0564 c3=0.0129 failed b/c3=0/0 done=1905000 elapsed=2912s
+cell 81/95  T7    E  US n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0561 c3=0.0126 failed b/c3=0/0 done=1930000 elapsed=2953s
+cell 82/95  T7    E  US n_days= 90 dep=     none sd=0.3 n=25000 rej base=0.0564 c3=0.0223 failed b/c3=0/0 done=1955000 elapsed=3011s
+cell 83/95  T7    E  US n_days=180 dep=     none sd=0.3 n=25000 rej base=0.0521 c3=0.0193 failed b/c3=0/0 done=1980000 elapsed=3124s
+cell 84/95  T7 D1.5  US n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0633 c3=0.0166 failed b/c3=0/0 done=2005000 elapsed=3166s
+cell 85/95  T7 D3.0  US n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0566 c3=0.0134 failed b/c3=0/0 done=2030000 elapsed=3201s
+cell 86/95  T5    E NSE n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0684 c3=0.0211 failed b/c3=0/0 done=2055000 elapsed=3235s
+cell 87/95  T5    E NSE n_days= 90 dep=     none sd=0.3 n=25000 rej base=0.0694 c3=0.0356 failed b/c3=0/0 done=2080000 elapsed=3291s
+cell 88/95  T5    E NSE n_days=180 dep=     none sd=0.3 n=25000 rej base=0.0635 c3=0.0322 failed b/c3=0/0 done=2105000 elapsed=3400s
+cell 89/95  T5 D1.5 NSE n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0712 c3=0.0244 failed b/c3=0/0 done=2130000 elapsed=3438s
+cell 90/95  T5 D3.0 NSE n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0652 c3=0.0193 failed b/c3=0/0 done=2155000 elapsed=3480s
+cell 91/95  T5    E  US n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0594 c3=0.0169 failed b/c3=0/0 done=2180000 elapsed=3523s
+cell 92/95  T5    E  US n_days= 90 dep=     none sd=0.3 n=25000 rej base=0.0624 c3=0.0282 failed b/c3=0/0 done=2205000 elapsed=3581s
+cell 93/95  T5    E  US n_days=180 dep=     none sd=0.3 n=25000 rej base=0.0603 c3=0.0295 failed b/c3=0/0 done=2230000 elapsed=3661s
+cell 94/95  T5 D1.5  US n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0720 c3=0.0258 failed b/c3=0/0 done=2255000 elapsed=3682s
+cell 95/95  T5 D3.0  US n_days= 59 dep=     none sd=0.3 n=25000 rej base=0.0623 c3=0.0185 failed b/c3=0/0 done=2280000 elapsed=3703s
+COMPLETE 2280000 simulations this session; 0 cells already complete

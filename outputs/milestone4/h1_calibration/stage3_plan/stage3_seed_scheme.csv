@@ -1,0 +1,5 @@
+purpose,master,spawn_key,streams
+"validation, re-run development cells (rows 0-75)",20261204,"(val_row, i, stream)","0 data, 1 baseline"
+"validation, new intermediate cells (rows 76-95)",20261205,"(val_row, i, stream)","0 data, 1 baseline"
+"C3 training at 90 and 180 days (24 cells x 25,000)",20261209,"(row, i)",T only
+validation power cells (only if calibration passes),20261213,"(power_cell, i, stream)","0 data, 1 baseline"

@@ -1,0 +1,5 @@
+criterion,met
+"24 cells x 25,000 simulations completed, unique ids",True
+failure rate at most 0.1% in every cell,True
+one finite value for each of 90 and 180 days,True
+seed 20261209 distinct from every other registered master seed,True

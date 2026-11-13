@@ -1,0 +1,97 @@
+val_row,tail,shape,market,n_days,dependence,day_vol_sd,tier,n_sims,kind,master_seed,stage2_dev_row,role,c3_value_source,d2_reference_row,d2_reference_matched_on_dependence_volatility
+0,G,flat,NSE,59,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,0,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),0,True
+1,G,flat,US,59,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,1,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),1,True
+2,G,E,NSE,59,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,2,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),2,True
+3,G,E,US,59,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,3,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),3,True
+4,G,D5,NSE,59,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,4,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),4,True
+5,G,D5,US,59,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,5,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),5,True
+6,G,R2,NSE,59,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,6,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),6,True
+7,G,R2,US,59,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,7,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),7,True
+8,T10,flat,NSE,59,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,8,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),0,True
+9,T10,flat,US,59,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,9,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),1,True
+10,T10,E,NSE,59,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,10,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),2,True
+11,T10,E,US,59,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,11,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),3,True
+12,T10,D5,NSE,59,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,12,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),4,True
+13,T10,D5,US,59,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,13,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),5,True
+14,T10,R2,NSE,59,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,14,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),6,True
+15,T10,R2,US,59,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,15,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),7,True
+16,T6,flat,NSE,59,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,16,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),0,True
+17,T6,flat,US,59,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,17,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),1,True
+18,T6,E,NSE,59,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,18,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),2,True
+19,T6,E,US,59,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,19,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),3,True
+20,T6,D5,NSE,59,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,20,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),4,True
+21,T6,D5,US,59,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,21,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),5,True
+22,T6,R2,NSE,59,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,22,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),6,True
+23,T6,R2,US,59,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,23,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),7,True
+24,T4,flat,NSE,59,none,0.3,B,25000,"development cell re-run, fresh seeds",20261204,24,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),0,True
+25,T4,flat,US,59,none,0.3,B,25000,"development cell re-run, fresh seeds",20261204,25,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),1,True
+26,T4,E,NSE,59,none,0.3,B,25000,"development cell re-run, fresh seeds",20261204,26,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),2,True
+27,T4,E,US,59,none,0.3,B,25000,"development cell re-run, fresh seeds",20261204,27,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),3,True
+28,T4,D5,NSE,59,none,0.3,B,25000,"development cell re-run, fresh seeds",20261204,28,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),4,True
+29,T4,D5,US,59,none,0.3,B,25000,"development cell re-run, fresh seeds",20261204,29,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),5,True
+30,T4,R2,NSE,59,none,0.3,B,25000,"development cell re-run, fresh seeds",20261204,30,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),6,True
+31,T4,R2,US,59,none,0.3,B,25000,"development cell re-run, fresh seeds",20261204,31,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),7,True
+32,T3,flat,NSE,59,none,0.3,C,10000,"development cell re-run, fresh seeds",20261204,32,report_only_df3,Stage 2 frozen table (c3_critical_values.csv),0,True
+33,T3,flat,US,59,none,0.3,C,10000,"development cell re-run, fresh seeds",20261204,33,report_only_df3,Stage 2 frozen table (c3_critical_values.csv),1,True
+34,T3,E,NSE,59,none,0.3,C,10000,"development cell re-run, fresh seeds",20261204,34,report_only_df3,Stage 2 frozen table (c3_critical_values.csv),2,True
+35,T3,E,US,59,none,0.3,C,10000,"development cell re-run, fresh seeds",20261204,35,report_only_df3,Stage 2 frozen table (c3_critical_values.csv),3,True
+36,T3,D5,NSE,59,none,0.3,C,10000,"development cell re-run, fresh seeds",20261204,36,report_only_df3,Stage 2 frozen table (c3_critical_values.csv),4,True
+37,T3,D5,US,59,none,0.3,C,10000,"development cell re-run, fresh seeds",20261204,37,report_only_df3,Stage 2 frozen table (c3_critical_values.csv),5,True
+38,T3,R2,NSE,59,none,0.3,C,10000,"development cell re-run, fresh seeds",20261204,38,report_only_df3,Stage 2 frozen table (c3_critical_values.csv),6,True
+39,T3,R2,US,59,none,0.3,C,10000,"development cell re-run, fresh seeds",20261204,39,report_only_df3,Stage 2 frozen table (c3_critical_values.csv),7,True
+40,T6,E,NSE,59,estimated,0.3,A,25000,"development cell re-run, fresh seeds",20261204,40,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),2,False
+41,T6,E,US,59,estimated,0.3,A,25000,"development cell re-run, fresh seeds",20261204,41,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),3,False
+42,T6,D5,NSE,59,estimated,0.3,A,25000,"development cell re-run, fresh seeds",20261204,42,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),4,False
+43,T6,D5,US,59,estimated,0.3,A,25000,"development cell re-run, fresh seeds",20261204,43,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),5,False
+44,T4,E,NSE,59,estimated,0.3,B,25000,"development cell re-run, fresh seeds",20261204,44,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),2,False
+45,T4,E,US,59,estimated,0.3,B,25000,"development cell re-run, fresh seeds",20261204,45,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),3,False
+46,T4,D5,NSE,59,estimated,0.3,B,25000,"development cell re-run, fresh seeds",20261204,46,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),4,False
+47,T4,D5,US,59,estimated,0.3,B,25000,"development cell re-run, fresh seeds",20261204,47,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),5,False
+48,T4,E,NSE,59,none,0.6,B,25000,"development cell re-run, fresh seeds",20261204,48,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),2,False
+49,T4,E,US,59,none,0.6,B,25000,"development cell re-run, fresh seeds",20261204,49,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),3,False
+50,T4,D5,NSE,59,none,0.6,B,25000,"development cell re-run, fresh seeds",20261204,50,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),4,False
+51,T4,D5,US,59,none,0.6,B,25000,"development cell re-run, fresh seeds",20261204,51,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),5,False
+52,G,E,NSE,125,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,52,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),52,True
+53,G,E,NSE,250,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,53,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),53,True
+54,G,E,US,125,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,54,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),54,True
+55,G,E,US,250,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,55,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),55,True
+56,G,D5,NSE,125,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,56,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),56,True
+57,G,D5,NSE,250,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,57,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),57,True
+58,G,D5,US,125,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,58,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),58,True
+59,G,D5,US,250,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,59,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),59,True
+60,T6,E,NSE,125,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,60,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),52,True
+61,T6,E,NSE,250,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,61,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),53,True
+62,T6,E,US,125,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,62,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),54,True
+63,T6,E,US,250,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,63,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),55,True
+64,T6,D5,NSE,125,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,64,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),56,True
+65,T6,D5,NSE,250,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,65,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),57,True
+66,T6,D5,US,125,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,66,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),58,True
+67,T6,D5,US,250,none,0.3,A,25000,"development cell re-run, fresh seeds",20261204,67,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),59,True
+68,T4,E,NSE,125,none,0.3,B,25000,"development cell re-run, fresh seeds",20261204,68,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),52,True
+69,T4,E,NSE,250,none,0.3,B,25000,"development cell re-run, fresh seeds",20261204,69,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),53,True
+70,T4,E,US,125,none,0.3,B,25000,"development cell re-run, fresh seeds",20261204,70,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),54,True
+71,T4,E,US,250,none,0.3,B,25000,"development cell re-run, fresh seeds",20261204,71,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),55,True
+72,T4,D5,NSE,125,none,0.3,B,25000,"development cell re-run, fresh seeds",20261204,72,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),56,True
+73,T4,D5,NSE,250,none,0.3,B,25000,"development cell re-run, fresh seeds",20261204,73,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),57,True
+74,T4,D5,US,125,none,0.3,B,25000,"development cell re-run, fresh seeds",20261204,74,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),58,True
+75,T4,D5,US,250,none,0.3,B,25000,"development cell re-run, fresh seeds",20261204,75,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),59,True
+76,T7,E,NSE,59,none,0.3,A,25000,new intermediate cell,20261205,-1,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),2,True
+77,T7,E,NSE,90,none,0.3,A,25000,new intermediate cell,20261205,-1,gated_c3_upper_limit,Stage 3 intermediate table (seed 20261209),-1,True
+78,T7,E,NSE,180,none,0.3,A,25000,new intermediate cell,20261205,-1,gated_c3_upper_limit,Stage 3 intermediate table (seed 20261209),-1,True
+79,T7,D1.5,NSE,59,none,0.3,A,25000,new intermediate cell,20261205,-1,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),-1,True
+80,T7,D3.0,NSE,59,none,0.3,A,25000,new intermediate cell,20261205,-1,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),-1,True
+81,T7,E,US,59,none,0.3,A,25000,new intermediate cell,20261205,-1,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),3,True
+82,T7,E,US,90,none,0.3,A,25000,new intermediate cell,20261205,-1,gated_c3_upper_limit,Stage 3 intermediate table (seed 20261209),-1,True
+83,T7,E,US,180,none,0.3,A,25000,new intermediate cell,20261205,-1,gated_c3_upper_limit,Stage 3 intermediate table (seed 20261209),-1,True
+84,T7,D1.5,US,59,none,0.3,A,25000,new intermediate cell,20261205,-1,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),-1,True
+85,T7,D3.0,US,59,none,0.3,A,25000,new intermediate cell,20261205,-1,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),-1,True
+86,T5,E,NSE,59,none,0.3,B,25000,new intermediate cell,20261205,-1,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),2,True
+87,T5,E,NSE,90,none,0.3,B,25000,new intermediate cell,20261205,-1,gated_c3_upper_limit,Stage 3 intermediate table (seed 20261209),-1,True
+88,T5,E,NSE,180,none,0.3,B,25000,new intermediate cell,20261205,-1,gated_c3_upper_limit,Stage 3 intermediate table (seed 20261209),-1,True
+89,T5,D1.5,NSE,59,none,0.3,B,25000,new intermediate cell,20261205,-1,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),-1,True
+90,T5,D3.0,NSE,59,none,0.3,B,25000,new intermediate cell,20261205,-1,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),-1,True
+91,T5,E,US,59,none,0.3,B,25000,new intermediate cell,20261205,-1,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),3,True
+92,T5,E,US,90,none,0.3,B,25000,new intermediate cell,20261205,-1,gated_c3_upper_limit,Stage 3 intermediate table (seed 20261209),-1,True
+93,T5,E,US,180,none,0.3,B,25000,new intermediate cell,20261205,-1,gated_c3_upper_limit,Stage 3 intermediate table (seed 20261209),-1,True
+94,T5,D1.5,US,59,none,0.3,B,25000,new intermediate cell,20261205,-1,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),-1,True
+95,T5,D3.0,US,59,none,0.3,B,25000,new intermediate cell,20261205,-1,gated_c3_upper_limit,Stage 2 frozen table (c3_critical_values.csv),-1,True

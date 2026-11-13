@@ -1,0 +1,7 @@
+power_cell,shape,mult,market,method,power_method,power_baseline,ratio_to_baseline,flag_cell,power_collapse_flag,caveat
+0,flat,1.1,NSE,c3,0.1234,0.299,0.41270903010033444,False,False,
+1,flat,1.1,US,c3,0.1924,0.407,0.4727272727272727,False,False,
+2,flat,1.2,NSE,c3,0.8184,0.8608,0.9507434944237918,True,False,
+3,flat,1.2,US,c3,0.893,0.8972,0.9953187695051271,True,False,
+4,E,1.2,NSE,c3,0.542,0.6462,0.8387496131228722,False,False,baseline size is distorted in E cells: ratio not a fair yardstick; no flag applies
+5,E,1.2,US,c3,0.6202,0.7146,0.8678981248250769,False,False,baseline size is distorted in E cells: ratio not a fair yardstick; no flag applies

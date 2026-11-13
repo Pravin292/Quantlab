@@ -1,0 +1,144 @@
+val_row,tail,shape,market,n_days,dependence,day_vol_sd,tier,kind,method,conditioning_variable,q1,q2,q3,q4,spread,reference_val_row,reference_spread,d2_computable,d2_flag_judgement_based,d2_label,cell
+17,T6,flat,US,59,none,0.3,A,"development cell re-run, fresh seeds",baseline,leverage,0.076,0.05232,0.04256,0.02144,0.05456,1.0,0.01888,True,True,,T6 flat US 59d
+18,T6,E,NSE,59,none,0.3,A,"development cell re-run, fresh seeds",baseline,leverage,0.13936,0.06368,0.0336,0.01152,0.12784,2.0,0.07168,True,True,,T6 E NSE 59d
+18,T6,E,NSE,59,none,0.3,A,"development cell re-run, fresh seeds",baseline,own_critical_value,0.12256,0.07696,0.04096,0.00768,0.11488,2.0,0.05792,True,True,,T6 E NSE 59d
+19,T6,E,US,59,none,0.3,A,"development cell re-run, fresh seeds",baseline,leverage,0.12336,0.0616,0.04112,0.01456,0.1088,3.0,0.052160000000000005,True,True,,T6 E US 59d
+19,T6,E,US,59,none,0.3,A,"development cell re-run, fresh seeds",baseline,own_critical_value,0.11952,0.07664,0.0344,0.01008,0.10944,3.0,0.0576,True,True,,T6 E US 59d
+20,T6,D5,NSE,59,none,0.3,A,"development cell re-run, fresh seeds",baseline,leverage,0.1232,0.06688,0.04016,0.01216,0.11104,4.0,0.059359999999999996,True,True,,T6 D5 NSE 59d
+20,T6,D5,NSE,59,none,0.3,A,"development cell re-run, fresh seeds",baseline,own_critical_value,0.13088,0.06912,0.03472,0.00768,0.12319999999999999,4.0,0.06144000000000001,True,True,,T6 D5 NSE 59d
+21,T6,D5,US,59,none,0.3,A,"development cell re-run, fresh seeds",baseline,leverage,0.12432,0.064,0.04864,0.01472,0.1096,5.0,0.0544,True,True,,T6 D5 US 59d
+21,T6,D5,US,59,none,0.3,A,"development cell re-run, fresh seeds",baseline,own_critical_value,0.1304,0.07296,0.0384,0.00992,0.12047999999999999,5.0,0.05840000000000001,True,True,,T6 D5 US 59d
+22,T6,R2,NSE,59,none,0.3,A,"development cell re-run, fresh seeds",baseline,leverage,0.10384,0.06432,0.03984,0.0168,0.08704,6.0,0.035039999999999995,True,True,,T6 R2 NSE 59d
+22,T6,R2,NSE,59,none,0.3,A,"development cell re-run, fresh seeds",baseline,own_critical_value,0.10544,0.07008,0.03712,0.01216,0.09328,6.0,0.042879999999999995,True,True,,T6 R2 NSE 59d
+23,T6,R2,US,59,none,0.3,A,"development cell re-run, fresh seeds",baseline,leverage,0.09376,0.06,0.04336,0.01616,0.0776,7.0,0.03088,True,True,,T6 R2 US 59d
+23,T6,R2,US,59,none,0.3,A,"development cell re-run, fresh seeds",baseline,own_critical_value,0.09344,0.0704,0.03968,0.00976,0.08367999999999999,7.0,0.03728,True,True,,T6 R2 US 59d
+24,T4,flat,NSE,59,none,0.3,B,"development cell re-run, fresh seeds",baseline,leverage,0.108,0.05968,0.04144,0.00816,0.09984,0.0,0.032799999999999996,True,True,,T4 flat NSE 59d
+24,T4,flat,NSE,59,none,0.3,B,"development cell re-run, fresh seeds",baseline,own_critical_value,0.108,0.06496,0.03792,0.0064,0.1016,0.0,0.039040000000000005,True,True,,T4 flat NSE 59d
+25,T4,flat,US,59,none,0.3,B,"development cell re-run, fresh seeds",baseline,leverage,0.0904,0.05456,0.02848,0.00752,0.08288,1.0,0.01888,True,True,,T4 flat US 59d
+25,T4,flat,US,59,none,0.3,B,"development cell re-run, fresh seeds",baseline,own_critical_value,0.08976,0.0584,0.0272,0.0056,0.08416000000000001,1.0,0.03776,True,True,,T4 flat US 59d
+26,T4,E,NSE,59,none,0.3,B,"development cell re-run, fresh seeds",baseline,leverage,0.19968,0.07888,0.03328,0.00528,0.1944,2.0,0.07168,True,True,,T4 E NSE 59d
+26,T4,E,NSE,59,none,0.3,B,"development cell re-run, fresh seeds",baseline,own_critical_value,0.1904,0.08832,0.03344,0.00496,0.18544000000000002,2.0,0.05792,True,True,,T4 E NSE 59d
+26,T4,E,NSE,59,none,0.3,B,"development cell re-run, fresh seeds",c3,leverage,0.06928,0.02672,0.01776,0.00944,0.05983999999999999,2.0,0.01296,True,True,,T4 E NSE 59d
+27,T4,E,US,59,none,0.3,B,"development cell re-run, fresh seeds",baseline,leverage,0.14992,0.07472,0.0384,0.00896,0.14096,3.0,0.052160000000000005,True,True,,T4 E US 59d
+27,T4,E,US,59,none,0.3,B,"development cell re-run, fresh seeds",baseline,own_critical_value,0.15824,0.07472,0.03296,0.00608,0.15216,3.0,0.0576,True,True,,T4 E US 59d
+27,T4,E,US,59,none,0.3,B,"development cell re-run, fresh seeds",c3,leverage,0.04384,0.024,0.01648,0.01072,0.03312,3.0,0.01008,True,True,,T4 E US 59d
+28,T4,D5,NSE,59,none,0.3,B,"development cell re-run, fresh seeds",baseline,leverage,0.1896,0.08288,0.04272,0.01088,0.17872,4.0,0.059359999999999996,True,True,,T4 D5 NSE 59d
+28,T4,D5,NSE,59,none,0.3,B,"development cell re-run, fresh seeds",baseline,own_critical_value,0.20096,0.08656,0.03264,0.00592,0.19504,4.0,0.06144000000000001,True,True,,T4 D5 NSE 59d
+28,T4,D5,NSE,59,none,0.3,B,"development cell re-run, fresh seeds",c3,leverage,0.0616,0.03104,0.02144,0.01536,0.04624,4.0,0.009600000000000001,True,True,,T4 D5 NSE 59d
+29,T4,D5,US,59,none,0.3,B,"development cell re-run, fresh seeds",baseline,leverage,0.1856,0.08688,0.04112,0.0088,0.17679999999999998,5.0,0.0544,True,True,,T4 D5 US 59d
+29,T4,D5,US,59,none,0.3,B,"development cell re-run, fresh seeds",baseline,own_critical_value,0.19312,0.08848,0.03424,0.00656,0.18656,5.0,0.05840000000000001,True,True,,T4 D5 US 59d
+29,T4,D5,US,59,none,0.3,B,"development cell re-run, fresh seeds",c3,leverage,0.06352,0.03136,0.02208,0.01888,0.04463999999999999,5.0,0.008640000000000002,True,True,,T4 D5 US 59d
+30,T4,R2,NSE,59,none,0.3,B,"development cell re-run, fresh seeds",baseline,leverage,0.1456,0.06608,0.04096,0.00832,0.13728,6.0,0.035039999999999995,True,True,,T4 R2 NSE 59d
+30,T4,R2,NSE,59,none,0.3,B,"development cell re-run, fresh seeds",baseline,own_critical_value,0.1408,0.08096,0.03408,0.00512,0.13568,6.0,0.042879999999999995,True,True,,T4 R2 NSE 59d
+30,T4,R2,NSE,59,none,0.3,B,"development cell re-run, fresh seeds",c3,leverage,0.04112,0.01888,0.01568,0.01008,0.031039999999999998,6.0,0.0044800000000000005,True,True,,T4 R2 NSE 59d
+31,T4,R2,US,59,none,0.3,B,"development cell re-run, fresh seeds",baseline,leverage,0.12288,0.06576,0.03456,0.00832,0.11456000000000001,7.0,0.03088,True,True,,T4 R2 US 59d
+31,T4,R2,US,59,none,0.3,B,"development cell re-run, fresh seeds",baseline,own_critical_value,0.12848,0.06576,0.03152,0.00576,0.12272000000000001,7.0,0.03728,True,True,,T4 R2 US 59d
+32,T3,flat,NSE,59,none,0.3,C,"development cell re-run, fresh seeds",baseline,leverage,0.1396,0.058,0.0172,0.0024,0.1372,0.0,0.032799999999999996,True,True,,T3 flat NSE 59d
+32,T3,flat,NSE,59,none,0.3,C,"development cell re-run, fresh seeds",baseline,own_critical_value,0.1344,0.0648,0.0168,0.0012,0.13319999999999999,0.0,0.039040000000000005,True,True,,T3 flat NSE 59d
+32,T3,flat,NSE,59,none,0.3,C,"development cell re-run, fresh seeds",c3,leverage,0.044,0.02,0.0092,0.014,0.0348,0.0,0.00224,True,True,,T3 flat NSE 59d
+33,T3,flat,US,59,none,0.3,C,"development cell re-run, fresh seeds",baseline,leverage,0.1128,0.0456,0.0192,0.0024,0.1104,1.0,0.01888,True,True,,T3 flat US 59d
+33,T3,flat,US,59,none,0.3,C,"development cell re-run, fresh seeds",baseline,own_critical_value,0.1076,0.056,0.0152,0.0012,0.1064,1.0,0.03776,True,True,,T3 flat US 59d
+34,T3,E,NSE,59,none,0.3,C,"development cell re-run, fresh seeds",baseline,leverage,0.2452,0.0904,0.0268,0.004,0.2412,2.0,0.07168,True,True,,T3 E NSE 59d
+34,T3,E,NSE,59,none,0.3,C,"development cell re-run, fresh seeds",baseline,own_critical_value,0.2312,0.0988,0.0332,0.0032,0.22799999999999998,2.0,0.05792,True,True,,T3 E NSE 59d
+34,T3,E,NSE,59,none,0.3,C,"development cell re-run, fresh seeds",c3,leverage,0.1072,0.0484,0.0264,0.026,0.08120000000000001,2.0,0.01296,True,True,,T3 E NSE 59d
+35,T3,E,US,59,none,0.3,C,"development cell re-run, fresh seeds",baseline,leverage,0.194,0.0736,0.0316,0.0024,0.1916,3.0,0.052160000000000005,True,True,,T3 E US 59d
+35,T3,E,US,59,none,0.3,C,"development cell re-run, fresh seeds",baseline,own_critical_value,0.1956,0.078,0.026,0.002,0.1936,3.0,0.0576,True,True,,T3 E US 59d
+35,T3,E,US,59,none,0.3,C,"development cell re-run, fresh seeds",c3,leverage,0.068,0.0268,0.0288,0.0196,0.048400000000000006,3.0,0.01008,True,True,,T3 E US 59d
+36,T3,D5,NSE,59,none,0.3,C,"development cell re-run, fresh seeds",baseline,leverage,0.2612,0.1084,0.0396,0.0068,0.2544,4.0,0.059359999999999996,True,True,,T3 D5 NSE 59d
+36,T3,D5,NSE,59,none,0.3,C,"development cell re-run, fresh seeds",baseline,own_critical_value,0.2712,0.106,0.0364,0.0024,0.2688,4.0,0.06144000000000001,True,True,,T3 D5 NSE 59d
+36,T3,D5,NSE,59,none,0.3,C,"development cell re-run, fresh seeds",c3,leverage,0.1172,0.0596,0.034,0.0344,0.0832,4.0,0.009600000000000001,True,True,,T3 D5 NSE 59d
+37,T3,D5,US,59,none,0.3,C,"development cell re-run, fresh seeds",baseline,leverage,0.264,0.1096,0.0412,0.0056,0.2584,5.0,0.0544,True,True,,T3 D5 US 59d
+37,T3,D5,US,59,none,0.3,C,"development cell re-run, fresh seeds",baseline,own_critical_value,0.2808,0.1032,0.0328,0.0036,0.2772,5.0,0.05840000000000001,True,True,,T3 D5 US 59d
+37,T3,D5,US,59,none,0.3,C,"development cell re-run, fresh seeds",c3,leverage,0.122,0.0556,0.0388,0.0332,0.08879999999999999,5.0,0.008640000000000002,True,True,,T3 D5 US 59d
+38,T3,R2,NSE,59,none,0.3,C,"development cell re-run, fresh seeds",baseline,leverage,0.1732,0.0684,0.0276,0.0024,0.17079999999999998,6.0,0.035039999999999995,True,True,,T3 R2 NSE 59d
+38,T3,R2,NSE,59,none,0.3,C,"development cell re-run, fresh seeds",baseline,own_critical_value,0.1724,0.0744,0.022,0.0028,0.1696,6.0,0.042879999999999995,True,True,,T3 R2 NSE 59d
+38,T3,R2,NSE,59,none,0.3,C,"development cell re-run, fresh seeds",c3,leverage,0.0636,0.024,0.018,0.0176,0.046,6.0,0.0044800000000000005,True,True,,T3 R2 NSE 59d
+39,T3,R2,US,59,none,0.3,C,"development cell re-run, fresh seeds",baseline,leverage,0.1484,0.0576,0.0164,0.0028,0.1456,7.0,0.03088,True,True,,T3 R2 US 59d
+39,T3,R2,US,59,none,0.3,C,"development cell re-run, fresh seeds",baseline,kurtosis,0.0756,0.0588,0.0492,0.0416,0.034,7.0,0.006080000000000002,True,True,,T3 R2 US 59d
+39,T3,R2,US,59,none,0.3,C,"development cell re-run, fresh seeds",baseline,own_critical_value,0.1464,0.0584,0.0172,0.0032,0.1432,7.0,0.03728,True,True,,T3 R2 US 59d
+39,T3,R2,US,59,none,0.3,C,"development cell re-run, fresh seeds",c3,leverage,0.044,0.0232,0.0148,0.0116,0.0324,7.0,0.0038400000000000005,True,True,,T3 R2 US 59d
+40,T6,E,NSE,59,estimated,0.3,A,"development cell re-run, fresh seeds",baseline,leverage,0.13952,0.06368,0.03632,0.00944,0.13008,2.0,0.07168,True,True,reference not matched on dependence / day-volatility,"T6 E NSE 59d, est. dependence"
+40,T6,E,NSE,59,estimated,0.3,A,"development cell re-run, fresh seeds",baseline,own_critical_value,0.13088,0.07376,0.03632,0.008,0.12287999999999999,2.0,0.05792,True,True,reference not matched on dependence / day-volatility,"T6 E NSE 59d, est. dependence"
+40,T6,E,NSE,59,estimated,0.3,A,"development cell re-run, fresh seeds",c3,leverage,0.04224,0.01488,0.00864,0.00512,0.03712,2.0,0.01296,True,True,reference not matched on dependence / day-volatility,"T6 E NSE 59d, est. dependence"
+41,T6,E,US,59,estimated,0.3,A,"development cell re-run, fresh seeds",baseline,leverage,0.11472,0.05904,0.03888,0.01376,0.10096000000000001,3.0,0.052160000000000005,True,True,reference not matched on dependence / day-volatility,"T6 E US 59d, est. dependence"
+41,T6,E,US,59,estimated,0.3,A,"development cell re-run, fresh seeds",baseline,own_critical_value,0.11568,0.06528,0.03536,0.01008,0.1056,3.0,0.0576,True,True,reference not matched on dependence / day-volatility,"T6 E US 59d, est. dependence"
+42,T6,D5,NSE,59,estimated,0.3,A,"development cell re-run, fresh seeds",baseline,leverage,0.13104,0.06048,0.03936,0.01616,0.11487999999999998,4.0,0.059359999999999996,True,True,reference not matched on dependence / day-volatility,"T6 D5 NSE 59d, est. dependence"
+42,T6,D5,NSE,59,estimated,0.3,A,"development cell re-run, fresh seeds",baseline,own_critical_value,0.1328,0.0672,0.036,0.01104,0.12176000000000001,4.0,0.06144000000000001,True,True,reference not matched on dependence / day-volatility,"T6 D5 NSE 59d, est. dependence"
+43,T6,D5,US,59,estimated,0.3,A,"development cell re-run, fresh seeds",baseline,leverage,0.13664,0.06704,0.03728,0.0128,0.12384,5.0,0.0544,True,True,reference not matched on dependence / day-volatility,"T6 D5 US 59d, est. dependence"
+43,T6,D5,US,59,estimated,0.3,A,"development cell re-run, fresh seeds",baseline,own_critical_value,0.13472,0.07472,0.03632,0.008,0.12672,5.0,0.05840000000000001,True,True,reference not matched on dependence / day-volatility,"T6 D5 US 59d, est. dependence"
+44,T4,E,NSE,59,estimated,0.3,B,"development cell re-run, fresh seeds",baseline,leverage,0.18992,0.08096,0.03248,0.0072,0.18272,2.0,0.07168,True,True,reference not matched on dependence / day-volatility,"T4 E NSE 59d, est. dependence"
+44,T4,E,NSE,59,estimated,0.3,B,"development cell re-run, fresh seeds",baseline,own_critical_value,0.18576,0.09088,0.02768,0.00624,0.17952,2.0,0.05792,True,True,reference not matched on dependence / day-volatility,"T4 E NSE 59d, est. dependence"
+44,T4,E,NSE,59,estimated,0.3,B,"development cell re-run, fresh seeds",c3,leverage,0.07296,0.02992,0.016,0.01264,0.06032,2.0,0.01296,True,True,reference not matched on dependence / day-volatility,"T4 E NSE 59d, est. dependence"
+45,T4,E,US,59,estimated,0.3,B,"development cell re-run, fresh seeds",baseline,leverage,0.15744,0.0728,0.04272,0.00752,0.14992,3.0,0.052160000000000005,True,True,reference not matched on dependence / day-volatility,"T4 E US 59d, est. dependence"
+45,T4,E,US,59,estimated,0.3,B,"development cell re-run, fresh seeds",baseline,own_critical_value,0.16224,0.0776,0.03504,0.0056,0.15664,3.0,0.0576,True,True,reference not matched on dependence / day-volatility,"T4 E US 59d, est. dependence"
+45,T4,E,US,59,estimated,0.3,B,"development cell re-run, fresh seeds",c3,leverage,0.04784,0.02064,0.01808,0.00928,0.03856,3.0,0.01008,True,True,reference not matched on dependence / day-volatility,"T4 E US 59d, est. dependence"
+46,T4,D5,NSE,59,estimated,0.3,B,"development cell re-run, fresh seeds",baseline,leverage,0.18224,0.084,0.04416,0.01072,0.17152,4.0,0.059359999999999996,True,True,reference not matched on dependence / day-volatility,"T4 D5 NSE 59d, est. dependence"
+46,T4,D5,NSE,59,estimated,0.3,B,"development cell re-run, fresh seeds",baseline,own_critical_value,0.19408,0.08512,0.03568,0.00624,0.18784,4.0,0.06144000000000001,True,True,reference not matched on dependence / day-volatility,"T4 D5 NSE 59d, est. dependence"
+46,T4,D5,NSE,59,estimated,0.3,B,"development cell re-run, fresh seeds",c3,leverage,0.06192,0.02896,0.02368,0.01872,0.0432,4.0,0.009600000000000001,True,True,reference not matched on dependence / day-volatility,"T4 D5 NSE 59d, est. dependence"
+47,T4,D5,US,59,estimated,0.3,B,"development cell re-run, fresh seeds",baseline,leverage,0.1824,0.08064,0.04432,0.0096,0.1728,5.0,0.0544,True,True,reference not matched on dependence / day-volatility,"T4 D5 US 59d, est. dependence"
+47,T4,D5,US,59,estimated,0.3,B,"development cell re-run, fresh seeds",baseline,own_critical_value,0.19024,0.08768,0.0328,0.00624,0.184,5.0,0.05840000000000001,True,True,reference not matched on dependence / day-volatility,"T4 D5 US 59d, est. dependence"
+47,T4,D5,US,59,estimated,0.3,B,"development cell re-run, fresh seeds",c3,leverage,0.064,0.02736,0.0248,0.01712,0.046880000000000005,5.0,0.008640000000000002,True,True,reference not matched on dependence / day-volatility,"T4 D5 US 59d, est. dependence"
+48,T4,E,NSE,59,none,0.6,B,"development cell re-run, fresh seeds",baseline,leverage,0.20096,0.07616,0.0376,0.00912,0.19184,2.0,0.07168,True,True,reference not matched on dependence / day-volatility,"T4 E NSE 59d, day-vol 0.6"
+48,T4,E,NSE,59,none,0.6,B,"development cell re-run, fresh seeds",baseline,own_critical_value,0.20816,0.08224,0.02944,0.004,0.20416,2.0,0.05792,True,True,reference not matched on dependence / day-volatility,"T4 E NSE 59d, day-vol 0.6"
+48,T4,E,NSE,59,none,0.6,B,"development cell re-run, fresh seeds",c3,leverage,0.08768,0.03696,0.02848,0.0248,0.06287999999999999,2.0,0.01296,True,True,reference not matched on dependence / day-volatility,"T4 E NSE 59d, day-vol 0.6"
+49,T4,E,US,59,none,0.6,B,"development cell re-run, fresh seeds",baseline,leverage,0.14512,0.06784,0.03792,0.00864,0.13648,3.0,0.052160000000000005,True,True,reference not matched on dependence / day-volatility,"T4 E US 59d, day-vol 0.6"
+49,T4,E,US,59,none,0.6,B,"development cell re-run, fresh seeds",baseline,own_critical_value,0.1552,0.07216,0.02832,0.00384,0.15136,3.0,0.0576,True,True,reference not matched on dependence / day-volatility,"T4 E US 59d, day-vol 0.6"
+49,T4,E,US,59,none,0.6,B,"development cell re-run, fresh seeds",c3,leverage,0.05776,0.03152,0.0264,0.02064,0.03712,3.0,0.01008,True,True,reference not matched on dependence / day-volatility,"T4 E US 59d, day-vol 0.6"
+50,T4,D5,NSE,59,none,0.6,B,"development cell re-run, fresh seeds",baseline,leverage,0.20544,0.0912,0.04208,0.00992,0.19552,4.0,0.059359999999999996,True,True,reference not matched on dependence / day-volatility,"T4 D5 NSE 59d, day-vol 0.6"
+50,T4,D5,NSE,59,none,0.6,B,"development cell re-run, fresh seeds",baseline,own_critical_value,0.22592,0.08976,0.02928,0.00368,0.22224000000000002,4.0,0.06144000000000001,True,True,reference not matched on dependence / day-volatility,"T4 D5 NSE 59d, day-vol 0.6"
+50,T4,D5,NSE,59,none,0.6,B,"development cell re-run, fresh seeds",c3,leverage,0.08928,0.04672,0.03168,0.02704,0.06224,4.0,0.009600000000000001,True,True,reference not matched on dependence / day-volatility,"T4 D5 NSE 59d, day-vol 0.6"
+51,T4,D5,US,59,none,0.6,B,"development cell re-run, fresh seeds",baseline,leverage,0.19456,0.08944,0.04288,0.01008,0.18448,5.0,0.0544,True,True,reference not matched on dependence / day-volatility,"T4 D5 US 59d, day-vol 0.6"
+51,T4,D5,US,59,none,0.6,B,"development cell re-run, fresh seeds",baseline,own_critical_value,0.2136,0.08752,0.032,0.00384,0.20976,5.0,0.05840000000000001,True,True,reference not matched on dependence / day-volatility,"T4 D5 US 59d, day-vol 0.6"
+51,T4,D5,US,59,none,0.6,B,"development cell re-run, fresh seeds",c3,leverage,0.08768,0.04528,0.036,0.02832,0.059359999999999996,5.0,0.008640000000000002,True,True,reference not matched on dependence / day-volatility,"T4 D5 US 59d, day-vol 0.6"
+60,T6,E,NSE,125,none,0.3,A,"development cell re-run, fresh seeds",baseline,leverage,0.13024,0.06224,0.032,0.0136,0.11664,52.0,0.05248,True,True,,T6 E NSE 125d
+60,T6,E,NSE,125,none,0.3,A,"development cell re-run, fresh seeds",baseline,own_critical_value,0.10848,0.07776,0.03824,0.0136,0.09487999999999999,52.0,0.04079999999999999,True,True,,T6 E NSE 125d
+60,T6,E,NSE,125,none,0.3,A,"development cell re-run, fresh seeds",c3,leverage,0.05696,0.02288,0.01424,0.01104,0.045919999999999996,52.0,0.01456,True,True,,T6 E NSE 125d
+61,T6,E,NSE,250,none,0.3,A,"development cell re-run, fresh seeds",baseline,leverage,0.11424,0.05664,0.0384,0.01488,0.09935999999999999,53.0,0.03824,True,True,,T6 E NSE 250d
+61,T6,E,NSE,250,none,0.3,A,"development cell re-run, fresh seeds",baseline,own_critical_value,0.09968,0.06864,0.04224,0.0136,0.08608,53.0,0.03135999999999999,True,True,,T6 E NSE 250d
+61,T6,E,NSE,250,none,0.3,A,"development cell re-run, fresh seeds",c3,leverage,0.04976,0.02352,0.01632,0.00944,0.040319999999999995,53.0,0.01216,True,True,,T6 E NSE 250d
+62,T6,E,US,125,none,0.3,A,"development cell re-run, fresh seeds",baseline,leverage,0.10192,0.06512,0.03792,0.0192,0.08272,54.0,0.03648,True,True,,T6 E US 125d
+62,T6,E,US,125,none,0.3,A,"development cell re-run, fresh seeds",baseline,own_critical_value,0.10384,0.0688,0.03952,0.012,0.09184,54.0,0.04816000000000001,True,True,,T6 E US 125d
+63,T6,E,US,250,none,0.3,A,"development cell re-run, fresh seeds",baseline,leverage,0.0968,0.05536,0.04496,0.0192,0.0776,55.0,0.024000000000000007,True,True,,T6 E US 250d
+63,T6,E,US,250,none,0.3,A,"development cell re-run, fresh seeds",baseline,own_critical_value,0.08816,0.06608,0.04688,0.0152,0.07296,55.0,0.0288,True,True,,T6 E US 250d
+64,T6,D5,NSE,125,none,0.3,A,"development cell re-run, fresh seeds",baseline,leverage,0.11648,0.06512,0.0408,0.01904,0.09744,56.0,0.04016,True,True,,T6 D5 NSE 125d
+64,T6,D5,NSE,125,none,0.3,A,"development cell re-run, fresh seeds",baseline,own_critical_value,0.11744,0.07088,0.03792,0.0152,0.10224,56.0,0.04224000000000001,True,True,,T6 D5 NSE 125d
+64,T6,D5,NSE,125,none,0.3,A,"development cell re-run, fresh seeds",c3,leverage,0.05168,0.02672,0.02208,0.01696,0.03472,56.0,0.010559999999999998,True,True,,T6 D5 NSE 125d
+65,T6,D5,NSE,250,none,0.3,A,"development cell re-run, fresh seeds",baseline,leverage,0.10304,0.064,0.04544,0.01872,0.08432,57.0,0.032479999999999995,True,True,,T6 D5 NSE 250d
+65,T6,D5,NSE,250,none,0.3,A,"development cell re-run, fresh seeds",baseline,own_critical_value,0.10272,0.06816,0.04496,0.01536,0.08736000000000001,57.0,0.029920000000000002,True,True,,T6 D5 NSE 250d
+66,T6,D5,US,125,none,0.3,A,"development cell re-run, fresh seeds",baseline,leverage,0.1168,0.0616,0.03968,0.0152,0.1016,58.0,0.04000000000000001,True,True,,T6 D5 US 125d
+66,T6,D5,US,125,none,0.3,A,"development cell re-run, fresh seeds",baseline,own_critical_value,0.11616,0.06816,0.03712,0.01184,0.10432,58.0,0.03776,True,True,,T6 D5 US 125d
+67,T6,D5,US,250,none,0.3,A,"development cell re-run, fresh seeds",baseline,leverage,0.1024,0.05968,0.04384,0.01888,0.08352000000000001,59.0,0.01904,True,True,,T6 D5 US 250d
+67,T6,D5,US,250,none,0.3,A,"development cell re-run, fresh seeds",baseline,own_critical_value,0.10032,0.06752,0.04064,0.01632,0.084,59.0,0.028800000000000006,True,True,,T6 D5 US 250d
+67,T6,D5,US,250,none,0.3,A,"development cell re-run, fresh seeds",c3,leverage,0.04384,0.02592,0.02032,0.01344,0.030399999999999996,59.0,0.008320000000000001,True,True,,T6 D5 US 250d
+68,T4,E,NSE,125,none,0.3,B,"development cell re-run, fresh seeds",baseline,leverage,0.19584,0.07552,0.03216,0.00864,0.18719999999999998,52.0,0.05248,True,True,,T4 E NSE 125d
+68,T4,E,NSE,125,none,0.3,B,"development cell re-run, fresh seeds",baseline,own_critical_value,0.1848,0.08704,0.03376,0.00656,0.17823999999999998,52.0,0.04079999999999999,True,True,,T4 E NSE 125d
+68,T4,E,NSE,125,none,0.3,B,"development cell re-run, fresh seeds",c3,leverage,0.10672,0.04112,0.02464,0.02448,0.08224,52.0,0.01456,True,True,,T4 E NSE 125d
+69,T4,E,NSE,250,none,0.3,B,"development cell re-run, fresh seeds",baseline,leverage,0.17184,0.07296,0.03152,0.00848,0.16336,53.0,0.03824,True,True,,T4 E NSE 250d
+69,T4,E,NSE,250,none,0.3,B,"development cell re-run, fresh seeds",baseline,own_critical_value,0.16544,0.07696,0.03552,0.00688,0.15856,53.0,0.03135999999999999,True,True,,T4 E NSE 250d
+69,T4,E,NSE,250,none,0.3,B,"development cell re-run, fresh seeds",c3,leverage,0.09744,0.0384,0.02384,0.01776,0.07968,53.0,0.01216,True,True,,T4 E NSE 250d
+70,T4,E,US,125,none,0.3,B,"development cell re-run, fresh seeds",baseline,leverage,0.14672,0.07152,0.04112,0.00928,0.13743999999999998,54.0,0.03648,True,True,,T4 E US 125d
+70,T4,E,US,125,none,0.3,B,"development cell re-run, fresh seeds",baseline,own_critical_value,0.15472,0.07136,0.03664,0.00592,0.1488,54.0,0.04816000000000001,True,True,,T4 E US 125d
+70,T4,E,US,125,none,0.3,B,"development cell re-run, fresh seeds",c3,leverage,0.07136,0.03616,0.02848,0.01936,0.052000000000000005,54.0,0.013600000000000001,True,True,,T4 E US 125d
+71,T4,E,US,250,none,0.3,B,"development cell re-run, fresh seeds",baseline,leverage,0.136,0.06672,0.03904,0.0088,0.1272,55.0,0.024000000000000007,True,True,,T4 E US 250d
+71,T4,E,US,250,none,0.3,B,"development cell re-run, fresh seeds",baseline,own_critical_value,0.14304,0.06768,0.03488,0.00496,0.13808,55.0,0.0288,True,True,,T4 E US 250d
+71,T4,E,US,250,none,0.3,B,"development cell re-run, fresh seeds",c3,leverage,0.06944,0.03328,0.02352,0.01904,0.0504,55.0,0.01056,True,True,,T4 E US 250d
+72,T4,D5,NSE,125,none,0.3,B,"development cell re-run, fresh seeds",baseline,leverage,0.18128,0.08016,0.04192,0.01072,0.17056,56.0,0.04016,True,True,,T4 D5 NSE 125d
+72,T4,D5,NSE,125,none,0.3,B,"development cell re-run, fresh seeds",baseline,own_critical_value,0.19088,0.0816,0.0344,0.0072,0.18367999999999998,56.0,0.04224000000000001,True,True,,T4 D5 NSE 125d
+72,T4,D5,NSE,125,none,0.3,B,"development cell re-run, fresh seeds",c3,leverage,0.10016,0.04736,0.03456,0.02864,0.07152,56.0,0.010559999999999998,True,True,,T4 D5 NSE 125d
+73,T4,D5,NSE,250,none,0.3,B,"development cell re-run, fresh seeds",baseline,leverage,0.17168,0.07728,0.0416,0.01152,0.16016,57.0,0.032479999999999995,True,True,,T4 D5 NSE 250d
+73,T4,D5,NSE,250,none,0.3,B,"development cell re-run, fresh seeds",baseline,own_critical_value,0.17792,0.0824,0.03344,0.00832,0.1696,57.0,0.029920000000000002,True,True,,T4 D5 NSE 250d
+73,T4,D5,NSE,250,none,0.3,B,"development cell re-run, fresh seeds",c3,leverage,0.09664,0.04304,0.03184,0.02672,0.06992000000000001,57.0,0.012320000000000001,True,True,,T4 D5 NSE 250d
+74,T4,D5,US,125,none,0.3,B,"development cell re-run, fresh seeds",baseline,leverage,0.17728,0.08064,0.04032,0.01024,0.16704,58.0,0.04000000000000001,True,True,,T4 D5 US 125d
+74,T4,D5,US,125,none,0.3,B,"development cell re-run, fresh seeds",baseline,own_critical_value,0.1816,0.08608,0.03424,0.00656,0.17504,58.0,0.03776,True,True,,T4 D5 US 125d
+74,T4,D5,US,125,none,0.3,B,"development cell re-run, fresh seeds",c3,leverage,0.09712,0.04896,0.0344,0.03056,0.06656,58.0,0.01536,True,True,,T4 D5 US 125d
+75,T4,D5,US,250,none,0.3,B,"development cell re-run, fresh seeds",baseline,leverage,0.15488,0.07456,0.0376,0.01152,0.14336,59.0,0.01904,True,True,,T4 D5 US 250d
+75,T4,D5,US,250,none,0.3,B,"development cell re-run, fresh seeds",baseline,own_critical_value,0.16304,0.07728,0.03168,0.00656,0.15647999999999998,59.0,0.028800000000000006,True,True,,T4 D5 US 250d
+75,T4,D5,US,250,none,0.3,B,"development cell re-run, fresh seeds",c3,leverage,0.08272,0.04304,0.0304,0.02464,0.05808000000000001,59.0,0.008320000000000001,True,True,,T4 D5 US 250d
+76,T7,E,NSE,59,none,0.3,A,new intermediate cell,baseline,leverage,0.13008,0.06576,0.03296,0.01216,0.11792,2.0,0.07168,True,True,,T7 E NSE 59d
+76,T7,E,NSE,59,none,0.3,A,new intermediate cell,baseline,own_critical_value,0.1176,0.0736,0.03872,0.01104,0.10656,2.0,0.05792,True,True,,T7 E NSE 59d
+81,T7,E,US,59,none,0.3,A,new intermediate cell,baseline,leverage,0.10416,0.0624,0.04176,0.016,0.08816,3.0,0.052160000000000005,True,True,,T7 E US 59d
+86,T5,E,NSE,59,none,0.3,B,new intermediate cell,baseline,leverage,0.16496,0.06864,0.02976,0.01024,0.15472,2.0,0.07168,True,True,,T5 E NSE 59d
+86,T5,E,NSE,59,none,0.3,B,new intermediate cell,baseline,own_critical_value,0.15552,0.07424,0.03632,0.00752,0.148,2.0,0.05792,True,True,,T5 E NSE 59d
+86,T5,E,NSE,59,none,0.3,B,new intermediate cell,c3,leverage,0.04768,0.0176,0.01184,0.00736,0.04032,2.0,0.01296,True,True,,T5 E NSE 59d
+91,T5,E,US,59,none,0.3,B,new intermediate cell,baseline,leverage,0.12864,0.06128,0.03488,0.0128,0.11584,3.0,0.052160000000000005,True,True,,T5 E US 59d
+91,T5,E,US,59,none,0.3,B,new intermediate cell,baseline,own_critical_value,0.1336,0.06576,0.0312,0.00704,0.12656,3.0,0.0576,True,True,,T5 E US 59d
