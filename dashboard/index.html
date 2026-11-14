@@ -32,11 +32,16 @@ window.addEventListener('error', (e) => window.__errors.push(String(e.message)))
       return { status: 'missing', data: [] };
     },
     calc(id, spec) { calcs[id] = spec; },
-    draw(name, fn) { draws[name] = fn; },
+    draw(name, fn) {
+      if (fn) { draws[name] = fn; return; }
+      document.querySelectorAll('[data-draw="' + name + '"]').forEach((el) => {
+        if (!el.closest('[hidden]')) { try { draws[name](el); } catch (e) { window.__errors.push(name + ': ' + e.message); } }
+      });
+    },
     setLink() {}, onData(fn) { fn(); }, params() { return {}; }, setParams() {}, resetParams() {}, refresh() {},
     __run() {
       for (const [n, fn] of Object.entries(draws))
-        document.querySelectorAll('[data-draw="' + n + '"]').forEach((el) => { try { fn(el); } catch (e) { window.__errors.push(n + ': ' + e.message); } });
+        document.querySelectorAll('[data-draw="' + n + '"]').forEach((el) => { if (el.closest('[hidden]')) return; try { fn(el); } catch (e) { window.__errors.push(n + ': ' + e.message); } });
     }
   };
 })();
@@ -121,11 +126,18 @@ window.addEventListener('error', (e) => window.__errors.push(String(e.message)))
 .qg-holo .sym{font-size:var(--fs-xs);opacity:.85;position:relative;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
 /* Grid of panels */
-.qg-grid{display:grid;gap:18px;min-width:0;grid-template-columns:minmax(0,1.75fr) minmax(0,1fr);
-  grid-template-areas:"stage integ" "contrast gauge" "cal cal" "real alt" "p6 p6" "limits gloss"}
-@media (max-width:860px){.qg-grid{grid-template-columns:minmax(0,1fr);grid-template-areas:"stage" "integ" "contrast" "gauge" "cal" "real" "alt" "p6" "limits" "gloss"}}
-#stages{grid-area:stage} #integrity{grid-area:integ} #contrasts{grid-area:contrast} #gauge-card{grid-area:gauge}
-#calibration{grid-area:cal} #real-data{grid-area:real} #alternatives{grid-area:alt} #phase6{grid-area:p6} #limits{grid-area:limits} #glossary{grid-area:gloss}
+
+/* Pages */
+.qg-page{display:grid;gap:18px;min-width:0}
+.qg-page[hidden]{display:none}
+.qg-pagehead{display:grid;gap:4px;padding:2px 4px}
+.qg-ptitle{font-size:22px!important;letter-spacing:-.02em}
+.qg-row2{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px;align-items:start;min-width:0}
+@media (max-width:860px){.qg-row2{grid-template-columns:minmax(0,1fr)}}
+.qg-pager{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.qg-pager a{text-decoration:none;color:var(--color-fg);font-weight:600;font-size:var(--fs-sm);padding:10px 18px;border-radius:999px;background:var(--glass-2);border:1px solid var(--edge)}
+.qg-pager a.next{background:var(--ind);color:#fff;border-color:transparent}
+.qg-tabs a{cursor:pointer}
 
 /* Stage list under the bar chart */
 .qg-stagelist{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:4px 16px;font-size:var(--fs-xs);color:var(--color-fg-muted)}
@@ -200,15 +212,16 @@ window.addEventListener('error', (e) => window.__errors.push(String(e.message)))
     </div>
   </header>
 
-  <nav class="qg-tabs" aria-label="Sections">
-    <a href="#overview" data-target="overview">Overview</a>
-    <a href="#stages" data-target="stages">Simulations</a>
-    <a href="#contrasts" data-target="contrasts">Real data</a>
-    <a href="#calibration" data-target="calibration">Calibration</a>
-    <a href="#phase6" data-target="phase6">Phase 6</a>
-    <a href="#limits" data-target="limits">Limits</a>
+  <nav class="qg-tabs" aria-label="Pages">
+    <a href="#p-overview" data-page="p-overview">Overview</a>
+    <a href="#p-real" data-page="p-real">Real data</a>
+    <a href="#p-sim" data-page="p-sim">Simulation</a>
+    <a href="#p-phase6" data-page="p-phase6">Phase 6</a>
+    <a href="#p-checks" data-page="p-checks">Checks & limits</a>
   </nav>
 
+  <div class="qg-page" id="p-overview">
+    <div class="qg-pagehead"><h2 class="qg-ptitle">Overview</h2><p class="mut">The project's headline numbers and the result for each real sample.</p></div>
   <section class="qg-glass" id="overview">
     <div class="qg-kpis">
       <div class="qg-kpi" id="kpi-sims">
@@ -233,7 +246,6 @@ window.addEventListener('error', (e) => window.__errors.push(String(e.message)))
       </div>
     </div>
   </section>
-
   <div class="qg-holos" id="real-cards">
     <div class="qg-holo" id="card-us">
       <div class="row"><span class="name">05 · US, first sample</span><span class="badge" data-draw="decision" data-row="1">—</span></div>
@@ -269,29 +281,21 @@ window.addEventListener('error', (e) => window.__errors.push(String(e.message)))
     </div>
   </div>
 
-  <div class="qg-grid">
-    <section class="qg-glass" id="stages">
-      <div class="qg-head"><h2><span class="no">09</span>Simulations by stage</h2><span class="qg-tag"><i></i>9 runs, each once</span></div>
-      <div class="ql-chart" data-draw="stagebars" data-source="simulation_ledger" id="stage-chart" style="min-height:170px"></div>
-      <ol class="qg-stagelist" data-draw="stagelist" data-source="simulation_ledger" aria-label="Runs in order"></ol>
-    </section>
+    <div class="qg-pager">
+      <span></span>
+      <a href="#p-real" data-page="p-real" class="next">Next: Real data →</a>
+    </div>
+  </div>
 
-    <section class="qg-glass" id="integrity">
-      <div class="qg-head"><h2><span class="no">10</span>Integrity checks</h2><span class="mut">all passing</span></div>
-      <table class="qg-rows" data-source="integrity_checks" data-row-key="check" id="integrity-table">
-        <thead><tr>
-          <th>Icon</th>
-          <th data-field="check">Check</th>
-          <th data-field="evidence">Evidence</th>
-          <th data-field="result">Result</th>
-          <th data-field="detail">Detail</th>
-        </tr></thead>
-        <tbody data-draw="integrityrows"></tbody>
-      </table>
+  <div class="qg-page" id="p-real" hidden>
+    <div class="qg-pagehead"><h2 class="qg-ptitle">Real data</h2><p class="mut">The H1 test run once on each real sample: how far T is above the limit, and which periods differ.</p></div>
+    <section class="qg-glass" id="real-data">
+      <div class="qg-head"><h2><span class="no">09</span>Test statistic T against the C3 limit</h2></div>
+      <div class="ql-chart" data-draw="realchart" data-source="real_tests" id="real-chart"></div>
+      <p class="mut">A bar past the dashed line rejects equal volatility. The fresh US sample comes from Alpaca and a period before the first US sample. The first NSE sample had only 58 complete days, so it was reported as not testable rather than shortened.</p>
     </section>
-
     <section class="qg-glass" id="contrasts">
-      <div class="qg-head"><h2><span class="no">11</span>Which periods differ</h2><span class="mut">log ratio of volatility, with SE</span></div>
+      <div class="qg-head"><h2><span class="no">10</span>Which periods differ</h2><span class="mut">log ratio of volatility, with SE</span></div>
       <div class="qg-tablewrap">
         <table class="qg-table" data-source="real_tests" data-row-key="test" id="contrast-table">
           <thead><tr>
@@ -312,13 +316,26 @@ window.addEventListener('error', (e) => window.__errors.push(String(e.message)))
       </div>
       <p class="mut">Near 0 means two periods are alike; 1.5 means the first is about 4.5 times as volatile (in mean square). The open is the most volatile period in every tested sample.</p>
     </section>
+    <div class="qg-pager">
+      <a href="#p-overview" data-page="p-overview">← Overview</a>
+      <a href="#p-sim" data-page="p-sim" class="next">Next: Simulation →</a>
+    </div>
+  </div>
 
+  <div class="qg-page" id="p-sim" hidden>
+    <div class="qg-pagehead"><h2 class="qg-ptitle">Simulation</h2><p class="mut">How C3 was checked on 8,024,000 simulated markets where the true answer is known.</p></div>
+    <div class="qg-row2">
+    <section class="qg-glass" id="stages">
+      <div class="qg-head"><h2><span class="no">11</span>Simulations by stage</h2><span class="qg-tag"><i></i>9 runs, each once</span></div>
+      <div class="ql-chart" data-draw="stagebars" data-source="simulation_ledger" id="stage-chart" style="min-height:170px"></div>
+      <ol class="qg-stagelist" data-draw="stagelist" data-source="simulation_ledger" aria-label="Runs in order"></ol>
+    </section>
     <section class="qg-glass" id="gauge-card">
       <div class="qg-head"><h2><span class="no">12</span>Highest false-alarm rate</h2></div>
       <div class="qb-gauge" data-draw="gauge" data-source="cal_summary" id="gauge" role="img" aria-label="Gauge of the highest C3 false-alarm rate among gated simulation cells against its limit"></div>
       <p class="mut" style="text-align:center">Green up to the 5% target, amber up to the limit, red beyond.</p>
     </section>
-
+    </div>
     <section class="qg-glass" id="calibration">
       <div class="qg-head"><h2><span class="no">13</span>False-alarm rate in every simulated cell</h2>
         <div class="ql-legend" aria-hidden="true">
@@ -330,15 +347,8 @@ window.addEventListener('error', (e) => window.__errors.push(String(e.message)))
       <div class="ql-chart" data-draw="calchart" data-source="calibration_cells" id="cal-chart"></div>
       <p class="mut">One dot per simulated market where volatility truly was equal. Dots left of the dashed line are within the limit. Report-only cells have the heaviest tails and no limit.</p>
     </section>
-
-    <section class="qg-glass" id="real-data">
-      <div class="qg-head"><h2><span class="no">14</span>Test statistic T against the C3 limit</h2></div>
-      <div class="ql-chart" data-draw="realchart" data-source="real_tests" id="real-chart"></div>
-      <p class="mut">A bar past the dashed line rejects equal volatility. The fresh US sample comes from Alpaca and a period before the first US sample. The first NSE sample had only 58 complete days, so it was reported as not testable rather than shortened.</p>
-    </section>
-
     <section class="qg-glass" id="alternatives">
-      <div class="qg-head"><h2><span class="no">15</span>Six harder processes</h2></div>
+      <div class="qg-head"><h2><span class="no">14</span>Six harder processes</h2></div>
       <div class="ql-legend" aria-hidden="true">
         <span><i class="ql-sw" data-series="c3"></i>C3</span>
         <span><i class="ql-sw" data-series="baseline"></i>Old test</span>
@@ -346,9 +356,16 @@ window.addEventListener('error', (e) => window.__errors.push(String(e.message)))
       </div>
       <div class="ql-chart" data-draw="altchart" data-source="alt_processes" id="alt-chart"></div>
     </section>
+    <div class="qg-pager">
+      <a href="#p-real" data-page="p-real">← Real data</a>
+      <a href="#p-phase6" data-page="p-phase6" class="next">Next: Phase 6 →</a>
+    </div>
+  </div>
 
+  <div class="qg-page" id="p-phase6" hidden>
+    <div class="qg-pagehead"><h2 class="qg-ptitle">Phase 6</h2><p class="mut">Do the real samples look like the simulated conditions C3 was validated on? (exploratory)</p></div>
     <section class="qg-glass" id="phase6">
-      <div class="qg-head"><h2><span class="no">16</span>Phase 6: do the real samples look like the simulations?</h2><span class="mut">exploratory, Option A</span></div>
+      <div class="qg-head"><h2><span class="no">15</span>Phase 6: do the real samples look like the simulations?</h2><span class="mut">exploratory, Option A</span></div>
       <div class="qg-tablewrap">
         <table class="qg-table" data-source="phase6_summary" data-row-key="sample" id="phase6-table">
           <thead><tr>
@@ -365,7 +382,28 @@ window.addEventListener('error', (e) => window.__errors.push(String(e.message)))
       </div>
       <p class="mut">The simulations used US dependence of φ 0.190, s 0.141 and ρ 0.187; a value above 1.5 times that counts as outside. Under Option A no sample can be placed inside the simulated domain, so results are only OUTSIDE, CANNOT BE CLASSIFIED or INSUFFICIENT. The real intraday shape is nearest to R2, not E: E was built from variances but simulated as volatility (docs/40). Full report: docs/41.</p>
     </section>
+    <div class="qg-pager">
+      <a href="#p-sim" data-page="p-sim">← Simulation</a>
+      <a href="#p-checks" data-page="p-checks" class="next">Next: Checks & limits →</a>
+    </div>
+  </div>
 
+  <div class="qg-page" id="p-checks" hidden>
+    <div class="qg-pagehead"><h2 class="qg-ptitle">Checks & limits</h2><p class="mut">How the results were protected, and what they do not show.</p></div>
+    <div class="qg-row2">
+    <section class="qg-glass" id="integrity">
+      <div class="qg-head"><h2><span class="no">16</span>Integrity checks</h2><span class="mut">all passing</span></div>
+      <table class="qg-rows" data-source="integrity_checks" data-row-key="check" id="integrity-table">
+        <thead><tr>
+          <th>Icon</th>
+          <th data-field="check">Check</th>
+          <th data-field="evidence">Evidence</th>
+          <th data-field="result">Result</th>
+          <th data-field="detail">Detail</th>
+        </tr></thead>
+        <tbody data-draw="integrityrows"></tbody>
+      </table>
+    </section>
     <section class="qg-glass" id="limits">
       <h2><span class="no">17</span>What these results do not show</h2>
       <ol class="qg-limits">
@@ -376,7 +414,7 @@ window.addEventListener('error', (e) => window.__errors.push(String(e.message)))
         <li>Phase 6 ran only as an exploratory check on these same stocks. Under Option A it cannot place any sample inside the simulated domain.</li>
       </ol>
     </section>
-
+    </div>
     <details class="qg-glass qg-gloss" id="glossary">
       <summary><span class="no">18</span>Key terms</summary>
       <dl>
@@ -388,6 +426,10 @@ window.addEventListener('error', (e) => window.__errors.push(String(e.message)))
         <dt>SE</dt><dd>Standard error: how uncertain an estimate is.</dd>
       </dl>
     </details>
+    <div class="qg-pager">
+      <a href="#p-phase6" data-page="p-phase6">← Phase 6</a>
+      <span></span>
+    </div>
   </div>
 
   <p class="qg-foot">All figures come from the saved QuantLab outputs (github.com/Pravin292/Quantlab). No raw market data is on this page.</p>
@@ -642,29 +684,34 @@ dash.draw('altchart', (el) => {
 document.querySelectorAll('.ql-sw[data-series]').forEach((sw) => {
   sw.style.background = sw.dataset.series === 'c3' ? 'var(--ind)' : 'var(--cds-chart-muted)';
 });
-document.querySelectorAll('a[data-target]').forEach((a) => {
-  a.addEventListener('click', () => { try { dash.setLink(a.dataset.target); } catch (e) {} });
-});
-document.querySelectorAll('a[data-open]').forEach((a) => {
-  a.addEventListener('click', () => { const t = document.getElementById(a.dataset.open); if (t) t.open = true; });
-});
 (function () {
-  const links = Array.from(document.querySelectorAll('.qg-tabs a[data-target]'));
-  if (!links.length) return;
-  let ticking = false;
-  const update = () => {
-    ticking = false;
-    let cur = links[0].dataset.target, best = -Infinity;
-    for (const a of links) {
-      const el = document.getElementById(a.dataset.target);
-      if (!el) continue;
-      const t = el.getBoundingClientRect().top;
-      if (t <= 140 && t > best + 1) { best = t; cur = a.dataset.target; }
-    }
-    links.forEach((a) => a.classList.toggle('is-active', a.dataset.target === cur));
+  const pages = Array.from(document.querySelectorAll('.qg-page'));
+  const tabs = Array.from(document.querySelectorAll('.qg-tabs a[data-page]'));
+  if (!pages.length) return;
+  const show = (id, initial) => {
+    if (!pages.some((p) => p.id === id)) id = pages[0].id;
+    pages.forEach((p) => { p.hidden = p.id !== id; });
+    tabs.forEach((a) => {
+      a.classList.toggle('is-active', a.dataset.page === id);
+      a.setAttribute('aria-current', a.dataset.page === id ? 'page' : 'false');
+    });
+    if (initial) return;
+    const page = document.getElementById(id);
+    const names = new Set();
+    if (page) page.querySelectorAll('[data-draw]').forEach((el) => names.add(el.dataset.draw));
+    names.forEach((n) => { try { dash.draw(n); } catch (e) {} });
+    try { dash.setLink(id); } catch (e) {}
+    const top = document.querySelector('.qg');
+    if (top && top.getBoundingClientRect().top < 0) top.scrollIntoView({ block: 'start' });
   };
-  window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true, capture: true });
-  update();
+  document.querySelectorAll('a[data-page]').forEach((a) => {
+    a.addEventListener('click', (ev) => { ev.preventDefault(); show(a.dataset.page, false); });
+  });
+  window.addEventListener('hashchange', () => {
+    const id = (location.hash || '').slice(1);
+    if (pages.some((p) => p.id === id)) show(id, false);
+  });
+  show((location.hash || '').slice(1), true);
 })();
 
 dash.draw('decision', (el) => {

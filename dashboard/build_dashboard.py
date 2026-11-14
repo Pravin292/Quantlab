@@ -44,11 +44,16 @@ window.addEventListener('error', (e) => window.__errors.push(String(e.message)))
       return { status: 'missing', data: [] };
     },
     calc(id, spec) { calcs[id] = spec; },
-    draw(name, fn) { draws[name] = fn; },
+    draw(name, fn) {
+      if (fn) { draws[name] = fn; return; }
+      document.querySelectorAll('[data-draw="' + name + '"]').forEach((el) => {
+        if (!el.closest('[hidden]')) { try { draws[name](el); } catch (e) { window.__errors.push(name + ': ' + e.message); } }
+      });
+    },
     setLink() {}, onData(fn) { fn(); }, params() { return {}; }, setParams() {}, resetParams() {}, refresh() {},
     __run() {
       for (const [n, fn] of Object.entries(draws))
-        document.querySelectorAll('[data-draw="' + n + '"]').forEach((el) => { try { fn(el); } catch (e) { window.__errors.push(n + ': ' + e.message); } });
+        document.querySelectorAll('[data-draw="' + n + '"]').forEach((el) => { if (el.closest('[hidden]')) return; try { fn(el); } catch (e) { window.__errors.push(n + ': ' + e.message); } });
     }
   };
 })();
