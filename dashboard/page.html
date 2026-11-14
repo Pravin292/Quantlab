@@ -1,0 +1,663 @@
+<meta name="dash-one-writer">
+<style>
+.qb{--qb-blue-h:#6f9cf5;--qb-green-h:#5fb59a;
+  --qb-blue:color-mix(in srgb,var(--qb-blue-h) 24%,var(--color-panel));
+  --qb-blue-2:color-mix(in srgb,var(--qb-blue-h) 40%,var(--color-panel));
+  --qb-green:color-mix(in srgb,var(--qb-green-h) 22%,var(--color-panel));
+  --qb-soft:color-mix(in srgb,var(--qb-blue-h) 7%,var(--color-panel));
+  --qb-chip:color-mix(in srgb,var(--color-panel) 85%,var(--color-bg));
+  --qb-line:color-mix(in srgb,var(--color-fg) 10%,transparent);
+  --qb-r:22px;
+  border-radius:30px;padding:clamp(8px,1.6vw,14px);background:color-mix(in srgb,var(--color-panel) 75%,transparent);border:1px solid var(--color-border-line);min-width:0}
+.qb-in{border-radius:24px;padding:clamp(14px,3vw,34px);display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(14px,2vw,20px);min-width:0;
+  background:linear-gradient(160deg,color-mix(in srgb,var(--qb-blue-h) 20%,var(--color-bg)) 0%,color-mix(in srgb,var(--qb-blue-h) 9%,var(--color-bg)) 55%,color-mix(in srgb,var(--qb-green-h) 12%,var(--color-bg)) 100%)}
+.qb p{margin:0}
+.qb h2,.qb h3{margin:0;font-weight:var(--cds-font-weight-medium);letter-spacing:-.01em}
+.qb h2{font-size:1.15rem}
+.qb h3{font-size:var(--cds-font-size-body)}
+.qb .mut{color:var(--color-fg-muted);font-size:var(--cds-font-size-caption)}
+.qb a{color:inherit}
+
+/* Top bar */
+.qb-top{position:sticky;top:0;z-index:6;display:flex;align-items:center;gap:clamp(10px,3vw,40px);flex-wrap:wrap;padding:10px 4px;border-radius:16px;
+  background:color-mix(in srgb,var(--qb-blue-h) 10%,var(--color-bg));backdrop-filter:blur(8px)}
+.qb-logo{display:flex;align-items:center;gap:10px;font-weight:var(--cds-font-weight-medium);font-size:1.15rem;flex:none}
+.qb-logo i{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--qb-green-h);color:#fff}
+.qb-logo svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.qb-tabs{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;flex:1 1 auto;min-width:0}
+.qb-tabs::-webkit-scrollbar{display:none}
+.qb-tabs a{flex:none;text-decoration:none;padding:7px 12px;border-radius:999px;font-size:var(--cds-font-size-body);color:var(--color-fg);opacity:.75;transition:background .15s,opacity .15s}
+.qb-tabs a:hover{opacity:1}
+.qb-tabs a.is-active{opacity:1;background:var(--color-panel);box-shadow:0 1px 2px color-mix(in srgb,var(--color-fg) 10%,transparent)}
+.qb-badges{display:flex;gap:8px;flex:none}
+@media (max-width:620px){.qb-top{position:static}.qb{padding:4px;border-radius:24px}.qb-in{padding:10px;border-radius:20px}.qb-tabs{order:3;flex:1 1 100%}.qb-badges{flex:1 1 auto;justify-content:flex-end;flex-wrap:wrap}}
+.qb-badge{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:999px;font-size:var(--cds-font-size-caption);background:color-mix(in srgb,var(--color-panel) 70%,transparent);border:1px solid var(--qb-line)}
+.qb-badge::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--bc)}
+.qb-badge.ok{--bc:var(--color-ok)} .qb-badge.warn{--bc:var(--color-warn)}
+
+/* Bento grid */
+.qb-grid{display:grid;gap:clamp(12px,1.6vw,18px);min-width:0;
+  grid-template-columns:minmax(0,1.35fr) minmax(0,1fr) minmax(0,1.1fr);
+  grid-template-areas:"over spend integ" "over learn integ" "cal cal gauge" "real real alt" "contrast contrast alt" "limits limits gloss"}
+@media (max-width:980px){.qb-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  grid-template-areas:"over over" "spend learn" "integ gauge" "cal cal" "real real" "contrast contrast" "alt alt" "limits limits" "gloss gloss"}}
+@media (max-width:620px){.qb-grid{grid-template-columns:minmax(0,1fr);
+  grid-template-areas:"over" "spend" "learn" "integ" "gauge" "cal" "real" "contrast" "alt" "limits" "gloss"}}
+.qb-card{border-radius:var(--qb-r);padding:clamp(16px,2vw,22px);background:var(--qb-soft);display:grid;gap:14px;align-content:start;min-width:0;position:relative;overflow:hidden;
+  border:1px solid color-mix(in srgb,var(--color-panel) 60%,transparent);scroll-margin-top:80px}
+.qb-card.blue{background:var(--qb-blue)} .qb-card.green{background:var(--qb-green)}
+.qb-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.qb-link{font-size:var(--cds-font-size-caption);text-decoration:none;font-weight:var(--cds-font-weight-medium)}
+.qb-link:hover{text-decoration:underline}
+.qb-btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;padding:6px 18px 6px 6px;border-radius:999px;background:var(--color-panel);font-size:var(--cds-font-size-body);border:1px solid var(--qb-line)}
+.qb-btn i{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--qb-blue)}
+.qb-btn svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.qb-pill{display:inline-block;text-decoration:none;padding:9px 20px;border-radius:999px;background:var(--qb-blue-2);font-size:var(--cds-font-size-caption);font-weight:var(--cds-font-weight-medium);border:none;color:var(--color-fg);cursor:pointer;font-family:inherit;justify-self:start}
+
+/* Overview card */
+#overview{grid-area:over} #spend{grid-area:spend} #learn{grid-area:learn} #integrity{grid-area:integ} #gauge-card{grid-area:gauge}
+#calibration{grid-area:cal} #real-data{grid-area:real} #contrasts{grid-area:contrast} #alternatives{grid-area:alt} #limits{grid-area:limits} #glossary{grid-area:gloss}
+.qb-big{font-size:clamp(2.2rem,5vw,3rem);font-weight:700;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.qb-actions{display:flex;gap:10px;flex-wrap:wrap}
+.qb-cards{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,.62fr);gap:10px}
+@media (max-width:460px){.qb-cards{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.qb-mini.dark{grid-column:span 2}}
+.qb-mini{position:relative;overflow:hidden;border-radius:16px;padding:14px;min-height:126px;display:grid;align-content:space-between;gap:8px;background:var(--qb-blue-2);min-width:0}
+.qb-mini.green{background:color-mix(in srgb,var(--qb-green-h) 34%,var(--color-panel))}
+.qb-mini.dark{background:var(--color-fg);color:var(--color-bg)}
+.qb-mini.dark .mut{color:color-mix(in srgb,var(--color-bg) 70%,transparent)}
+.qb-mini::after{content:"";position:absolute;right:-40px;top:-46px;width:120px;height:120px;border-radius:50%;border:1.5px solid color-mix(in srgb,var(--color-fg) 55%,transparent);box-shadow:16px 10px 0 -1px transparent,inset 0 0 0 14px transparent;pointer-events:none}
+.qb-mini.dark::after{border-color:color-mix(in srgb,var(--color-bg) 40%,transparent)}
+.qb-mini .tag{font-size:11px;font-weight:700;letter-spacing:.06em}
+.qb-mini .t{font-size:1.5rem;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.qb-mini .sym{font-size:11px;opacity:.8;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* Learn card */
+.qb-rings{position:absolute;right:-56px;top:-34px;width:170px;height:170px;pointer-events:none;opacity:.35}
+.qb-rings circle{fill:none;stroke:var(--color-fg);stroke-width:1.2}
+.qb-rings circle.b{stroke:var(--qb-blue-h)}
+#learn h3{font-size:1.05rem;max-width:16ch;line-height:1.3;position:relative}
+#learn p{max-width:30ch;position:relative}
+
+/* Integrity list (a table laid out as a list) */
+.qb-list{width:100%;border-collapse:collapse}
+.qb-list thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.qb-list tr{display:grid;grid-template-columns:42px minmax(0,1fr) auto;grid-template-areas:"ic name val" "ic sub det";column-gap:12px;row-gap:2px;padding:11px 0;border-bottom:1px solid var(--qb-line);align-items:center}
+.qb-list tr:last-child{border-bottom:none}
+.qb-list td{padding:0;border:none;min-width:0}
+.qb-list td.ic{grid-area:ic;width:40px;height:40px;border-radius:50%;border:1.5px solid color-mix(in srgb,var(--color-fg) 70%,transparent);display:grid;place-items:center}
+.qb-list td.ic svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.qb-list td.nm{grid-area:name;font-weight:var(--cds-font-weight-medium)}
+.qb-list td.ev{grid-area:sub;font-size:11px;color:var(--color-fg-muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.qb-list td.rs{grid-area:val;font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
+.qb-list td.dt{grid-area:det;font-size:11px;text-align:right;color:var(--color-ok);font-weight:var(--cds-font-weight-medium)}
+
+/* Gauge */
+.qb-gauge{position:relative;min-height:190px}
+
+/* Charts, tooltips, tables */
+.ql-chart{position:relative;min-height:180px;min-width:0}
+.ql-tip{position:absolute;pointer-events:none;background:var(--cds-surface-popover);border:1px solid var(--cds-border);box-shadow:var(--cds-shadow-popover);border-radius:10px;padding:6px 9px;font-size:var(--cds-font-size-caption);max-width:260px;z-index:3}
+.ql-tip b{display:block;color:var(--color-fg)}
+.ql-tip span{color:var(--cds-text-secondary)}
+.ql-legend{display:flex;gap:14px;flex-wrap:wrap;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.ql-sw{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px;background:var(--cds-chart-muted)}
+.ql-sw.ql-line{width:14px;height:0;border-top:2px dashed var(--cds-chart-reference);border-radius:0;background:none}
+.ql-svg text{fill:var(--cds-text-secondary);font-size:var(--cds-font-size-caption)}
+.ql-svg .ql-axis path,.ql-svg .ql-axis line{stroke:var(--cds-chart-axis)}
+.ql-svg .ql-grid line{stroke:var(--cds-chart-grid)}
+.ql-svg .ql-grid path{stroke:none}
+#alt-chart text,#real-chart text{paint-order:stroke;stroke:var(--qb-halo,var(--qb-soft));stroke-width:4px;stroke-linejoin:round}
+#real-data{--qb-halo:var(--qb-blue)}
+.qb-bubble{font-size:11px;fill:var(--color-fg)!important;font-weight:600}
+.qb-tablewrap{overflow-x:auto;border-radius:14px;background:var(--color-panel)}
+.qb-table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:var(--cds-font-size-caption)}
+.qb-table th,.qb-table td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--qb-line);white-space:nowrap}
+.qb-table th{font-weight:var(--cds-font-weight-medium);color:var(--color-fg-muted)}
+.qb-table tbody tr:last-child td{border-bottom:none}
+.ql-tag{display:inline-block;border-radius:999px;padding:3px 10px;font-weight:var(--cds-font-weight-medium);background:color-mix(in srgb,var(--pc) 16%,transparent);color:var(--color-fg);border:1px solid color-mix(in srgb,var(--pc) 45%,transparent)}
+.ql-tag.ok{--pc:var(--color-ok)} .ql-tag.warn{--pc:var(--color-warn)} .ql-tag.bad{--pc:var(--color-bad)} .ql-tag.mute{--pc:var(--color-fg-muted)}
+.qb-limits{margin:0;padding-left:1.1em;display:grid;gap:8px;font-size:var(--cds-font-size-body)}
+.qb-limits li::marker{color:var(--color-warn)}
+#limits{border-left:5px solid var(--color-warn)}
+.qb-gloss summary{cursor:pointer;font-weight:var(--cds-font-weight-medium);font-size:1.05rem}
+.qb-gloss dl{display:grid;gap:10px;margin:12px 0 0}
+.qb-gloss dt{font-weight:var(--cds-font-weight-medium)} .qb-gloss dd{margin:2px 0 0;color:var(--color-fg-muted);font-size:var(--cds-font-size-caption)}
+.qb-foot{text-align:center;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+[data-dash-source-state=refreshing]{opacity:.5}
+</style>
+
+<div class="qb">
+<div class="qb-in">
+  <header class="qb-top" id="summary">
+    <div class="qb-logo"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></i>QuantLab</div>
+    <nav class="qb-tabs" aria-label="Sections">
+      <a href="#overview" data-target="overview">Overview</a>
+      <a href="#real-data" data-target="real-data">Real data</a>
+      <a href="#calibration" data-target="calibration">Simulation</a>
+      <a href="#integrity" data-target="integrity">Integrity</a>
+      <a href="#limits" data-target="limits">Limits</a>
+    </nav>
+    <div class="qb-badges">
+      <span class="qb-badge warn">Verdict: PARTIAL</span>
+      <span class="qb-badge ok">Cost ₹0</span>
+    </div>
+  </header>
+
+  <div class="qb-grid">
+    <section class="qb-card" id="overview">
+      <div>
+        <p class="mut">Total simulations run</p>
+        <div class="qb-big" data-draw="val" data-source="sim_total" data-field="total" data-row="0" data-fmt="int">—</div>
+      </div>
+      <p>C3 stayed within its limit in <b data-draw="val" data-source="cal_summary" data-field="passed" data-row="0">—</b> of <b data-draw="val" data-source="cal_summary" data-field="gated" data-row="0">—</b> gated cells, and <b data-draw="val" data-source="real_summary" data-field="rejected" data-row="0">—</b> of <b data-draw="val" data-source="real_summary" data-field="tested" data-row="0">—</b> real samples rejected equal volatility.</p>
+      <div class="qb-actions">
+        <a class="qb-btn" href="#real-data" data-target="real-data"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></i>Real data</a>
+        <a class="qb-btn" href="#calibration" data-target="calibration"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17 7 7 17"/><path d="M16 17H7V8"/></svg></i>Simulation</a>
+      </div>
+      <h2>Real-data tests</h2>
+      <div class="qb-cards">
+        <div class="qb-mini" id="card-us">
+          <span class="tag">US · 5-MIN</span>
+          <div>
+            <div class="t"><span class="mut">T </span><span data-draw="val" data-source="real_tests" data-field="T" data-row="1" data-fmt="dec2">—</span></div>
+            <div class="sym" data-draw="val" data-source="real_tests" data-field="symbols" data-row="1">—</div>
+            <div class="mut" data-draw="decision" data-row="1">—</div>
+          </div>
+        </div>
+        <div class="qb-mini green" id="card-nse">
+          <span class="tag">NSE · 5-MIN</span>
+          <div>
+            <div class="t"><span class="mut">T </span><span data-draw="val" data-source="real_tests" data-field="T" data-row="2" data-fmt="dec2">—</span></div>
+            <div class="sym" data-draw="val" data-source="real_tests" data-field="symbols" data-row="2">—</div>
+            <div class="mut" data-draw="decision" data-row="2">—</div>
+          </div>
+        </div>
+        <div class="qb-mini dark" id="card-nse-first">
+          <span class="tag">NSE · FIRST</span>
+          <div>
+            <div class="t"><span data-draw="val" data-source="real_tests" data-field="usable_market_sessions" data-row="0">—</span><span class="mut">/<span data-draw="val" data-source="real_tests" data-field="n_required" data-row="0">—</span></span></div>
+            <div class="mut">days complete</div>
+            <div class="mut" data-draw="decision" data-row="0">—</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="qb-card blue" id="spend">
+      <div class="qb-head"><h3>Simulations by stage</h3><span class="mut">9 runs</span></div>
+      <div class="ql-chart" data-draw="stagebars" data-source="simulation_ledger" id="stage-chart" style="min-height:150px"></div>
+    </section>
+
+    <section class="qb-card green" id="learn">
+      <svg class="qb-rings" viewBox="0 0 170 170" aria-hidden="true"><circle cx="70" cy="60" r="48"/><circle cx="120" cy="88" r="48"/><circle class="b" cx="96" cy="128" r="40"/></svg>
+      <h3>What does H1 ask?</h3>
+      <p class="mut">Is a stock's volatility the same at the open, middle and close of the trading day? Tested on 3 NSE and 3 US stocks, 5-minute bars.</p>
+      <a class="qb-pill" href="#glossary" data-open="glossary">Learn more</a>
+    </section>
+
+    <section class="qb-card green" id="integrity">
+      <div class="qb-head"><h3>Integrity checks</h3><span class="mut">all passing</span></div>
+      <table class="qb-list" data-source="integrity_checks" data-row-key="check" id="integrity-table">
+        <thead><tr>
+          <th>Icon</th>
+          <th data-field="check">Check</th>
+          <th data-field="evidence">Evidence</th>
+          <th data-field="result">Result</th>
+          <th data-field="detail">Detail</th>
+        </tr></thead>
+        <tbody data-draw="integrityrows"></tbody>
+      </table>
+    </section>
+
+    <section class="qb-card" id="gauge-card">
+      <div class="qb-head"><h3>Highest false-alarm rate</h3><a class="qb-link" href="#calibration" data-target="calibration">See all cells</a></div>
+      <div class="qb-gauge" data-draw="gauge" data-source="cal_summary" id="gauge" role="img" aria-label="Gauge of the highest C3 false-alarm rate among gated simulation cells against its limit"></div>
+      <p class="mut" style="text-align:center">Target 5%. Limit in that cell <span data-draw="val" data-source="cal_summary" data-field="limit_at_max" data-row="0" data-fmt="pct1">—</span>.</p>
+    </section>
+
+    <section class="qb-card" id="calibration">
+      <div class="qb-head"><h2>False-alarm rate in every simulated cell</h2>
+        <div class="ql-legend" aria-hidden="true">
+          <span><i class="ql-sw" data-series="c3"></i>C3</span>
+          <span><i class="ql-sw" data-series="baseline"></i>Old bootstrap test</span>
+          <span><i class="ql-sw ql-line"></i>Limit</span>
+        </div>
+      </div>
+      <div class="ql-chart" data-draw="calchart" data-source="calibration_cells" id="cal-chart"></div>
+      <p class="mut">One dot per simulated market where volatility truly was equal. Dots left of the dashed line are within the limit. Report-only cells have the heaviest tails and no limit.</p>
+    </section>
+
+    <section class="qb-card blue" id="real-data">
+      <div class="qb-head"><h2>Test statistic T against the C3 limit</h2><span class="mut">reject if past the line</span></div>
+      <div class="ql-chart" data-draw="realchart" data-source="real_tests" id="real-chart"></div>
+      <p class="mut">Each sample is 59 complete trading days of three stocks. The first NSE sample had only 58, so it was reported as not testable rather than shortened.</p>
+    </section>
+
+    <section class="qb-card" id="alternatives">
+      <div class="qb-head"><h2>Six harder processes</h2></div>
+      <div class="ql-legend" aria-hidden="true">
+        <span><i class="ql-sw" data-series="c3"></i>C3</span>
+        <span><i class="ql-sw" data-series="baseline"></i>Old test</span>
+        <span><i class="ql-sw ql-line"></i>Limit</span>
+      </div>
+      <div class="ql-chart" data-draw="altchart" data-source="alt_processes" id="alt-chart"></div>
+    </section>
+
+    <section class="qb-card" id="contrasts">
+      <div class="qb-head"><h2>Which periods differ</h2><span class="mut">log ratio of volatility, with SE</span></div>
+      <div class="qb-tablewrap">
+        <table class="qb-table" data-source="real_tests" data-row-key="test" id="contrast-table">
+          <thead><tr>
+            <th data-field="test">Sample</th>
+            <th data-field="status">Status</th>
+            <th data-field="reject">Decision</th>
+            <th data-field="log_ratio_open_middle">Open vs middle</th>
+            <th data-field="se_open_middle">SE</th>
+            <th data-field="log_ratio_close_middle">Close vs middle</th>
+            <th data-field="se_close_middle">SE</th>
+            <th data-field="log_ratio_open_close">Open vs close</th>
+            <th data-field="se_open_close">SE</th>
+            <th data-field="first_date">First day</th>
+            <th data-field="last_date">Last day</th>
+          </tr></thead>
+          <tbody data-draw="contrastrows"></tbody>
+        </table>
+      </div>
+      <p class="mut">Near 0 means two periods are alike; 1.5 means the first is about 4.5 times as volatile (in mean square). The open is the most volatile period in both markets.</p>
+    </section>
+
+    <section class="qb-card" id="limits">
+      <h2>What these results do not show</h2>
+      <ul class="qb-limits">
+        <li>They do not show that C3 has a 5% error rate on real data. That is still unverified.</li>
+        <li>The real samples are not independent: the same six stocks and source shaped the simulation design.</li>
+        <li>Higher volatility at the open is well known, so the rejections confirm it rather than discover it.</li>
+        <li>C3 is cautious and has less power than the old test. Neither real result was close.</li>
+        <li>The Phase 6 placement protocol is proposed and unapproved, and was not needed here.</li>
+      </ul>
+    </section>
+
+    <details class="qb-card qb-gloss" id="glossary">
+      <summary>Key terms</summary>
+      <dl>
+        <dt>H1</dt><dd>Volatility is the same in the open, middle and close of the trading day.</dd>
+        <dt>T</dt><dd>The largest of the three period differences divided by its standard error.</dd>
+        <dt>C3</dt><dd>A fixed cut-off for T, chosen in advance from simulations. Above it, H1 is rejected.</dd>
+        <dt>False-alarm rate</dt><dd>How often a test rejects when volatility really is equal. Target 5%.</dd>
+        <dt>Gated cell</dt><dd>A simulated scenario with a pass limit: 5.5% (tier A) or 6.0% (tier B).</dd>
+        <dt>SE</dt><dd>Standard error: how uncertain an estimate is.</dd>
+      </dl>
+    </details>
+  </div>
+
+  <p class="qb-foot">All figures come from the saved QuantLab outputs (github.com/Pravin292/Quantlab). No raw market data is on this page.</p>
+</div>
+</div>
+
+<script>
+dash.calc('cal_summary', {
+  inputs: ['calibration_cells'],
+  title: 'Calibration summary',
+  description: 'Gated cells, passes and the highest C3 rate among gated cells, from the Stage 3 cell table.',
+  fn: (cells) => {
+    const gated = cells.filter((r) => r.tier === 'A' || r.tier === 'B');
+    let top = null;
+    for (const r of gated) if (!top || +r.c3_rate_pct > +top.c3_rate_pct) top = r;
+    return [{
+      gated: gated.length,
+      passed: gated.filter((r) => r.status === 'PASS').length,
+      max_gated: top ? +top.c3_rate_pct : null,
+      limit_at_max: top ? +top.gate_limit_pct : null
+    }];
+  }
+});
+dash.calc('sim_total', {
+  inputs: ['simulation_ledger'],
+  title: 'Total simulations',
+  description: 'Sum of the simulation ledger, Stages 1 to 4.',
+  fn: (ledger) => [{ total: ledger.reduce((s, r) => s + Number(r.simulations), 0), stages: ledger.length }]
+});
+dash.calc('real_summary', {
+  inputs: ['real_tests'],
+  title: 'Real-data tests summary',
+  description: 'How many real-data samples were testable and how many rejected equal volatility.',
+  fn: (tests) => {
+    const tested = tests.filter((r) => r.status === 'TESTED');
+    return [{ tested: tested.length, rejected: tested.filter((r) => String(r.reject) === 'True' || r.reject === true).length }];
+  }
+});
+
+window.qlFmt = function (v, f) {
+  if (v === null || v === undefined || v === '' || Number.isNaN(Number(v)) && f) return '—';
+  if (f === 'int') return d3.format(',')(Math.round(+v));
+  if (f === 'pct2') return d3.format('.2f')(+v) + '%';
+  if (f === 'pct1') return d3.format('.1f')(+v) + '%';
+  if (f === 'dec2') return d3.format('.2f')(+v);
+  if (f === 'dec3') return d3.format('.3f')(+v);
+  return String(v);
+};
+
+dash.draw('val', (el) => {
+  const s = dash.data(el.dataset.source);
+  if (s.status !== 'ok') { el.textContent = '—'; return; }
+  const rows = Array.isArray(s.data) ? s.data : [s.data];
+  const r = rows[Number(el.dataset.row || 0)];
+  el.textContent = r ? qlFmt(r[el.dataset.field], el.dataset.fmt) : '—';
+});
+
+window.qlTip = function (box) {
+  const tip = document.createElement('div');
+  tip.className = 'ql-tip';
+  tip.hidden = true;
+  box.appendChild(tip);
+  return {
+    show(ev, title, lines) {
+      tip.replaceChildren();
+      const b = document.createElement('b'); b.textContent = title; tip.appendChild(b);
+      for (const l of lines) { const s = document.createElement('span'); s.textContent = l; tip.appendChild(s); tip.appendChild(document.createElement('br')); }
+      tip.hidden = false;
+      const rect = box.getBoundingClientRect();
+      const p = ev.touches ? ev.touches[0] : ev;
+      let x = p.clientX - rect.left + 12, y = p.clientY - rect.top + 12;
+      const w = tip.offsetWidth, h = tip.offsetHeight;
+      if (x + w > box.clientWidth) x = Math.max(0, p.clientX - rect.left - w - 12);
+      if (y + h > box.clientHeight) y = Math.max(0, p.clientY - rect.top - h - 12);
+      tip.style.left = x + 'px'; tip.style.top = y + 'px';
+    },
+    hide() { tip.hidden = true; }
+  };
+};
+
+window.qlEmpty = function (el, s) {
+  el.replaceChildren();
+  const p = document.createElement('p');
+  p.className = 'ql-muted';
+  p.textContent = s.status === 'error' ? 'Failed to load' : '—';
+  el.appendChild(p);
+};
+
+window.qlTextWidth = function (svg, texts) {
+  const g = svg.append('g').attr('opacity', 0);
+  let w = 0;
+  for (const t of texts) { const n = g.append('text').text(t).node(); w = Math.max(w, n.getComputedTextLength()); }
+  g.remove();
+  return w;
+};
+</script>
+
+<script>
+dash.draw('realchart', (el) => {
+  const s = dash.data('real_tests');
+  if (s.status !== 'ok') { qlEmpty(el, s); return; }
+  const rows = s.data;
+  el.replaceChildren();
+  const W = el.clientWidth || 600, narrow = W < 520, rowH = narrow ? 52 : 44, top = 24;
+  const base = top + rows.length * rowH;
+  const svg = d3.select(el).append('svg').attr('class', 'ql-svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${base + 28}`)
+    .attr('role', 'img').attr('aria-label', 'Bar chart of the real-data statistic T for each sample against the C3 critical value');
+  const labelW = narrow ? 0 : Math.min(W * 0.4, qlTextWidth(svg, rows.map((r) => r.test)) + 12);
+  const tested = rows.filter((r) => r.status === 'TESTED');
+  const crit = +rows[0].crit;
+  const valW = qlTextWidth(svg, tested.map((r) => qlFmt(r.T, 'dec2'))) + 10;
+  const xmax = Math.max(crit * 1.5, d3.max(tested, (r) => +r.T) || 0);
+  const x = d3.scaleLinear().domain([0, xmax]).range([labelW + 8, W - valW]);
+  const ticks = Math.max(2, Math.floor((W - labelW) / 80));
+  svg.append('g').attr('class', 'ql-grid').attr('transform', `translate(0,${base})`)
+    .call(d3.axisBottom(x).ticks(ticks).tickSize(-(base - top + 4)).tickFormat(''));
+  svg.append('g').attr('class', 'ql-axis').attr('transform', `translate(0,${base})`).call(d3.axisBottom(x).ticks(ticks));
+  const tip = qlTip(el);
+  rows.forEach((r, i) => {
+    const y0 = top + i * rowH;
+    const barY = narrow ? y0 + 18 : y0 + 8;
+    svg.append('text').attr('x', 0).attr('y', narrow ? y0 + 12 : y0 + 23).text(r.test);
+    if (r.status === 'TESTED') {
+      const bar = svg.append('rect').attr('x', x(0)).attr('y', barY).attr('height', 22).attr('rx', 4)
+        .attr('width', Math.max(0, x(+r.T) - x(0))).style('fill', dash.colors[0]);
+      svg.append('text').attr('x', x(+r.T) + 6).attr('y', barY + 15).text(qlFmt(r.T, 'dec2'));
+      const lines = [`T ${qlFmt(r.T, 'dec2')}, limit ${qlFmt(r.crit, 'dec2')}`, `Decision: ${String(r.reject) === 'True' ? 'reject equal volatility' : 'do not reject'}`, `${r.first_date} to ${r.last_date}`, `Stocks: ${r.symbols}`];
+      bar.on('pointermove', (ev) => tip.show(ev, r.test, lines)).on('pointerleave', () => tip.hide());
+    } else {
+      svg.append('text').attr('x', x(crit) + 8).attr('y', barY + 15)
+        .text(`Not testable: ${r.usable_market_sessions} of ${r.n_required} sessions`);
+    }
+  });
+  svg.append('line').attr('x1', x(crit)).attr('x2', x(crit)).attr('y1', top - 4).attr('y2', base)
+    .style('stroke', 'var(--cds-chart-reference)').style('stroke-width', 2).style('stroke-dasharray', '5 4');
+  svg.append('text').attr('x', x(crit) + 4).attr('y', 12).text(`C3 limit ${qlFmt(crit, 'dec2')}`);
+});
+
+dash.draw('contrastrows', (tb) => {
+  const s = dash.data('real_tests');
+  tb.replaceChildren();
+  if (s.status !== 'ok') return;
+  const tag = (td, text, kind) => { const t = document.createElement('span'); t.className = 'ql-tag ' + kind; t.textContent = text; td.appendChild(t); };
+  const cols = ['test', 'status', 'reject', 'log_ratio_open_middle', 'se_open_middle', 'log_ratio_close_middle', 'se_close_middle', 'log_ratio_open_close', 'se_open_close', 'first_date', 'last_date'];
+  for (const r of s.data) {
+    const tr = document.createElement('tr');
+    for (const c of cols) {
+      const td = document.createElement('td');
+      if (c === 'status') {
+        tag(td, r.status === 'TESTED' ? 'Tested' : 'Not testable', r.status === 'TESTED' ? 'ok' : 'warn');
+      } else if (c === 'reject') {
+        if (r.status !== 'TESTED') td.textContent = '—';
+        else tag(td, String(r.reject) === 'True' ? 'Reject equal volatility' : 'Do not reject', String(r.reject) === 'True' ? 'bad' : 'mute');
+      } else if (c.startsWith('log_ratio') || c.startsWith('se_')) {
+        td.textContent = qlFmt(r[c], 'dec3');
+      } else td.textContent = r[c] === null || r[c] === '' ? '—' : String(r[c]);
+      tr.appendChild(td);
+    }
+    tb.appendChild(tr);
+  }
+});
+
+</script>
+
+<script>
+dash.draw('calchart', (el) => {
+  const s = dash.data('calibration_cells');
+  if (s.status !== 'ok') { qlEmpty(el, s); return; }
+  el.replaceChildren();
+  const groups = [
+    { key: 'A', label: 'Tier A cells' },
+    { key: 'B', label: 'Tier B cells' },
+    { key: 'C', label: 'Report-only cells' }
+  ];
+  const W = el.clientWidth || 600, bandH = 74, top = 8;
+  const H = top + groups.length * bandH + 30;
+  const svg = d3.select(el).append('svg').attr('class', 'ql-svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`)
+    .attr('role', 'img').attr('aria-label', 'Dot plot of rejection rates under a true null for C3 and the old bootstrap test in every Stage 3 validation cell, grouped by tier, with each tier limit');
+  const narrow = W < 480;
+  const labelW = narrow ? 0 : qlTextWidth(svg, groups.map((g) => g.label)) + 14;
+  const rows = s.data;
+  const xmax = Math.ceil(d3.max(rows, (r) => Math.max(+r.c3_rate_pct, +r.baseline_rate_pct)) + 0.5);
+  const x = d3.scaleLinear().domain([0, xmax]).range([labelW + 14, W - 26]);
+  const ticks = Math.max(3, Math.floor((W - labelW) / 70));
+  svg.append('g').attr('class', 'ql-grid').attr('transform', `translate(0,${H - 30})`).call(d3.axisBottom(x).ticks(ticks).tickSize(-(H - 30 - top)).tickFormat(''));
+  svg.append('g').attr('class', 'ql-axis').attr('transform', `translate(0,${H - 30})`).call(d3.axisBottom(x).ticks(ticks).tickFormat((d) => d + '%'));
+  const tip = qlTip(el);
+  groups.forEach((g, gi) => {
+    const y0 = top + gi * bandH;
+    const cells = rows.filter((r) => r.tier === g.key);
+    svg.append('text').attr('x', narrow ? x(0) + 2 : 0).attr('y', narrow ? y0 + 12 : y0 + bandH / 2 + 4).text(`${g.label} (${cells.length})`);
+    const lim = cells.length && cells[0].gate_limit_pct !== null && cells[0].gate_limit_pct !== '' ? +cells[0].gate_limit_pct : null;
+    if (lim !== null && !Number.isNaN(lim)) {
+      svg.append('line').attr('x1', x(lim)).attr('x2', x(lim)).attr('y1', y0 + 6).attr('y2', y0 + bandH - 6)
+        .style('stroke', 'var(--cds-chart-reference)').style('stroke-width', 2).style('stroke-dasharray', '5 4');
+      svg.append('text').attr('x', x(lim) + 4).attr('y', y0 + 14).text(`limit ${qlFmt(lim, 'pct1')}`);
+    }
+    cells.forEach((r, i) => {
+      const jit = ((i * 37) % 17) / 16;
+      const yb = y0 + 22 + jit * (bandH - 34);
+      const lines = [`C3 ${qlFmt(r.c3_rate_pct, 'pct2')}`, `Old test ${qlFmt(r.baseline_rate_pct, 'pct2')}`, lim !== null && !Number.isNaN(lim) ? `Limit ${qlFmt(lim, 'pct1')} · ${r.status === 'PASS' ? 'within limit' : r.status}` : 'Report only, no limit'];
+      svg.append('circle').attr('cx', x(+r.baseline_rate_pct)).attr('cy', yb).attr('r', 3.5)
+        .style('fill', 'var(--cds-chart-muted)').style('stroke', 'var(--color-bg)').style('stroke-width', 1)
+        .on('pointermove', (ev) => tip.show(ev, r.cell, lines)).on('pointerleave', () => tip.hide());
+      svg.append('circle').attr('cx', x(+r.c3_rate_pct)).attr('cy', yb).attr('r', 4)
+        .style('fill', dash.colors[0]).style('stroke', 'var(--color-bg)').style('stroke-width', 1)
+        .on('pointermove', (ev) => tip.show(ev, r.cell, lines)).on('pointerleave', () => tip.hide());
+    });
+  });
+});
+
+dash.draw('altchart', (el) => {
+  const s = dash.data('alt_processes');
+  if (s.status !== 'ok') { qlEmpty(el, s); return; }
+  el.replaceChildren();
+  const rows = s.data.map((r) => ({ ...r, label: `${r.process} · ${r.market}` }));
+  const W = el.clientWidth || 600, narrow = W < 520, rowH = narrow ? 42 : 30, top = 6;
+  const H = top + rows.length * rowH + 30;
+  const svg = d3.select(el).append('svg').attr('class', 'ql-svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`)
+    .attr('role', 'img').attr('aria-label', 'Paired bars of rejection rates for C3 and the old test under six alternative simulated processes in each market, with the 6 percent limit');
+  const labelW = narrow ? 0 : Math.min(W * 0.5, qlTextWidth(svg, rows.map((r) => r.label)) + 10);
+  const dy = narrow ? 13 : 0;
+  const xmax = Math.ceil(d3.max(rows, (r) => Math.max(+r.c3_rate_pct, +r.baseline_rate_pct, +r.gate_limit_pct)) + 0.5);
+  const x = d3.scaleLinear().domain([0, xmax]).range([labelW + (narrow ? 14 : 0), W - 26]);
+  const ticks = Math.max(3, Math.floor((W - labelW) / 70));
+  svg.append('g').attr('class', 'ql-grid').attr('transform', `translate(0,${H - 30})`).call(d3.axisBottom(x).ticks(ticks).tickSize(-(H - 30 - top)).tickFormat(''));
+  svg.append('g').attr('class', 'ql-axis').attr('transform', `translate(0,${H - 30})`).call(d3.axisBottom(x).ticks(ticks).tickFormat((d) => d + '%'));
+  const tip = qlTip(el);
+  rows.forEach((r, i) => {
+    const y0 = top + i * rowH;
+    svg.append('text').attr('x', 0).attr('y', narrow ? y0 + 11 : y0 + 18).text(r.label);
+    const lines = [`C3 ${qlFmt(r.c3_rate_pct, 'pct2')} (${r.c3_status})`, `Old test ${qlFmt(r.baseline_rate_pct, 'pct2')} (${r.baseline_status})`, `Limit ${qlFmt(r.gate_limit_pct, 'pct1')}`];
+    const g = svg.append('g').on('pointermove', (ev) => tip.show(ev, r.label, lines)).on('pointerleave', () => tip.hide());
+    g.append('rect').attr('x', x(0)).attr('y', y0 + 4 + dy).attr('height', 10).attr('rx', 3).attr('width', Math.max(0, x(+r.c3_rate_pct) - x(0))).style('fill', dash.colors[0]);
+    g.append('rect').attr('x', x(0)).attr('y', y0 + 16 + dy).attr('height', 10).attr('rx', 3).attr('width', Math.max(0, x(+r.baseline_rate_pct) - x(0))).style('fill', 'var(--cds-chart-muted)');
+  });
+  const lim = +rows[0].gate_limit_pct;
+  svg.append('line').attr('x1', x(lim)).attr('x2', x(lim)).attr('y1', top).attr('y2', H - 30)
+    .style('stroke', 'var(--cds-chart-reference)').style('stroke-width', 2).style('stroke-dasharray', '5 4');
+});
+
+</script>
+
+<script>
+document.querySelectorAll('.ql-sw[data-series]').forEach((sw) => {
+  sw.style.background = sw.dataset.series === 'c3' ? dash.colors[0] : 'var(--cds-chart-muted)';
+});
+document.querySelectorAll('a[data-target]').forEach((a) => {
+  a.addEventListener('click', () => { try { dash.setLink(a.dataset.target); } catch (e) {} });
+});
+document.querySelectorAll('a[data-open]').forEach((a) => {
+  a.addEventListener('click', () => { const t = document.getElementById(a.dataset.open); if (t) t.open = true; });
+});
+(function () {
+  const links = Array.from(document.querySelectorAll('.qb-tabs a[data-target]'));
+  if (!links.length) return;
+  let ticking = false;
+  const update = () => {
+    ticking = false;
+    let cur = links[0].dataset.target, best = -Infinity;
+    for (const a of links) {
+      const el = document.getElementById(a.dataset.target);
+      if (!el) continue;
+      const t = el.getBoundingClientRect().top;
+      if (t <= 140 && t > best + 1) { best = t; cur = a.dataset.target; }
+    }
+    links.forEach((a) => a.classList.toggle('is-active', a.dataset.target === cur));
+  };
+  window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true, capture: true });
+  update();
+})();
+
+dash.draw('decision', (el) => {
+  const s = dash.data('real_tests');
+  if (s.status !== 'ok') { el.textContent = '—'; return; }
+  const r = s.data[Number(el.dataset.row || 0)];
+  if (!r) { el.textContent = '—'; return; }
+  if (r.status !== 'TESTED') el.textContent = 'Not testable';
+  else el.textContent = String(r.reject) === 'True' ? 'Rejects equal volatility' : 'Does not reject';
+});
+
+dash.draw('stagebars', (el) => {
+  const s = dash.data('simulation_ledger');
+  if (s.status !== 'ok') { qlEmpty(el, s); return; }
+  el.replaceChildren();
+  const fmt = d3.format(','), fmtS = d3.format('.2~s');
+  const counts = {};
+  const rows = s.data.map((r) => {
+    const st = (String(r.stage).match(/^Stage\s*(\d+)/) || [, '?'])[1];
+    counts[st] = (counts[st] || 0) + 1;
+    return { ...r, n: +r.simulations, st, short: `S${st}${String.fromCharCode(96 + counts[st])}` };
+  });
+  rows.forEach((r) => { if (counts[r.st] === 1) r.short = `S${r.st}`; });
+  const W = el.clientWidth || 300, H = 150, top = 26, bottom = 20;
+  const svg = d3.select(el).append('svg').attr('class', 'ql-svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`)
+    .attr('role', 'img').attr('aria-label', 'Column chart of the number of simulations in each of the nine runs, Stages 1 to 4');
+  const x = d3.scaleBand().domain(rows.map((r, i) => i)).range([2, W - 2]).paddingInner(W < 300 ? 0.35 : 0.45);
+  const y = d3.scaleLinear().domain([0, d3.max(rows, (r) => r.n)]).range([H - bottom, top]);
+  const maxI = d3.maxIndex(rows, (r) => r.n);
+  const tip = qlTip(el);
+  rows.forEach((r, i) => {
+    const bw = x.bandwidth(), h = Math.max(bw, (H - bottom) - y(r.n));
+    svg.append('rect').attr('x', x(i)).attr('y', H - bottom - h).attr('width', bw).attr('height', h).attr('rx', bw / 2)
+      .style('fill', i === maxI ? dash.colors[0] : 'var(--color-panel)')
+      .on('pointermove', (ev) => tip.show(ev, r.stage, [`${fmt(r.n)} simulations`])).on('pointerleave', () => tip.hide());
+    svg.append('text').attr('x', x(i) + bw / 2).attr('y', H - 5).attr('text-anchor', 'middle').style('font-size', '10px').text(r.short);
+  });
+  const m = rows[maxI], cx = x(maxI) + x.bandwidth() / 2;
+  const label = fmtS(m.n).replace('M', 'M');
+  const g = svg.append('g');
+  const t = g.append('text').attr('class', 'qb-bubble').attr('text-anchor', 'middle').attr('y', 14).text(label);
+  const tw = t.node().getComputedTextLength() + 16;
+  const bx = Math.min(Math.max(cx, tw / 2 + 1), W - tw / 2 - 1);
+  t.attr('x', bx);
+  g.insert('rect', 'text').attr('x', bx - tw / 2).attr('y', 1).attr('width', tw).attr('height', 19).attr('rx', 9.5)
+    .style('fill', 'var(--color-panel)').style('stroke', 'var(--cds-border)');
+});
+
+dash.draw('integrityrows', (tb) => {
+  const s = dash.data('integrity_checks');
+  tb.replaceChildren();
+  if (s.status !== 'ok') return;
+  const icons = [
+    'M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11',
+    'M12 2l7 4v6c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6z',
+    'M6 10V7a6 6 0 0 1 12 0v3M5 10h14v11H5z',
+    'M4 4h16v16H4zM4 9h16M9 9v11',
+    'M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6'
+  ];
+  const ns = 'http://www.w3.org/2000/svg';
+  s.data.forEach((r, i) => {
+    const tr = document.createElement('tr');
+    const ic = document.createElement('td'); ic.className = 'ic';
+    const svg = document.createElementNS(ns, 'svg'); svg.setAttribute('viewBox', '0 0 24 24'); svg.setAttribute('aria-hidden', 'true');
+    const p = document.createElementNS(ns, 'path'); p.setAttribute('d', icons[i % icons.length]); svg.appendChild(p); ic.appendChild(svg);
+    const nm = document.createElement('td'); nm.className = 'nm'; nm.textContent = r.check;
+    const ev = document.createElement('td'); ev.className = 'ev'; ev.textContent = r.evidence;
+    const rs = document.createElement('td'); rs.className = 'rs'; rs.textContent = r.result;
+    const dt = document.createElement('td'); dt.className = 'dt'; dt.textContent = '✓ ' + r.detail;
+    tr.append(ic, nm, ev, rs, dt);
+    tb.appendChild(tr);
+  });
+});
+
+dash.draw('gauge', (el) => {
+  const s = dash.data('cal_summary');
+  if (s.status !== 'ok' || !s.data || !s.data[0]) { qlEmpty(el, s); return; }
+  el.replaceChildren();
+  const v = +s.data[0].max_gated, lim = +s.data[0].limit_at_max, target = 5;
+  const vmax = Math.max(10, Math.ceil(v * 1.2));
+  const W = Math.min(el.clientWidth || 300, 320), H = W * 0.62, R = W / 2 - 14, cx = W / 2, cy = R + 12, th = 14;
+  const svg = d3.select(el).append('svg').attr('class', 'ql-svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).style('max-width', W + 'px').style('display', 'block').style('margin', '0 auto')
+    .attr('aria-hidden', 'true');
+  const a = d3.scaleLinear().domain([0, vmax]).range([-Math.PI / 2, Math.PI / 2]);
+  const arc = d3.arc().innerRadius(R - th).outerRadius(R).cornerRadius(th / 2).padAngle(0.04);
+  const segs = [[0, target, 'var(--color-ok)'], [target, lim, 'var(--color-warn)'], [lim, vmax, 'var(--color-bad)']];
+  const g = svg.append('g').attr('transform', `translate(${cx},${cy})`);
+  segs.forEach(([s0, s1, c]) => { if (s1 > s0) g.append('path').attr('d', arc({ startAngle: a(s0), endAngle: a(s1) })).style('fill', c).style('opacity', 0.9); });
+  const ang = a(Math.min(v, vmax));
+  const px = Math.sin(ang) * (R - th / 2), py = -Math.cos(ang) * (R - th / 2);
+  g.append('circle').attr('cx', px).attr('cy', py).attr('r', th / 2 + 4).style('fill', 'var(--color-panel)').style('stroke', 'var(--color-fg)').style('stroke-width', 2.5);
+  g.append('text').attr('text-anchor', 'middle').attr('y', -R * 0.18).style('font-size', Math.round(R * 0.36) + 'px').style('font-weight', 700).style('fill', 'var(--color-fg)').text(qlFmt(v, 'pct2'));
+  const ok = v <= lim;
+  g.append('text').attr('text-anchor', 'middle').attr('y', -R * 0.18 + 24).style('font-size', '14px').style('fill', ok ? 'var(--color-ok)' : 'var(--color-bad)')
+    .text(ok ? 'Within limit' : 'Over limit');
+  g.append('text').attr('x', -R + th / 2).attr('y', 16).attr('text-anchor', 'middle').text('0%');
+  g.append('text').attr('x', R - th / 2).attr('y', 16).attr('text-anchor', 'middle').text(vmax + '%');
+  const tip = qlTip(el);
+  svg.attr('aria-hidden', null).style('pointer-events', 'all')
+    .on('pointermove', (ev) => tip.show(ev, 'Highest C3 rate, gated cells', [`${qlFmt(v, 'pct2')} vs limit ${qlFmt(lim, 'pct1')}`, `Green to ${target}% target, amber to the limit, red beyond`]))
+    .on('pointerleave', () => tip.hide());
+});
+</script>
