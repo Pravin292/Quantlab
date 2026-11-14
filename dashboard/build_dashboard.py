@@ -1,6 +1,6 @@
 """Build dashboard/index.html, a standalone copy of the published QuantLab H1 Results dashboard.
 
-page.html is the page stored in the online dashboard; data/*.csv are the five aggregate files it reads. This script
+page.html is the page stored in the online dashboard; datasets/*.csv are the five aggregate files it reads. This script
 embeds both, with d3 and a minimal stand-in for the dashboard runtime (dash.data, dash.calc, dash.draw), so the page
 opens offline or from a local server. No raw market data is used: every CSV is an aggregate of saved project outputs.
 
@@ -56,7 +56,7 @@ window.addEventListener('error', (e) => window.__errors.push(String(e.message)))
 
 
 def load(name):
-    with open(HERE / "data" / f"{name}.csv", newline="") as f:
+    with open(HERE / "datasets" / f"{name}.csv", newline="") as f:
         return [{k: (v if v != "" else None) for k, v in r.items()} for r in csv.DictReader(f)]
 
 

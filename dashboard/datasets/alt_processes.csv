@@ -1,0 +1,13 @@
+process,market,c3_rate_pct,baseline_rate_pct,c3_status,baseline_status,gate_limit_pct
+a: intraday volatility clustering,NSE,1.976,6.688,PASS,FAIL,6.0
+a: intraday volatility clustering,US,1.6320000000000001,6.1080000000000005,PASS,FAIL_AMBIGUOUS,6.0
+b: jumps,NSE,2.368,7.26,PASS,FAIL,6.0
+b: jumps,US,1.96,6.372,PASS,FAIL,6.0
+c: period specific tails,NSE,4.412,9.452,PASS,FAIL,6.0
+c: period specific tails,US,3.696,8.608,PASS,FAIL,6.0
+d: stock specific tails,NSE,2.78,7.516,PASS,FAIL,6.0
+d: stock specific tails,US,2.02,6.176,PASS,FAIL_AMBIGUOUS,6.0
+e: heavy tailed day factor,NSE,1.436,5.04,PASS,PASS,6.0
+e: heavy tailed day factor,US,1.228,5.088,PASS,PASS,6.0
+f: laplace shocks,NSE,1.652,6.156,PASS,FAIL_AMBIGUOUS,6.0
+f: laplace shocks,US,1.344,5.584,PASS,PASS,6.0

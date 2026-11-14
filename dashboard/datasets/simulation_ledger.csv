@@ -1,0 +1,10 @@
+stage,simulations
+Stage 1 baseline diagnosis,1240000
+Stage 2 C3 training,1700000
+Stage 2 development,1780000
+Stage 2 power check,30000
+Stage 3 C3 training 90/180 days,600000
+Stage 3 locked validation,2280000
+Stage 3 power cells,30000
+Stage 4 alternative processes,300000
+Stage 4 bar-level check,64000

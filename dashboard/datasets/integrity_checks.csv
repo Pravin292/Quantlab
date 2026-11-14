@@ -1,0 +1,6 @@
+check,result,detail,evidence
+Test suite,362 passed,0 failed,pytest 2026-11-14
+Hashed manifests,12 verified,0 mismatches,shasum -a 256 -c
+Frozen C3 table,unchanged,hash verified,C3_TABLE.sha256
+Raw market data in GitHub,none,git-ignored,.gitignore
+Money spent,0,no paid source,docs/33 §7
