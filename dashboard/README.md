@@ -26,6 +26,7 @@ Then open http://127.0.0.1:8765/
 | `datasets/real_tests.csv` | The four pre-registered real-data runs (`docs/31`, `docs/35`, `docs/39`) |
 | `datasets/simulation_ledger.csv` | Simulations per stage (`docs/19` §5) |
 | `datasets/integrity_checks.csv` | Test-suite, manifest and data-handling checks run on 2026-11-14 |
+| `datasets/phase6_summary.csv` | Exploratory Phase 6 result per real sample (`docs/41`, from `outputs/milestone4/phase6/`) |
 | `build_dashboard.py` | Embeds the page and data into `index.html` |
 | `index.html` | Generated standalone dashboard. Rebuild it after changing `page.html` or the datasets |
 

@@ -1,0 +1,33 @@
+sample,variant,method,unit,result,nearest,second,q_nearest,K,flags,why
+us_first,baseline,primary,panel,2,R2,flat,1.1057379735612414,R2,,
+us_first,baseline,primary,stock0,2,R2,flat,1.3356832315829832,R2,,
+us_first,baseline,primary,stock1,2,R2,E,1.0603224949101588,R2,,
+us_first,baseline,primary,stock2,2,R2,flat,1.001673587274742,R2,,
+us_first,baseline,literal,panel,2,E,R2,0.16896795932903663,E,,
+us_first,baseline,literal,stock0,2,E,R2,0.7641187592516736,E,,
+us_first,baseline,literal,stock1,2,E,R2,0.3836756873458234,E,,
+us_first,baseline,literal,stock2,2,E,R2,0.8999456323828227,E,,
+us_first,strict,primary,panel,2,R2,flat,1.1046238315290493,R2,,
+us_first,strict,primary,stock0,2,R2,flat,1.3040418042742608,R2,,
+us_first,strict,primary,stock1,2,R2,flat,1.1098628977214349,R2,,
+us_first,strict,primary,stock2,2,R2,flat,0.9293878054722037,R2,,
+us_first,strict,literal,panel,1,E,R2,0.2254554956015163,E,,
+us_first,strict,literal,stock0,2,E,R2,0.7292122122176997,E,,
+us_first,strict,literal,stock1,2,E,R2,0.2379443858854747,E,,
+us_first,strict,literal,stock2,3,E,R2,1.0497054882559198,E,,
+us_fresh,baseline,primary,panel,U,R2,E,0.8053230346866154,R2,,d_R2:DEPENDENCE-INCONSISTENCY | d_R2:PSEUDO-VALUE-SKEW
+us_fresh,baseline,primary,stock0,U,R2,E,0.9456417775719329,R2,,d_R2:DEPENDENCE-INCONSISTENCY
+us_fresh,baseline,primary,stock1,U,R2,flat,0.7531615450918882,R2,,d_R2:PSEUDO-VALUE-SKEW
+us_fresh,baseline,primary,stock2,U,R2,flat,0.9873095827481241,R2,,d_R2:PSEUDO-VALUE-SKEW
+us_fresh,baseline,literal,panel,U,E,R2,2.9092607092922673,E,,d_E:PSEUDO-VALUE-SKEW | SPLIT-HALF
+us_fresh,baseline,literal,stock0,U,E,R2,4.463162114959204,E,,d_E:PSEUDO-VALUE-SKEW | SPLIT-HALF
+us_fresh,baseline,literal,stock1,U,E,R2,2.5820072292742404,E,,d_E:PSEUDO-VALUE-SKEW
+us_fresh,baseline,literal,stock2,U,E,R2,1.7345028102422446,E,,d_E:PSEUDO-VALUE-SKEW
+us_fresh,strict,primary,panel,U,R2,E,0.8026958425263316,R2,,d_R2:DEPENDENCE-INCONSISTENCY | d_R2:PSEUDO-VALUE-SKEW
+us_fresh,strict,primary,stock0,U,R2,E,0.9543033086870675,R2,,d_R2:DEPENDENCE-INCONSISTENCY
+us_fresh,strict,primary,stock1,U,R2,E,0.7406237046561945,R2,,d_R2:PSEUDO-VALUE-SKEW
+us_fresh,strict,primary,stock2,U,R2,flat,0.9795334312588717,R2,,d_R2:PSEUDO-VALUE-SKEW
+us_fresh,strict,literal,panel,U,E,R2,2.9188266437294987,E,,d_E:PSEUDO-VALUE-SKEW | SPLIT-HALF
+us_fresh,strict,literal,stock0,U,E,R2,4.501298056948313,E,,d_E:PSEUDO-VALUE-SKEW | SPLIT-HALF
+us_fresh,strict,literal,stock1,U,E,R2,2.55721076650425,E,,d_E:PSEUDO-VALUE-SKEW
+us_fresh,strict,literal,stock2,U,E,R2,1.7511022281277828,E,,d_E:PSEUDO-VALUE-SKEW

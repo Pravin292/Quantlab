@@ -11,7 +11,7 @@ import json
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-DATASETS = ["calibration_cells", "alt_processes", "real_tests", "simulation_ledger", "integrity_checks"]
+DATASETS = ["calibration_cells", "alt_processes", "real_tests", "simulation_ledger", "integrity_checks", "phase6_summary"]
 
 THEME = """
 :root{--color-fg:#1f1e1d;--color-fg-muted:#6b6a68;--color-bg:#f4f6fb;--color-panel:#ffffff;--color-border-line:#e3e6ee;

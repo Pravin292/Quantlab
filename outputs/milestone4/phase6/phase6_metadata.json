@@ -1,0 +1,10 @@
+{
+  "protocol": "docs/26 revision 5 as amended by docs/40 (revision 6, exploratory, Option A)",
+  "block_n": 59,
+  "jackknife_groups": 10,
+  "strict_z": 8.0,
+  "strict_min_sessions": 54,
+  "manifest": "outputs/milestone4/frozen_phase6_inputs.sha256",
+  "random_numbers": "none",
+  "h1_statistic": "not computed"
+}

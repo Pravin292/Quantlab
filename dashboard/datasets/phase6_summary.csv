@@ -1,0 +1,5 @@
+sample,market,block,result,phi,s,rho,day_sd,shape,why
+NSE · first Yahoo sample,NSE,2026-08-05 to 2026-10-29,INSUFFICIENT,,,,,,"2026-10-15 incomplete, so the 59-day block cannot be used"
+US · first Yahoo sample,US,2026-08-06 to 2026-10-28,CANNOT BE CLASSIFIED,0.1948921022952218,0.1768915873642578,0.18664743521502203,0.22955208437767052,R2,Tail and alternative checks unavailable (Option A); dependence measure unstable
+NSE · fresh Yahoo pull,NSE,2026-08-18 to 2026-11-12,INSUFFICIENT,,,,,,"2026-10-15 incomplete, so the 59-day block cannot be used"
+US · fresh Alpaca pull,US,2026-04-13 to 2026-07-07,OUTSIDE,0.42461375854898403,0.29979525095216014,0.23976515872793022,0.27294170927502087,R2,Day-volatility persistence and co-movement above the simulated level

@@ -78,10 +78,10 @@
 
 /* Grid of panels */
 .qg-grid{display:grid;gap:18px;min-width:0;grid-template-columns:minmax(0,1.75fr) minmax(0,1fr);
-  grid-template-areas:"stage integ" "contrast gauge" "cal cal" "real alt" "limits gloss"}
-@media (max-width:860px){.qg-grid{grid-template-columns:minmax(0,1fr);grid-template-areas:"stage" "integ" "contrast" "gauge" "cal" "real" "alt" "limits" "gloss"}}
+  grid-template-areas:"stage integ" "contrast gauge" "cal cal" "real alt" "p6 p6" "limits gloss"}
+@media (max-width:860px){.qg-grid{grid-template-columns:minmax(0,1fr);grid-template-areas:"stage" "integ" "contrast" "gauge" "cal" "real" "alt" "p6" "limits" "gloss"}}
 #stages{grid-area:stage} #integrity{grid-area:integ} #contrasts{grid-area:contrast} #gauge-card{grid-area:gauge}
-#calibration{grid-area:cal} #real-data{grid-area:real} #alternatives{grid-area:alt} #limits{grid-area:limits} #glossary{grid-area:gloss}
+#calibration{grid-area:cal} #real-data{grid-area:real} #alternatives{grid-area:alt} #phase6{grid-area:p6} #limits{grid-area:limits} #glossary{grid-area:gloss}
 
 /* Stage list under the bar chart */
 .qg-stagelist{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:4px 16px;font-size:var(--fs-xs);color:var(--color-fg-muted)}
@@ -161,6 +161,7 @@
     <a href="#stages" data-target="stages">Simulations</a>
     <a href="#contrasts" data-target="contrasts">Real data</a>
     <a href="#calibration" data-target="calibration">Calibration</a>
+    <a href="#phase6" data-target="phase6">Phase 6</a>
     <a href="#limits" data-target="limits">Limits</a>
   </nav>
 
@@ -302,19 +303,38 @@
       <div class="ql-chart" data-draw="altchart" data-source="alt_processes" id="alt-chart"></div>
     </section>
 
+    <section class="qg-glass" id="phase6">
+      <div class="qg-head"><h2><span class="no">16</span>Phase 6: do the real samples look like the simulations?</h2><span class="mut">exploratory, Option A</span></div>
+      <div class="qg-tablewrap">
+        <table class="qg-table" data-source="phase6_summary" data-row-key="sample" id="phase6-table">
+          <thead><tr>
+            <th data-field="sample">Sample</th>
+            <th data-field="result">Result</th>
+            <th data-field="phi">Persistence φ</th>
+            <th data-field="s">Shared vol. s</th>
+            <th data-field="rho">Correlation ρ</th>
+            <th data-field="shape">Shape</th>
+            <th data-field="why">Why</th>
+          </tr></thead>
+          <tbody data-draw="p6rows"></tbody>
+        </table>
+      </div>
+      <p class="mut">The simulations used US dependence of φ 0.190, s 0.141 and ρ 0.187; a value above 1.5 times that counts as outside. Under Option A no sample can be placed inside the simulated domain, so results are only OUTSIDE, CANNOT BE CLASSIFIED or INSUFFICIENT. The real intraday shape is nearest to R2, not E: E was built from variances but simulated as volatility (docs/40). Full report: docs/41.</p>
+    </section>
+
     <section class="qg-glass" id="limits">
-      <h2><span class="no">16</span>What these results do not show</h2>
+      <h2><span class="no">17</span>What these results do not show</h2>
       <ol class="qg-limits">
         <li>They do not show that C3 has a 5% error rate on real data. That is still unverified.</li>
         <li>The real samples are only partly independent: the same six stocks shaped the simulation design. The fresh US sample adds a new period and source, not new stocks.</li>
         <li>Higher volatility at the open is well known, so the rejections confirm it rather than discover it.</li>
         <li>C3 is cautious and has less power than the old test. Neither real result was close.</li>
-        <li>The Phase 6 placement step was shelved by the owner's decision and was not needed for these results.</li>
+        <li>Phase 6 ran only as an exploratory check on these same stocks. Under Option A it cannot place any sample inside the simulated domain.</li>
       </ol>
     </section>
 
     <details class="qg-glass qg-gloss" id="glossary">
-      <summary><span class="no">17</span>Key terms</summary>
+      <summary><span class="no">18</span>Key terms</summary>
       <dl>
         <dt>H1</dt><dd>Volatility is the same in the open, middle and close of the trading day.</dd>
         <dt>T</dt><dd>The largest of the three period differences divided by its standard error.</dd>
@@ -641,6 +661,29 @@ dash.draw('stagebars', (el) => {
   t.attr('x', bx);
   g.insert('rect', 'text').attr('x', bx - tw / 2).attr('y', 1).attr('width', tw).attr('height', 19).attr('rx', 9.5)
     .style('fill', 'var(--color-panel)').style('stroke', 'var(--cds-border)');
+});
+
+dash.draw('p6rows', (tb) => {
+  const s = dash.data('phase6_summary');
+  tb.replaceChildren();
+  if (s.status !== 'ok') return;
+  const kind = { 'OUTSIDE': 'bad', 'CANNOT BE CLASSIFIED': 'mute', 'INSUFFICIENT': 'warn' };
+  for (const r of s.data) {
+    const tr = document.createElement('tr');
+    for (const c of ['sample', 'result', 'phi', 's', 'rho', 'shape', 'why']) {
+      const td = document.createElement('td');
+      if (c === 'result') {
+        const t = document.createElement('span'); t.className = 'ql-tag ' + (kind[r.result] || 'mute'); t.textContent = r.result; td.appendChild(t);
+      } else if (c === 'phi' || c === 's' || c === 'rho') {
+        td.textContent = r[c] === null || r[c] === '' ? '—' : qlFmt(r[c], 'dec3');
+      } else {
+        td.textContent = r[c] === null || r[c] === '' ? '—' : String(r[c]);
+      }
+      if (c === 'why') { td.style.whiteSpace = 'normal'; td.style.minWidth = '230px'; }
+      tr.appendChild(td);
+    }
+    tb.appendChild(tr);
+  }
 });
 
 dash.draw('stagelist', (ol) => {

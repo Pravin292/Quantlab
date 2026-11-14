@@ -58,6 +58,8 @@ Documents are numbered in reading order. `07_research_protocol.md` does not exis
 | [37](37_fresh_us_check_design.md) | Fresh-US check design (Alpaca free plan, window before 2026-08-06), frozen before any fetch; awaiting keys |
 | [38](38_closing_decisions_and_status.md) | **Closing decisions and final status**: re-test results, D-tail Option A, Phase 6 shelved, Alpaca pending |
 | [39](39_fresh_us_check_report.md) | **Fresh-US check report**: Alpaca SIP, 2026-04-13 to 2026-07-07, T = 17.75, reject |
+| [40](40_phase6_protocol_revision6_exploratory.md) | Phase 6 protocol revision 6 (exploratory, Option A), frozen before measurement; records the shape-E variance/volatility finding |
+| [41](41_phase6_exploratory_report.md) | **Phase 6 exploratory report**: NSE blocks INSUFFICIENT, US first CANNOT BE CLASSIFIED, US fresh OUTSIDE (dependence) |
 
 ## Project status
 

@@ -24,8 +24,8 @@
 | Real-data H1 test, US | Done. T = 22.594, reject (`docs/31`) |
 | Real-data H1 test, NSE | Done on the fresh free pull. T = 17.305, reject (`docs/35`); the first sample was not testable (58 of 59 days) |
 | Fresh, independent US check | Done (`docs/39`, added 2026-11-14). Alpaca SIP, 2026-04-13 to 2026-07-07, T = 17.748, reject |
-| Larger 90–250-day study (`docs/26`) | Not done. Needs more data than free sources give without an account, and has not been approved |
-| Phase 6 descriptive placement | Shelved by owner decision (§2.3) |
+| Full-universe Phase 6 / larger 90–250-day study (`docs/26`) | Not done. Needs more data than free sources give without an account, and has not been approved |
+| Phase 6 descriptive placement | Run as an exploratory check on 2026-11-14, after the owner reversed §2.3 (`docs/40`, `docs/41`). Under Option A no coverage label is possible: NSE blocks INSUFFICIENT, US first CANNOT BE CLASSIFIED, US fresh OUTSIDE (dependence) |
 | D-tail option (`docs/29`) | Decided: Option A (§2.2) |
 | C3's 5% rate on real data | Cannot be shown: the truth is unknown on real data. It stays a stated limitation |
 | Dashboard | Done. Online, and in `dashboard/` with an offline build |

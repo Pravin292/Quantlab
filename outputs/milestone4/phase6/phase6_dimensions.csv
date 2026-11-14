@@ -1,0 +1,25 @@
+sample,variant,dimension,result,why,reason
+us_first,baseline,D-daysd,2,,DAYSD-FRINGE
+us_first,baseline,D-dep,U,phi:WIDTH | s:ZONE-CROSSING-ON-DELETION,phi:DEP-HIGH | s:DEP-HIGH | rho:E-ZONE-DEP
+us_first,baseline,D-shape,2,,
+us_first,baseline,D-tail,U,D-TAIL-UNAVAILABLE-OPTION-A,
+us_first,baseline,D-alt,U,D-ALT-NO-PER-STOCK-REFERENCE,
+us_first,baseline,D-shape-literal (report only),2,,
+us_first,strict,D-daysd,2,,DAYSD-FRINGE
+us_first,strict,D-dep,U,phi:WIDTH,phi:DEP-HIGH | s:DEP-HIGH | rho:E-ZONE-DEP
+us_first,strict,D-shape,2,,
+us_first,strict,D-tail,U,D-TAIL-UNAVAILABLE-OPTION-A,
+us_first,strict,D-alt,U,D-ALT-NO-PER-STOCK-REFERENCE,
+us_first,strict,D-shape-literal (report only),3,,
+us_fresh,baseline,D-daysd,U,PSEUDO-VALUE-SKEW,
+us_fresh,baseline,D-dep,4,,phi:DEP-HIGH | s:DEP-HIGH | rho:DEP-HIGH
+us_fresh,baseline,D-shape,U,panel:d_R2:DEPENDENCE-INCONSISTENCY | panel:d_R2:PSEUDO-VALUE-SKEW | stock0:d_R2:DEPENDENCE-INCONSISTENCY | stock1:d_R2:PSEUDO-VALUE-SKEW | stock2:d_R2:PSEUDO-VALUE-SKEW,
+us_fresh,baseline,D-tail,U,D-TAIL-UNAVAILABLE-OPTION-A,
+us_fresh,baseline,D-alt,U,D-ALT-NO-PER-STOCK-REFERENCE,
+us_fresh,baseline,D-shape-literal (report only),U,panel:d_E:PSEUDO-VALUE-SKEW | panel:SPLIT-HALF | stock0:d_E:PSEUDO-VALUE-SKEW | stock0:SPLIT-HALF | stock1:d_E:PSEUDO-VALUE-SKEW | stock2:d_E:PSEUDO-VALUE-SKEW,
+us_fresh,strict,D-daysd,U,PSEUDO-VALUE-SKEW,
+us_fresh,strict,D-dep,4,,phi:DEP-HIGH | s:DEP-HIGH | rho:DEP-HIGH
+us_fresh,strict,D-shape,U,panel:d_R2:DEPENDENCE-INCONSISTENCY | panel:d_R2:PSEUDO-VALUE-SKEW | stock0:d_R2:DEPENDENCE-INCONSISTENCY | stock1:d_R2:PSEUDO-VALUE-SKEW | stock2:d_R2:PSEUDO-VALUE-SKEW,
+us_fresh,strict,D-tail,U,D-TAIL-UNAVAILABLE-OPTION-A,
+us_fresh,strict,D-alt,U,D-ALT-NO-PER-STOCK-REFERENCE,
+us_fresh,strict,D-shape-literal (report only),U,panel:d_E:PSEUDO-VALUE-SKEW | panel:SPLIT-HALF | stock0:d_E:PSEUDO-VALUE-SKEW | stock0:SPLIT-HALF | stock1:d_E:PSEUDO-VALUE-SKEW | stock2:d_E:PSEUDO-VALUE-SKEW,
