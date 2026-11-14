@@ -2,6 +2,8 @@
 
 Documents are numbered in reading order. `07_research_protocol.md` does not exist: **docs 09 to 24 are diagnostic or planning documents, not a frozen research protocol.**
 
+**Start here:** the project [README](../README.md) (flowcharts and charts), the plain-language summary [36](36_project_summary_in_plain_language.md) and the final status [38](38_closing_decisions_and_status.md). Reports are dated records: a later document, not an edit, records any change of status.
+
 ## M1 to M3: data, pipeline and EDA
 
 | Doc | Content |
@@ -44,19 +46,19 @@ Documents are numbered in reading order. `07_research_protocol.md` does not exis
 | [23](23_h1_calibration_stage4_report.md) | **Stage 4 report** (independent validation of C3: all five preregistered criteria met; limitations) |
 | [24](24_h1_calibration_stage5_decision_report.md) | **Stage 5 decision report** (classification PARTIAL; validated domain, count and seed audit, gate interpretation, limitations). Numbered 24 because `docs/14` is the Stage 0 report |
 | [25](25_h1_calibration_stage5_errata.md) | Stage 5 errata (repeat-variability re-analysis of saved Stage 2 and 3 files; PARTIAL unchanged) |
-| [26](26_real_data_descriptive_validation_protocol.md) | **Phase 6 protocol, revision 5: PROPOSED, not approved, not executed** (real-data descriptive validation; no data accessed) |
-| [27](27_quantlab_formal_decision_and_approval_register.md) | Phase 6 decision and approval register (D1–D17 all pending; gates, checklist, blocked work) |
+| [26](26_real_data_descriptive_validation_protocol.md) | Phase 6 protocol, revision 5 (real-data descriptive validation). Not approved as written; the exploratory run used revision 6 ([40](40_phase6_protocol_revision6_exploratory.md)) |
+| [27](27_quantlab_formal_decision_and_approval_register.md) | Phase 6 decision and approval register (state on 2026-11-13; decisions later applied in [38](38_closing_decisions_and_status.md) and [40](40_phase6_protocol_revision6_exploratory.md)) |
 | [28](28_stage0_mode_b_reference_layout_verification.md) | Stage 0 reference layout check for Mode B (read-only; the n = 59 D-tail claim is not supported) |
-| [29](29_stage0_d_tail_compatibility_decision_memo.md) | Decision memo on the Stage 0 D-tail mismatch (options A, B, C; owner decision pending) |
+| [29](29_stage0_d_tail_compatibility_decision_memo.md) | Decision memo on the Stage 0 D-tail mismatch (options A, B, C; the owner chose **Option A** on 2026-11-14, see [38](38_closing_decisions_and_status.md)) |
 | [30](30_real_data_h1_test_preregistration_plan.md) | Real-data H1 test pre-registration plan (frozen C3, existing local sample; R1–R8, authorisation record) |
 | [31](31_real_data_h1_test_report.md) | **Real-data H1 test report** (US: T = 22.59, reject; NSE: not testable, 58 complete sessions) |
 | [32](32_decision_sheet_and_next_paths.md) | Decision sheet: paths P1–P3 and a suggested response to D1–D17 per path (nothing approved) |
-| [33](33_complete_h1_check_preregistration_plan.md) | Path P2 pre-registration plan: repeat the H1 check on new data (NSE and fresh US); proposed, blocked on provider and licence |
+| [33](33_complete_h1_check_preregistration_plan.md) | Path P2 pre-registration plan: repeat the H1 check on new data (NSE and fresh US); its §7 zero-cost version was used for [35](35_nse_h1_check_report.md) and [39](39_fresh_us_check_report.md) |
 | [34](34_provider_research_for_p2.md) | Provider research for the P2 check (NSE: Kite Connect, TrueData; US: Alpaca, Databento, Massive); web research, unverified terms |
 | [35](35_nse_h1_check_report.md) | **NSE H1 check report** (zero-cost, one Yahoo pull: 59 complete sessions, T = 17.31, reject) |
-| [36](36_project_summary_in_plain_language.md) | **Plain-language project summary** (question, method, results, limits, what is left) |
-| [37](37_fresh_us_check_design.md) | Fresh-US check design (Alpaca free plan, window before 2026-08-06), frozen before any fetch; awaiting keys |
-| [38](38_closing_decisions_and_status.md) | **Closing decisions and final status**: re-test results, D-tail Option A, Phase 6 shelved, Alpaca pending |
+| [36](36_project_summary_in_plain_language.md) | **Plain-language project summary** (final: question, method, every result, limits) |
+| [37](37_fresh_us_check_design.md) | Fresh-US check design (Alpaca free plan, window before 2026-08-06), frozen before any fetch; run on 2026-11-14 ([39](39_fresh_us_check_report.md)) |
+| [38](38_closing_decisions_and_status.md) | **Closing decisions and final status**: re-tests, D-tail Option A, fresh US check done, Phase 6 run as an exploratory check; every item done or decided |
 | [39](39_fresh_us_check_report.md) | **Fresh-US check report**: Alpaca SIP, 2026-04-13 to 2026-07-07, T = 17.75, reject |
 | [40](40_phase6_protocol_revision6_exploratory.md) | Phase 6 protocol revision 6 (exploratory, Option A), frozen before measurement; records the shape-E variance/volatility finding |
 | [41](41_phase6_exploratory_report.md) | **Phase 6 exploratory report**: NSE blocks INSUFFICIENT, US first CANNOT BE CLASSIFIED, US fresh OUTSIDE (dependence) |
@@ -65,6 +67,8 @@ Documents are numbered in reading order. `07_research_protocol.md` does not exis
 
 | Doc | Content |
 |---|---|
-| [19](19_quantlab_project_status_report.md) | **Consolidated project status**, findings, limitations, simulation ledger, integrity checks and blockers |
+| [38](38_closing_decisions_and_status.md) | **Final status** of every item (current) |
+| [36](36_project_summary_in_plain_language.md) | Plain-language summary of the whole project (current) |
+| [19](19_quantlab_project_status_report.md) | Technical status snapshot as of 2026-11-13: findings, limitations, the full **simulation ledger**, integrity checks and the blocker list at that date (superseded for status by 38) |
 
 Doc 12 is a closed audit report and is not edited; later documents refine its wording where needed (docs 13 section 2.1).

@@ -1,5 +1,7 @@
 # 19 — QuantLab project status report (as of 2026-11-13, after Stage 5 and Phase 6 documentation)
 
+> **Snapshot, superseded for status (note added 2026-11-15).** This report describes the project on 2026-11-13 and is kept unchanged as a record. Since then the fresh US check ([docs/39](39_fresh_us_check_report.md)) and the exploratory Phase 6 run ([docs/40](40_phase6_protocol_revision6_exploratory.md), [docs/41](41_phase6_exploratory_report.md)) were completed, the test suite grew to 413 tests and there are 13 manifests. For the current status see [docs/38](38_closing_decisions_and_status.md) and [docs/36](36_project_summary_in_plain_language.md). Its simulation ledger (§5) and Stage 1–5 sections remain accurate.
+
 **What this is:** one consolidated, honest status report for the whole project: what is finished, what is blocked and why, what was found, what the findings do and do not show, and how to verify everything.
 **What it is not:** it is not a research protocol and it contains **no claim about real-market behaviour and no profitability claim**. All inferential work in M4 and the H1 calibration investigation uses **simulated** data. No real-market H1, H2 or H3 test has been run.
 **Evidence labels:** **[VERIFIED]** checked in the repository on 2026-11-08 (Stage 4 sections) or 2026-11-05 (earlier sections); **[REPORTED]** taken from a project document (path given); **[BLOCKED]** needs an approval that has not been given.

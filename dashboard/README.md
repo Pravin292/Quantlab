@@ -1,9 +1,19 @@
 # QuantLab H1 Results dashboard
 
-A one-page summary of the H1 study: the simulation check of the fixed critical value C3, and the real-data tests on NSE and US stocks.
+A five-page summary of the H1 study, with one tab per page:
+
+| Page | Contents |
+|---|---|
+| Overview | headline numbers and one card per real sample |
+| Real data | T against the C3 limit; which periods differ |
+| Simulation | simulations by stage, highest false-alarm rate, all 96 validation cells, six harder processes |
+| Phase 6 | the exploratory placement result per sample |
+| Checks & limits | integrity checks, what the results do not show, key terms |
+
+Each page has its own link (for example `#p-phase6`).
 
 - **Online version:** https://claude.ai/artifact/JyiVESsrnCvSjoXpwpdARw (private until shared)
-- **Offline version:** `dashboard/index.html`. Open it in a browser. It needs an internet connection only to load d3 from cdnjs.
+- **Offline version:** `dashboard/index.html`. Open it in a browser. It needs an internet connection only to load D3.js v7 from cdnjs.
 
 ## Run it on localhost
 

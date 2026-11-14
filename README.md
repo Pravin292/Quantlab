@@ -30,7 +30,8 @@ It works on 5-minute price bars for three Indian (NSE) and three US stocks. Most
 9. [What the results do not show](#9-what-the-results-do-not-show)
 10. [Run it yourself](#10-run-it-yourself)
 11. [Repository map and document index](#11-repository-map-and-document-index)
-12. [Glossary](#12-glossary)
+12. [Tech stack](#12-tech-stack)
+13. [Glossary](#13-glossary)
 
 ---
 
@@ -319,7 +320,27 @@ data/                    NOT in the repository (raw market data, git-ignored)
 
 ---
 
-## 12. Glossary
+## 12. Tech stack
+
+| Layer | Tools | Used for |
+|---|---|---|
+| **Language** | Python 3.12 | everything except the dashboard page |
+| **Numbers and data** | NumPy 2.5, pandas 3.1, SciPy 1.18 | returns, simulations, test statistics, the intraday shape fit |
+| **Statistics** | statsmodels 0.15 | models in the H2 work |
+| **Storage** | PyArrow 26 (Parquet files), CSV, JSON | cleaned data and saved results |
+| **Exploratory charts** | Plotly 7.1 | M3 charts (kept locally, not in the repository) |
+| **Testing** | pytest 9.2 | 413 tests on synthetic data |
+| **Data access** | Python `urllib` | Yahoo Finance public chart endpoint; Alpaca Market Data API (keys read from environment variables) |
+| **Integrity** | `hashlib` / `shasum` (SHA-256) | raw-file hashes and the 13 frozen manifests |
+| **Dashboard** | HTML, CSS, JavaScript, D3.js v7 | the five-page dashboard, hosted as a Claude Artifact; offline copy built by `dashboard/build_dashboard.py` and served with Python's `http.server` |
+| **Docs and charts** | Markdown, Mermaid, SVG | this README, 44 numbered documents, flowcharts, and charts drawn by `scripts/make_readme_charts.py` with plain Python |
+| **Version control** | Git, GitHub | [Pravin292/Quantlab](https://github.com/Pravin292/Quantlab) |
+
+Exact versions are pinned in [`requirements.txt`](requirements.txt). There is no database, no web framework, no machine-learning library and no paid service.
+
+---
+
+## 13. Glossary
 
 | Term | Meaning |
 |---|---|
