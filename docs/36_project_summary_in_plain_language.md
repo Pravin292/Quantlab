@@ -1,38 +1,45 @@
-# 36 — QuantLab in plain language: what was done, what was found, what is left (as of 2026-11-14)
+# 36 — QuantLab in plain language: what was done, what was found (final, 2026-11-14)
 
-**Purpose:** one readable summary for the project owner. It adds no new analysis. Numbers are from `docs/24`, `docs/31`, `docs/35` and the manifests; where something is unverified, it says so.
+**Purpose:** one readable summary for anyone. It adds no new analysis; every number comes from the reports named in brackets. The project's front page ([README](../README.md)) has the flowcharts and charts.
 
 ## 1. The question
-Does the volatility (size of price moves) of a stock differ between the **open**, **middle** and **close** of the trading day, in NSE (India) and US 5-minute data? The project calls this H1. The hard part is not asking the question but having a **statistical test you can trust** on short samples (about 59 days, 3 stocks) where price moves have fat tails and uneven intraday shapes.
+Does a stock's volatility (the size of its price moves) differ between the **open**, **middle** and **close** of the trading day? This is tested on 5-minute data for three NSE stocks (RELIANCE, TCS, INFY) and three US stocks (AAPL, MSFT, NVDA), and the project calls it **H1**. The hard part is having a test you can trust on short samples (about 59 days) with fat tails and uneven intraday shapes.
 
-## 2. What was built (all on simulated data first)
-1. **Diagnostics (M4a/M4b):** the ordinary bootstrap test **over-rejected** (it said "different" too often) when tails were heavy.
-2. **Calibration programme (Stages 0–5):** a fixed critical value called **C3** was developed and then tested on fresh simulations it had not been tuned on. About **8.02 million simulations**, with frozen specifications, fixed seeds and file hashes so nothing could be quietly changed.
-3. **Result:** C3 **never rejected more often than its allowed limit** in the tested simulated worlds (it is deliberately conservative, near 5.3% at its worst corner), also under six harder alternative processes. Verdict: **PARTIAL**, because it was shown only on a **sparse set of simulated cases (108 points)**, not everywhere and not on real data.
-4. **Honest flags kept in the record:** the same simulations helped choose C3 (so part of the evidence is less independent than the cell count suggests); C3 has less power than the ordinary test; the repeat-run variability is larger than chance alone explains (cause unknown).
+## 2. What was built, step by step
+1. **Data pipeline (M1–M3):** free 5-minute data is pulled once, hashed, validated and cleaned, with nothing silently filled or deleted ([docs/05](05_validation_rules.md), [06](06_eda_findings.md)).
+2. **Diagnosis (M4):** in simulated markets where the truth is known, the standard bootstrap test said "different" **7–9% of the time instead of 5%** when tails were heavy ([docs/12](12_m4b_h1_inference_and_h2_power_report.md)).
+3. **A better test (Stages 0–5):** a fixed cut-off called **C3** was developed and then checked on **8,024,000 simulations** with frozen rules and registered seeds. C3 never exceeded its limit in any of the 88 gated scenarios or the 6 harder alternative worlds. Verdict: **PARTIAL**. It is safe and conservative in the simulated domain, but not shown to be exactly 5% or valid on real data ([docs/24](24_h1_calibration_stage5_decision_report.md)).
 
-## 3. The real-data check (both free, both pre-registered, each run once)
-| Market | Sample | Result |
-|---|---|---|
-| US (AAPL, MSFT, NVDA) | 59 sessions, 2026-08-06 to 2026-10-28 | T = 22.59 against 3.30: **reject** |
-| NSE (RELIANCE, TCS, INFY) | 59 complete sessions, 2026-08-18 to 2026-11-13 | T = 17.31 against 3.30: **reject** |
-In both, the open is far more volatile than the middle (about 2 times in volatility). This is the textbook intraday pattern, so the test **agrees with what was expected**; it is not a discovery.
+## 3. The answer on real data (each sample run once, rules fixed first)
+| Sample | Source | Days | T (limit 3.30) | Result |
+|---|---|---|---|---|
+| US, first | Yahoo | 2026-08-06 to 2026-10-28 | 22.59 | **reject** ([docs/31](31_real_data_h1_test_report.md)) |
+| NSE, fresh | Yahoo | 2026-08-18 to 2026-11-13 | 17.31 | **reject** ([docs/35](35_nse_h1_check_report.md)) |
+| US, fresh | Alpaca (SIP feed) | 2026-04-13 to 2026-07-07 | 17.75 | **reject** ([docs/39](39_fresh_us_check_report.md)) |
+| NSE, first | Yahoo | 58 complete days only | — | not testable ([docs/31](31_real_data_h1_test_report.md)) |
 
-## 4. What these results do not show
-- Not independent: same source (Yahoo), same stocks that shaped the simulation design, overlapping dates.
-- They do **not** show that C3 has a 5% error rate on real data, or that anything holds for other stocks, years or markets.
-- A "reject" with T far above the limit is robust to C3's conservatism; a close call would not have been.
+In every sample the open is about **2× as volatile** as the middle of the day. This is the well-known intraday pattern, so the result confirms it rather than discovers it.
 
-## 5. Phase 6 (the large real-data placement protocol)
-Documents `docs/26`–`29`: a careful but heavy protocol that would place real-data blocks against the simulated cases. **Proposed and unapproved**; all 17 decisions are pending; one of its fallbacks (Mode B) does not match the existing Stage 0 reference (60 versus 59 days). The real-data H1 checks above did **not** need it. It can stay shelved.
+## 4. Phase 6: do the real samples look like the simulations? (exploratory)
+- **What it compared:** each sample's tail weight, intraday shape, day-to-day volatility and cross-stock dependence against the simulated scenarios ([docs/40](40_phase6_protocol_revision6_exploratory.md), [41](41_phase6_exploratory_report.md)).
+- **Results:**
+  - Both NSE blocks: **INSUFFICIENT** (one incomplete day, 2026-10-15).
+  - US first sample: **CANNOT BE CLASSIFIED**.
+  - US fresh sample: **OUTSIDE**. Its day-to-day volatility was more persistent (0.42 against 0.19) and more shared across the three stocks (0.30 against 0.14) than the simulations assumed.
+- **What that means:** for that period, C3 has no simulation evidence either way.
+- **A finding about the earlier work:** the simulated shape "E" was fitted to variances but simulated as volatility. The real intraday shape is closest to the validated shape R2.
 
-## 6. What is left, all optional
-1. **A truly fresh US check** (dates before 2026-08-06) using Alpaca's free plan; needs your own free sign-up and keys, and a separate authorisation. Only this would reduce the independence caveat.
-2. **Phase 6**, if you ever want the descriptive placement: decide D1–D17 (`docs/32` lists suggested answers).
-3. **Housekeeping you may want:** choose a licence for the repository; read the Yahoo and Alpaca terms yourself before publishing anything beyond aggregates.
+## 5. What these results do not show
+- **C3's 5% rate on real data:** it cannot be proven, because the truth is unknown on real data.
+- **Independence is only partial:** the same six stocks shaped the simulations. The fresh US sample adds a new period and source, but not new stocks.
+- **Scope:** nothing is claimed about other stocks, markets or years, and nothing about trading or profit.
+
+## 6. Status of every item
+Everything planned is **done, decided or closed** ([docs/38](38_closing_decisions_and_status.md)).
+- **Not done:** the full-universe Phase 6 or a 90–250-day study. Both need data that free sources do not provide, and they have not been approved.
 
 ## 7. Cost, safety and reproducibility
-- **Cost:** nothing was spent. No account, subscription or paid data was used.
-- **Integrity:** 11 hashed manifests, all verifying; 360 tests passing; frozen files, seeds and C3 were never edited; every outcome (including a not-testable NSE result in `docs/31`) was kept.
-- **Data handling:** raw market data stays on your Mac (git-ignored); only aggregates are in GitHub.
-- **Repository:** `https://github.com/Pravin292/Quantlab`, branch `main`.
+- **Cost:** ₹0. Only free data tiers were used; the Alpaca account and keys belong to the owner, and the keys were never stored.
+- **Integrity:** 413 tests pass; 13 hash manifests verify; frozen files, seeds and C3 were never edited; every outcome (including "not testable" and "insufficient") is kept.
+- **Data handling:** raw market data stays on the owner's computer (git-ignored); only aggregates are on GitHub.
+- **Repository:** https://github.com/Pravin292/Quantlab, branch `main`. Dashboard: https://claude.ai/artifact/JyiVESsrnCvSjoXpwpdARw
