@@ -1,203 +1,229 @@
 <meta name="dash-one-writer">
 <style>
-.qb{--qb-blue-h:#6f9cf5;--qb-green-h:#5fb59a;
-  --qb-blue:color-mix(in srgb,var(--qb-blue-h) 24%,var(--color-panel));
-  --qb-blue-2:color-mix(in srgb,var(--qb-blue-h) 40%,var(--color-panel));
-  --qb-green:color-mix(in srgb,var(--qb-green-h) 22%,var(--color-panel));
-  --qb-soft:color-mix(in srgb,var(--qb-blue-h) 7%,var(--color-panel));
-  --qb-chip:color-mix(in srgb,var(--color-panel) 85%,var(--color-bg));
-  --qb-line:color-mix(in srgb,var(--color-fg) 10%,transparent);
-  --qb-r:22px;
-  border-radius:30px;padding:clamp(8px,1.6vw,14px);background:color-mix(in srgb,var(--color-panel) 75%,transparent);border:1px solid var(--color-border-line);min-width:0}
-.qb-in{border-radius:24px;padding:clamp(14px,3vw,34px);display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(14px,2vw,20px);min-width:0;
-  background:linear-gradient(160deg,color-mix(in srgb,var(--qb-blue-h) 20%,var(--color-bg)) 0%,color-mix(in srgb,var(--qb-blue-h) 9%,var(--color-bg)) 55%,color-mix(in srgb,var(--qb-green-h) 12%,var(--color-bg)) 100%)}
-.qb p{margin:0}
-.qb h2,.qb h3{margin:0;font-weight:var(--cds-font-weight-medium);letter-spacing:-.01em}
-.qb h2{font-size:1.15rem}
-.qb h3{font-size:var(--cds-font-size-body)}
-.qb .mut{color:var(--color-fg-muted);font-size:var(--cds-font-size-caption)}
-.qb a{color:inherit}
+/* One type scale for the whole page: 12 / 13.5 / 15 / 28 px */
+.qg{--fs-xs:12px;--fs-sm:13.5px;--fs-md:15px;--fs-xl:28px;
+  --ind:#5b5bd6;--ind-soft:color-mix(in srgb,var(--ind) 14%,var(--color-panel));
+  --glass:color-mix(in srgb,var(--color-panel) 78%,transparent);
+  --glass-2:color-mix(in srgb,var(--color-panel) 82%,transparent);
+  --edge:color-mix(in srgb,var(--color-panel) 70%,var(--color-border-line));
+  --shadow:0 10px 30px color-mix(in srgb,var(--ind) 10%,transparent),0 1px 2px color-mix(in srgb,var(--color-fg) 8%,transparent);
+  --line:color-mix(in srgb,var(--color-fg) 9%,transparent);
+  font-family:var(--font-anthropic-sans);font-size:var(--fs-sm);line-height:1.45;min-width:0;
+  border-radius:34px;padding:clamp(14px,3vw,30px);display:grid;grid-template-columns:minmax(0,1fr);gap:18px;
+  border:1px solid var(--edge);box-shadow:var(--shadow);
+  background:
+    radial-gradient(circle at 12% 0%,color-mix(in srgb,var(--ind) 12%,transparent),transparent 45%),
+    radial-gradient(circle at 100% 100%,color-mix(in srgb,#e48bd8 10%,transparent),transparent 45%),
+    linear-gradient(color-mix(in srgb,var(--color-fg) 4%,transparent) 1px,transparent 1px) 0 0/40px 40px,
+    linear-gradient(90deg,color-mix(in srgb,var(--color-fg) 4%,transparent) 1px,transparent 1px) 0 0/40px 40px,
+    color-mix(in srgb,var(--color-bg) 92%,var(--ind))}
+.qg *{box-sizing:border-box}
+.qg p{margin:0}
+.qg h1,.qg h2{margin:0;font-weight:650;letter-spacing:-.01em;font-size:var(--fs-md)}
+.qg h1{font-size:18px}
+.qg .mut{color:var(--color-fg-muted);font-size:var(--fs-xs)}
+.qg .num{font-size:var(--fs-xl);font-weight:700;letter-spacing:-.02em;line-height:1.1;font-variant-numeric:tabular-nums}
+.qg .no{display:inline-grid;place-items:center;min-width:26px;height:22px;padding:0 6px;border-radius:999px;font-size:var(--fs-xs);font-weight:650;
+  background:var(--ind-soft);color:var(--color-fg);margin-right:8px;font-variant-numeric:tabular-nums}
 
-/* Top bar */
-.qb-top{position:sticky;top:0;z-index:6;display:flex;align-items:center;gap:clamp(10px,3vw,40px);flex-wrap:wrap;padding:10px 4px;border-radius:16px;
-  background:color-mix(in srgb,var(--qb-blue-h) 10%,var(--color-bg));backdrop-filter:blur(8px)}
-.qb-logo{display:flex;align-items:center;gap:10px;font-weight:var(--cds-font-weight-medium);font-size:1.15rem;flex:none}
-.qb-logo i{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--qb-green-h);color:#fff}
-.qb-logo svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
-.qb-tabs{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;flex:1 1 auto;min-width:0}
-.qb-tabs::-webkit-scrollbar{display:none}
-.qb-tabs a{flex:none;text-decoration:none;padding:7px 12px;border-radius:999px;font-size:var(--cds-font-size-body);color:var(--color-fg);opacity:.75;transition:background .15s,opacity .15s}
-.qb-tabs a:hover{opacity:1}
-.qb-tabs a.is-active{opacity:1;background:var(--color-panel);box-shadow:0 1px 2px color-mix(in srgb,var(--color-fg) 10%,transparent)}
-.qb-badges{display:flex;gap:8px;flex:none}
-@media (max-width:620px){.qb-top{position:static}.qb{padding:4px;border-radius:24px}.qb-in{padding:10px;border-radius:20px}.qb-tabs{order:3;flex:1 1 100%}.qb-badges{flex:1 1 auto;justify-content:flex-end;flex-wrap:wrap}}
-.qb-badge{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:999px;font-size:var(--cds-font-size-caption);background:color-mix(in srgb,var(--color-panel) 70%,transparent);border:1px solid var(--qb-line)}
-.qb-badge::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--bc)}
-.qb-badge.ok{--bc:var(--color-ok)} .qb-badge.warn{--bc:var(--color-warn)}
+/* Header */
+.qg-top{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.qg-logo{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--ind);color:#fff;flex:none;box-shadow:0 6px 16px color-mix(in srgb,var(--ind) 35%,transparent)}
+.qg-logo svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.qg-title{display:grid;flex:1 1 200px;min-width:0}
+.qg-status{display:flex;gap:8px;flex-wrap:wrap}
+.qg-chip{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:999px;background:var(--glass-2);border:1px solid var(--edge);font-size:var(--fs-xs);font-weight:600;backdrop-filter:blur(10px)}
+.qg-chip i{width:8px;height:8px;border-radius:50%;background:var(--c)}
+.qg-chip.ok{--c:var(--color-ok)} .qg-chip.warn{--c:var(--color-warn)}
 
-/* Bento grid */
-.qb-grid{display:grid;gap:clamp(12px,1.6vw,18px);min-width:0;
-  grid-template-columns:minmax(0,1.35fr) minmax(0,1fr) minmax(0,1.1fr);
-  grid-template-areas:"over spend integ" "over learn integ" "cal cal gauge" "real real alt" "contrast contrast alt" "limits limits gloss"}
-@media (max-width:980px){.qb-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);
-  grid-template-areas:"over over" "spend learn" "integ gauge" "cal cal" "real real" "contrast contrast" "alt alt" "limits limits" "gloss gloss"}}
-@media (max-width:620px){.qb-grid{grid-template-columns:minmax(0,1fr);
-  grid-template-areas:"over" "spend" "learn" "integ" "gauge" "cal" "real" "contrast" "alt" "limits" "gloss"}}
-.qb-card{border-radius:var(--qb-r);padding:clamp(16px,2vw,22px);background:var(--qb-soft);display:grid;gap:14px;align-content:start;min-width:0;position:relative;overflow:hidden;
-  border:1px solid color-mix(in srgb,var(--color-panel) 60%,transparent);scroll-margin-top:80px}
-.qb-card.blue{background:var(--qb-blue)} .qb-card.green{background:var(--qb-green)}
-.qb-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
-.qb-link{font-size:var(--cds-font-size-caption);text-decoration:none;font-weight:var(--cds-font-weight-medium)}
-.qb-link:hover{text-decoration:underline}
-.qb-btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;padding:6px 18px 6px 6px;border-radius:999px;background:var(--color-panel);font-size:var(--cds-font-size-body);border:1px solid var(--qb-line)}
-.qb-btn i{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--qb-blue)}
-.qb-btn svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.qb-pill{display:inline-block;text-decoration:none;padding:9px 20px;border-radius:999px;background:var(--qb-blue-2);font-size:var(--cds-font-size-caption);font-weight:var(--cds-font-weight-medium);border:none;color:var(--color-fg);cursor:pointer;font-family:inherit;justify-self:start}
+/* Filter-style section tabs */
+.qg-tabs{position:sticky;top:0;z-index:6;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:6px;margin:0 -6px;border-radius:999px;backdrop-filter:blur(12px)}
+.qg-tabs::-webkit-scrollbar{display:none}
+.qg-tabs a{flex:none;text-decoration:none;color:var(--color-fg);font-size:var(--fs-sm);font-weight:600;padding:10px 20px;border-radius:999px;background:var(--glass-2);border:1px solid var(--edge);transition:background .15s,color .15s,box-shadow .15s}
+.qg-tabs a.is-active{background:var(--ind);color:#fff;border-color:transparent;box-shadow:0 8px 18px color-mix(in srgb,var(--ind) 35%,transparent)}
 
-/* Overview card */
-#overview{grid-area:over} #spend{grid-area:spend} #learn{grid-area:learn} #integrity{grid-area:integ} #gauge-card{grid-area:gauge}
-#calibration{grid-area:cal} #real-data{grid-area:real} #contrasts{grid-area:contrast} #alternatives{grid-area:alt} #limits{grid-area:limits} #glossary{grid-area:gloss}
-.qb-big{font-size:clamp(2.2rem,5vw,3rem);font-weight:700;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
-.qb-actions{display:flex;gap:10px;flex-wrap:wrap}
-.qb-cards{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,.62fr);gap:10px}
-@media (max-width:460px){.qb-cards{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.qb-mini.dark{grid-column:span 2}}
-.qb-mini{position:relative;overflow:hidden;border-radius:16px;padding:14px;min-height:126px;display:grid;align-content:space-between;gap:8px;background:var(--qb-blue-2);min-width:0}
-.qb-mini.green{background:color-mix(in srgb,var(--qb-green-h) 34%,var(--color-panel))}
-.qb-mini.dark{background:var(--color-fg);color:var(--color-bg)}
-.qb-mini.dark .mut{color:color-mix(in srgb,var(--color-bg) 70%,transparent)}
-.qb-mini::after{content:"";position:absolute;right:-40px;top:-46px;width:120px;height:120px;border-radius:50%;border:1.5px solid color-mix(in srgb,var(--color-fg) 55%,transparent);box-shadow:16px 10px 0 -1px transparent,inset 0 0 0 14px transparent;pointer-events:none}
-.qb-mini.dark::after{border-color:color-mix(in srgb,var(--color-bg) 40%,transparent)}
-.qb-mini .tag{font-size:11px;font-weight:700;letter-spacing:.06em}
-.qb-mini .t{font-size:1.5rem;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
-.qb-mini .sym{font-size:11px;opacity:.8;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* Glass panels */
+.qg-glass{background:var(--glass);border:1px solid var(--edge);border-radius:24px;padding:clamp(16px,2.2vw,22px);box-shadow:var(--shadow);min-width:0;display:grid;gap:14px;align-content:start;scroll-margin-top:76px}
+.qg-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.qg-tag{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;font-size:var(--fs-xs);font-weight:600;background:color-mix(in srgb,var(--color-ok) 16%,var(--color-panel));border:1px solid color-mix(in srgb,var(--color-ok) 35%,transparent)}
+.qg-tag i{width:7px;height:7px;border-radius:50%;background:var(--color-ok)}
 
-/* Learn card */
-.qb-rings{position:absolute;right:-56px;top:-34px;width:170px;height:170px;pointer-events:none;opacity:.35}
-.qb-rings circle{fill:none;stroke:var(--color-fg);stroke-width:1.2}
-.qb-rings circle.b{stroke:var(--qb-blue-h)}
-#learn h3{font-size:1.05rem;max-width:16ch;line-height:1.3;position:relative}
-#learn p{max-width:30ch;position:relative}
+/* KPI strip */
+.qg-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.qg-kpi{display:grid;gap:6px;padding:4px 20px;border-left:1px solid var(--line);min-width:0}
+.qg-kpi:first-child{border-left:none;padding-left:4px}
+.qg-kpi .lab{font-size:var(--fs-sm);font-weight:600}
+@media (max-width:900px){.qg-kpis{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:18px}.qg-kpi:nth-child(3){border-left:none;padding-left:4px}}
+@media (max-width:420px){.qg-kpis{grid-template-columns:minmax(0,1fr)}.qg-kpi{border-left:none;padding-left:4px;border-top:1px solid var(--line);padding-top:14px}.qg-kpi:first-child{border-top:none;padding-top:4px}}
 
-/* Integrity list (a table laid out as a list) */
-.qb-list{width:100%;border-collapse:collapse}
-.qb-list thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-.qb-list tr{display:grid;grid-template-columns:42px minmax(0,1fr) auto;grid-template-areas:"ic name val" "ic sub det";column-gap:12px;row-gap:2px;padding:11px 0;border-bottom:1px solid var(--qb-line);align-items:center}
-.qb-list tr:last-child{border-bottom:none}
-.qb-list td{padding:0;border:none;min-width:0}
-.qb-list td.ic{grid-area:ic;width:40px;height:40px;border-radius:50%;border:1.5px solid color-mix(in srgb,var(--color-fg) 70%,transparent);display:grid;place-items:center}
-.qb-list td.ic svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.qb-list td.nm{grid-area:name;font-weight:var(--cds-font-weight-medium)}
-.qb-list td.ev{grid-area:sub;font-size:11px;color:var(--color-fg-muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.qb-list td.rs{grid-area:val;font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
-.qb-list td.dt{grid-area:det;font-size:11px;text-align:right;color:var(--color-ok);font-weight:var(--cds-font-weight-medium)}
+/* Holographic cards */
+.qg-holos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:760px){.qg-holos{grid-template-columns:minmax(0,1fr)}}
+.qg-holo{position:relative;overflow:hidden;border-radius:20px;padding:18px;min-height:160px;display:grid;align-content:space-between;gap:12px;color:#17172b;
+  border:1px solid rgba(255,255,255,.7);box-shadow:0 14px 30px rgba(80,70,180,.18);
+  background:linear-gradient(125deg,#a8d8ff 0%,#e9c6ff 28%,#fff1c9 50%,#b9f3e4 72%,#c7b9ff 100%)}
+.qg-holo::before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.55) 45%,transparent 60%);pointer-events:none}
+.qg-holo.b{background:linear-gradient(125deg,#6c63ff 0%,#7f8cff 30%,#9ee7ff 62%,#c9b6ff 100%);color:#fff}
+.qg-holo.c{background:linear-gradient(125deg,#c5f0ff 0%,#f8c8ef 30%,#d9f7c4 60%,#b7c3ff 100%)}
+.qg-holo .row{position:relative;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.qg-holo .name{font-size:var(--fs-md);font-weight:700}
+.qg-holo .chipimg{width:40px;height:30px;border-radius:7px;background:linear-gradient(135deg,rgba(255,255,255,.95),rgba(220,220,235,.85));box-shadow:inset 0 0 0 1px rgba(0,0,0,.08);position:relative}
+.qg-holo .chipimg::before{content:"";position:absolute;inset:7px 6px;border-top:1px solid rgba(0,0,0,.2);border-bottom:1px solid rgba(0,0,0,.2)}
+.qg-holo .badge{padding:5px 12px;border-radius:999px;background:rgba(255,255,255,.85);color:#17172b;font-size:var(--fs-xs);font-weight:650}
+.qg-holo .val{position:relative;display:flex;align-items:baseline;gap:6px}
+.qg-holo .small{font-size:var(--fs-xs);opacity:.85;position:relative}
+.qg-holo .sym{font-size:var(--fs-xs);opacity:.85;position:relative;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
-/* Gauge */
-.qb-gauge{position:relative;min-height:190px}
+/* Grid of panels */
+.qg-grid{display:grid;gap:18px;min-width:0;grid-template-columns:minmax(0,1.75fr) minmax(0,1fr);
+  grid-template-areas:"stage integ" "contrast gauge" "cal cal" "real alt" "limits gloss"}
+@media (max-width:860px){.qg-grid{grid-template-columns:minmax(0,1fr);grid-template-areas:"stage" "integ" "contrast" "gauge" "cal" "real" "alt" "limits" "gloss"}}
+#stages{grid-area:stage} #integrity{grid-area:integ} #contrasts{grid-area:contrast} #gauge-card{grid-area:gauge}
+#calibration{grid-area:cal} #real-data{grid-area:real} #alternatives{grid-area:alt} #limits{grid-area:limits} #glossary{grid-area:gloss}
 
-/* Charts, tooltips, tables */
-.ql-chart{position:relative;min-height:180px;min-width:0}
-.ql-tip{position:absolute;pointer-events:none;background:var(--cds-surface-popover);border:1px solid var(--cds-border);box-shadow:var(--cds-shadow-popover);border-radius:10px;padding:6px 9px;font-size:var(--cds-font-size-caption);max-width:260px;z-index:3}
-.ql-tip b{display:block;color:var(--color-fg)}
+/* Stage list under the bar chart */
+.qg-stagelist{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:4px 16px;font-size:var(--fs-xs);color:var(--color-fg-muted)}
+.qg-stagelist li{display:flex;gap:8px;align-items:baseline;min-width:0}
+.qg-stagelist b{color:var(--color-fg);min-width:16px;font-variant-numeric:tabular-nums}
+
+/* Integrity: a table laid out as action rows */
+.qg-rows{width:100%;border-collapse:separate;border-spacing:0 8px;margin:-8px 0}
+.qg-rows thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.qg-rows tr{display:grid;grid-template-columns:30px minmax(0,1fr) auto;grid-template-areas:"ic nm rs" "ic ev dt";column-gap:12px;align-items:center;padding:11px 14px;border-radius:16px;background:var(--glass-2);border:1px solid var(--edge)}
+.qg-rows td{padding:0;border:none;min-width:0}
+.qg-rows td.ic{grid-area:ic;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--color-ok);color:#fff;font-size:var(--fs-xs);font-weight:700}
+.qg-rows td.nm{grid-area:nm;font-weight:600;font-size:var(--fs-sm)}
+.qg-rows td.ev{grid-area:ev;font-size:var(--fs-xs);color:var(--color-fg-muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.qg-rows td.rs{grid-area:rs;font-weight:650;text-align:right;font-variant-numeric:tabular-nums;font-size:var(--fs-sm)}
+.qg-rows td.dt{grid-area:dt;text-align:right;font-size:var(--fs-xs);color:var(--color-ok);font-weight:600;white-space:nowrap}
+
+/* Glow card */
+#gauge-card{--color-fg:#f5f5ff;--color-fg-muted:#c3c3e0;--cds-text-secondary:#c3c3e0;--color-panel:#2a2948;color:#f5f5ff;
+  background:linear-gradient(160deg,#2c2b4b,#1e1d35);border:2px solid transparent;
+  box-shadow:0 0 0 1px rgba(255,255,255,.08),0 0 28px rgba(160,140,255,.45),0 0 60px rgba(120,220,255,.18)}
+#gauge-card::before{content:"";position:absolute;inset:-2px;border-radius:26px;padding:2px;pointer-events:none;
+  background:linear-gradient(120deg,#8ec5ff,#c69cff,#ff9de6,#9ef2df,#8ec5ff);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+#gauge-card{position:relative}
+#gauge-card .no{background:rgba(255,255,255,.14)}
+.qb-gauge{position:relative;min-height:170px}
+
+/* Charts, tables, tooltips */
+.ql-chart{position:relative;min-height:170px;min-width:0}
+.ql-tip{position:absolute;pointer-events:none;background:var(--cds-surface-popover);border:1px solid var(--cds-border);box-shadow:var(--cds-shadow-popover);border-radius:12px;padding:7px 10px;font-size:var(--fs-xs);max-width:260px;z-index:3;color:var(--color-fg)}
+#gauge-card .ql-tip{background:#3a3960;border-color:#55548a}
+.ql-tip b{display:block}
 .ql-tip span{color:var(--cds-text-secondary)}
-.ql-legend{display:flex;gap:14px;flex-wrap:wrap;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.ql-legend{display:flex;gap:14px;flex-wrap:wrap;font-size:var(--fs-xs);color:var(--color-fg-muted)}
 .ql-sw{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px;background:var(--cds-chart-muted)}
 .ql-sw.ql-line{width:14px;height:0;border-top:2px dashed var(--cds-chart-reference);border-radius:0;background:none}
-.ql-svg text{fill:var(--cds-text-secondary);font-size:var(--cds-font-size-caption)}
+.ql-svg text{fill:var(--cds-text-secondary);font-size:var(--fs-xs)}
 .ql-svg .ql-axis path,.ql-svg .ql-axis line{stroke:var(--cds-chart-axis)}
 .ql-svg .ql-grid line{stroke:var(--cds-chart-grid)}
 .ql-svg .ql-grid path{stroke:none}
-#alt-chart text,#real-chart text{paint-order:stroke;stroke:var(--qb-halo,var(--qb-soft));stroke-width:4px;stroke-linejoin:round}
-#real-data{--qb-halo:var(--qb-blue)}
-.qb-bubble{font-size:11px;fill:var(--color-fg)!important;font-weight:600}
-.qb-tablewrap{overflow-x:auto;border-radius:14px;background:var(--color-panel)}
-.qb-table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:var(--cds-font-size-caption)}
-.qb-table th,.qb-table td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--qb-line);white-space:nowrap}
-.qb-table th{font-weight:var(--cds-font-weight-medium);color:var(--color-fg-muted)}
-.qb-table tbody tr:last-child td{border-bottom:none}
-.ql-tag{display:inline-block;border-radius:999px;padding:3px 10px;font-weight:var(--cds-font-weight-medium);background:color-mix(in srgb,var(--pc) 16%,transparent);color:var(--color-fg);border:1px solid color-mix(in srgb,var(--pc) 45%,transparent)}
+#alt-chart text,#real-chart text{paint-order:stroke;stroke:color-mix(in srgb,var(--color-panel) 90%,transparent);stroke-width:4px;stroke-linejoin:round}
+.qb-bubble{font-size:var(--fs-xs);fill:var(--color-fg)!important;font-weight:650}
+.qg-tablewrap{overflow-x:auto;border-radius:16px;background:var(--glass-2);border:1px solid var(--edge)}
+.qg-table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:var(--fs-sm)}
+.qg-table th,.qg-table td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);white-space:nowrap}
+.qg-table th{font-weight:650;font-size:var(--fs-xs);color:var(--color-fg-muted);background:color-mix(in srgb,var(--ind) 6%,transparent)}
+.qg-table tbody tr:last-child td{border-bottom:none}
+.ql-tag{display:inline-flex;align-items:center;gap:6px;font-weight:600}
+.ql-tag::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--pc)}
 .ql-tag.ok{--pc:var(--color-ok)} .ql-tag.warn{--pc:var(--color-warn)} .ql-tag.bad{--pc:var(--color-bad)} .ql-tag.mute{--pc:var(--color-fg-muted)}
-.qb-limits{margin:0;padding-left:1.1em;display:grid;gap:8px;font-size:var(--cds-font-size-body)}
-.qb-limits li::marker{color:var(--color-warn)}
-#limits{border-left:5px solid var(--color-warn)}
-.qb-gloss summary{cursor:pointer;font-weight:var(--cds-font-weight-medium);font-size:1.05rem}
-.qb-gloss dl{display:grid;gap:10px;margin:12px 0 0}
-.qb-gloss dt{font-weight:var(--cds-font-weight-medium)} .qb-gloss dd{margin:2px 0 0;color:var(--color-fg-muted);font-size:var(--cds-font-size-caption)}
-.qb-foot{text-align:center;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.qg-limits{margin:0;padding:0;list-style:none;display:grid;gap:8px;counter-reset:lim}
+.qg-limits li{counter-increment:lim;display:grid;grid-template-columns:26px 1fr;gap:10px;align-items:start;font-size:var(--fs-sm)}
+.qg-limits li::before{content:counter(lim);display:grid;place-items:center;width:24px;height:24px;border-radius:50%;font-size:var(--fs-xs);font-weight:650;background:color-mix(in srgb,var(--color-warn) 20%,var(--color-panel))}
+.qg-gloss summary{cursor:pointer;font-weight:650;font-size:var(--fs-md);list-style-position:inside}
+.qg-gloss dl{display:grid;gap:10px;margin:12px 0 0}
+.qg-gloss dt{font-weight:650;font-size:var(--fs-sm)} .qg-gloss dd{margin:2px 0 0;color:var(--color-fg-muted);font-size:var(--fs-xs)}
+.qg-foot{text-align:center;font-size:var(--fs-xs);color:var(--color-fg-muted)}
 [data-dash-source-state=refreshing]{opacity:.5}
+@media (max-width:620px){.qg{border-radius:24px;padding:12px}.qg-tabs{position:static}}
 </style>
 
-<div class="qb">
-<div class="qb-in">
-  <header class="qb-top" id="summary">
-    <div class="qb-logo"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></i>QuantLab</div>
-    <nav class="qb-tabs" aria-label="Sections">
-      <a href="#overview" data-target="overview">Overview</a>
-      <a href="#real-data" data-target="real-data">Real data</a>
-      <a href="#calibration" data-target="calibration">Simulation</a>
-      <a href="#integrity" data-target="integrity">Integrity</a>
-      <a href="#limits" data-target="limits">Limits</a>
-    </nav>
-    <div class="qb-badges">
-      <span class="qb-badge warn">Verdict: PARTIAL</span>
-      <span class="qb-badge ok">Cost ₹0</span>
+<div class="qg">
+  <header class="qg-top" id="summary">
+    <span class="qg-logo" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>
+    <div class="qg-title">
+      <h1>QuantLab H1 Results</h1>
+      <span class="mut">Is volatility the same at the open, middle and close of the trading day?</span>
+    </div>
+    <div class="qg-status">
+      <span class="qg-chip warn"><i></i>Verdict: PARTIAL</span>
+      <span class="qg-chip ok"><i></i>Cost ₹0</span>
     </div>
   </header>
 
-  <div class="qb-grid">
-    <section class="qb-card" id="overview">
+  <nav class="qg-tabs" aria-label="Sections">
+    <a href="#overview" data-target="overview">Overview</a>
+    <a href="#stages" data-target="stages">Simulations</a>
+    <a href="#contrasts" data-target="contrasts">Real data</a>
+    <a href="#calibration" data-target="calibration">Calibration</a>
+    <a href="#limits" data-target="limits">Limits</a>
+  </nav>
+
+  <section class="qg-glass" id="overview">
+    <div class="qg-kpis">
+      <div class="qg-kpi" id="kpi-sims">
+        <span class="lab"><span class="no">01</span>Total simulations</span>
+        <span class="num" data-draw="val" data-source="sim_total" data-field="total" data-row="0" data-fmt="int">—</span>
+        <span class="mut">across <span data-draw="val" data-source="sim_total" data-field="stages" data-row="0">—</span> runs, each run once</span>
+      </div>
+      <div class="qg-kpi" id="kpi-cells">
+        <span class="lab"><span class="no">02</span>Cells within limit</span>
+        <span class="num"><span data-draw="val" data-source="cal_summary" data-field="passed" data-row="0">—</span> / <span data-draw="val" data-source="cal_summary" data-field="gated" data-row="0">—</span></span>
+        <span class="mut">gated simulation cells</span>
+      </div>
+      <div class="qg-kpi" id="kpi-worst">
+        <span class="lab"><span class="no">03</span>Highest C3 rate</span>
+        <span class="num" data-draw="val" data-source="cal_summary" data-field="max_gated" data-row="0" data-fmt="pct2">—</span>
+        <span class="mut">limit <span data-draw="val" data-source="cal_summary" data-field="limit_at_max" data-row="0" data-fmt="pct1">—</span>, target 5%</span>
+      </div>
+      <div class="qg-kpi" id="kpi-real">
+        <span class="lab"><span class="no">04</span>Real samples rejected</span>
+        <span class="num"><span data-draw="val" data-source="real_summary" data-field="rejected" data-row="0">—</span> / <span data-draw="val" data-source="real_summary" data-field="tested" data-row="0">—</span></span>
+        <span class="mut">testable samples</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="qg-holos" id="real-cards">
+    <div class="qg-holo" id="card-us">
+      <div class="row"><span class="name">05 · US stocks</span><span class="badge" data-draw="decision" data-row="1">—</span></div>
+      <span class="chipimg" aria-hidden="true"></span>
       <div>
-        <p class="mut">Total simulations run</p>
-        <div class="qb-big" data-draw="val" data-source="sim_total" data-field="total" data-row="0" data-fmt="int">—</div>
+        <div class="val"><span class="small">T</span><span class="num" data-draw="val" data-source="real_tests" data-field="T" data-row="1" data-fmt="dec2">—</span><span class="small">limit <span data-draw="val" data-source="real_tests" data-field="crit" data-row="1" data-fmt="dec2">—</span></span></div>
+        <div class="sym" data-draw="val" data-source="real_tests" data-field="symbols" data-row="1">—</div>
       </div>
-      <p>C3 stayed within its limit in <b data-draw="val" data-source="cal_summary" data-field="passed" data-row="0">—</b> of <b data-draw="val" data-source="cal_summary" data-field="gated" data-row="0">—</b> gated cells, and <b data-draw="val" data-source="real_summary" data-field="rejected" data-row="0">—</b> of <b data-draw="val" data-source="real_summary" data-field="tested" data-row="0">—</b> real samples rejected equal volatility.</p>
-      <div class="qb-actions">
-        <a class="qb-btn" href="#real-data" data-target="real-data"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></i>Real data</a>
-        <a class="qb-btn" href="#calibration" data-target="calibration"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17 7 7 17"/><path d="M16 17H7V8"/></svg></i>Simulation</a>
+    </div>
+    <div class="qg-holo b" id="card-nse">
+      <div class="row"><span class="name">06 · NSE stocks</span><span class="badge" data-draw="decision" data-row="2">—</span></div>
+      <span class="chipimg" aria-hidden="true"></span>
+      <div>
+        <div class="val"><span class="small">T</span><span class="num" data-draw="val" data-source="real_tests" data-field="T" data-row="2" data-fmt="dec2">—</span><span class="small">limit <span data-draw="val" data-source="real_tests" data-field="crit" data-row="2" data-fmt="dec2">—</span></span></div>
+        <div class="sym" data-draw="val" data-source="real_tests" data-field="symbols" data-row="2">—</div>
       </div>
-      <h2>Real-data tests</h2>
-      <div class="qb-cards">
-        <div class="qb-mini" id="card-us">
-          <span class="tag">US · 5-MIN</span>
-          <div>
-            <div class="t"><span class="mut">T </span><span data-draw="val" data-source="real_tests" data-field="T" data-row="1" data-fmt="dec2">—</span></div>
-            <div class="sym" data-draw="val" data-source="real_tests" data-field="symbols" data-row="1">—</div>
-            <div class="mut" data-draw="decision" data-row="1">—</div>
-          </div>
-        </div>
-        <div class="qb-mini green" id="card-nse">
-          <span class="tag">NSE · 5-MIN</span>
-          <div>
-            <div class="t"><span class="mut">T </span><span data-draw="val" data-source="real_tests" data-field="T" data-row="2" data-fmt="dec2">—</span></div>
-            <div class="sym" data-draw="val" data-source="real_tests" data-field="symbols" data-row="2">—</div>
-            <div class="mut" data-draw="decision" data-row="2">—</div>
-          </div>
-        </div>
-        <div class="qb-mini dark" id="card-nse-first">
-          <span class="tag">NSE · FIRST</span>
-          <div>
-            <div class="t"><span data-draw="val" data-source="real_tests" data-field="usable_market_sessions" data-row="0">—</span><span class="mut">/<span data-draw="val" data-source="real_tests" data-field="n_required" data-row="0">—</span></span></div>
-            <div class="mut">days complete</div>
-            <div class="mut" data-draw="decision" data-row="0">—</div>
-          </div>
-        </div>
+    </div>
+    <div class="qg-holo c" id="card-nse-first">
+      <div class="row"><span class="name">07 · NSE first sample</span><span class="badge" data-draw="decision" data-row="0">—</span></div>
+      <span class="chipimg" aria-hidden="true"></span>
+      <div>
+        <div class="val"><span class="num" data-draw="val" data-source="real_tests" data-field="usable_market_sessions" data-row="0">—</span><span class="small">of <span data-draw="val" data-source="real_tests" data-field="n_required" data-row="0">—</span> complete days needed</span></div>
+        <div class="sym" data-draw="val" data-source="real_tests" data-field="symbols" data-row="0">—</div>
       </div>
+    </div>
+  </div>
+
+  <div class="qg-grid">
+    <section class="qg-glass" id="stages">
+      <div class="qg-head"><h2><span class="no">08</span>Simulations by stage</h2><span class="qg-tag"><i></i>9 runs, each once</span></div>
+      <div class="ql-chart" data-draw="stagebars" data-source="simulation_ledger" id="stage-chart" style="min-height:170px"></div>
+      <ol class="qg-stagelist" data-draw="stagelist" data-source="simulation_ledger" aria-label="Runs in order"></ol>
     </section>
 
-    <section class="qb-card blue" id="spend">
-      <div class="qb-head"><h3>Simulations by stage</h3><span class="mut">9 runs</span></div>
-      <div class="ql-chart" data-draw="stagebars" data-source="simulation_ledger" id="stage-chart" style="min-height:150px"></div>
-    </section>
-
-    <section class="qb-card green" id="learn">
-      <svg class="qb-rings" viewBox="0 0 170 170" aria-hidden="true"><circle cx="70" cy="60" r="48"/><circle cx="120" cy="88" r="48"/><circle class="b" cx="96" cy="128" r="40"/></svg>
-      <h3>What does H1 ask?</h3>
-      <p class="mut">Is a stock's volatility the same at the open, middle and close of the trading day? Tested on 3 NSE and 3 US stocks, 5-minute bars.</p>
-      <a class="qb-pill" href="#glossary" data-open="glossary">Learn more</a>
-    </section>
-
-    <section class="qb-card green" id="integrity">
-      <div class="qb-head"><h3>Integrity checks</h3><span class="mut">all passing</span></div>
-      <table class="qb-list" data-source="integrity_checks" data-row-key="check" id="integrity-table">
+    <section class="qg-glass" id="integrity">
+      <div class="qg-head"><h2><span class="no">09</span>Integrity checks</h2><span class="mut">all passing</span></div>
+      <table class="qg-rows" data-source="integrity_checks" data-row-key="check" id="integrity-table">
         <thead><tr>
           <th>Icon</th>
           <th data-field="check">Check</th>
@@ -209,44 +235,10 @@
       </table>
     </section>
 
-    <section class="qb-card" id="gauge-card">
-      <div class="qb-head"><h3>Highest false-alarm rate</h3><a class="qb-link" href="#calibration" data-target="calibration">See all cells</a></div>
-      <div class="qb-gauge" data-draw="gauge" data-source="cal_summary" id="gauge" role="img" aria-label="Gauge of the highest C3 false-alarm rate among gated simulation cells against its limit"></div>
-      <p class="mut" style="text-align:center">Target 5%. Limit in that cell <span data-draw="val" data-source="cal_summary" data-field="limit_at_max" data-row="0" data-fmt="pct1">—</span>.</p>
-    </section>
-
-    <section class="qb-card" id="calibration">
-      <div class="qb-head"><h2>False-alarm rate in every simulated cell</h2>
-        <div class="ql-legend" aria-hidden="true">
-          <span><i class="ql-sw" data-series="c3"></i>C3</span>
-          <span><i class="ql-sw" data-series="baseline"></i>Old bootstrap test</span>
-          <span><i class="ql-sw ql-line"></i>Limit</span>
-        </div>
-      </div>
-      <div class="ql-chart" data-draw="calchart" data-source="calibration_cells" id="cal-chart"></div>
-      <p class="mut">One dot per simulated market where volatility truly was equal. Dots left of the dashed line are within the limit. Report-only cells have the heaviest tails and no limit.</p>
-    </section>
-
-    <section class="qb-card blue" id="real-data">
-      <div class="qb-head"><h2>Test statistic T against the C3 limit</h2><span class="mut">reject if past the line</span></div>
-      <div class="ql-chart" data-draw="realchart" data-source="real_tests" id="real-chart"></div>
-      <p class="mut">Each sample is 59 complete trading days of three stocks. The first NSE sample had only 58, so it was reported as not testable rather than shortened.</p>
-    </section>
-
-    <section class="qb-card" id="alternatives">
-      <div class="qb-head"><h2>Six harder processes</h2></div>
-      <div class="ql-legend" aria-hidden="true">
-        <span><i class="ql-sw" data-series="c3"></i>C3</span>
-        <span><i class="ql-sw" data-series="baseline"></i>Old test</span>
-        <span><i class="ql-sw ql-line"></i>Limit</span>
-      </div>
-      <div class="ql-chart" data-draw="altchart" data-source="alt_processes" id="alt-chart"></div>
-    </section>
-
-    <section class="qb-card" id="contrasts">
-      <div class="qb-head"><h2>Which periods differ</h2><span class="mut">log ratio of volatility, with SE</span></div>
-      <div class="qb-tablewrap">
-        <table class="qb-table" data-source="real_tests" data-row-key="test" id="contrast-table">
+    <section class="qg-glass" id="contrasts">
+      <div class="qg-head"><h2><span class="no">10</span>Which periods differ</h2><span class="mut">log ratio of volatility, with SE</span></div>
+      <div class="qg-tablewrap">
+        <table class="qg-table" data-source="real_tests" data-row-key="test" id="contrast-table">
           <thead><tr>
             <th data-field="test">Sample</th>
             <th data-field="status">Status</th>
@@ -266,19 +258,53 @@
       <p class="mut">Near 0 means two periods are alike; 1.5 means the first is about 4.5 times as volatile (in mean square). The open is the most volatile period in both markets.</p>
     </section>
 
-    <section class="qb-card" id="limits">
-      <h2>What these results do not show</h2>
-      <ul class="qb-limits">
+    <section class="qg-glass" id="gauge-card">
+      <div class="qg-head"><h2><span class="no">11</span>Highest false-alarm rate</h2></div>
+      <div class="qb-gauge" data-draw="gauge" data-source="cal_summary" id="gauge" role="img" aria-label="Gauge of the highest C3 false-alarm rate among gated simulation cells against its limit"></div>
+      <p class="mut" style="text-align:center">Green up to the 5% target, amber up to the limit, red beyond.</p>
+    </section>
+
+    <section class="qg-glass" id="calibration">
+      <div class="qg-head"><h2><span class="no">12</span>False-alarm rate in every simulated cell</h2>
+        <div class="ql-legend" aria-hidden="true">
+          <span><i class="ql-sw" data-series="c3"></i>C3</span>
+          <span><i class="ql-sw" data-series="baseline"></i>Old bootstrap test</span>
+          <span><i class="ql-sw ql-line"></i>Limit</span>
+        </div>
+      </div>
+      <div class="ql-chart" data-draw="calchart" data-source="calibration_cells" id="cal-chart"></div>
+      <p class="mut">One dot per simulated market where volatility truly was equal. Dots left of the dashed line are within the limit. Report-only cells have the heaviest tails and no limit.</p>
+    </section>
+
+    <section class="qg-glass" id="real-data">
+      <div class="qg-head"><h2><span class="no">13</span>Test statistic T against the C3 limit</h2></div>
+      <div class="ql-chart" data-draw="realchart" data-source="real_tests" id="real-chart"></div>
+      <p class="mut">A bar past the dashed line rejects equal volatility. The first NSE sample had only 58 complete days, so it was reported as not testable rather than shortened.</p>
+    </section>
+
+    <section class="qg-glass" id="alternatives">
+      <div class="qg-head"><h2><span class="no">14</span>Six harder processes</h2></div>
+      <div class="ql-legend" aria-hidden="true">
+        <span><i class="ql-sw" data-series="c3"></i>C3</span>
+        <span><i class="ql-sw" data-series="baseline"></i>Old test</span>
+        <span><i class="ql-sw ql-line"></i>Limit</span>
+      </div>
+      <div class="ql-chart" data-draw="altchart" data-source="alt_processes" id="alt-chart"></div>
+    </section>
+
+    <section class="qg-glass" id="limits">
+      <h2><span class="no">15</span>What these results do not show</h2>
+      <ol class="qg-limits">
         <li>They do not show that C3 has a 5% error rate on real data. That is still unverified.</li>
         <li>The real samples are not independent: the same six stocks and source shaped the simulation design.</li>
         <li>Higher volatility at the open is well known, so the rejections confirm it rather than discover it.</li>
         <li>C3 is cautious and has less power than the old test. Neither real result was close.</li>
         <li>The Phase 6 placement protocol is proposed and unapproved, and was not needed here.</li>
-      </ul>
+      </ol>
     </section>
 
-    <details class="qb-card qb-gloss" id="glossary">
-      <summary>Key terms</summary>
+    <details class="qg-glass qg-gloss" id="glossary">
+      <summary><span class="no">16</span>Key terms</summary>
       <dl>
         <dt>H1</dt><dd>Volatility is the same in the open, middle and close of the trading day.</dd>
         <dt>T</dt><dd>The largest of the three period differences divided by its standard error.</dd>
@@ -290,8 +316,7 @@
     </details>
   </div>
 
-  <p class="qb-foot">All figures come from the saved QuantLab outputs (github.com/Pravin292/Quantlab). No raw market data is on this page.</p>
-</div>
+  <p class="qg-foot">All figures come from the saved QuantLab outputs (github.com/Pravin292/Quantlab). No raw market data is on this page.</p>
 </div>
 
 <script>
@@ -412,7 +437,7 @@ dash.draw('realchart', (el) => {
     svg.append('text').attr('x', 0).attr('y', narrow ? y0 + 12 : y0 + 23).text(r.test);
     if (r.status === 'TESTED') {
       const bar = svg.append('rect').attr('x', x(0)).attr('y', barY).attr('height', 22).attr('rx', 4)
-        .attr('width', Math.max(0, x(+r.T) - x(0))).style('fill', dash.colors[0]);
+        .attr('width', Math.max(0, x(+r.T) - x(0))).style('fill', 'var(--ind)');
       svg.append('text').attr('x', x(+r.T) + 6).attr('y', barY + 15).text(qlFmt(r.T, 'dec2'));
       const lines = [`T ${qlFmt(r.T, 'dec2')}, limit ${qlFmt(r.crit, 'dec2')}`, `Decision: ${String(r.reject) === 'True' ? 'reject equal volatility' : 'do not reject'}`, `${r.first_date} to ${r.last_date}`, `Stocks: ${r.symbols}`];
       bar.on('pointermove', (ev) => tip.show(ev, r.test, lines)).on('pointerleave', () => tip.hide());
@@ -493,7 +518,7 @@ dash.draw('calchart', (el) => {
         .style('fill', 'var(--cds-chart-muted)').style('stroke', 'var(--color-bg)').style('stroke-width', 1)
         .on('pointermove', (ev) => tip.show(ev, r.cell, lines)).on('pointerleave', () => tip.hide());
       svg.append('circle').attr('cx', x(+r.c3_rate_pct)).attr('cy', yb).attr('r', 4)
-        .style('fill', dash.colors[0]).style('stroke', 'var(--color-bg)').style('stroke-width', 1)
+        .style('fill', 'var(--ind)').style('stroke', 'var(--color-bg)').style('stroke-width', 1)
         .on('pointermove', (ev) => tip.show(ev, r.cell, lines)).on('pointerleave', () => tip.hide());
     });
   });
@@ -521,7 +546,7 @@ dash.draw('altchart', (el) => {
     svg.append('text').attr('x', 0).attr('y', narrow ? y0 + 11 : y0 + 18).text(r.label);
     const lines = [`C3 ${qlFmt(r.c3_rate_pct, 'pct2')} (${r.c3_status})`, `Old test ${qlFmt(r.baseline_rate_pct, 'pct2')} (${r.baseline_status})`, `Limit ${qlFmt(r.gate_limit_pct, 'pct1')}`];
     const g = svg.append('g').on('pointermove', (ev) => tip.show(ev, r.label, lines)).on('pointerleave', () => tip.hide());
-    g.append('rect').attr('x', x(0)).attr('y', y0 + 4 + dy).attr('height', 10).attr('rx', 3).attr('width', Math.max(0, x(+r.c3_rate_pct) - x(0))).style('fill', dash.colors[0]);
+    g.append('rect').attr('x', x(0)).attr('y', y0 + 4 + dy).attr('height', 10).attr('rx', 3).attr('width', Math.max(0, x(+r.c3_rate_pct) - x(0))).style('fill', 'var(--ind)');
     g.append('rect').attr('x', x(0)).attr('y', y0 + 16 + dy).attr('height', 10).attr('rx', 3).attr('width', Math.max(0, x(+r.baseline_rate_pct) - x(0))).style('fill', 'var(--cds-chart-muted)');
   });
   const lim = +rows[0].gate_limit_pct;
@@ -533,7 +558,7 @@ dash.draw('altchart', (el) => {
 
 <script>
 document.querySelectorAll('.ql-sw[data-series]').forEach((sw) => {
-  sw.style.background = sw.dataset.series === 'c3' ? dash.colors[0] : 'var(--cds-chart-muted)';
+  sw.style.background = sw.dataset.series === 'c3' ? 'var(--ind)' : 'var(--cds-chart-muted)';
 });
 document.querySelectorAll('a[data-target]').forEach((a) => {
   a.addEventListener('click', () => { try { dash.setLink(a.dataset.target); } catch (e) {} });
@@ -542,7 +567,7 @@ document.querySelectorAll('a[data-open]').forEach((a) => {
   a.addEventListener('click', () => { const t = document.getElementById(a.dataset.open); if (t) t.open = true; });
 });
 (function () {
-  const links = Array.from(document.querySelectorAll('.qb-tabs a[data-target]'));
+  const links = Array.from(document.querySelectorAll('.qg-tabs a[data-target]'));
   if (!links.length) return;
   let ticking = false;
   const update = () => {
@@ -566,7 +591,7 @@ dash.draw('decision', (el) => {
   const r = s.data[Number(el.dataset.row || 0)];
   if (!r) { el.textContent = '—'; return; }
   if (r.status !== 'TESTED') el.textContent = 'Not testable';
-  else el.textContent = String(r.reject) === 'True' ? 'Rejects equal volatility' : 'Does not reject';
+  else el.textContent = String(r.reject) === 'True' ? 'Rejected' : 'Not rejected';
 });
 
 dash.draw('stagebars', (el) => {
@@ -574,14 +599,8 @@ dash.draw('stagebars', (el) => {
   if (s.status !== 'ok') { qlEmpty(el, s); return; }
   el.replaceChildren();
   const fmt = d3.format(','), fmtS = d3.format('.2~s');
-  const counts = {};
-  const rows = s.data.map((r) => {
-    const st = (String(r.stage).match(/^Stage\s*(\d+)/) || [, '?'])[1];
-    counts[st] = (counts[st] || 0) + 1;
-    return { ...r, n: +r.simulations, st, short: `S${st}${String.fromCharCode(96 + counts[st])}` };
-  });
-  rows.forEach((r) => { if (counts[r.st] === 1) r.short = `S${r.st}`; });
-  const W = el.clientWidth || 300, H = 150, top = 26, bottom = 20;
+  const rows = s.data.map((r, i) => ({ ...r, n: +r.simulations, short: String(i + 1) }));
+  const W = el.clientWidth || 300, H = 170, top = 28, bottom = 22;
   const svg = d3.select(el).append('svg').attr('class', 'ql-svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`)
     .attr('role', 'img').attr('aria-label', 'Column chart of the number of simulations in each of the nine runs, Stages 1 to 4');
   const x = d3.scaleBand().domain(rows.map((r, i) => i)).range([2, W - 2]).paddingInner(W < 300 ? 0.35 : 0.45);
@@ -591,9 +610,9 @@ dash.draw('stagebars', (el) => {
   rows.forEach((r, i) => {
     const bw = x.bandwidth(), h = Math.max(bw, (H - bottom) - y(r.n));
     svg.append('rect').attr('x', x(i)).attr('y', H - bottom - h).attr('width', bw).attr('height', h).attr('rx', bw / 2)
-      .style('fill', i === maxI ? dash.colors[0] : 'var(--color-panel)')
-      .on('pointermove', (ev) => tip.show(ev, r.stage, [`${fmt(r.n)} simulations`])).on('pointerleave', () => tip.hide());
-    svg.append('text').attr('x', x(i) + bw / 2).attr('y', H - 5).attr('text-anchor', 'middle').style('font-size', '10px').text(r.short);
+      .style('fill', i === maxI ? 'var(--ind)' : 'color-mix(in srgb, var(--ind) 26%, var(--color-panel))')
+      .on('pointermove', (ev) => tip.show(ev, `${i + 1}. ${r.stage}`, [`${fmt(r.n)} simulations`])).on('pointerleave', () => tip.hide());
+    svg.append('text').attr('x', x(i) + bw / 2).attr('y', H - 5).attr('text-anchor', 'middle').text(r.short);
   });
   const m = rows[maxI], cx = x(maxI) + x.bandwidth() / 2;
   const label = fmtS(m.n).replace('M', 'M');
@@ -604,6 +623,19 @@ dash.draw('stagebars', (el) => {
   t.attr('x', bx);
   g.insert('rect', 'text').attr('x', bx - tw / 2).attr('y', 1).attr('width', tw).attr('height', 19).attr('rx', 9.5)
     .style('fill', 'var(--color-panel)').style('stroke', 'var(--cds-border)');
+});
+
+dash.draw('stagelist', (ol) => {
+  const s = dash.data('simulation_ledger');
+  ol.replaceChildren();
+  if (s.status !== 'ok') return;
+  const fmt = d3.format(',');
+  s.data.forEach((r, i) => {
+    const li = document.createElement('li');
+    const b = document.createElement('b'); b.textContent = String(i + 1);
+    const t = document.createElement('span'); t.textContent = `${r.stage} · ${fmt(+r.simulations)}`;
+    li.append(b, t); ol.appendChild(li);
+  });
 });
 
 dash.draw('integrityrows', (tb) => {
@@ -621,8 +653,7 @@ dash.draw('integrityrows', (tb) => {
   s.data.forEach((r, i) => {
     const tr = document.createElement('tr');
     const ic = document.createElement('td'); ic.className = 'ic';
-    const svg = document.createElementNS(ns, 'svg'); svg.setAttribute('viewBox', '0 0 24 24'); svg.setAttribute('aria-hidden', 'true');
-    const p = document.createElementNS(ns, 'path'); p.setAttribute('d', icons[i % icons.length]); svg.appendChild(p); ic.appendChild(svg);
+    ic.textContent = '✓'; ic.setAttribute('aria-hidden', 'true');
     const nm = document.createElement('td'); nm.className = 'nm'; nm.textContent = r.check;
     const ev = document.createElement('td'); ev.className = 'ev'; ev.textContent = r.evidence;
     const rs = document.createElement('td'); rs.className = 'rs'; rs.textContent = r.result;
