@@ -350,10 +350,10 @@ window.addEventListener('error', (e) => window.__errors.push(String(e.message)))
       <h2><span class="no">16</span>What these results do not show</h2>
       <ol class="qg-limits">
         <li>They do not show that C3 has a 5% error rate on real data. That is still unverified.</li>
-        <li>The real samples are not independent: the same six stocks and source shaped the simulation design.</li>
+        <li>The real samples are only partly independent: the same six stocks shaped the simulation design. The fresh US sample adds a new period and source, not new stocks.</li>
         <li>Higher volatility at the open is well known, so the rejections confirm it rather than discover it.</li>
         <li>C3 is cautious and has less power than the old test. Neither real result was close.</li>
-        <li>The Phase 6 placement protocol is proposed and unapproved, and was not needed here.</li>
+        <li>The Phase 6 placement step was shelved by the owner's decision and was not needed for these results.</li>
       </ol>
     </section>
 
@@ -455,6 +455,14 @@ window.qlEmpty = function (el, s) {
   el.appendChild(p);
 };
 
+window.qlFit = function (sel, maxW) {
+  const n = sel.node(); if (!n || maxW <= 0) return sel;
+  let t = n.textContent;
+  if (n.getComputedTextLength() <= maxW) return sel;
+  while (t.length > 1 && n.getComputedTextLength() > maxW) { t = t.slice(0, -1); n.textContent = t.trimEnd() + '…'; }
+  return sel;
+};
+
 window.qlTextWidth = function (svg, texts) {
   const g = svg.append('g').attr('opacity', 0);
   let w = 0;
@@ -488,7 +496,7 @@ dash.draw('realchart', (el) => {
   rows.forEach((r, i) => {
     const y0 = top + i * rowH;
     const barY = narrow ? y0 + 18 : y0 + 8;
-    svg.append('text').attr('x', 0).attr('y', narrow ? y0 + 12 : y0 + 23).text(r.test);
+    qlFit(svg.append('text').attr('x', 0).attr('y', narrow ? y0 + 12 : y0 + 23).text(r.test), narrow ? W - 2 : labelW - 4);
     if (r.status === 'TESTED') {
       const bar = svg.append('rect').attr('x', x(0)).attr('y', barY).attr('height', 22).attr('rx', 4)
         .attr('width', Math.max(0, x(+r.T) - x(0))).style('fill', 'var(--ind)');
@@ -497,7 +505,7 @@ dash.draw('realchart', (el) => {
       bar.on('pointermove', (ev) => tip.show(ev, r.test, lines)).on('pointerleave', () => tip.hide());
     } else {
       svg.append('text').attr('x', x(crit) + 8).attr('y', barY + 15)
-        .text(`Not testable: ${r.usable_market_sessions} of ${r.n_required} sessions`);
+        .text(narrow ? `Not testable: ${r.usable_market_sessions}/${r.n_required} days` : `Not testable: ${r.usable_market_sessions} of ${r.n_required} sessions`).call((t) => qlFit(t, W - x(crit) - 10));
     }
   });
   svg.append('line').attr('x1', x(crit)).attr('x2', x(crit)).attr('y1', top - 4).attr('y2', base)
@@ -597,7 +605,7 @@ dash.draw('altchart', (el) => {
   const tip = qlTip(el);
   rows.forEach((r, i) => {
     const y0 = top + i * rowH;
-    svg.append('text').attr('x', 0).attr('y', narrow ? y0 + 11 : y0 + 18).text(r.label);
+    qlFit(svg.append('text').attr('x', 0).attr('y', narrow ? y0 + 11 : y0 + 18).text(r.label), narrow ? W - 2 : labelW - 4);
     const lines = [`C3 ${qlFmt(r.c3_rate_pct, 'pct2')} (${r.c3_status})`, `Old test ${qlFmt(r.baseline_rate_pct, 'pct2')} (${r.baseline_status})`, `Limit ${qlFmt(r.gate_limit_pct, 'pct1')}`];
     const g = svg.append('g').on('pointermove', (ev) => tip.show(ev, r.label, lines)).on('pointerleave', () => tip.hide());
     g.append('rect').attr('x', x(0)).attr('y', y0 + 4 + dy).attr('height', 10).attr('rx', 3).attr('width', Math.max(0, x(+r.c3_rate_pct) - x(0))).style('fill', 'var(--ind)');
