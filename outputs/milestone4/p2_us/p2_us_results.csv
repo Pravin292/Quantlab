@@ -1,0 +1,2 @@
+market,symbols,dates_in_sample,usable_market_sessions,usable_per_stock,n_required,status,T,crit,reject,first_date,last_date,log_ratio_open_middle,se_open_middle,log_ratio_close_middle,se_close_middle,log_ratio_open_close,se_open_close
+US,"AAPL,MSFT,NVDA",80,80,"[80, 80, 80]",59,TESTED,17.748264829682572,3.298658000460969,True,2026-04-13,2026-07-07,1.3326098719888486,0.07508395241883949,0.17993556537393687,0.158432257689988,1.1526743066149119,0.17859404760573203

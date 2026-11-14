@@ -23,7 +23,7 @@
 | Tune and check C3 in simulation | Done. Verdict PARTIAL (`docs/24`) |
 | Real-data H1 test, US | Done. T = 22.594, reject (`docs/31`) |
 | Real-data H1 test, NSE | Done on the fresh free pull. T = 17.305, reject (`docs/35`); the first sample was not testable (58 of 59 days) |
-| Fresh, independent US check | Ready and frozen (`docs/37`). Waiting on the owner's Alpaca keys and "pull once" |
+| Fresh, independent US check | Done (`docs/39`, added 2026-11-14). Alpaca SIP, 2026-04-13 to 2026-07-07, T = 17.748, reject |
 | Larger 90–250-day study (`docs/26`) | Not done. Needs more data than free sources give without an account, and has not been approved |
 | Phase 6 descriptive placement | Shelved by owner decision (§2.3) |
 | D-tail option (`docs/29`) | Decided: Option A (§2.2) |
@@ -32,4 +32,4 @@
 
 ## 4. What remains
 
-Only the fresh-US check, which needs the owner's free Alpaca keys. Everything else is either done, decided or shelved by the owner's choice.
+Nothing. The fresh-US check was completed later the same day (`docs/39`). Every item is now done, decided, or shelved by the owner's choice. A larger 90–250-day study would need a new plan and its own approval.

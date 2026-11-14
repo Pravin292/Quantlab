@@ -1,0 +1,8 @@
+{
+  "crit_n59": 3.298658000460969,
+  "data_files": {
+    "AAPL_AAPL_5m_2026-04-13_2026-08-05_dfaf77132759.parquet": "821256fc2c7a093c7b71b50d77a10bf0c9b46fb962a333cfab68b3e42e38e1f9",
+    "MSFT_MSFT_5m_2026-04-13_2026-08-05_51a8deaf802e.parquet": "214ab8e5367efa799fee6454aeb14f524e7d7760f4f41ae4c16e91aec20b3e7d",
+    "NVDA_NVDA_5m_2026-04-13_2026-08-05_6ba346ec8819.parquet": "b87b5a60904207bcda5d4c7f4abc86093a592b0d36823c5a7ab8ecf1a44cd15f"
+  }
+}

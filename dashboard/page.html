@@ -57,13 +57,15 @@
 @media (max-width:420px){.qg-kpis{grid-template-columns:minmax(0,1fr)}.qg-kpi{border-left:none;padding-left:4px;border-top:1px solid var(--line);padding-top:14px}.qg-kpi:first-child{border-top:none;padding-top:4px}}
 
 /* Holographic cards */
-.qg-holos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-@media (max-width:760px){.qg-holos{grid-template-columns:minmax(0,1fr)}}
+.qg-holos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+@media (max-width:1100px){.qg-holos{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.qg-holos{grid-template-columns:minmax(0,1fr)}}
 .qg-holo{position:relative;overflow:hidden;border-radius:20px;padding:18px;min-height:160px;display:grid;align-content:space-between;gap:12px;color:#17172b;
   border:1px solid rgba(255,255,255,.7);box-shadow:0 14px 30px rgba(80,70,180,.18);
   background:linear-gradient(125deg,#a8d8ff 0%,#e9c6ff 28%,#fff1c9 50%,#b9f3e4 72%,#c7b9ff 100%)}
 .qg-holo::before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.55) 45%,transparent 60%);pointer-events:none}
 .qg-holo.b{background:linear-gradient(125deg,#6c63ff 0%,#7f8cff 30%,#9ee7ff 62%,#c9b6ff 100%);color:#fff}
+.qg-holo.d{background:linear-gradient(125deg,#ffd1b3 0%,#f9c5f0 32%,#c9d6ff 64%,#b8f0e6 100%)}
 .qg-holo.c{background:linear-gradient(125deg,#c5f0ff 0%,#f8c8ef 30%,#d9f7c4 60%,#b7c3ff 100%)}
 .qg-holo .row{position:relative;display:flex;justify-content:space-between;align-items:center;gap:8px}
 .qg-holo .name{font-size:var(--fs-md);font-weight:700}
@@ -189,15 +191,23 @@
 
   <div class="qg-holos" id="real-cards">
     <div class="qg-holo" id="card-us">
-      <div class="row"><span class="name">05 · US stocks</span><span class="badge" data-draw="decision" data-row="1">—</span></div>
+      <div class="row"><span class="name">05 · US, first sample</span><span class="badge" data-draw="decision" data-row="1">—</span></div>
       <span class="chipimg" aria-hidden="true"></span>
       <div>
         <div class="val"><span class="small">T</span><span class="num" data-draw="val" data-source="real_tests" data-field="T" data-row="1" data-fmt="dec2">—</span><span class="small">limit <span data-draw="val" data-source="real_tests" data-field="crit" data-row="1" data-fmt="dec2">—</span></span></div>
         <div class="sym" data-draw="val" data-source="real_tests" data-field="symbols" data-row="1">—</div>
       </div>
     </div>
+    <div class="qg-holo d" id="card-us-fresh">
+      <div class="row"><span class="name">06 · US, fresh sample</span><span class="badge" data-draw="decision" data-row="3">—</span></div>
+      <span class="chipimg" aria-hidden="true"></span>
+      <div>
+        <div class="val"><span class="small">T</span><span class="num" data-draw="val" data-source="real_tests" data-field="T" data-row="3" data-fmt="dec2">—</span><span class="small">limit <span data-draw="val" data-source="real_tests" data-field="crit" data-row="3" data-fmt="dec2">—</span></span></div>
+        <div class="sym"><span data-draw="val" data-source="real_tests" data-field="first_date" data-row="3">—</span> to <span data-draw="val" data-source="real_tests" data-field="last_date" data-row="3">—</span></div>
+      </div>
+    </div>
     <div class="qg-holo b" id="card-nse">
-      <div class="row"><span class="name">06 · NSE stocks</span><span class="badge" data-draw="decision" data-row="2">—</span></div>
+      <div class="row"><span class="name">07 · NSE stocks</span><span class="badge" data-draw="decision" data-row="2">—</span></div>
       <span class="chipimg" aria-hidden="true"></span>
       <div>
         <div class="val"><span class="small">T</span><span class="num" data-draw="val" data-source="real_tests" data-field="T" data-row="2" data-fmt="dec2">—</span><span class="small">limit <span data-draw="val" data-source="real_tests" data-field="crit" data-row="2" data-fmt="dec2">—</span></span></div>
@@ -205,7 +215,7 @@
       </div>
     </div>
     <div class="qg-holo c" id="card-nse-first">
-      <div class="row"><span class="name">07 · NSE first sample</span><span class="badge" data-draw="decision" data-row="0">—</span></div>
+      <div class="row"><span class="name">08 · NSE first sample</span><span class="badge" data-draw="decision" data-row="0">—</span></div>
       <span class="chipimg" aria-hidden="true"></span>
       <div>
         <div class="val"><span class="num" data-draw="val" data-source="real_tests" data-field="usable_market_sessions" data-row="0">—</span><span class="small">of <span data-draw="val" data-source="real_tests" data-field="n_required" data-row="0">—</span> complete days needed</span></div>
@@ -216,13 +226,13 @@
 
   <div class="qg-grid">
     <section class="qg-glass" id="stages">
-      <div class="qg-head"><h2><span class="no">08</span>Simulations by stage</h2><span class="qg-tag"><i></i>9 runs, each once</span></div>
+      <div class="qg-head"><h2><span class="no">09</span>Simulations by stage</h2><span class="qg-tag"><i></i>9 runs, each once</span></div>
       <div class="ql-chart" data-draw="stagebars" data-source="simulation_ledger" id="stage-chart" style="min-height:170px"></div>
       <ol class="qg-stagelist" data-draw="stagelist" data-source="simulation_ledger" aria-label="Runs in order"></ol>
     </section>
 
     <section class="qg-glass" id="integrity">
-      <div class="qg-head"><h2><span class="no">09</span>Integrity checks</h2><span class="mut">all passing</span></div>
+      <div class="qg-head"><h2><span class="no">10</span>Integrity checks</h2><span class="mut">all passing</span></div>
       <table class="qg-rows" data-source="integrity_checks" data-row-key="check" id="integrity-table">
         <thead><tr>
           <th>Icon</th>
@@ -236,7 +246,7 @@
     </section>
 
     <section class="qg-glass" id="contrasts">
-      <div class="qg-head"><h2><span class="no">10</span>Which periods differ</h2><span class="mut">log ratio of volatility, with SE</span></div>
+      <div class="qg-head"><h2><span class="no">11</span>Which periods differ</h2><span class="mut">log ratio of volatility, with SE</span></div>
       <div class="qg-tablewrap">
         <table class="qg-table" data-source="real_tests" data-row-key="test" id="contrast-table">
           <thead><tr>
@@ -255,17 +265,17 @@
           <tbody data-draw="contrastrows"></tbody>
         </table>
       </div>
-      <p class="mut">Near 0 means two periods are alike; 1.5 means the first is about 4.5 times as volatile (in mean square). The open is the most volatile period in both markets.</p>
+      <p class="mut">Near 0 means two periods are alike; 1.5 means the first is about 4.5 times as volatile (in mean square). The open is the most volatile period in every tested sample.</p>
     </section>
 
     <section class="qg-glass" id="gauge-card">
-      <div class="qg-head"><h2><span class="no">11</span>Highest false-alarm rate</h2></div>
+      <div class="qg-head"><h2><span class="no">12</span>Highest false-alarm rate</h2></div>
       <div class="qb-gauge" data-draw="gauge" data-source="cal_summary" id="gauge" role="img" aria-label="Gauge of the highest C3 false-alarm rate among gated simulation cells against its limit"></div>
       <p class="mut" style="text-align:center">Green up to the 5% target, amber up to the limit, red beyond.</p>
     </section>
 
     <section class="qg-glass" id="calibration">
-      <div class="qg-head"><h2><span class="no">12</span>False-alarm rate in every simulated cell</h2>
+      <div class="qg-head"><h2><span class="no">13</span>False-alarm rate in every simulated cell</h2>
         <div class="ql-legend" aria-hidden="true">
           <span><i class="ql-sw" data-series="c3"></i>C3</span>
           <span><i class="ql-sw" data-series="baseline"></i>Old bootstrap test</span>
@@ -277,13 +287,13 @@
     </section>
 
     <section class="qg-glass" id="real-data">
-      <div class="qg-head"><h2><span class="no">13</span>Test statistic T against the C3 limit</h2></div>
+      <div class="qg-head"><h2><span class="no">14</span>Test statistic T against the C3 limit</h2></div>
       <div class="ql-chart" data-draw="realchart" data-source="real_tests" id="real-chart"></div>
-      <p class="mut">A bar past the dashed line rejects equal volatility. The first NSE sample had only 58 complete days, so it was reported as not testable rather than shortened.</p>
+      <p class="mut">A bar past the dashed line rejects equal volatility. The fresh US sample comes from Alpaca and a period before the first US sample. The first NSE sample had only 58 complete days, so it was reported as not testable rather than shortened.</p>
     </section>
 
     <section class="qg-glass" id="alternatives">
-      <div class="qg-head"><h2><span class="no">14</span>Six harder processes</h2></div>
+      <div class="qg-head"><h2><span class="no">15</span>Six harder processes</h2></div>
       <div class="ql-legend" aria-hidden="true">
         <span><i class="ql-sw" data-series="c3"></i>C3</span>
         <span><i class="ql-sw" data-series="baseline"></i>Old test</span>
@@ -293,7 +303,7 @@
     </section>
 
     <section class="qg-glass" id="limits">
-      <h2><span class="no">15</span>What these results do not show</h2>
+      <h2><span class="no">16</span>What these results do not show</h2>
       <ol class="qg-limits">
         <li>They do not show that C3 has a 5% error rate on real data. That is still unverified.</li>
         <li>The real samples are not independent: the same six stocks and source shaped the simulation design.</li>
@@ -304,7 +314,7 @@
     </section>
 
     <details class="qg-glass qg-gloss" id="glossary">
-      <summary><span class="no">16</span>Key terms</summary>
+      <summary><span class="no">17</span>Key terms</summary>
       <dl>
         <dt>H1</dt><dd>Volatility is the same in the open, middle and close of the trading day.</dd>
         <dt>T</dt><dd>The largest of the three period differences divided by its standard error.</dd>
