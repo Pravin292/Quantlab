@@ -1,0 +1,5 @@
+us_first_yahoo: real T=22.594  placebo reject rate=0.0073 [0.0058, 0.0092]  median T=1.144
+nse_first_yahoo NOT_TESTABLE
+nse_fresh_yahoo: real T=17.305  placebo reject rate=0.0130 [0.0110, 0.0154]  median T=1.233
+us_fresh_alpaca: real T=17.748  placebo reject rate=0.0085 [0.0069, 0.0105]  median T=1.187
+COMPLETE

@@ -1,0 +1,2 @@
+outcome,gated_cells,n_PASS,n_PASS_AMBIGUOUS,n_FAIL_AMBIGUOUS,n_FAIL,highest_gated_rate,highest_reported_rate
+STRESS_PASS,64,64,0,0,0,0.0484,0.04608
