@@ -62,6 +62,10 @@ Documents are numbered in reading order. `07_research_protocol.md` does not exis
 | [39](39_fresh_us_check_report.md) | **Fresh-US check report**: Alpaca SIP, 2026-04-13 to 2026-07-07, T = 17.75, reject |
 | [40](40_phase6_protocol_revision6_exploratory.md) | Phase 6 protocol revision 6 (exploratory, Option A), frozen before measurement; records the shape-E variance/volatility finding |
 | [41](41_phase6_exploratory_report.md) | **Phase 6 exploratory report**: NSE blocks INSUFFICIENT, US first CANNOT BE CLASSIFIED, US fresh OUTSIDE (dependence) |
+| [42](42_stage6_preregistration_dependence_power_placebo.md) | **Stage 6 preregistration** (frozen before any run): dependence stress test of C3, power curve, real-data placebo |
+| [43](43_stage6_report.md) | **Stage 6 report**: results of the stress test, the power curve and the placebo (generated from the saved files) |
+| [44](44_independent_holdout_design.md) | Independent holdout check: design only, not run; needs your approval for a new data pull |
+| [45](45_h1_tool_guide.md) | **H1 tool guide**: run the frozen C3 test on your own 5-minute bars with `quantlab-h1` |
 
 ## Project status
 

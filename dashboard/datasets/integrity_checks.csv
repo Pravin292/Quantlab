@@ -1,6 +1,7 @@
 check,result,detail,evidence
-Test suite,413 passed,0 failed,pytest 2026-11-14
-Hashed manifests,13 verified,0 mismatches,shasum -a 256 -c
+Test suite,438 passed,0 failed,pytest 2026-11-19
+Hashed manifests,14 verified,0 mismatches,scripts/verify_manifests.py
+Stage 6 results reproduce,exactly,3 cells re-run from seeds,docs/43
 Frozen C3 table,unchanged,hash verified,C3_TABLE.sha256
 Raw market data in GitHub,none,git-ignored,.gitignore
 Money spent,0,no paid source,docs/33 §7

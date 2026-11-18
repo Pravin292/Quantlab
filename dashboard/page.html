@@ -146,6 +146,43 @@
 .qg-gloss dl{display:grid;gap:10px;margin:12px 0 0}
 .qg-gloss dt{font-weight:650;font-size:var(--fs-sm)} .qg-gloss dd{margin:2px 0 0;color:var(--color-fg-muted);font-size:var(--fs-xs)}
 .qg-foot{text-align:center;font-size:var(--fs-xs);color:var(--color-fg-muted)}
+
+/* Hero (plain-language answer) */
+.qg-hero{position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:22px;padding:clamp(18px,2.6vw,30px);border-radius:28px;color:#fff;
+  background:linear-gradient(135deg,#4a4ac4 0%,#6d5fd0 48%,#3b82c4 100%);box-shadow:0 20px 44px color-mix(in srgb,var(--ind) 30%,transparent)}
+.qg-hero::before{content:"";position:absolute;right:-80px;top:-90px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.28),transparent 65%);pointer-events:none}
+.qg-hero>*{position:relative}
+.qg-eyebrow{font-size:var(--fs-xs);font-weight:700;letter-spacing:.09em;text-transform:uppercase;opacity:.85}
+.qg-hero h2{font-size:clamp(20px,2.9vw,28px)!important;line-height:1.2;font-weight:700;letter-spacing:-.02em;margin:6px 0 10px}
+.qg-hero p{font-size:var(--fs-md);opacity:.94;line-height:1.5}
+.qg-hero p+p{margin-top:8px}
+.qg-hero b{font-weight:700}
+.qg-steps{list-style:none;margin:0;padding:0;display:grid;gap:10px;align-content:center;counter-reset:st}
+.qg-steps li{counter-increment:st;display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px;align-items:center;padding:10px 12px;border-radius:16px;font-size:var(--fs-sm);
+  background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.28);backdrop-filter:blur(6px)}
+.qg-steps li::before{content:counter(st);display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#fff;color:#4a4ac4;font-weight:700;font-size:var(--fs-xs)}
+@media (max-width:860px){.qg-hero{grid-template-columns:minmax(0,1fr)}}
+.qg-how{display:flex;gap:10px;flex-wrap:wrap}
+.qg-how span{display:inline-flex;gap:8px;align-items:center;padding:8px 14px;border-radius:999px;background:var(--glass-2);border:1px solid var(--edge);font-size:var(--fs-xs);font-weight:600}
+.qg-how i{width:9px;height:9px;border-radius:50%;background:var(--c)}
+/* Callouts, segmented controls, heat cells */
+.qg-callout{display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px;align-items:start;padding:14px 16px;border-radius:18px;background:var(--ind-soft);border:1px solid var(--edge);font-size:var(--fs-sm)}
+.qg-callout::before{content:"i";display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--ind);color:#fff;font-weight:700;font-size:var(--fs-xs)}
+.qg-callout b{font-weight:700}
+.qg-callout.ok{background:color-mix(in srgb,var(--color-ok) 12%,var(--color-panel))}.qg-callout.ok::before{background:var(--color-ok);content:"\2713"}
+.qg-callout.warn{background:color-mix(in srgb,var(--color-warn) 14%,var(--color-panel))}.qg-callout.warn::before{background:var(--color-warn);content:"!"}
+.qg-callout.bad{background:color-mix(in srgb,var(--color-bad) 12%,var(--color-panel))}.qg-callout.bad::before{background:var(--color-bad);content:"!"}
+.qg-controls{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.qg-seg{display:inline-flex;gap:4px;padding:4px;border-radius:999px;background:var(--glass-2);border:1px solid var(--edge)}
+.qg-seg button{border:0;background:transparent;font:inherit;font-size:var(--fs-xs);font-weight:650;padding:8px 14px;border-radius:999px;cursor:pointer;color:var(--color-fg)}
+.qg-seg button.is-on{background:var(--ind);color:#fff;box-shadow:0 6px 14px color-mix(in srgb,var(--ind) 30%,transparent)}
+.qg-seg button:focus-visible,.qg-tabs a:focus-visible,.qg-pager a:focus-visible{outline:2px solid var(--ind);outline-offset:2px}
+.qg-ctl-lab{font-size:var(--fs-xs);color:var(--color-fg-muted);font-weight:600}
+.qg-heat{display:inline-block;min-width:74px;text-align:center;padding:5px 10px;border-radius:999px;font-weight:650;background:color-mix(in srgb,var(--ind) var(--h,10%),transparent)}
+.qg-mini{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+@media (max-width:700px){.qg-mini{grid-template-columns:minmax(0,1fr)}}
+.qg-mini .qg-glass{gap:6px;box-shadow:none}
+.qg-chip.bad{--c:var(--color-bad)}
 [data-dash-source-state=refreshing]{opacity:.5}
 @media (max-width:620px){.qg{border-radius:24px;padding:12px}.qg-tabs{position:static}}
 </style>
@@ -159,6 +196,7 @@
     </div>
     <div class="qg-status">
       <span class="qg-chip warn"><i></i>Verdict: PARTIAL</span>
+      <span class="qg-chip" id="s6chip" data-draw="s6chip"><i></i>Stress test: —</span>
       <span class="qg-chip ok"><i></i>Cost ₹0</span>
     </div>
   </header>
@@ -168,11 +206,31 @@
     <a href="#p-real" data-page="p-real">Real data</a>
     <a href="#p-sim" data-page="p-sim">Simulation</a>
     <a href="#p-phase6" data-page="p-phase6">Phase 6</a>
+    <a href="#p-stress" data-page="p-stress">Stress test</a>
     <a href="#p-checks" data-page="p-checks">Checks & limits</a>
   </nav>
 
   <div class="qg-page" id="p-overview">
-    <div class="qg-pagehead"><h2 class="qg-ptitle">Overview</h2><p class="mut">The project's headline numbers and the result for each real sample.</p></div>
+    <section class="qg-hero" id="answer">
+      <div>
+        <span class="qg-eyebrow">The short answer</span>
+        <h2>Yes: stock prices do not move the same amount all day. The open is about twice as volatile as the middle.</h2>
+        <p>This held in <b><span data-draw="val" data-source="real_summary" data-field="rejected" data-row="0">—</span> of <span data-draw="val" data-source="real_summary" data-field="tested" data-row="0">—</span></b> real samples that could be tested: the open moved
+          <b><span data-draw="val" data-source="real_ratio" data-field="lo" data-row="0" data-fmt="x2">—</span> to <span data-draw="val" data-source="real_ratio" data-field="hi" data-row="0" data-fmt="x2">—</span></b> as much as the middle.</p>
+        <p>It was found with a test (called C3) that was first proven on <b><span data-draw="val" data-source="sim_total" data-field="total" data-row="0" data-fmt="int">—</span></b> simulated markets, then stress-tested under realistic conditions.</p>
+      </div>
+      <ol class="qg-steps" aria-label="How the project works">
+        <li><span>Ask: is the size of price moves the same in the open, middle and close of the day?</span></li>
+        <li><span>Check the test first, on simulated markets where the true answer is known.</span></li>
+        <li><span>Use it once on real data, then stress-test it (Stage 6).</span></li>
+      </ol>
+    </section>
+    <div class="qg-how" aria-label="How to read this dashboard">
+      <span style="--c:var(--ind)"><i></i>Use the tabs above to move between pages</span>
+      <span style="--c:var(--color-ok)"><i></i>Green means within the limit</span>
+      <span style="--c:var(--color-warn)"><i></i>Amber means a caution</span>
+      <span style="--c:var(--cds-chart-reference)"><i></i>Hover or tap any chart for details</span>
+    </div>
   <section class="qg-glass" id="overview">
     <div class="qg-kpis">
       <div class="qg-kpi" id="kpi-sims">
@@ -197,9 +255,17 @@
       </div>
     </div>
   </section>
+  <section class="qg-glass" id="s6-glance">
+    <div class="qg-head"><h2><span class="no">05</span>Stage 6 at a glance: was the test stress-tested?</h2><a class="qg-tag" href="#p-stress" data-page="p-stress" style="text-decoration:none;color:inherit"><i></i>See the details</a></div>
+    <div class="qg-mini">
+      <div class="qg-glass"><span class="mut">Highest false-alarm rate under dependence</span><span class="num" data-draw="val" data-source="stage6_summary" data-field="highest_gated_pct" data-row="0" data-fmt="pct2">—</span><span class="mut">limits 5.5% and 6.0%</span></div>
+      <div class="qg-glass"><span class="mut">Stress cells within limit</span><span class="num"><span data-draw="val" data-source="stage6_summary" data-field="n_pass" data-row="0">—</span> / <span data-draw="val" data-source="stage6_summary" data-field="gated_cells" data-row="0">—</span></span><span class="mut">gated cells, dependence as measured in real data</span></div>
+      <div class="qg-glass"><span class="mut">Smallest open/close difference found (59 sessions, US)</span><span class="num" data-draw="val" data-source="mde_focus" data-field="us59" data-row="0" data-fmt="x2">—</span><span class="mut">of the middle's volatility, 80% power</span></div>
+    </div>
+  </section>
   <div class="qg-holos" id="real-cards">
     <div class="qg-holo" id="card-us">
-      <div class="row"><span class="name">05 · US, first sample</span><span class="badge" data-draw="decision" data-row="1">—</span></div>
+      <div class="row"><span class="name">06 · US, first sample</span><span class="badge" data-draw="decision" data-row="1">—</span></div>
       <span class="chipimg" aria-hidden="true"></span>
       <div>
         <div class="val"><span class="small">T</span><span class="num" data-draw="val" data-source="real_tests" data-field="T" data-row="1" data-fmt="dec2">—</span><span class="small">limit <span data-draw="val" data-source="real_tests" data-field="crit" data-row="1" data-fmt="dec2">—</span></span></div>
@@ -207,7 +273,7 @@
       </div>
     </div>
     <div class="qg-holo d" id="card-us-fresh">
-      <div class="row"><span class="name">06 · US, fresh sample</span><span class="badge" data-draw="decision" data-row="3">—</span></div>
+      <div class="row"><span class="name">07 · US, fresh sample</span><span class="badge" data-draw="decision" data-row="3">—</span></div>
       <span class="chipimg" aria-hidden="true"></span>
       <div>
         <div class="val"><span class="small">T</span><span class="num" data-draw="val" data-source="real_tests" data-field="T" data-row="3" data-fmt="dec2">—</span><span class="small">limit <span data-draw="val" data-source="real_tests" data-field="crit" data-row="3" data-fmt="dec2">—</span></span></div>
@@ -215,7 +281,7 @@
       </div>
     </div>
     <div class="qg-holo b" id="card-nse">
-      <div class="row"><span class="name">07 · NSE stocks</span><span class="badge" data-draw="decision" data-row="2">—</span></div>
+      <div class="row"><span class="name">08 · NSE stocks</span><span class="badge" data-draw="decision" data-row="2">—</span></div>
       <span class="chipimg" aria-hidden="true"></span>
       <div>
         <div class="val"><span class="small">T</span><span class="num" data-draw="val" data-source="real_tests" data-field="T" data-row="2" data-fmt="dec2">—</span><span class="small">limit <span data-draw="val" data-source="real_tests" data-field="crit" data-row="2" data-fmt="dec2">—</span></span></div>
@@ -223,7 +289,7 @@
       </div>
     </div>
     <div class="qg-holo c" id="card-nse-first">
-      <div class="row"><span class="name">08 · NSE first sample</span><span class="badge" data-draw="decision" data-row="0">—</span></div>
+      <div class="row"><span class="name">09 · NSE first sample</span><span class="badge" data-draw="decision" data-row="0">—</span></div>
       <span class="chipimg" aria-hidden="true"></span>
       <div>
         <div class="val"><span class="num" data-draw="val" data-source="real_tests" data-field="usable_market_sessions" data-row="0">—</span><span class="small">of <span data-draw="val" data-source="real_tests" data-field="n_required" data-row="0">—</span> complete days needed</span></div>
@@ -241,12 +307,12 @@
   <div class="qg-page" id="p-real" hidden>
     <div class="qg-pagehead"><h2 class="qg-ptitle">Real data</h2><p class="mut">The H1 test run once on each real sample: how far T is above the limit, and which periods differ.</p></div>
     <section class="qg-glass" id="real-data">
-      <div class="qg-head"><h2><span class="no">09</span>Test statistic T against the C3 limit</h2></div>
+      <div class="qg-head"><h2><span class="no">10</span>Test statistic T against the C3 limit</h2></div>
       <div class="ql-chart" data-draw="realchart" data-source="real_tests" id="real-chart"></div>
       <p class="mut">A bar past the dashed line rejects equal volatility. The fresh US sample comes from Alpaca and a period before the first US sample. The first NSE sample had only 58 complete days, so it was reported as not testable rather than shortened.</p>
     </section>
     <section class="qg-glass" id="contrasts">
-      <div class="qg-head"><h2><span class="no">10</span>Which periods differ</h2><span class="mut">log ratio of volatility, with SE</span></div>
+      <div class="qg-head"><h2><span class="no">11</span>Which periods differ</h2><span class="mut">log ratio of volatility, with SE</span></div>
       <div class="qg-tablewrap">
         <table class="qg-table" data-source="real_tests" data-row-key="test" id="contrast-table">
           <thead><tr>
@@ -274,21 +340,21 @@
   </div>
 
   <div class="qg-page" id="p-sim" hidden>
-    <div class="qg-pagehead"><h2 class="qg-ptitle">Simulation</h2><p class="mut">How C3 was checked on 8,024,000 simulated markets where the true answer is known.</p></div>
+    <div class="qg-pagehead"><h2 class="qg-ptitle">Simulation</h2><p class="mut">How C3 was checked on millions of simulated markets where the true answer is known (Stages 1 to 4, and the Stage 6 stress test).</p></div>
     <div class="qg-row2">
     <section class="qg-glass" id="stages">
-      <div class="qg-head"><h2><span class="no">11</span>Simulations by stage</h2><span class="qg-tag"><i></i>9 runs, each once</span></div>
+      <div class="qg-head"><h2><span class="no">12</span>Simulations by stage</h2><span class="qg-tag"><i></i><span data-draw="val" data-source="sim_total" data-field="stages" data-row="0">—</span> runs, each once</span></div>
       <div class="ql-chart" data-draw="stagebars" data-source="simulation_ledger" id="stage-chart" style="min-height:170px"></div>
       <ol class="qg-stagelist" data-draw="stagelist" data-source="simulation_ledger" aria-label="Runs in order"></ol>
     </section>
     <section class="qg-glass" id="gauge-card">
-      <div class="qg-head"><h2><span class="no">12</span>Highest false-alarm rate</h2></div>
+      <div class="qg-head"><h2><span class="no">13</span>Highest false-alarm rate</h2></div>
       <div class="qb-gauge" data-draw="gauge" data-source="cal_summary" id="gauge" role="img" aria-label="Gauge of the highest C3 false-alarm rate among gated simulation cells against its limit"></div>
       <p class="mut" style="text-align:center">Green up to the 5% target, amber up to the limit, red beyond.</p>
     </section>
     </div>
     <section class="qg-glass" id="calibration">
-      <div class="qg-head"><h2><span class="no">13</span>False-alarm rate in every simulated cell</h2>
+      <div class="qg-head"><h2><span class="no">14</span>False-alarm rate in every simulated cell</h2>
         <div class="ql-legend" aria-hidden="true">
           <span><i class="ql-sw" data-series="c3"></i>C3</span>
           <span><i class="ql-sw" data-series="baseline"></i>Old bootstrap test</span>
@@ -299,7 +365,7 @@
       <p class="mut">One dot per simulated market where volatility truly was equal. Dots left of the dashed line are within the limit. Report-only cells have the heaviest tails and no limit.</p>
     </section>
     <section class="qg-glass" id="alternatives">
-      <div class="qg-head"><h2><span class="no">14</span>Six harder processes</h2></div>
+      <div class="qg-head"><h2><span class="no">15</span>Six harder processes</h2></div>
       <div class="ql-legend" aria-hidden="true">
         <span><i class="ql-sw" data-series="c3"></i>C3</span>
         <span><i class="ql-sw" data-series="baseline"></i>Old test</span>
@@ -316,7 +382,7 @@
   <div class="qg-page" id="p-phase6" hidden>
     <div class="qg-pagehead"><h2 class="qg-ptitle">Phase 6</h2><p class="mut">Do the real samples look like the simulated conditions C3 was validated on? (exploratory)</p></div>
     <section class="qg-glass" id="phase6">
-      <div class="qg-head"><h2><span class="no">15</span>Phase 6: do the real samples look like the simulations?</h2><span class="mut">exploratory, Option A</span></div>
+      <div class="qg-head"><h2><span class="no">16</span>Phase 6: do the real samples look like the simulations?</h2><span class="mut">exploratory, Option A</span></div>
       <div class="qg-tablewrap">
         <table class="qg-table" data-source="phase6_summary" data-row-key="sample" id="phase6-table">
           <thead><tr>
@@ -335,6 +401,54 @@
     </section>
     <div class="qg-pager">
       <a href="#p-sim" data-page="p-sim">← Simulation</a>
+      <a href="#p-stress" data-page="p-stress" class="next">Next: Stress test →</a>
+    </div>
+  </div>
+
+  <div class="qg-page" id="p-stress" hidden>
+    <div class="qg-pagehead"><h2 class="qg-ptitle">Stress test</h2><p class="mut">Stage 6: does C3 still behave when stocks and days move together, how big a difference can it find, and does it behave on real data?</p></div>
+    <section class="qg-glass" id="s6-summary">
+      <div class="qg-head"><h2><span class="no">17</span>Does C3 survive realistic dependence?</h2><span class="mut">simulated data, rules fixed before the run</span></div>
+      <div class="qg-kpis">
+        <div class="qg-kpi"><span class="lab"><span class="no">18</span>Outcome</span><span class="num" style="font-size:20px" data-draw="val" data-source="stage6_summary" data-field="outcome" data-row="0">—</span><span class="mut">label fixed in advance</span></div>
+        <div class="qg-kpi"><span class="lab"><span class="no">19</span>Highest rate</span><span class="num" data-draw="val" data-source="stage6_summary" data-field="highest_gated_pct" data-row="0" data-fmt="pct2">—</span><span class="mut">limits 5.5% and 6.0%</span></div>
+        <div class="qg-kpi"><span class="lab"><span class="no">20</span>Cells within limit</span><span class="num"><span data-draw="val" data-source="stage6_summary" data-field="n_pass" data-row="0">—</span> / <span data-draw="val" data-source="stage6_summary" data-field="gated_cells" data-row="0">—</span></span><span class="mut">clear passes among gated cells</span></div>
+        <div class="qg-kpi"><span class="lab"><span class="no">21</span>Simulations</span><span class="num" data-draw="val" data-source="s6_sims" data-field="total" data-row="0" data-fmt="int">—</span><span class="mut">stress test and power curve</span></div>
+      </div>
+      <div class="qg-callout" id="s6-reading" data-draw="s6reading"><span>—</span></div>
+    </section>
+    <section class="qg-glass" id="s6-size">
+      <div class="qg-head"><h2><span class="no">22</span>False-alarm rate as dependence gets stronger</h2>
+        <div class="ql-legend" aria-hidden="true"><span><i class="ql-sw" data-series="c3"></i>C3</span><span><i class="ql-sw" data-series="baseline"></i>Old bootstrap test</span><span><i class="ql-sw ql-line"></i>Limits 5.5% / 6.0%</span></div></div>
+      <div class="ql-chart" data-draw="sizechart" data-source="stage6_size" id="s6-size-chart"></div>
+      <p class="mut">Each dot is one simulated market where volatility truly was equal, so every rejection is a false alarm. S0 has independent stocks and days; S2 and S3 are what the fresh US sample showed (measured, and the top of its uncertainty range). S4 and S5 are stronger stress that is only reported, not scored. Dots left of the dashed lines are within the limit.</p>
+    </section>
+    <section class="qg-glass" id="s6-power">
+      <div class="qg-head"><h2><span class="no">23</span>How big a difference can C3 detect?</h2></div>
+      <div class="qg-controls">
+        <span class="qg-ctl-lab">Market</span>
+        <div class="qg-seg" data-group="pm" role="group" aria-label="Market"><button data-val="US" class="is-on">US</button><button data-val="NSE">NSE</button></div>
+        <span class="qg-ctl-lab">Stocks and days</span>
+        <div class="qg-seg" data-group="pd" role="group" aria-label="Dependence"><button data-val="S0_none" class="is-on">Independent</button><button data-val="S2_fresh_point">Dependent, as measured</button></div>
+      </div>
+      <div class="ql-legend" data-draw="powerlegend" aria-hidden="true"></div>
+      <div class="ql-chart" data-draw="powerchart" data-source="stage6_power" id="s6-power-chart" style="min-height:300px"></div>
+      <p class="mut">Power is the share of simulated markets in which C3 rejects. Along the bottom is how many times bigger the open and close volatility is than the middle's. A line above the dashed 80% mark means the difference is found reliably.</p>
+      <div class="qg-tablewrap">
+        <table class="qg-table" id="s6-mde-table">
+          <thead><tr><th>Sessions</th><th>Independent stocks and days</th><th>Dependent, as measured</th></tr></thead>
+          <tbody data-draw="mderows"></tbody>
+        </table>
+      </div>
+      <p class="mut">Smallest difference (open and close volatility as a multiple of the middle's) that C3 finds with 80% power, for the market selected above. The real samples showed about 2 times, far above these values.</p>
+    </section>
+    <section class="qg-glass" id="s6-placebo">
+      <div class="qg-head"><h2><span class="no">24</span>Does C3 behave on real data's own structure?</h2><span class="mut">time-of-day labels shuffled, truth = equal</span></div>
+      <div class="ql-chart" data-draw="placebochart" data-source="stage6_placebo" id="s6-placebo-chart"></div>
+      <p class="mut">In each real sample the time-of-day labels were randomly shuffled 10,000 times, so open, middle and close are equal by construction while the real fat tails and dependence stay. A good test should reject rarely. Each dot is the share of false alarms with its 95% interval. The first NSE sample was not testable and gets no placebo.</p>
+    </section>
+    <div class="qg-pager">
+      <a href="#p-phase6" data-page="p-phase6">← Phase 6</a>
       <a href="#p-checks" data-page="p-checks" class="next">Next: Checks & limits →</a>
     </div>
   </div>
@@ -343,7 +457,7 @@
     <div class="qg-pagehead"><h2 class="qg-ptitle">Checks & limits</h2><p class="mut">How the results were protected, and what they do not show.</p></div>
     <div class="qg-row2">
     <section class="qg-glass" id="integrity">
-      <div class="qg-head"><h2><span class="no">16</span>Integrity checks</h2><span class="mut">all passing</span></div>
+      <div class="qg-head"><h2><span class="no">25</span>Integrity checks</h2><span class="mut">all passing</span></div>
       <table class="qg-rows" data-source="integrity_checks" data-row-key="check" id="integrity-table">
         <thead><tr>
           <th>Icon</th>
@@ -356,18 +470,19 @@
       </table>
     </section>
     <section class="qg-glass" id="limits">
-      <h2><span class="no">17</span>What these results do not show</h2>
+      <h2><span class="no">26</span>What these results do not show</h2>
       <ol class="qg-limits">
         <li>They do not show that C3 has a 5% error rate on real data. That is still unverified.</li>
         <li>The real samples are only partly independent: the same six stocks shaped the simulation design. The fresh US sample adds a new period and source, not new stocks.</li>
         <li>Higher volatility at the open is well known, so the rejections confirm it rather than discover it.</li>
         <li>C3 is cautious and has less power than the old test. Neither real result was close.</li>
         <li>Phase 6 ran only as an exploratory check on these same stocks. Under Option A it cannot place any sample inside the simulated domain.</li>
+        <li>The stress test covers the dependence levels that were tried. It does not prove C3 is safe for stronger dependence, other markets or other stocks, and a test on stocks that played no part in the design still needs a new data pull.</li>
       </ol>
     </section>
     </div>
     <details class="qg-glass qg-gloss" id="glossary">
-      <summary><span class="no">18</span>Key terms</summary>
+      <summary><span class="no">27</span>Key terms</summary>
       <dl>
         <dt>H1</dt><dd>Volatility is the same in the open, middle and close of the trading day.</dd>
         <dt>T</dt><dd>The largest of the three period differences divided by its standard error.</dd>
@@ -375,10 +490,14 @@
         <dt>False-alarm rate</dt><dd>How often a test rejects when volatility really is equal. Target 5%.</dd>
         <dt>Gated cell</dt><dd>A simulated scenario with a pass limit: 5.5% (tier A) or 6.0% (tier B).</dd>
         <dt>SE</dt><dd>Standard error: how uncertain an estimate is.</dd>
+        <dt>Dependence</dt><dd>How much stocks and days move together: persistence (a wild day is followed by another), shared volatility (stocks get wild on the same days) and return correlation.</dd>
+        <dt>Power</dt><dd>How often a test finds a difference that really exists.</dd>
+        <dt>Placebo</dt><dd>A test where the truth is equal by construction (here, labels shuffled), used to count false alarms on real data.</dd>
+        <dt>Stress test</dt><dd>Running the test under harder conditions than it was built for, to see where it stops being reliable.</dd>
       </dl>
     </details>
     <div class="qg-pager">
-      <a href="#p-phase6" data-page="p-phase6">← Phase 6</a>
+      <a href="#p-stress" data-page="p-stress">← Stress test</a>
       <span></span>
     </div>
   </div>
@@ -426,6 +545,7 @@ window.qlFmt = function (v, f) {
   if (f === 'pct1') return d3.format('.1f')(+v) + '%';
   if (f === 'dec2') return d3.format('.2f')(+v);
   if (f === 'dec3') return d3.format('.3f')(+v);
+  if (f === 'x2') return d3.format('.2f')(+v) + '×';
   return String(v);
 };
 
@@ -682,7 +802,7 @@ dash.draw('stagebars', (el) => {
   const rows = s.data.map((r, i) => ({ ...r, n: +r.simulations, short: String(i + 1) }));
   const W = el.clientWidth || 300, H = 170, top = 28, bottom = 22;
   const svg = d3.select(el).append('svg').attr('class', 'ql-svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`)
-    .attr('role', 'img').attr('aria-label', 'Column chart of the number of simulations in each of the nine runs, Stages 1 to 4');
+    .attr('role', 'img').attr('aria-label', 'Column chart of the number of simulations in each run, Stages 1 to 4 and Stage 6');
   const x = d3.scaleBand().domain(rows.map((r, i) => i)).range([2, W - 2]).paddingInner(W < 300 ? 0.35 : 0.45);
   const y = d3.scaleLinear().domain([0, d3.max(rows, (r) => r.n)]).range([H - bottom, top]);
   const maxI = d3.maxIndex(rows, (r) => r.n);
@@ -793,5 +913,200 @@ dash.draw('gauge', (el) => {
   svg.attr('aria-hidden', null).style('pointer-events', 'all')
     .on('pointermove', (ev) => tip.show(ev, 'Highest C3 rate, gated cells', [`${qlFmt(v, 'pct2')} vs limit ${qlFmt(lim, 'pct1')}`, `Green to ${target}% target, amber to the limit, red beyond`]))
     .on('pointerleave', () => tip.hide());
+});
+</script>
+
+<script>
+dash.calc('real_ratio', {
+  inputs: ['real_tests'],
+  title: 'Open vs middle volatility ratio',
+  description: 'Smallest and largest open/middle volatility ratio, exp(log ratio of mean squares / 2), over the tested real samples.',
+  fn: (tests) => {
+    const v = tests.filter((r) => r.status === 'TESTED').map((r) => Math.exp(+r.log_ratio_open_middle / 2));
+    return [{ lo: v.length ? Math.min(...v) : null, hi: v.length ? Math.max(...v) : null }];
+  }
+});
+dash.calc('s6_sims', {
+  inputs: ['stage6_summary'],
+  title: 'Stage 6 simulations',
+  description: 'Simulations in the Stage 6 stress test and power curve.',
+  fn: (s) => [{ total: Number(s[0].sims_part_a) + Number(s[0].sims_part_b) }]
+});
+dash.calc('mde_focus', {
+  inputs: ['stage6_mde'],
+  title: 'Smallest detectable difference at 59 sessions',
+  description: 'Smallest open/close multiplier with 80% power at 59 sessions, US, independent stocks and days.',
+  fn: (m) => {
+    const r = m.find((x) => x.market === 'US' && x.level === 'S0_none' && +x.n_days === 59);
+    return [{ us59: r ? Number(r.mde_mult) : null }];
+  }
+});
+
+window.qlState = { pm: 'US', pd: 'S0_none' };
+const PALETTE = ['#5b5bd6', '#2f9e8f', '#d97757', '#c2416b', 'var(--color-fg)'];
+const LEVEL_NAMES = { S0_none: 'S0 independent', S1_validated: 'S1 earlier estimate', S2_fresh_point: 'S2 US fresh, measured', S3_fresh_upper: 'S3 US fresh, upper range', S4_one_and_half_x: 'S4 1.5 × measured', S5_illustrative: 'S5 illustrative stress' };
+
+(function () {
+  document.querySelectorAll('.qg-seg').forEach((seg) => {
+    seg.querySelectorAll('button').forEach((b) => b.addEventListener('click', () => {
+      window.qlState[seg.dataset.group] = b.dataset.val;
+      seg.querySelectorAll('button').forEach((x) => x.classList.toggle('is-on', x === b));
+      ['powerchart', 'powerlegend', 'mderows'].forEach((n) => { try { dash.draw(n); } catch (e) {} });
+    }));
+  });
+})();
+
+dash.draw('s6chip', (el) => {
+  const s = dash.data('stage6_summary');
+  const r = s.status === 'ok' && s.data[0];
+  el.lastChild.textContent = r ? 'Stress test: ' + r.outcome.replace('STRESS_', '') : 'Stress test: —';
+  el.classList.remove('ok', 'warn', 'bad');
+  if (r) el.classList.add(r.outcome === 'STRESS_PASS' ? 'ok' : (r.outcome === 'STRESS_FAIL' ? 'bad' : 'warn'));
+});
+
+dash.draw('s6reading', (el) => {
+  const s = dash.data('stage6_summary');
+  if (s.status !== 'ok' || !s.data[0]) { el.lastElementChild.textContent = '—'; return; }
+  const r = s.data[0];
+  const text = {
+    STRESS_PASS: 'C3 stayed within its limits at the dependence levels measured in real data, including the top of their uncertainty range, in the cells tested. This does not mean it is valid everywhere.',
+    STRESS_MARGINAL: 'No scored cell failed, but at least one is too close to its limit to call. C3 is not shown to fail, and calibration under dependence is not claimed.',
+    STRESS_BOUNDARY: 'No scored cell clearly failed, but at least one is too close to its limit to call. C3 is not shown safe there.',
+    STRESS_FAIL: 'At least one scored cell is above its limit, so C3 is not shown safe at that level of dependence. It was not retuned; any fix would be a separate new method.'
+  }[r.outcome] || '';
+  el.className = 'qg-callout ' + (r.outcome === 'STRESS_PASS' ? 'ok' : (r.outcome === 'STRESS_FAIL' ? 'bad' : 'warn'));
+  el.replaceChildren();
+  const span = document.createElement('span');
+  const b = document.createElement('b'); b.textContent = ({ STRESS_PASS: 'Passed. ', STRESS_MARGINAL: 'Marginal. ', STRESS_BOUNDARY: 'Too close to call. ', STRESS_FAIL: 'Failed. ' }[r.outcome] || '');
+  span.append(b, document.createTextNode(text + ` The highest rate among ${r.gated_cells} scored cells was ${qlFmt(r.highest_gated_pct, 'pct2')}; at the two unscored, stronger stress levels it was ${qlFmt(r.highest_reported_pct, 'pct2')}.`));
+  el.appendChild(span);
+});
+
+dash.draw('sizechart', (el) => {
+  const s = dash.data('stage6_size');
+  if (s.status !== 'ok') { qlEmpty(el, s); return; }
+  el.replaceChildren();
+  const levels = Object.keys(LEVEL_NAMES);
+  const W = el.clientWidth || 600, bandH = 64, top = 8, narrow = W < 520;
+  const H = top + levels.length * bandH + 32;
+  const svg = d3.select(el).append('svg').attr('class', 'ql-svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`)
+    .attr('role', 'img').attr('aria-label', 'Dot plot of the false-alarm rate of C3 and the old test in each simulated cell, grouped by dependence level, with the 5.5 and 6 percent limits');
+  const labelW = narrow ? 0 : Math.min(W * 0.34, qlTextWidth(svg, Object.values(LEVEL_NAMES)) + 14);
+  const xmax = Math.max(8, Math.ceil(d3.max(s.data, (r) => Math.max(+r.c3_rate_pct, +r.baseline_rate_pct)) + 0.5));
+  const x = d3.scaleLinear().domain([0, xmax]).range([labelW + 12, W - 24]);
+  const ticks = Math.max(3, Math.floor((W - labelW) / 70));
+  svg.append('g').attr('class', 'ql-grid').attr('transform', `translate(0,${H - 30})`).call(d3.axisBottom(x).ticks(ticks).tickSize(-(H - 30 - top)).tickFormat(''));
+  svg.append('g').attr('class', 'ql-axis').attr('transform', `translate(0,${H - 30})`).call(d3.axisBottom(x).ticks(ticks).tickFormat((d) => d + '%'));
+  const tip = qlTip(el);
+  levels.forEach((lv, gi) => {
+    const y0 = top + gi * bandH;
+    const cells = s.data.filter((r) => r.level === lv);
+    const gated = cells.length && String(cells[0].gated).toLowerCase() === 'true';
+    svg.append('text').attr('x', narrow ? x(0) : 0).attr('y', narrow ? y0 + 12 : y0 + bandH / 2 - 2).style('font-weight', 650).text(LEVEL_NAMES[lv]);
+    svg.append('text').attr('x', narrow ? x(0) + 150 : 0).attr('y', narrow ? y0 + 12 : y0 + bandH / 2 + 13).text(gated ? 'scored' : 'reported only');
+    [5.5, 6.0].forEach((lim) => svg.append('line').attr('x1', x(lim)).attr('x2', x(lim)).attr('y1', y0 + 4).attr('y2', y0 + bandH - 6)
+      .style('stroke', 'var(--cds-chart-reference)').style('stroke-width', lim === 5.5 ? 2 : 1.2).style('stroke-dasharray', '5 4'));
+    cells.forEach((r, i) => {
+      const yb = y0 + 16 + (((i * 37) % 17) / 16) * (bandH - 28);
+      const lines = [`C3 ${qlFmt(r.c3_rate_pct, 'pct2')} (limit ${qlFmt(r.limit_pct, 'pct1')}, ${r.status})`, `Old test ${qlFmt(r.baseline_rate_pct, 'pct2')}`, `${r.market} · shape ${r.shape} · tail ${r.tail} · ${r.n_days} sessions`];
+      const tipfn = (ev) => tip.show(ev, LEVEL_NAMES[lv], lines);
+      svg.append('circle').attr('cx', x(+r.baseline_rate_pct)).attr('cy', yb).attr('r', 3.5).style('fill', 'var(--cds-chart-muted)').style('stroke', 'var(--color-bg)').on('pointermove', tipfn).on('pointerleave', () => tip.hide());
+      svg.append('circle').attr('cx', x(+r.c3_rate_pct)).attr('cy', yb).attr('r', 4.2).style('fill', 'var(--ind)').style('stroke', 'var(--color-bg)').on('pointermove', tipfn).on('pointerleave', () => tip.hide());
+    });
+  });
+});
+
+dash.draw('powerlegend', (el) => {
+  const s = dash.data('stage6_power');
+  el.replaceChildren();
+  if (s.status !== 'ok') return;
+  const ns = [...new Set(s.data.map((r) => +r.n_days))].sort((a, b) => a - b);
+  ns.forEach((n, i) => {
+    const sp = document.createElement('span'); const sw = document.createElement('i'); sw.className = 'ql-sw'; sw.style.background = PALETTE[i % PALETTE.length];
+    sp.append(sw, document.createTextNode(n + ' sessions')); el.appendChild(sp);
+  });
+  const sp = document.createElement('span'); const sw = document.createElement('i'); sw.className = 'ql-sw ql-line'; sp.append(sw, document.createTextNode('80% power')); el.appendChild(sp);
+});
+
+dash.draw('powerchart', (el) => {
+  const s = dash.data('stage6_power');
+  if (s.status !== 'ok') { qlEmpty(el, s); return; }
+  el.replaceChildren();
+  const st = window.qlState;
+  const rows = s.data.filter((r) => r.market === st.pm && r.level === st.pd);
+  const mults = [...new Set(rows.map((r) => +r.mult))].sort((a, b) => a - b);
+  const ns = [...new Set(rows.map((r) => +r.n_days))].sort((a, b) => a - b);
+  const W = el.clientWidth || 600, H = 300, m = { l: 46, r: 18, t: 14, b: 38 };
+  const svg = d3.select(el).append('svg').attr('class', 'ql-svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`)
+    .attr('role', 'img').attr('aria-label', 'Lines showing the power of C3 against how many times bigger the open and close volatility is than the middle, for five sample sizes');
+  const x = d3.scalePoint().domain(mults).range([m.l, W - m.r]).padding(0.25);
+  const y = d3.scaleLinear().domain([0, 100]).range([H - m.b, m.t]);
+  svg.append('g').attr('class', 'ql-grid').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).tickValues([0, 25, 50, 75, 100]).tickSize(-(W - m.l - m.r)).tickFormat(''));
+  svg.append('g').attr('class', 'ql-axis').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).tickValues([0, 25, 50, 75, 100]).tickFormat((d) => d + '%'));
+  svg.append('g').attr('class', 'ql-axis').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).tickFormat((d) => d + '×'));
+  svg.append('text').attr('x', (m.l + W - m.r) / 2).attr('y', H - 4).attr('text-anchor', 'middle').text('open and close volatility as a multiple of the middle');
+  svg.append('line').attr('x1', m.l).attr('x2', W - m.r).attr('y1', y(80)).attr('y2', y(80)).style('stroke', 'var(--cds-chart-reference)').style('stroke-width', 1.6).style('stroke-dasharray', '5 4');
+  const tip = qlTip(el);
+  ns.forEach((n, i) => {
+    const pts = rows.filter((r) => +r.n_days === n).sort((a, b) => +a.mult - +b.mult);
+    const col = PALETTE[i % PALETTE.length];
+    svg.append('path').attr('d', d3.line().x((r) => x(+r.mult)).y((r) => y(+r.power_pct))(pts)).style('fill', 'none').style('stroke', col).style('stroke-width', 2.4);
+    pts.forEach((r) => svg.append('circle').attr('cx', x(+r.mult)).attr('cy', y(+r.power_pct)).attr('r', 4).style('fill', col).style('stroke', 'var(--color-bg)').style('stroke-width', 1.5)
+      .on('pointermove', (ev) => tip.show(ev, `${n} sessions · ${r.mult}×`, [`Power ${qlFmt(r.power_pct, 'pct1')}`, `95% interval ${qlFmt(r.wilson_low_pct, 'pct1')} to ${qlFmt(r.wilson_high_pct, 'pct1')}`, `${r.market}, ${r.level === 'S0_none' ? 'independent' : 'dependent as measured'}`]))
+      .on('pointerleave', () => tip.hide()));
+  });
+});
+
+dash.draw('mderows', (tb) => {
+  const s = dash.data('stage6_mde');
+  tb.replaceChildren();
+  if (s.status !== 'ok') return;
+  const mk = window.qlState.pm;
+  const ns = [...new Set(s.data.map((r) => +r.n_days))].sort((a, b) => a - b);
+  const fmt = (r) => !r ? '—' : (r.kind === 'at_or_below_first' ? '≤ ' + (+r.mde_mult).toFixed(2) + '×' : (r.kind === 'not_reached' ? '> ' + (+r.mde_mult).toFixed(2) + '×' : (+r.mde_mult).toFixed(2) + '×'));
+  const heat = (r) => r ? Math.max(8, Math.min(60, ((+r.mde_mult - 1) / 0.6) * 60)) : 8;
+  ns.forEach((n) => {
+    const tr = document.createElement('tr');
+    const td0 = document.createElement('td'); td0.textContent = n; tr.appendChild(td0);
+    ['S0_none', 'S2_fresh_point'].forEach((lv) => {
+      const r = s.data.find((x) => x.market === mk && x.level === lv && +x.n_days === n);
+      const td = document.createElement('td'); const sp = document.createElement('span'); sp.className = 'qg-heat'; sp.style.setProperty('--h', heat(r) + '%'); sp.textContent = fmt(r); td.appendChild(sp); tr.appendChild(td);
+    });
+    tb.appendChild(tr);
+  });
+});
+
+dash.draw('placebochart', (el) => {
+  const s = dash.data('stage6_placebo');
+  if (s.status !== 'ok') { qlEmpty(el, s); return; }
+  el.replaceChildren();
+  const names = { us_first_yahoo: 'US · first Yahoo sample', nse_first_yahoo: 'NSE · first Yahoo sample', nse_fresh_yahoo: 'NSE · fresh Yahoo pull', us_fresh_alpaca: 'US · fresh Alpaca pull' };
+  const rows = s.data;
+  const W = el.clientWidth || 600, rowH = 46, top = 34, narrow = W < 520;
+  const H = top + rows.length * rowH + 34;
+  const svg = d3.select(el).append('svg').attr('class', 'ql-svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`)
+    .attr('role', 'img').attr('aria-label', 'Dot plot of the placebo false-alarm rate of C3 in each tested real sample against the 5.5 and 7 percent marks');
+  const labelW = narrow ? 0 : Math.min(W * 0.36, qlTextWidth(svg, Object.values(names)) + 12);
+  const done = rows.filter((r) => r.status === 'PLACEBO_DONE');
+  const xmax = Math.max(8, 2 * Math.ceil((d3.max(done, (r) => +r.wilson_high_pct) || 8) / 2));
+  const x = d3.scaleLinear().domain([0, xmax]).range([labelW + 12, W - 60]);
+  const ticks = Math.max(3, Math.floor((W - labelW) / 70));
+  svg.append('g').attr('class', 'ql-grid').attr('transform', `translate(0,${H - 30})`).call(d3.axisBottom(x).ticks(ticks).tickSize(-(H - 30 - top + 8)).tickFormat(''));
+  svg.append('g').attr('class', 'ql-axis').attr('transform', `translate(0,${H - 30})`).call(d3.axisBottom(x).ticks(ticks).tickFormat((d) => d + '%'));
+  [[5.5, '5.5% limit'], [7.0, '7% ceiling']].forEach(([v, t]) => {
+    svg.append('line').attr('x1', x(v)).attr('x2', x(v)).attr('y1', top - 10).attr('y2', H - 30).style('stroke', 'var(--cds-chart-reference)').style('stroke-width', 1.6).style('stroke-dasharray', '5 4');
+    svg.append('text').attr('x', x(v) + (v === 5.5 ? -4 : 4)).attr('y', top - 16).attr('text-anchor', v === 5.5 ? 'end' : 'start').style('font-weight', 650).text(t);
+  });
+  const tip = qlTip(el);
+  rows.forEach((r, i) => {
+    const y0 = top + i * rowH + rowH / 2;
+    qlFit(svg.append('text').attr('x', 0).attr('y', narrow ? y0 - 14 : y0 + 4).text(names[r.sample] || r.sample), narrow ? W - 2 : labelW - 4);
+    if (r.status !== 'PLACEBO_DONE') { qlFit(svg.append('text').attr('x', x(0) + 6).attr('y', y0 + 4).text(narrow ? `Not testable: ${r.usable_market_sessions} of 59 sessions` : `Not testable: ${r.usable_market_sessions} of 59 complete sessions, so no placebo`), W - x(0) - 14); return; }
+    const lines = [`False-alarm rate ${qlFmt(r.rate_pct, 'pct2')}`, `95% interval ${qlFmt(r.wilson_low_pct, 'pct2')} to ${qlFmt(r.wilson_high_pct, 'pct2')}`, `Real T ${qlFmt(r.real_T, 'dec2')}; largest placebo T ${qlFmt(r.T_max, 'dec2')}`, `Label ${r.label}`];
+    const g = svg.append('g').on('pointermove', (ev) => tip.show(ev, names[r.sample] || r.sample, lines)).on('pointerleave', () => tip.hide());
+    g.append('line').attr('x1', x(+r.wilson_low_pct)).attr('x2', x(+r.wilson_high_pct)).attr('y1', y0).attr('y2', y0).style('stroke', 'var(--ind)').style('stroke-width', 3).style('stroke-linecap', 'round');
+    g.append('circle').attr('cx', x(+r.rate_pct)).attr('cy', y0).attr('r', 6).style('fill', 'var(--ind)').style('stroke', 'var(--color-bg)').style('stroke-width', 2);
+    svg.append('text').attr('x', x(+r.wilson_high_pct) + 8).attr('y', y0 + 4).style('font-weight', 650).text(qlFmt(r.rate_pct, 'pct2'));
+  });
 });
 </script>

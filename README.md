@@ -10,10 +10,12 @@ It works on 5-minute price bars for three Indian (NSE) and three US stocks. Most
 |---|---|
 | **Stocks** | NSE: `RELIANCE.NS`, `TCS.NS`, `INFY.NS` · US: `AAPL`, `MSFT`, `NVDA` |
 | **Data** | 5-minute OHLCV bars from Yahoo Finance and the Alpaca Market Data API (free tiers) |
-| **Simulations run** | **8,024,000** (H1 calibration Stages 1–4) |
+| **Simulations run** | **11,624,000**: 8,024,000 in the H1 calibration (Stages 1–4) + 3,600,000 in the Stage 6 stress test and power curve |
 | **Answer** | In all **3 of 3** testable real samples, volatility is **not** equal: the open is about **2× as volatile** as the middle of the day |
 | **Test verdict** | The new test (C3) is **PARTIAL**: safe in every simulated scenario with a pass limit, but not proven exactly right on real data |
-| **Tests and integrity** | 413 automated tests pass · 13 hash manifests freeze every input · ₹0 spent |
+| **Stress test (Stage 6)** | **STRESS_PASS**: with stocks and days as dependent as the fresh US sample (and its upper uncertainty range), C3's highest false-alarm rate was **4.84%** over 64 scored cells (limits 5.5% and 6.0%). It detects an open/close difference of 1.10× to 1.24× with 80% power, and a real-data placebo gave 0.73% to 1.30% false alarms |
+| **Tests and integrity** | 438 automated tests pass · 14 hash manifests freeze every input · checks run automatically on GitHub · ₹0 spent |
+| **Reusable tool** | `quantlab-h1 bars.csv` runs the frozen C3 test on your own 5-minute bars ([guide](docs/45_h1_tool_guide.md)); it reproduces the three real-data results exactly |
 | **Live dashboard** | [QuantLab H1 Results](https://claude.ai/artifact/JyiVESsrnCvSjoXpwpdARw) (offline copy: [`dashboard/index.html`](dashboard/index.html)) |
 
 ---
@@ -96,6 +98,9 @@ flowchart TD
         ST3 --> ST4["Stage 4 · Independent checks<br/>6 harder worlds, all pass"]
         ST4 --> ST5["Stage 5 · Decision<br/>verdict PARTIAL"]
     end
+    subgraph S3b["3b · Stress-test the test (simulated + real structure)"]
+        ST6["Stage 6 · dependence stress test,<br/>power curve, real-data placebo<br/>STRESS_PASS"]
+    end
     subgraph S4["4 · Real data (each run once, rules fixed first)"]
         R1["US first sample<br/>T = 22.59 · reject"]
         R2["NSE fresh sample<br/>T = 17.31 · reject"]
@@ -105,7 +110,7 @@ flowchart TD
         P6["Phase 6 · Do real samples look<br/>like the simulations?<br/>(exploratory)"]
         D["Dashboard and reports"]
     end
-    S1 --> S2 --> S3 --> S4 --> S5
+    S1 --> S2 --> S3 --> S3b --> S4 --> S5
     P6 --> D
 ```
 
@@ -165,6 +170,26 @@ Each phase was approved before it started, and each one's rules were written dow
 - **Why it matters:** it shows *where the simulation evidence stops*. The fresh US period had stronger dependence than any simulated setting, so for that period C3 has no simulation evidence either way. It also found that one simulated shape (E) was fitted to variances but simulated as volatility; the real intraday shape is actually closest to the validated shape R2.
 - **Docs:** protocol [26](docs/26_real_data_descriptive_validation_protocol.md) to [29](docs/29_stage0_d_tail_compatibility_decision_memo.md), revision [40](docs/40_phase6_protocol_revision6_exploratory.md), report [41](docs/41_phase6_exploratory_report.md)
 
+### Stage 6 · Stress-test C3 and measure its power (simulated data, plus the real samples' own structure)
+- **What:** after Phase 6 showed that the fresh US sample had stronger day-to-day dependence than the simulations used, a new stage with **frozen rules and new registered seeds** asked three questions, each run once ([docs/42](docs/42_stage6_preregistration_dependence_power_placebo.md), report [docs/43](docs/43_stage6_report.md)):
+  1. **Size under dependence:** 96 simulated settings × 25,000 simulations, with stocks and days moving together as in the real data (persistence, shared volatility, correlation), including the top of their uncertainty range and two stronger levels that were reported but not scored.
+  2. **Power:** how large an open/close difference C3 detects with 80% power at 59, 90, 125, 180 and 250 sessions.
+  3. **Real-data placebo:** shuffle the time-of-day labels inside each real session so the truth is "equal", keep the real tails and dependence, and count false alarms.
+- **Result:**
+
+  | Question | Result |
+  |---|---|
+  | Size under dependence | **STRESS_PASS.** All 64 scored cells within limit; highest rate **4.84%** (limits 5.5% and 6.0%). The 32 stronger, unscored cells also stayed within the limits (highest 4.61%). The old bootstrap test reached 7.96% on the same data |
+  | Power | 80% power at an open/close multiple of **1.20×–1.24×** with 59 sessions, **1.16×–1.17×** with 125, **1.10×–1.11×** with 250. At the observed ≈2× the lowest power in the grid is 99.8% |
+  | Real-data placebo | False alarms **0.73%** (US first), **1.30%** (NSE fresh), **0.85%** (US fresh) against a 5.5% limit; real T (17.3 to 22.6) is far above every placebo's 95th percentile (2.5 to 2.6) |
+
+- **Why it matters:** it closes the gap Phase 6 opened. C3 was not shown unsafe where the real data sit, it is **cautious but not blind** (it finds differences of about 1.1×–1.25×), and on the real samples' own tails and dependence it raises few false alarms. It stays **PARTIAL**: this is still simulated evidence plus a placebo, not proof on real markets.
+- **Code and charts:** `src/quantlab/research/stage6.py`, `scripts/milestone4/stage6_*.py`, `scripts/make_stage6_charts.py`.
+
+### Reusable tool · `quantlab-h1`
+- **What:** a command-line program that applies the frozen C3 test to any three stocks of one market given as 5-minute bars (CSV), with plain-language output, data-quality counts and an explicit refusal when the input is outside what C3 was checked for ([docs/45](docs/45_h1_tool_guide.md)). Fed with the project's own bars it reproduces the three recorded real-data T values to 9 decimals.
+- **Why it matters:** it turns a study into something another person can run, and it never shortens a sample or hides a limit.
+
 ### Reporting · Dashboard and summaries
 - **What:** an interactive [dashboard](https://claude.ai/artifact/JyiVESsrnCvSjoXpwpdARw) built only from saved aggregate results (offline copy in [`dashboard/`](dashboard/)), a plain-language summary ([36](docs/36_project_summary_in_plain_language.md)) and a final status record ([38](docs/38_closing_decisions_and_status.md)).
 - **Why it matters:** anyone can see every number, where it came from and what it does not mean, without running code.
@@ -212,7 +237,18 @@ Even with jumps, volatility clustering, period- and stock-specific tails, a heav
 
 Dots are estimates and lines are ± 2 standard errors from a jackknife. The fresh US sample (orange) lies beyond the 1.5× "outside" line for persistence and shared volatility.
 
-All charts are drawn by [`scripts/make_readme_charts.py`](scripts/make_readme_charts.py) from the saved result files. No number in them is typed by hand.
+### Stage 6: false-alarm rate when stocks and days are dependent
+![C3 false-alarm rate under dependence](docs/images/stage6_size.svg)
+
+Every dot is a simulated market where volatility truly was equal. C3 (blue) stays well left of the limits at every dependence level, including the two stronger ones that were not scored.
+
+### Stage 6: power of C3
+![Power of C3 by sample size](docs/images/stage6_power.svg)
+
+### Stage 6: real-data placebo
+![Real-data placebo false-alarm rate](docs/images/stage6_placebo.svg)
+
+All charts are drawn by [`scripts/make_readme_charts.py`](scripts/make_readme_charts.py) and [`scripts/make_stage6_charts.py`](scripts/make_stage6_charts.py) from the saved result files. No number in them is typed by hand.
 
 ---
 
@@ -242,17 +278,17 @@ flowchart LR
 ```
 
 - **Rules fixed first.** Every stage has a plan written before its results existed. Changes need a new, numbered document.
-- **Frozen inputs.** 13 SHA-256 manifests cover specifications, code, critical values and data-derived inputs. If a single byte changes, verification fails.
+- **Frozen inputs.** 14 SHA-256 manifests (132 file entries) cover specifications, code, critical values and data-derived inputs, including the Stage 6 plan and code. If a single byte changes, verification fails.
 - **Run once.** Validation runs and real-data tests are run a single time; outputs are write-once.
 - **Nothing hidden.** Failures, "not testable" results and unexpected findings (like the shape-E mismatch) are kept and reported.
 - **Registered seeds.** Every simulation uses a registered master seed, so results can be regenerated exactly.
-- **Tests.** 413 automated tests, all on synthetic data, pass.
+- **Tests.** 438 automated tests, all on synthetic data, pass; GitHub Actions runs them and the manifest check on every push.
+- **Reproducible.** Re-running part of a Stage 6 cell from its registered seeds reproduced the saved results exactly.
 
 Verify everything from the repository root:
 
 ```bash
-python -m pytest -q
-for m in $(find outputs -name "*.sha256"); do shasum -a 256 -c "$m"; done
+make check        # = python scripts/verify_manifests.py  +  python -m pytest -q
 ```
 
 Because the manifests hash raw file bytes, **never move or rename files** listed in them.
@@ -265,8 +301,10 @@ Because the manifests hash raw file bytes, **never move or rename files** listed
 - **Partly independent only.** All real samples use the same six stocks that shaped the simulations. The fresh US sample adds a new period and source, but not new stocks.
 - **Expected pattern.** Higher volatility at the open is well known; these results confirm it.
 - **Limited scope.** Three stocks per market, about 59 days per sample, liquid large caps only. Nothing is claimed about other stocks, markets or years.
-- **C3 is cautious.** It has less power than the old test, so a close call would carry little weight. None of the real results was close.
+- **C3 is cautious.** It has less power than the old test: it detects an open/close difference of about 1.2× at 59 sessions and about 1.1× at 250 (Stage 6). A "not rejected" result is weak evidence of equality. None of the real results was close.
 - **Phase 6 is exploratory.** Under Option A it cannot place any sample *inside* the simulated domain. The full version (all NIFTY 50 and S&P 500 stocks over two years) needs data that free sources do not provide.
+- **The Stage 6 stress test covers the levels tried.** C3 passed at every dependence level up to the illustrative stress value, but that is simulated evidence in the settings tested; the placebo breaks the within-day volatility pattern and reuses the same 59 sessions, so it is a stress check, not a proof of size.
+- **No independent stocks yet.** A holdout on stocks that played no part in the design needs a new data pull, which needs your approval ([docs/44](docs/44_independent_holdout_design.md)). For the US, Alpaca's free plan may also allow a longer 90–250-session study at no cost (depth unverified until a small test pull); earlier notes that said free sources cannot do this are corrected there.
 - **No trading claims.** Nothing here supports a trading, profitability or performance statement.
 
 ---
@@ -286,7 +324,9 @@ The tests use synthetic data only and do not need market data.
 
 | Task | Command |
 |---|---|
-| Rebuild the README charts | `python scripts/make_readme_charts.py` |
+| Check everything (manifests + all tests) | `make check` |
+| Run the C3 test on your own bars | `pip install .` then `quantlab-h1 your_bars.csv` (try `make demo` first; [docs/45](docs/45_h1_tool_guide.md)) |
+| Rebuild the README and Stage 6 charts | `make charts` |
 | Rebuild the offline dashboard | `python dashboard/build_dashboard.py` |
 | View the dashboard locally | `python -m http.server 8765 --directory dashboard`, then open http://127.0.0.1:8765/ |
 | Pull and clean Yahoo data (one limited pull) | `python scripts/milestone2/run_pipeline.py pull-test --confirm`, then `process <raw file>` |
@@ -300,10 +340,15 @@ The real-data scripts (`real_h1_run.py`, `p2_nse.py`, `p2_us.py`, `phase6_run.py
 
 ```
 src/quantlab/            core pipeline: calendars, ingest, parse, validate, clean, eda/
-src/quantlab/research/   simulators, H1/H2 methods, calibration, real-data test, Phase 6
+src/quantlab/research/   simulators, H1/H2 methods, calibration, real-data test, Phase 6, Stage 6
+src/quantlab/h1tool.py   the reusable C3 test: `quantlab-h1 bars.csv` (guide: docs/45)
 scripts/milestone1-4/    command-line runners, one folder per milestone
-scripts/make_readme_charts.py   draws the charts in this README
-tests/                   413 unit tests (synthetic data only)
+scripts/verify_manifests.py     checks every frozen manifest (used by CI and `make check`)
+scripts/make_readme_charts.py, make_stage6_charts.py   draw the charts in this README and the Stage 6 report
+examples/                synthetic demo bars for the tool (no market data)
+.github/workflows/ci.yml        automatic checks on every push
+Makefile                 `make check`, `make demo`, `make charts`
+tests/                   438 unit tests (synthetic data only)
 docs/                    reports, plans and decision records, numbered in reading order
 docs/images/             README charts (generated)
 dashboard/               offline dashboard: page, aggregate datasets, build script
@@ -329,11 +374,13 @@ data/                    NOT in the repository (raw market data, git-ignored)
 | **Statistics** | statsmodels 0.15 | models in the H2 work |
 | **Storage** | PyArrow 26 (Parquet files), CSV, JSON | cleaned data and saved results |
 | **Exploratory charts** | Plotly 7.1 | M3 charts (kept locally, not in the repository) |
-| **Testing** | pytest 9.2 | 413 tests on synthetic data |
+| **Testing** | pytest 9.2 | 438 tests on synthetic data |
 | **Data access** | Python `urllib` | Yahoo Finance public chart endpoint; Alpaca Market Data API (keys read from environment variables) |
 | **Integrity** | `hashlib` / `shasum` (SHA-256) | raw-file hashes and the 13 frozen manifests |
 | **Dashboard** | HTML, CSS, JavaScript, D3.js v7 | the five-page dashboard, hosted as a Claude Artifact; offline copy built by `dashboard/build_dashboard.py` and served with Python's `http.server` |
-| **Docs and charts** | Markdown, Mermaid, SVG | this README, 44 numbered documents, flowcharts, and charts drawn by `scripts/make_readme_charts.py` with plain Python |
+| **Docs and charts** | Markdown, Mermaid, SVG | this README, 49 numbered documents, flowcharts, and charts drawn by `scripts/make_readme_charts.py` and `scripts/make_stage6_charts.py` with plain Python |
+| **Packaging** | `pyproject.toml` (setuptools) | installable package and the `quantlab-h1` command ([docs/45](docs/45_h1_tool_guide.md)) |
+| **Automation** | GitHub Actions, Make | on every push: verify all frozen manifests, run all tests; `make check` does the same locally |
 | **Version control** | Git, GitHub | [Pravin292/Quantlab](https://github.com/Pravin292/Quantlab) |
 
 Exact versions are pinned in [`requirements.txt`](requirements.txt). There is no database, no web framework, no machine-learning library and no paid service.

@@ -1,0 +1,2 @@
+outcome,gated_cells,n_pass,n_pass_ambiguous,n_fail_ambiguous,n_fail,highest_gated_pct,highest_reported_pct,sims_part_a,sims_part_b,master_seed_a,master_seed_b
+STRESS_PASS,64,64,0,0,0,4.84,4.608,2400000,1200000,20261401,20261402

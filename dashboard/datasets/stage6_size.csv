@@ -1,0 +1,97 @@
+level,level_label,market,shape,tail,tier,n_days,gated,ret_corr,share,phi,c3_rate_pct,baseline_rate_pct,wilson_low_pct,wilson_high_pct,limit_pct,status
+S0_none,S0 independent,NSE,R2,T6,A,59,True,0.0,0.0,0.0,1.228,5.548,1.0988,1.3722,5.5,PASS
+S1_validated,S1 earlier estimate,NSE,R2,T6,A,59,True,0.355,0.454,0.441,1.272,5.404,1.1404,1.4186,5.5,PASS
+S2_fresh_point,"S2 US fresh, measured",NSE,R2,T6,A,59,True,0.24,0.3,0.42,1.148,5.428,1.0233,1.2878,5.5,PASS
+S3_fresh_upper,"S3 US fresh, upper range",NSE,R2,T6,A,59,True,0.29,0.5,0.61,1.284,5.424,1.1517,1.4312,5.5,PASS
+S4_one_and_half_x,S4 1.5 × measured,NSE,R2,T6,A,59,False,0.36,0.45,0.63,1.148,5.284,1.0233,1.2878,5.5,PASS
+S5_illustrative,S5 illustrative stress,NSE,R2,T6,A,59,False,0.5,0.7,0.7,1.408,5.488,1.2692,1.5617,5.5,PASS
+S0_none,S0 independent,NSE,R2,T6,A,125,True,0.0,0.0,0.0,1.988,5.268,1.8222,2.1686,5.5,PASS
+S1_validated,S1 earlier estimate,NSE,R2,T6,A,125,True,0.355,0.454,0.441,2.144,5.26,1.9717,2.331,5.5,PASS
+S2_fresh_point,"S2 US fresh, measured",NSE,R2,T6,A,125,True,0.24,0.3,0.42,2.164,5.34,1.9908,2.3519,5.5,PASS
+S3_fresh_upper,"S3 US fresh, upper range",NSE,R2,T6,A,125,True,0.29,0.5,0.61,2.176,5.364,2.0024,2.3643,5.5,PASS
+S4_one_and_half_x,S4 1.5 × measured,NSE,R2,T6,A,125,False,0.36,0.45,0.63,2.204,5.212,2.0292,2.3935,5.5,PASS
+S5_illustrative,S5 illustrative stress,NSE,R2,T6,A,125,False,0.5,0.7,0.7,2.2,5.352,2.0254,2.3893,5.5,PASS
+S0_none,S0 independent,NSE,R2,T4,B,59,True,0.0,0.0,0.0,1.876,6.348,1.7151,2.0517,6.0,PASS
+S1_validated,S1 earlier estimate,NSE,R2,T4,B,59,True,0.355,0.454,0.441,1.76,5.82,1.6043,1.9306,6.0,PASS
+S2_fresh_point,"S2 US fresh, measured",NSE,R2,T4,B,59,True,0.24,0.3,0.42,1.792,5.968,1.6348,1.964,6.0,PASS
+S3_fresh_upper,"S3 US fresh, upper range",NSE,R2,T4,B,59,True,0.29,0.5,0.61,1.836,5.92,1.6768,2.01,6.0,PASS
+S4_one_and_half_x,S4 1.5 × measured,NSE,R2,T4,B,59,False,0.36,0.45,0.63,1.74,5.672,1.5852,1.9097,6.0,PASS
+S5_illustrative,S5 illustrative stress,NSE,R2,T4,B,59,False,0.5,0.7,0.7,1.896,6.0,1.7342,2.0726,6.0,PASS
+S0_none,S0 independent,NSE,R2,T4,B,125,True,0.0,0.0,0.0,3.084,5.812,2.8768,3.3056,6.0,PASS
+S1_validated,S1 earlier estimate,NSE,R2,T4,B,125,True,0.355,0.454,0.441,3.076,5.812,2.8691,3.2974,6.0,PASS
+S2_fresh_point,"S2 US fresh, measured",NSE,R2,T4,B,125,True,0.24,0.3,0.42,3.18,6.092,2.9696,3.4048,6.0,PASS
+S3_fresh_upper,"S3 US fresh, upper range",NSE,R2,T4,B,125,True,0.29,0.5,0.61,3.092,5.724,2.8845,3.3139,6.0,PASS
+S4_one_and_half_x,S4 1.5 × measured,NSE,R2,T4,B,125,False,0.36,0.45,0.63,3.172,6.004,2.9618,3.3965,6.0,PASS
+S5_illustrative,S5 illustrative stress,NSE,R2,T4,B,125,False,0.5,0.7,0.7,3.216,5.956,3.0044,3.442,6.0,PASS
+S0_none,S0 independent,NSE,E,T6,A,59,True,0.0,0.0,0.0,1.776,6.124,1.6195,1.9473,5.5,PASS
+S1_validated,S1 earlier estimate,NSE,E,T6,A,59,True,0.355,0.454,0.441,1.888,6.192,1.7265,2.0643,5.5,PASS
+S2_fresh_point,"S2 US fresh, measured",NSE,E,T6,A,59,True,0.24,0.3,0.42,1.724,6.056,1.5699,1.8929,5.5,PASS
+S3_fresh_upper,"S3 US fresh, upper range",NSE,E,T6,A,59,True,0.29,0.5,0.61,1.744,6.124,1.589,1.9138,5.5,PASS
+S4_one_and_half_x,S4 1.5 × measured,NSE,E,T6,A,59,False,0.36,0.45,0.63,1.768,6.348,1.6119,1.9389,5.5,PASS
+S5_illustrative,S5 illustrative stress,NSE,E,T6,A,59,False,0.5,0.7,0.7,1.86,6.068,1.6998,2.035,5.5,PASS
+S0_none,S0 independent,NSE,E,T6,A,125,True,0.0,0.0,0.0,2.88,6.1,2.6798,3.0947,5.5,PASS
+S1_validated,S1 earlier estimate,NSE,E,T6,A,125,True,0.355,0.454,0.441,2.636,5.844,2.4446,2.842,5.5,PASS
+S2_fresh_point,"S2 US fresh, measured",NSE,E,T6,A,125,True,0.24,0.3,0.42,2.68,5.74,2.487,2.8876,5.5,PASS
+S3_fresh_upper,"S3 US fresh, upper range",NSE,E,T6,A,125,True,0.29,0.5,0.61,2.652,5.544,2.46,2.8586,5.5,PASS
+S4_one_and_half_x,S4 1.5 × measured,NSE,E,T6,A,125,False,0.36,0.45,0.63,2.708,5.66,2.5139,2.9166,5.5,PASS
+S5_illustrative,S5 illustrative stress,NSE,E,T6,A,125,False,0.5,0.7,0.7,2.84,5.76,2.6412,3.0533,5.5,PASS
+S0_none,S0 independent,NSE,E,T4,B,59,True,0.0,0.0,0.0,3.116,7.908,2.9077,3.3387,6.0,PASS
+S1_validated,S1 earlier estimate,NSE,E,T4,B,59,True,0.355,0.454,0.441,3.156,7.504,2.9464,3.38,6.0,PASS
+S2_fresh_point,"S2 US fresh, measured",NSE,E,T4,B,59,True,0.24,0.3,0.42,3.112,7.776,2.9039,3.3346,6.0,PASS
+S3_fresh_upper,"S3 US fresh, upper range",NSE,E,T4,B,59,True,0.29,0.5,0.61,3.096,7.84,2.8884,3.318,6.0,PASS
+S4_one_and_half_x,S4 1.5 × measured,NSE,E,T4,B,59,False,0.36,0.45,0.63,3.276,7.884,3.0624,3.5039,6.0,PASS
+S5_illustrative,S5 illustrative stress,NSE,E,T4,B,59,False,0.5,0.7,0.7,3.408,7.964,3.1902,3.6402,6.0,PASS
+S0_none,S0 independent,NSE,E,T4,B,125,True,0.0,0.0,0.0,4.584,7.36,4.3317,4.8503,6.0,PASS
+S1_validated,S1 earlier estimate,NSE,E,T4,B,125,True,0.355,0.454,0.441,4.84,7.648,4.5808,5.113,6.0,PASS
+S2_fresh_point,"S2 US fresh, measured",NSE,E,T4,B,125,True,0.24,0.3,0.42,4.732,7.384,4.4757,5.0022,6.0,PASS
+S3_fresh_upper,"S3 US fresh, upper range",NSE,E,T4,B,125,True,0.29,0.5,0.61,4.6,7.348,4.3472,4.8667,6.0,PASS
+S4_one_and_half_x,S4 1.5 × measured,NSE,E,T4,B,125,False,0.36,0.45,0.63,4.568,7.228,4.3161,4.8339,6.0,PASS
+S5_illustrative,S5 illustrative stress,NSE,E,T4,B,125,False,0.5,0.7,0.7,4.608,7.196,4.355,4.8749,6.0,PASS
+S0_none,S0 independent,US,R2,T6,A,59,True,0.0,0.0,0.0,0.996,5.128,0.8802,1.1268,5.5,PASS
+S1_validated,S1 earlier estimate,US,R2,T6,A,59,True,0.187,0.141,0.19,1.096,5.04,0.9742,1.2328,5.5,PASS
+S2_fresh_point,"S2 US fresh, measured",US,R2,T6,A,59,True,0.24,0.3,0.42,0.98,5.02,0.8652,1.1099,5.5,PASS
+S3_fresh_upper,"S3 US fresh, upper range",US,R2,T6,A,59,True,0.29,0.5,0.61,1.14,5.208,1.0157,1.2793,5.5,PASS
+S4_one_and_half_x,S4 1.5 × measured,US,R2,T6,A,59,False,0.36,0.45,0.63,1.12,5.064,0.9969,1.2582,5.5,PASS
+S5_illustrative,S5 illustrative stress,US,R2,T6,A,59,False,0.5,0.7,0.7,1.052,4.924,0.9328,1.1862,5.5,PASS
+S0_none,S0 independent,US,R2,T6,A,125,True,0.0,0.0,0.0,2.016,5.124,1.849,2.1977,5.5,PASS
+S1_validated,S1 earlier estimate,US,R2,T6,A,125,True,0.187,0.141,0.19,1.996,5.072,1.8299,2.1769,5.5,PASS
+S2_fresh_point,"S2 US fresh, measured",US,R2,T6,A,125,True,0.24,0.3,0.42,2.064,5.144,1.895,2.2477,5.5,PASS
+S3_fresh_upper,"S3 US fresh, upper range",US,R2,T6,A,125,True,0.29,0.5,0.61,2.016,4.976,1.849,2.1977,5.5,PASS
+S4_one_and_half_x,S4 1.5 × measured,US,R2,T6,A,125,False,0.36,0.45,0.63,1.876,4.96,1.7151,2.0517,5.5,PASS
+S5_illustrative,S5 illustrative stress,US,R2,T6,A,125,False,0.5,0.7,0.7,2.08,5.092,1.9103,2.2644,5.5,PASS
+S0_none,S0 independent,US,R2,T4,B,59,True,0.0,0.0,0.0,1.56,5.712,1.4137,1.7212,6.0,PASS
+S1_validated,S1 earlier estimate,US,R2,T4,B,59,True,0.187,0.141,0.19,1.46,5.772,1.3186,1.6163,6.0,PASS
+S2_fresh_point,"S2 US fresh, measured",US,R2,T4,B,59,True,0.24,0.3,0.42,1.516,5.468,1.3718,1.6751,6.0,PASS
+S3_fresh_upper,"S3 US fresh, upper range",US,R2,T4,B,59,True,0.29,0.5,0.61,1.516,5.64,1.3718,1.6751,6.0,PASS
+S4_one_and_half_x,S4 1.5 × measured,US,R2,T4,B,59,False,0.36,0.45,0.63,1.516,5.652,1.3718,1.6751,6.0,PASS
+S5_illustrative,S5 illustrative stress,US,R2,T4,B,59,False,0.5,0.7,0.7,1.736,5.78,1.5814,1.9055,6.0,PASS
+S0_none,S0 independent,US,R2,T4,B,125,True,0.0,0.0,0.0,2.872,5.816,2.6721,3.0864,6.0,PASS
+S1_validated,S1 earlier estimate,US,R2,T4,B,125,True,0.187,0.141,0.19,2.98,5.772,2.7763,3.1981,6.0,PASS
+S2_fresh_point,"S2 US fresh, measured",US,R2,T4,B,125,True,0.24,0.3,0.42,2.772,5.256,2.5756,2.9829,6.0,PASS
+S3_fresh_upper,"S3 US fresh, upper range",US,R2,T4,B,125,True,0.29,0.5,0.61,2.824,5.532,2.6258,3.0367,6.0,PASS
+S4_one_and_half_x,S4 1.5 × measured,US,R2,T4,B,125,False,0.36,0.45,0.63,2.816,5.716,2.6181,3.0284,6.0,PASS
+S5_illustrative,S5 illustrative stress,US,R2,T4,B,125,False,0.5,0.7,0.7,2.904,5.636,2.703,3.1195,6.0,PASS
+S0_none,S0 independent,US,E,T6,A,59,True,0.0,0.0,0.0,1.484,5.828,1.3414,1.6415,5.5,PASS
+S1_validated,S1 earlier estimate,US,E,T6,A,59,True,0.187,0.141,0.19,1.376,5.796,1.2389,1.5281,5.5,PASS
+S2_fresh_point,"S2 US fresh, measured",US,E,T6,A,59,True,0.24,0.3,0.42,1.288,5.544,1.1555,1.4354,5.5,PASS
+S3_fresh_upper,"S3 US fresh, upper range",US,E,T6,A,59,True,0.29,0.5,0.61,1.488,5.752,1.3452,1.6457,5.5,PASS
+S4_one_and_half_x,S4 1.5 × measured,US,E,T6,A,59,False,0.36,0.45,0.63,1.46,5.668,1.3186,1.6163,5.5,PASS
+S5_illustrative,S5 illustrative stress,US,E,T6,A,59,False,0.5,0.7,0.7,1.568,5.588,1.4213,1.7296,5.5,PASS
+S0_none,S0 independent,US,E,T6,A,125,True,0.0,0.0,0.0,2.408,5.44,2.2252,2.6055,5.5,PASS
+S1_validated,S1 earlier estimate,US,E,T6,A,125,True,0.187,0.141,0.19,2.376,5.292,2.1944,2.5722,5.5,PASS
+S2_fresh_point,"S2 US fresh, measured",US,E,T6,A,125,True,0.24,0.3,0.42,2.544,5.576,2.356,2.7466,5.5,PASS
+S3_fresh_upper,"S3 US fresh, upper range",US,E,T6,A,125,True,0.29,0.5,0.61,2.436,5.464,2.2521,2.6345,5.5,PASS
+S4_one_and_half_x,S4 1.5 × measured,US,E,T6,A,125,False,0.36,0.45,0.63,2.532,5.64,2.3444,2.7341,5.5,PASS
+S5_illustrative,S5 illustrative stress,US,E,T6,A,125,False,0.5,0.7,0.7,2.608,5.724,2.4176,2.813,5.5,PASS
+S0_none,S0 independent,US,E,T4,B,59,True,0.0,0.0,0.0,2.284,6.66,2.106,2.4766,6.0,PASS
+S1_validated,S1 earlier estimate,US,E,T4,B,59,True,0.187,0.141,0.19,2.3,7.008,2.1214,2.4933,6.0,PASS
+S2_fresh_point,"S2 US fresh, measured",US,E,T4,B,59,True,0.24,0.3,0.42,2.392,6.98,2.2098,2.5889,6.0,PASS
+S3_fresh_upper,"S3 US fresh, upper range",US,E,T4,B,59,True,0.29,0.5,0.61,2.26,6.468,2.083,2.4517,6.0,PASS
+S4_one_and_half_x,S4 1.5 × measured,US,E,T4,B,59,False,0.36,0.45,0.63,2.428,6.604,2.2444,2.6262,6.0,PASS
+S5_illustrative,S5 illustrative stress,US,E,T4,B,59,False,0.5,0.7,0.7,2.3,6.704,2.1214,2.4933,6.0,PASS
+S0_none,S0 independent,US,E,T4,B,125,True,0.0,0.0,0.0,3.944,6.708,3.7097,4.1924,6.0,PASS
+S1_validated,S1 earlier estimate,US,E,T4,B,125,True,0.187,0.141,0.19,3.78,6.516,3.5506,4.0236,6.0,PASS
+S2_fresh_point,"S2 US fresh, measured",US,E,T4,B,125,True,0.24,0.3,0.42,3.764,6.504,3.5351,4.0071,6.0,PASS
+S3_fresh_upper,"S3 US fresh, upper range",US,E,T4,B,125,True,0.29,0.5,0.61,3.84,6.576,3.6088,4.0854,6.0,PASS
+S4_one_and_half_x,S4 1.5 × measured,US,E,T4,B,125,False,0.36,0.45,0.63,3.848,6.576,3.6166,4.0936,6.0,PASS
+S5_illustrative,S5 illustrative stress,US,E,T4,B,125,False,0.5,0.7,0.7,3.704,6.44,3.4769,3.9453,6.0,PASS
