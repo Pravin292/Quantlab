@@ -1,0 +1,23 @@
+name: CI
+
+# Runs on every push and pull request: (1) every frozen manifest still matches its files, (2) all unit tests pass.
+# Tests use synthetic data only, so no market data or API key is needed.
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install pinned requirements
+        run: pip install -r requirements.txt
+      - name: Verify frozen manifests
+        run: python scripts/verify_manifests.py
+      - name: Run tests
+        run: python -m pytest -q

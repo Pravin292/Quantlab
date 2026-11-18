@@ -15,3 +15,8 @@ outputs/milestone3/
 # Local backups of the requirements file
 requirements.txt.bak*
 requirements.txt.new
+
+# Packaging artefacts
+build/
+dist/
+*.egg-info/
